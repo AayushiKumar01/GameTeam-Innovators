@@ -21,6 +21,7 @@
                 <Label Text="Team Innovators" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label Text="Aayushi Kumar" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label Text="Maason Kao" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                <Label Text="Adam Kucera" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label x:Name="CurrentDateTime" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
             </StackLayout>
 
