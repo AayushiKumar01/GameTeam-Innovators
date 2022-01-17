@@ -120,6 +120,18 @@ namespace Game.Views
             value = Math.Round(value, MidpointRounding.AwayFromZero);
             ValueValue.Text = String.Format("{0}", (int)value);
         }
+
+        /// <summary>
+        /// Catch the change to the slider for Damage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+       public void Damage_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            DamageValue.Text = String.Format("{0}", (int)value);
+        }
     }
-    
+
 }
