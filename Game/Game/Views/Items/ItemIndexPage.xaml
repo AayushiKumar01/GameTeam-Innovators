@@ -16,7 +16,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="&lt;" />
+                <Label Text="Filter:"/>
                 <Entry Text="{Binding Data.Filter}" 
                        Style="{StaticResource EntryStyle}"/>
                 <Button Text="Clear" />
