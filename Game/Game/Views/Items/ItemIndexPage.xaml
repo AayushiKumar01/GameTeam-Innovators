@@ -19,6 +19,7 @@
                 <Button Text="&lt;" />
                 <Entry Text="{Binding Data.Filter}" 
                        Style="{StaticResource EntryStyle}"/>
+                <Button Text="Clear" />
             </StackLayout>
                 
 
