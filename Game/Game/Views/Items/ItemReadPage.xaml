@@ -18,7 +18,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}" 
                      Spacing="10">
 
-            <Label Text="Detail Page" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"/>
+            <Label Text="{Binding Data.Name}" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
