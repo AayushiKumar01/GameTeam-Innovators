@@ -15,7 +15,11 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
+            <StackLayout Grid.Column="1" Grid.Row="2"
+                         Orientation="Horizontal">
+
+            </StackLayout>
+                
 
             <ListView x:Name="ItemsListView"
                     ItemsSource="{Binding Dataset}"
