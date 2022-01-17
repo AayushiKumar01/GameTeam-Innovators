@@ -18,6 +18,8 @@
             <StackLayout Grid.Column="1" Grid.Row="2"
                          Orientation="Horizontal">
                 <Button Text="&lt;" />
+                <Entry Text="{Binding Data.Filter}" 
+                       Style="{StaticResource EntryStyle}"/>
             </StackLayout>
                 
 
