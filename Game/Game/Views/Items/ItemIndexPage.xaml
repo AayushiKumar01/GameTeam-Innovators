@@ -17,7 +17,7 @@
 
             <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
 
-            <ListView x:Name="ItemsListView" 
+            <ListView x:Name="ItemsListView"
                     ItemsSource="{Binding Dataset}"
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     RefreshCommand="{Binding LoadItemsCommand}"
@@ -51,7 +51,12 @@
                                        Text="{Binding Name}" 
                                        Style="{StaticResource ListStyle}"/>
 
-                                <StackLayout Grid.Column="1" Grid.Row="1"
+                                <Label Grid.Column="1" Grid.Row="1"
+                                       Text="{Binding Description}" 
+                                       Style="{StaticResource ListStyle}"
+                                       FontSize="Micro"/>
+
+                                <StackLayout Grid.Column="1" Grid.Row="2"
                                     Orientation="Horizontal">
                                     
                                     <Label 
@@ -62,11 +67,6 @@
                                         Style="{StaticResource ListStyle}"/>
                                 
                                 </StackLayout>
-
-                                <Label Grid.Column="1" Grid.Row="2"
-                                       Text="{Binding Description}" 
-                                       Style="{StaticResource ListStyle}"
-                                       FontSize="Micro"/>
 
                             </Grid>
                         </ViewCell>
