@@ -96,5 +96,17 @@ namespace Game.Views
         {
             DamageValue.Text = String.Format("{0}", e.NewValue);
         }
+
+        /// <summary>
+        /// Catch the change to the Slider for Range
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Range_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            RangeValue.Text = String.Format("{0}", (int)value);
+        }
     }
 }

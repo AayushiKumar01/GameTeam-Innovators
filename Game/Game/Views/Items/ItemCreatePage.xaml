@@ -114,8 +114,6 @@
                             Text="Range" 
                             Style="{StaticResource LabelStyle}"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
                         <Label 
                             Text="{Binding Data.Range}" 
                             x:Name="RangeValue"
@@ -124,11 +122,11 @@
                             HorizontalOptions="End"
                             HorizontalTextAlignment="End"/>
                     
-                        <Stepper 
-                            Value="{Binding Data.Range, Mode=TwoWay}"
-                            ValueChanged="Range_OnStepperValueChanged"/>
+                        <Slider Maximum="10"
+                                Value="{Binding Data.Range}"
+                                ValueChanged="Range_OnSliderValueChanged"
+                                HorizontalOptions="FillAndExpand"/>
                         
-                    </StackLayout>
 
                     <Label 
                         Text="Value"
