@@ -147,7 +147,6 @@
                         Text="Damage" 
                         Style="{StaticResource LabelStyle}"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
 
                         <Label 
                             Text="{Binding Data.Damage}" 
@@ -157,11 +156,11 @@
                             HorizontalOptions="End"
                             HorizontalTextAlignment="End"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Damage, Mode=TwoWay}"
-                            ValueChanged="Damage_OnStepperValueChanged"/>
+                    <Slider Maximum="10"
+                                Value="{Binding Data.Damage}"
+                                ValueChanged="Damage_OnSliderValueChanged"
+                                HorizontalOptions="FillAndExpand"/>
 
-                    </StackLayout>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

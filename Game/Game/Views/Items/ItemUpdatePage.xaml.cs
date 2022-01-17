@@ -100,9 +100,11 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        public void Damage_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DamageValue.Text = String.Format("{0}", e.NewValue);
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            DamageValue.Text = String.Format("{0}", (int)value);
         }
     }
 }
