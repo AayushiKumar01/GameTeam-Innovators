@@ -132,8 +132,6 @@
                         Text="Value"
                         Style="{StaticResource LabelStyle}"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-                        
                         <Label 
                             Text="{Binding Data.Value}" 
                             x:Name="ValueValue"
@@ -142,11 +140,10 @@
                             HorizontalOptions="End"
                             HorizontalTextAlignment="End"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Value, Mode=TwoWay}"
-                            ValueChanged="Value_OnStepperValueChanged"/>
-
-                    </StackLayout>
+                    <Slider Maximum="10"
+                                Value="{Binding Data.Value}"
+                                ValueChanged="Value_OnSliderValueChanged"
+                                HorizontalOptions="FillAndExpand"/>
 
                     <Label 
                         Text="Damage" 

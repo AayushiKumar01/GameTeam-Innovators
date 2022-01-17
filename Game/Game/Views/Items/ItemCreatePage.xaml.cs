@@ -108,5 +108,18 @@ namespace Game.Views
             value = Math.Round(value, MidpointRounding.AwayFromZero);
             RangeValue.Text = String.Format("{0}", (int)value);
         }
+
+        /// <summary>
+        /// Catch the change to the slider for Value
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Value_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            ValueValue.Text = String.Format("{0}", (int)value);
+        }
     }
+    
 }
