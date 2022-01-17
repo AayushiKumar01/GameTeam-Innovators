@@ -19,16 +19,16 @@
 
             <Label Text="Detail Page" Style="{StaticResource HeaderStyle}"/>
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
-                   Text="Name : " 
+                    Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
                 <Label 
                     Text="{Binding Data.Name}" 
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
+
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
