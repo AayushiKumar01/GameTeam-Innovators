@@ -64,24 +64,35 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
+        ///public void Range_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        ///{
+        ///   RangeValue.Text = String.Format("{0}", e.NewValue);
+        ///}
+        ///
+
         /// <summary>
-        /// Catch the change to the Stepper for Range
+        /// Catch the change to the slider for Range
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Range_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        public void Range_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            RangeValue.Text = String.Format("{0}", e.NewValue);
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            RangeValue.Text = String.Format("{0}", (int)value);
+
         }
 
         /// <summary>
-        /// Catch the change to the stepper for Value
+        /// Catch the change to the slider for Value
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Value_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        public void Value_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            ValueValue.Text = String.Format("{0}", e.NewValue);
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            ValueValue.Text = String.Format("{0}", (int)value);
         }
 
         /// <summary>
@@ -92,20 +103,6 @@ namespace Game.Views
         public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
             DamageValue.Text = String.Format("{0}", e.NewValue);
-        }
-
-
-        /// <summary>
-        /// Catch the change to the Stepper for Range
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void Range_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            double value = e.NewValue;
-            value = Math.Round(value, MidpointRounding.AwayFromZero);
-            RangeValue.Text = String.Format("{0}", (int)value);
-
         }
     }
 }
