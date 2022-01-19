@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Game.Models
 {
+    /// <summary>
+    /// Special Abilities that Characters can have
+    /// </summary>
     public enum SpecialAbility
     {
         // Invalid State
