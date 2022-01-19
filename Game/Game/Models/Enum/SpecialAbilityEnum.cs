@@ -7,7 +7,7 @@ namespace Game.Models
     /// <summary>
     /// Special Abilities that Characters can have
     /// </summary>
-    public enum SpecialAbility
+    public enum SpecialAbilityEnum
     {
         // Invalid State
         Unknown = 0,
