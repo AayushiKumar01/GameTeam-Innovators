@@ -24,10 +24,14 @@ namespace Game.Models
             ImageURI = "knight.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
+            SpecialAbility = SpecialAbilityEnum.Unknown;
 
             // Default to unknown, which is no special job
             Job = CharacterJobEnum.Unknown;
         }
+
+        // Special Ability of the Character, default if unknown
+        public SpecialAbilityEnum SpecialAbility { get; set; } = SpecialAbilityEnum.Unknown;
 
         /// <summary>
         /// Create a copy
