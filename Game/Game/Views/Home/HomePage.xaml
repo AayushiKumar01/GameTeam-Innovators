@@ -29,13 +29,6 @@
                         MaxLines="5"
                         />
 
-                    <Label 
-                        Text="Help them on their mission."
-                        Style="{StaticResource CenterMessageStyle}"
-                        FontSize="Micro"
-                        LineBreakMode="WordWrap"
-                        MaxLines="5"
-                        />
                 </StackLayout>
 
                 <Button
