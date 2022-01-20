@@ -22,9 +22,9 @@
                 <StackLayout HorizontalOptions="Center" Padding="70,5,70,0"> 
                
                     <Label 
-                        Text="Your Game Information"
+                        Text="Andromeda Quest"
                         Style="{StaticResource CenterMessageStyle}"
-                        FontSize="Micro"
+                        FontSize="Large"
                         LineBreakMode="WordWrap"
                         MaxLines="5"
                         />
