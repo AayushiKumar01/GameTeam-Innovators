@@ -43,7 +43,8 @@
                         Text="Name" 
                         Style="{StaticResource LabelStyle}"/>
 
-                    <Entry Grid.Row="0" Grid.Column="1"
+                    <Entry x:Name="ItemName" 
+                        Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource EntryStyle}"/>
 
@@ -66,7 +67,8 @@
                         Text="Description" 
                         Style="{StaticResource LabelStyle}"/>
 
-                    <Entry Grid.Row="0" Grid.Column="1"
+                    <Entry x:Name="ItemDescription" 
+                        Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Description}" 
                         Style="{StaticResource EntryStyle}"/>
 
