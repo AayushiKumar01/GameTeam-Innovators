@@ -47,6 +47,10 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text))
+            {
+                return;
+            }
             // If the image in the data box is empty, use the default one..
             if (string.IsNullOrEmpty(ViewModel.Data.ImageURI))
             {
