@@ -47,7 +47,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            // Abort save if name of description entries are empty
+            // Abort save if name or description entries are empty
             if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text))
             {
                 return;
