@@ -39,7 +39,7 @@
                 </StackLayout>
 
                 <Button
-                    Text="Enter"
+                    Text="Start"
                     Clicked="GameButton_Clicked"/>
 
             </StackLayout>
