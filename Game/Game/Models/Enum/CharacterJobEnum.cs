@@ -12,8 +12,18 @@
         // Fighters hit hard and have fight abilities
         Fighter = 10,
 
-        // Clerics defend well and have buff abilities
-        Cleric = 12,
+        // Corvettes defend well and have buff abilities
+        Corvette = 12,
+
+        // Frigates support well and have heal abilities
+        Frigate = 14,
+
+        // Destroyers attack well and can trade hp for increased damage
+        Destroyer = 16,
+
+        // Battlecruisers are highly mobile and can teleport anywhere
+        Battlecruiser = 18,
+
 
     }
 
@@ -38,8 +48,20 @@
                     Message = "Fighter";
                     break;
 
-                case CharacterJobEnum.Cleric:
-                    Message = "Cleric";
+                case CharacterJobEnum.Corvette:
+                    Message = "Corvette";
+                    break;
+
+                case CharacterJobEnum.Frigate:
+                    Message = "Frigate";
+                    break;
+
+                case CharacterJobEnum.Destroyer:
+                    Message = "Destroyer";
+                    break;
+
+                case CharacterJobEnum.Battlecruiser:
+                    Message = "Battlecruiser";
                     break;
 
                 case CharacterJobEnum.Unknown:
