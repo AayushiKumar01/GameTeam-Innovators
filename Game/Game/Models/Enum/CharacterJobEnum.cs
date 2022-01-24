@@ -13,7 +13,9 @@
         Fighter = 10,
 
         // Corvettes defend well and have buff abilities
-        Corvette = 12,
+        Cleric = 12,
+
+        Corvette = 13,
 
         // Frigates support well and have heal abilities
         Frigate = 14,
@@ -48,7 +50,7 @@
                     Message = "Fighter";
                     break;
 
-                case CharacterJobEnum.Corvette:
+                case CharacterJobEnum.Cleric:
                     Message = "Corvette";
                     break;
 
