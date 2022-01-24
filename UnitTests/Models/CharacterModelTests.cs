@@ -272,7 +272,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetAttack_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
+            var data = new CharacterModel { Job = CharacterJobEnum.Corvette };
 
             // Act
             var result = data.GetAttack();
@@ -287,7 +287,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetDefense_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
+            var data = new CharacterModel { Job = CharacterJobEnum.Corvette };
 
             // Act
             var result = data.GetDefense();
@@ -302,7 +302,7 @@ namespace UnitTests.Models
         public void CharacterModel_GetSpeed_Cleric_Should_Pass()
         {
             // ArDefense
-            var data = new CharacterModel { Job = CharacterJobEnum.Cleric };
+            var data = new CharacterModel { Job = CharacterJobEnum.Corvette };
 
             // Act
             var result = data.GetSpeed();

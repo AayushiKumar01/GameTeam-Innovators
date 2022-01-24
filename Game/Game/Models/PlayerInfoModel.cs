@@ -112,7 +112,7 @@ namespace Game.Models
             // TODO: Mike, Refactor this, so it is in a helper, and call it on level up as well.
             switch (Job)
             {
-                case CharacterJobEnum.Cleric:
+                case CharacterJobEnum.Corvette:
 
                     foreach (var item in AbilityEnumHelper.GetListCleric)
                     {

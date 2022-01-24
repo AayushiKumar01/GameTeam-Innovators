@@ -41,7 +41,7 @@ namespace UnitTests.Models
             // Arrange
 
             // Act
-            var result = CharacterJobEnum.Cleric.ToMessage();
+            var result = CharacterJobEnum.Corvette.ToMessage();
 
             // Reset
 
