@@ -55,8 +55,8 @@
 
                         </Grid>
 
-                         <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
                             <ImageButton 
                                 x:Name="RollDice"
