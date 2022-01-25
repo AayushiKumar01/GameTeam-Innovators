@@ -80,12 +80,13 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Row="1" Grid.Column="0"
-                                Text="Description" 
+                                Text="Description *" 
                                 Style="{StaticResource LabelStyle}"/>
 
                             <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
-                                Style="{StaticResource EntryStyle}"/>
+                                Style="{StaticResource EntryStyle}"
+                                   x:Name="CharacterDescription"/>
 
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Image" 
