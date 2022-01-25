@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.VillagePage"
+             Title="The Mothership"
              >
 
     <ContentPage.Content>
@@ -21,7 +22,7 @@
                                 Clicked="CharactersButton_Clicked"/>
 
                     <Label 
-                                Text="Characters"
+                                Text="Spaceships"
                                 Style="{StaticResource CenterMessageStyle}"/>
 
                 </StackLayout>
@@ -34,7 +35,7 @@
                                 Clicked="MonstersButton_Clicked"/>
 
                     <Label 
-                                Text="Monsters"
+                                Text="Alien Spacecraft"
                                 Style="{StaticResource CenterMessageStyle}"/>
 
                 </StackLayout>
