@@ -45,7 +45,16 @@
                     BorderColor="black">
                     </Button>
 
-                   </StackLayout>
+                    <Button 
+                    Text="No" 
+                    Clicked="CancelCharacterDeletion" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                    </Button>
+
+                </StackLayout>
                 
             </StackLayout>
             
