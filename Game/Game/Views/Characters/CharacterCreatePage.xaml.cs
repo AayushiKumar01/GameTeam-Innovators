@@ -40,7 +40,7 @@ namespace Game.Views
             data.Data = new CharacterModel();
             this.ViewModel = data;
 
-            this.ViewModel.Title = "Create";
+            this.ViewModel.Title = "Create Character";
 
             // Load the values for the Level into the Picker
             for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
