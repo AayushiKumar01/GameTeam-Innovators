@@ -22,15 +22,15 @@
                     AbsoluteLayout.LayoutFlags="All">
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}">
+                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="CenterAndExpand">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Label Text="Read Page" Style="{StaticResource HeaderStyle}"/>
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                Text="Name : " 
                                Style="{StaticResource LabelStyle}"/>
@@ -39,7 +39,7 @@
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Description : " 
                                 Style="{StaticResource LabelStyle}"/>
@@ -48,7 +48,7 @@
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Level : " 
                                 Style="{StaticResource LabelStyle}"/>
