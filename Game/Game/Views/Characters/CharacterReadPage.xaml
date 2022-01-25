@@ -26,8 +26,6 @@
 
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
-
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                Text="Name : " 
@@ -36,6 +34,8 @@
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
+                        
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
