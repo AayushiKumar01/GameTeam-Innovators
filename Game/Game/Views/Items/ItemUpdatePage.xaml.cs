@@ -69,12 +69,6 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
-        ///public void Range_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
-        ///{
-        ///   RangeValue.Text = String.Format("{0}", e.NewValue);
-        ///}
-        ///
-
         /// <summary>
         /// Catch the change to the slider for Range
         /// </summary>
