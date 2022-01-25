@@ -44,9 +44,10 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            //Abort save it name or description are empty
+            //Abort save it name or description or Location or Attribute is empty
             if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text))
             {
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
                 return;
             }
             // If the image in the data box is empty, use the default one..
