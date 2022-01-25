@@ -160,9 +160,11 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Speed_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        public void Speed_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            SpeedValue.Text = String.Format("{0}", e.NewValue);
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            SpeedValue.Text = String.Format("{0}", (int)value);
         }
 
         /// <summary>
