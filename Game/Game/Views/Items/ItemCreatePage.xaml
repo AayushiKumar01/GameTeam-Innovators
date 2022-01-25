@@ -77,7 +77,7 @@
                         Style="{StaticResource EntryStyle}"/>
 
                     <Label Grid.Row="1" Grid.Column="0"
-                        Text="Location" 
+                        Text="Location *" 
                         Style="{StaticResource LabelStyle}"/>
 
                     <Picker Grid.Row="1" Grid.Column="1"
