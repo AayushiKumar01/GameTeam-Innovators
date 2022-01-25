@@ -22,7 +22,7 @@
                                 Clicked="CharactersButton_Clicked"/>
 
                     <Label 
-                                Text="Characters"
+                                Text="Spaceships"
                                 Style="{StaticResource CenterMessageStyle}"/>
 
                 </StackLayout>
