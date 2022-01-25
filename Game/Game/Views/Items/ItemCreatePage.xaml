@@ -27,6 +27,9 @@
             <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10">
 
+                <Label x:Name="ErrorMessage"
+                 HorizontalOptions="CenterAndExpand"/>
+                
                 <Grid
                     RowSpacing="1"
                     ColumnSpacing="2"
@@ -40,7 +43,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0"
-                        Text="Name" 
+                        Text="Name *" 
                         Style="{StaticResource LabelStyle}"/>
 
                     <Entry x:Name="ItemName"
@@ -65,7 +68,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0"
-                        Text="Description" 
+                        Text="Description *" 
                         Style="{StaticResource LabelStyle}"/>
 
                     <Entry x:Name="ItemDescription"

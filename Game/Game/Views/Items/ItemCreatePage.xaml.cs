@@ -50,6 +50,7 @@ namespace Game.Views
             // Abort save if name or description entries are empty
             if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text))
             {
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
                 return;
             }
             // If the image in the data box is empty, use the default one..
