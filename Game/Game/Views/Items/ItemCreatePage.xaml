@@ -86,7 +86,7 @@
                         x:Name="LocationPicker"/>
 
                     <Label Grid.Row="2" Grid.Column="0"
-                        Text="Attribute" 
+                        Text="Attribute *" 
                         Style="{StaticResource LabelStyle}"/>
 
                     <Picker Grid.Row="2" Grid.Column="1"

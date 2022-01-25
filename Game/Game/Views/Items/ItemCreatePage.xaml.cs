@@ -48,7 +48,7 @@ namespace Game.Views
         public async void Save_Clicked(object sender, EventArgs e)
         {
             // Abort save if name or description entries are empty
-            if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text) || LocationPicker.SelectedItem.Equals("Unknown"))
+            if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text) || LocationPicker.SelectedItem.Equals("Unknown") || AttributePicker.SelectedItem.Equals("Unknown"))
             {
                 ErrorMessage.Text = "Mandatory fields can not be blank.";
                 return;
