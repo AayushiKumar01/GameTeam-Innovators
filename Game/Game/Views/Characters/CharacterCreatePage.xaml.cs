@@ -144,13 +144,15 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Catch the change to the Stepper for Defense
+        /// Catch the change to the Slider for Defense
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void Defense_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        public void Defense_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DefenseValue.Text = String.Format("{0}", e.NewValue);
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            DefenseValue.Text = String.Format("{0}", (int)value);
         }
 
         /// <summary>
