@@ -62,5 +62,16 @@ namespace Game.Views
             // Add your code here...
             return true;
         }
+
+        /// <summary>
+        /// Delete selected character
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void DeleteCharacter(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, "Delete", viewModel.Data);
+            _ = await Navigation.PopModalAsync();
+        }
     }
 }
