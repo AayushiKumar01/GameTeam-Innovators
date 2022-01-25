@@ -111,7 +111,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            // Abort save if name is empty
+            // Abort save if name or description is empty
             if (string.IsNullOrEmpty(CharacterName.Text) || string.IsNullOrEmpty(CharacterDescription.Text))
             {
                 ErrorMessage.Text = "Mandatory fields can not be blank.";
