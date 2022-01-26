@@ -53,9 +53,10 @@
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="ScoresButton_Clicked"/>
 
-                    <Label 
-                        Text="Scores"
-                        Style="{StaticResource CenterMessageStyle}"/>
+                    <Button Text="Scores"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="ScoresButton_Clicked" />
                 </StackLayout>
 
 
