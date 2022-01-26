@@ -31,6 +31,22 @@
                 
             </StackLayout>
 
+
+            <!-- Spacer label -->
+            <Label Text="" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+
+            <!-- how to play -->
+            <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
+
+                <Label Text="how to play" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
+
+                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                    <Label Text="description to play.. put some description here" Style="{StaticResource HeaderStyle}" FontSize="Micro" LineBreakMode="WordWrap" WidthRequest="200"/>
+                    <Image Source="d20_2.png" Style="{StaticResource ImageMediumStyle}"/>
+                </StackLayout>
+
+            </StackLayout>
+
             <!--Database Settings Frame-->
 
             <StackLayout Style="{StaticResource HorizontalStack}">
@@ -45,6 +61,7 @@
                     IsToggled="False"/>
             </StackLayout>
 
+            
             <StackLayout Style="{StaticResource VerticalStack}"
                          x:Name="DatabaseSettingsFrame"
                          IsVisible="False">
@@ -95,6 +112,13 @@
                     IsToggled="False"/>
             </StackLayout>
 
+
+            <StackLayout Style="{StaticResource HorizontalStack}">
+                <Label FontAttributes="Bold">Date / Time:</Label>
+                <Label x:Name="CurrentDateTime" HorizontalOptions="EndAndExpand">Date TBD</Label>
+            </StackLayout>
+
+
             <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
 
                 <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
@@ -144,6 +168,7 @@
                             />
 
                     </StackLayout>
+                    
                 </StackLayout>
             </StackLayout>
         </StackLayout>
