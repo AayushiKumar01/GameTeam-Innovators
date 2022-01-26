@@ -50,6 +50,15 @@
                                 Text="{Binding Data.Level}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
+                        
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Spaceship Type : " 
+                                Style="{StaticResource LabelStyle}"/>
+                            <Label 
+                                Text="{Binding Data.Job}" 
+                                Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame OutlineColor="Black" Padding="1">
