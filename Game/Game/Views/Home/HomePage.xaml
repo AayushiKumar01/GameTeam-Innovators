@@ -48,8 +48,9 @@
                 </StackLayout>
 
                 <Button
-                    Text="Start"
-                    Clicked="GameButton_Clicked"/>
+                    Text="start"
+                    Clicked="GameButton_Clicked"
+                    Padding="25,0,25,0"/>
 
             </StackLayout>
         </ScrollView>
