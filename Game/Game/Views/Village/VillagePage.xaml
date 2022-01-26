@@ -23,6 +23,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Clicked="CharactersButton_Clicked" />
                 </StackLayout>
+                
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
@@ -35,6 +36,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Clicked="MonstersButton_Clicked" />
                 </StackLayout>
+                
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
@@ -47,6 +49,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Clicked="ItemsButton_Clicked" />
                 </StackLayout>
+
                 <StackLayout Orientation="Horizontal"
                             Spacing="15">
                     <ImageButton
@@ -59,7 +62,6 @@
                         HorizontalOptions="CenterAndExpand"
                         Clicked="ScoresButton_Clicked" />
                 </StackLayout>
-
 
             </StackLayout>
         </ScrollView>
