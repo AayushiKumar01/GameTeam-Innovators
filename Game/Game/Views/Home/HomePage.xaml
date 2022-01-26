@@ -13,15 +13,25 @@
                 HorizontalOptions="Center">
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+
                     <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="Center">
 
                         <Image
-                             Source="item.png"
-                             Style="{StaticResource ImageLargeStyle}"/>
+                            Source="item.png"
+                            Style="{StaticResource ImageLargeStyle}"/>
+
+
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+
+                            <Image
+                                Source="item.png"
+                                Style="{StaticResource ImageSmallStyle}" Rotation="-30" Margin="10, -40, 0, 0"/>
+
+                        </StackLayout>
 
                     </StackLayout>
                 </StackLayout>
-                
+
                 <StackLayout HorizontalOptions="Center" Padding="70,5,70,0"> 
                
                     <Label 
