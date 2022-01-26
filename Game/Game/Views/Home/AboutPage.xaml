@@ -8,21 +8,20 @@
              Title="About">
 
     <ScrollView
-      Padding="10,10,10,10"
-      VerticalOptions="Start"
-      HorizontalOptions="FillAndExpand"
-      Orientation="Vertical">
+        Padding="10,10,10,10"
+        VerticalOptions="Start"
+        HorizontalOptions="FillAndExpand"
+        Orientation="Vertical">
 
         <StackLayout Style="{StaticResource VerticalStack}">
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                 <Image Source="d20_2.png" Style="{StaticResource ImageMediumStyle}"/>
-                <Label Text="Team Innovators" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                <Label Text="developers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label Text="Aayushi Kumar" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label Text="Maason Kao" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                 <Label Text="Adam Kucera" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
-                <Label x:Name="CurrentDateTime" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
             </StackLayout>
 
             <!--Database Settings Frame-->
@@ -30,29 +29,29 @@
             <StackLayout Style="{StaticResource HorizontalStack}">
 
                 <Label
-                        Text="Database Settings"
-                        Style="{DynamicResource LabelStyle}"/>
+                    Text="Database Settings"
+                    Style="{DynamicResource LabelStyle}"/>
 
                 <Switch
-                        x:Name="DatabaseSettingsSwitch"
-                        HorizontalOptions="EndAndExpand"
-                        Toggled="DatabaseSettingsSwitch_OnToggled"
-                        IsToggled="False"/>
+                    x:Name="DatabaseSettingsSwitch"
+                    HorizontalOptions="EndAndExpand"
+                    Toggled="DatabaseSettingsSwitch_OnToggled"
+                    IsToggled="False"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource VerticalStack}"
-                        x:Name="DatabaseSettingsFrame"
-                        IsVisible="False">
+                         x:Name="DatabaseSettingsFrame"
+                         IsVisible="False">
 
                 <!--Database Settings-->
                 <StackLayout Style="{StaticResource HorizontalStack}"
-                                    Padding="50,0,0,0">
+                             Padding="50,0,0,0">
 
                     <Label Text="SQL Data Source"
-                            Style="{DynamicResource LabelStyle}"/>
+                           Style="{DynamicResource LabelStyle}"/>
 
                     <Switch
-                        HorizontalOptions="Start" 
+                        HorizontalOptions="Start"
                         VerticalOptions="Center"
                         x:Name="DataSourceValue"
                         IsToggled="{Binding ItemIndexViewModel.Instance.CurrentDataSource}"
@@ -62,14 +61,14 @@
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource HorizontalStack}"
-                                    Padding="50,0,0,0">
+                             Padding="50,0,0,0">
 
                     <Label Text="Wipe Data List"
                            Style="{DynamicResource LabelStyle}"/>
 
                     <Button
                         Text="Wipe"
-                        Clicked="WipeDataList_Clicked"
+                        Clicked="WipeDataList_Clicked" 
                         />
 
                 </StackLayout>
@@ -80,7 +79,7 @@
 
                 <Label
                     Text="Debug Settings"
-                    Style="{DynamicResource LabelStyle}"
+                    Style="{DynamicResource LabelStyle}" 
                     />
 
                 <Switch
@@ -108,7 +107,7 @@
 
                             <Entry
                                 x:Name="ServerItemValue"
-                                Text="1" 
+                                Text="1"
                                 FontSize="Micro"
                                 MaxLength="5"
                                 CursorPosition="0"
@@ -135,7 +134,7 @@
                             IsVisible="false"
                             IsEnabled="false"
                             HorizontalOptions="StartAndExpand"
-                            VerticalOptions="StartAndExpand"
+                            VerticalOptions="StartAndExpand" 
                             />
 
                     </StackLayout>
