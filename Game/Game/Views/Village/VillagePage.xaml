@@ -21,7 +21,6 @@
                     <Button Text="Spaceships"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        Scale="2"
                         Clicked="CharactersButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"
@@ -31,9 +30,10 @@
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="MonstersButton_Clicked"/>
 
-                    <Label 
-                        Text="Alien Spacecraft"
-                        Style="{StaticResource CenterMessageStyle}"/>
+                    <Button Text="Alien Spacecraft"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="MonstersButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
