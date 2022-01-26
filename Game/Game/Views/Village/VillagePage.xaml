@@ -37,14 +37,15 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
-                        <ImageButton
+                    <ImageButton
                         Source="item.png"
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="ItemsButton_Clicked"/>
 
-                    <Label 
-                            Text="Items"
-                            Style="{StaticResource CenterMessageStyle}"/>
+                    <Button Text="Items"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="ItemsButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"
                             Spacing="15">
