@@ -192,6 +192,13 @@
 
             </StackLayout>
 
+
+            <!-- Spacer label -->
+            <Label Text="" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+
+            <Image Source="item.png" Style="{StaticResource ImageLargeStyle}"/>
+
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
