@@ -46,7 +46,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Cleric", result);
+            Assert.AreEqual("Corvette", result);
         }
     }
 }
