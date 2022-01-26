@@ -10,12 +10,12 @@
     <ScrollView
         Padding="10,10,10,10"
         VerticalOptions="Start"
-        HorizontalOptions="FillAndExpand"
+        HorizontalOptions="CenterAndExpand"
         Orientation="Vertical">
 
         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" >
 
-            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="EndAndExpand" WidthRequest="200">
+            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" WidthRequest="200">
                 
                     <Label Text="developers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
                     <Label Text="Aayushi Kumar" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Start" />
@@ -36,7 +36,7 @@
             <Label Text="" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
 
             <!-- how to play -->
-            <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
+            <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
                 <Label Text="how to play" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
 
@@ -129,7 +129,7 @@
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Label FontAttributes="Bold">Date / Time:</Label>
-                            <Label x:Name="CurrentDateTime" HorizontalOptions="EndAndExpand">Date TBD</Label>
+                            <Label x:Name="CurrentDateTime" >Date TBD</Label>
                         </StackLayout>
 
 
