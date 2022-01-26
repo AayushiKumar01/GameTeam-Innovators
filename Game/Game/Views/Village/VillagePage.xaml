@@ -9,65 +9,55 @@
 
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
 
-            <FlexLayout x:Name="flexLayout"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround">
+            <StackLayout Margin="20" Style="{StaticResource OuterBoxStack}">
 
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
                     <ImageButton
-                                Source="item.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="CharactersButton_Clicked"/>
+                        Source="item.png"
+                        Style="{StaticResource ImageLargeStyle}"
+                        Clicked="CharactersButton_Clicked"/>
 
                     <Label 
-                                Text="Spaceships"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
+                        Text="Spaceships"
+                        Style="{StaticResource CenterMessageStyle}"/>
                 </StackLayout>
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
                     <ImageButton
-                                Source="item.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="MonstersButton_Clicked"/>
+                        Source="item.png"
+                        Style="{StaticResource ImageLargeStyle}"
+                        Clicked="MonstersButton_Clicked"/>
 
                     <Label 
-                                Text="Alien Spacecraft"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
+                        Text="Alien Spacecraft"
+                        Style="{StaticResource CenterMessageStyle}"/>
                 </StackLayout>
-
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
-                    <ImageButton
-                                Source="item.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="ItemsButton_Clicked"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="15">
+                        <ImageButton
+                        Source="item.png"
+                        Style="{StaticResource ImageLargeStyle}"
+                        Clicked="ItemsButton_Clicked"/>
 
                     <Label 
-                                Text="Items"
-                                Style="{StaticResource CenterMessageStyle}"/>
+                            Text="Items"
+                            Style="{StaticResource CenterMessageStyle}"/>
                 </StackLayout>
-
-
-                <StackLayout Style="{StaticResource CardImageTextBox}">
-
+                <StackLayout Orientation="Horizontal"
+                            Spacing="15">
                     <ImageButton
-                                Source="item.png"
-                                Style="{StaticResource ImageLargeStyle}"
-                                Clicked="ScoresButton_Clicked"/>
+                        Source="item.png"
+                        Style="{StaticResource ImageLargeStyle}"
+                        Clicked="ScoresButton_Clicked"/>
 
                     <Label 
-                                Text="Scores"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
+                        Text="Scores"
+                        Style="{StaticResource CenterMessageStyle}"/>
                 </StackLayout>
 
-            </FlexLayout>
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
