@@ -18,9 +18,11 @@
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="CharactersButton_Clicked"/>
 
-                    <Label 
-                        Text="Spaceships"
-                        Style="{StaticResource CenterMessageStyle}"/>
+                    <Button Text="Spaceships"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Scale="2"
+                        Clicked="CharactersButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
