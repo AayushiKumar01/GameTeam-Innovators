@@ -39,6 +39,8 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
+            SpaceshipPicker.SelectedItem = data.Data.Job.ToMessage();
+
             // Load the values for the Level into the Picker
             for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
             {

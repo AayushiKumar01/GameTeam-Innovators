@@ -18,6 +18,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:CharacterJobEnumConverter x:Key="CharacterJobEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -130,7 +131,7 @@
 
                             <Picker Grid.Row="5" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
-                        SelectedItem="{Binding Data.Job, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
+                        SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
                         x:Name="SpaceshipPicker"/>
                         </Grid>
 

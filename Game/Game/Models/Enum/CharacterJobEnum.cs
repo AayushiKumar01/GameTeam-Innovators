@@ -97,6 +97,28 @@ namespace Game.Models
                 return myList;
             }
         }
+            /// <summary>
+            /// Given the Message for an enum
+            /// Look it up and return the enum
+            /// 
+            /// Right Finger => RightFinger
+            /// 
+            /// </summary>
+            /// <param name="value"></param>
+            /// <returns></returns>
+        public static CharacterJobEnum ConvertMessageToEnum(string value)
+        {
+            // Get the Message, Determine Which enum has that message, and return that enum.
+            foreach (CharacterJobEnum job in Enum.GetValues(typeof(CharacterJobEnum)))
+            {
+                if (job.ToMessage().Equals(value))
+                {
+                    return job;
+                }
+            }
+            return CharacterJobEnum.Unknown;
+        }
+    
 
     }
 }
