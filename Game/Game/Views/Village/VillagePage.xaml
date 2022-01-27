@@ -14,6 +14,10 @@
             <StackLayout Margin="20" Style="{StaticResource OuterBoxStack}">
 
                 <Label Text="all aboard the spacecraft carrier" HorizontalOptions="Center" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                
+                <!-- Spacer labels -->
+                <Label Text=""/>
+                <Label Text=""/>
                 <Label Text=""/>
 
                 <StackLayout Orientation="Horizontal"
