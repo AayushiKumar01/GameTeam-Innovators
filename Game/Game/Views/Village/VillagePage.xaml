@@ -20,7 +20,7 @@
                              Spacing="15">
                     <ImageButton
                         Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
+                        Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="CharactersButton_Clicked"/>
 
                     <Button Text="Spaceships"
@@ -33,7 +33,7 @@
                              Spacing="15">
                     <ImageButton
                         Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
+                        Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="MonstersButton_Clicked"/>
 
                     <Button Text="Alien Spacecraft"
@@ -46,7 +46,7 @@
                              Spacing="15">
                     <ImageButton
                         Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
+                        Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="ItemsButton_Clicked"/>
 
                     <Button Text="Items"
@@ -59,7 +59,7 @@
                             Spacing="15">
                     <ImageButton
                         Source="item.png"
-                        Style="{StaticResource ImageLargeStyle}"
+                        Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="ScoresButton_Clicked"/>
 
                     <Button Text="Scores"
