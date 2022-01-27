@@ -53,13 +53,15 @@
             <!-- settings -->
             <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="Center" HorizontalOptions="Center">
 
-                <Label Text="settings" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"/>
+                
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+
                     <Image Source="d20_2.png" Style="{StaticResource ImageMediumStyle}"/>
 
                     <StackLayout  Style="{StaticResource VerticalStack}" VerticalOptions="Center">
 
+                        <Label Text="settings" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"/>
 
                         <!--Database Settings Frame-->
 
