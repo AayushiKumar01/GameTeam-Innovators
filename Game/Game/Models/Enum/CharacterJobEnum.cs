@@ -80,8 +80,8 @@ namespace Game.Models
     public static class CharacterJobEnumHelper
     {
         // <summary>
-        ///  Gets the list of locations a character can use
-        ///  Removes Finger for example, and allows for left and right finger
+        ///  Gets the list of Jobs (Spaceship types) for a character
+        ///  Removes Unknown
         /// </summary>
         public static List<string> GetListMessageCharacterJob
         {
