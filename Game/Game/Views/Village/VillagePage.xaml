@@ -13,7 +13,7 @@
 
             <StackLayout Margin="20" Style="{StaticResource OuterBoxStack}">
 
-                <Label Text="all aboard the spacecraft carrier" HorizontalOptions="Center" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                <Label Text="all aboard the spacecraft carrier" HorizontalOptions="Center" FontSize="Medium" HorizontalTextAlignment="Center" Style="{StaticResource LabelBaseStyle}"/>
                 
                 <!-- Spacer labels -->
                 <Label Text=""/>
