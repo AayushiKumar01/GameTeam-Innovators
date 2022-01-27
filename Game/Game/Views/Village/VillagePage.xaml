@@ -23,10 +23,10 @@
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="CharactersButton_Clicked"/>
 
-                    <Button Text="Spaceships"
+                    <Button Text="spaceships"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        Clicked="CharactersButton_Clicked" />
+                        Clicked="CharactersButton_Clicked" Padding="25,0" WidthRequest="170" HeightRequest="35"/>
                 </StackLayout>
                 
                 <StackLayout Orientation="Horizontal"
@@ -34,12 +34,12 @@
                     <ImageButton
                         Source="item.png"
                         Style="{StaticResource ImageBattleMediumStyle}"
-                        Clicked="MonstersButton_Clicked"/>
+                        Clicked="MonstersButton_Clicked" />
 
-                    <Button Text="Alien Spacecraft"
+                    <Button Text="alien spacecraft"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        Clicked="MonstersButton_Clicked" />
+                        Clicked="MonstersButton_Clicked" Padding="25,0" WidthRequest="170" HeightRequest="35"/>
                 </StackLayout>
                 
                 <StackLayout Orientation="Horizontal"
@@ -49,10 +49,10 @@
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="ItemsButton_Clicked"/>
 
-                    <Button Text="Items"
+                    <Button Text="items"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        Clicked="ItemsButton_Clicked" />
+                        Clicked="ItemsButton_Clicked" Padding="25,0" WidthRequest="170" HeightRequest="35"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"
@@ -62,10 +62,10 @@
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="ScoresButton_Clicked"/>
 
-                    <Button Text="Scores"
+                    <Button Text="scores"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        Clicked="ScoresButton_Clicked" />
+                        Clicked="ScoresButton_Clicked" Padding="25,0" WidthRequest="170" HeightRequest="35"/>
                 </StackLayout>
 
             </StackLayout>
