@@ -7,9 +7,14 @@
 
     <ContentPage.Content>
 
+
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
 
+
             <StackLayout Margin="20" Style="{StaticResource OuterBoxStack}">
+
+                <Label Text="all aboard the spacecraft carrier" HorizontalOptions="Center" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                <Label Text=""/>
 
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
