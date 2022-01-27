@@ -31,8 +31,8 @@
                             Clicked="VillageButton_Clicked"/>
 
                         <Label 
-                            Text="Village"
-                            Style="{StaticResource CenterMessageStyle}"/>
+                            Text="spacecraft carrier"
+                            Style="{StaticResource CenterMessageStyle}" LineBreakMode="WordWrap"/>
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource CardImageTextBox}">
@@ -43,7 +43,7 @@
                             Clicked="DungeonButton_Clicked"/>
 
                         <Label 
-                            Text="Dungeon"
+                            Text="planet 1"
                             Style="{StaticResource CenterMessageStyle}"/>
                     </StackLayout>
 
@@ -55,15 +55,15 @@
                             Clicked="AutobattleButton_Clicked"/>
 
                         <Label 
-                            Text="Auto Battle"
+                            Text="planet 2"
                             Style="{StaticResource CenterMessageStyle}"/>
                     </StackLayout>
 
                 </StackLayout>
 
                 <!-- Spacer labels -->
-                <Label Text="[Game mode title]" HorizontalOptions="Center" FontSize="Large"/>
-                <Label Text="[description of game mode]" HorizontalOptions="Center" />
+                <Label x:Name="GameModeTitle" Text="[game mode title]" HorizontalOptions="Center" FontSize="Large"/>
+                <Label x:Name="GameModeDescription" Text="[description of game mode]" HorizontalOptions="Center" />
 
             </StackLayout>
         </ScrollView>
