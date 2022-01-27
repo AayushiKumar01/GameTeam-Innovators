@@ -17,7 +17,7 @@ namespace Game.Models
         // The head includes, Hats, Helms, Caps, Crowns, Hair Ribbons, Bunny Ears, and anything else that sits on the head
         Head = 10,
 
-        // Things to put around the neck, such as necklass, broaches, scarfs, neck ribbons.  Can have at the same time with Head items ex. Ribbon for Hair, and Ribbon for Neck is OK to have
+        // Things to put around the neck, such as necklace, broaches, scarfs, neck ribbons.  Can have at the same time with Head items ex. Ribbon for Hair, and Ribbon for Neck is OK to have
         Necklass = 12,
 
         // The primary hand used for fighting with a sword or a staff.  
@@ -61,7 +61,7 @@ namespace Game.Models
                     break;
 
                 case ItemLocationEnum.Necklass:
-                    Message = "Necklass";
+                    Message = "Necklace";
                     break;
 
                 case ItemLocationEnum.PrimaryHand:
@@ -183,6 +183,71 @@ namespace Game.Models
                 default:
                     return ItemLocationEnum.Feet;
             }
+        }
+
+        /// <summary>
+        /// Gets the list of Message strings of the locations that an Item can have.
+        /// Does not include the Left and Right Finger 
+        /// </summary>
+        public static List<string> GetListItemMessage
+        {
+            get
+            {
+                var myList = new List<string>();
+                foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+                {
+                    if (item != ItemLocationEnum.Unknown &&
+                        item != ItemLocationEnum.LeftFinger &&
+                        item != ItemLocationEnum.RightFinger
+                    )
+                        myList.Add(item.ToMessage());
+                }
+
+                return myList;
+            }
+        }
+
+        /// <summary>
+        ///  Gets the list of locations a character can use
+        ///  Removes Finger for example, and allows for left and right finger
+        /// </summary>
+        public static List<string> GetListMessageCharacter
+        {
+            get
+            {
+                var myList = new List<string>();
+                foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+                {
+                    if (item != ItemLocationEnum.Unknown &&
+                        item != ItemLocationEnum.Finger
+                    )
+                        myList.Add(item.ToMessage());
+                }
+
+                return myList;
+            }
+        }
+
+        /// <summary>
+        /// Given the Message for an enum
+        /// Look it up and return the enum
+        /// 
+        /// Right Finger => RightFinger
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static ItemLocationEnum ConvertMessageToEnum(string value)
+        {
+            // Get the Message, Determine Which enum has that message, and return that enum.
+            foreach (ItemLocationEnum item in Enum.GetValues(typeof(ItemLocationEnum)))
+            {
+                if (item.ToMessage().Equals(value))
+                {
+                    return item;
+                }
+            }
+            return ItemLocationEnum.Unknown;
         }
     }
 }
