@@ -44,7 +44,7 @@ namespace Game.Models
         public static string ToMessage(this CharacterJobEnum value)
         {
             // Default String
-            var Message = "Player";
+            var Message = "Fighter";
 
             switch (value)
             {
