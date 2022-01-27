@@ -1,4 +1,5 @@
-﻿using Game.GameRules;
+﻿using System.Collections.Generic;
+using Game.GameRules;
 
 namespace Game.Models
 {
@@ -9,6 +10,20 @@ namespace Game.Models
     /// </summary>
     public class CharacterModel : BasePlayerModel<CharacterModel>
     {
+        
+        // Dictionary for tracking Special Abilities per job type
+        static Dictionary < CharacterJobEnum, SpecialAbilityEnum > JobToSpecialAbility = new Dictionary < CharacterJobEnum, SpecialAbilityEnum > ();
+
+        static CharacterModel()
+        {
+            // Initialize job to special ability dictionary the first time we use this class
+            JobToSpecialAbility.Add(CharacterJobEnum.Frigate, SpecialAbilityEnum.Healing);
+            JobToSpecialAbility.Add(CharacterJobEnum.Destroyer, SpecialAbilityEnum.Damage);
+            JobToSpecialAbility.Add(CharacterJobEnum.Battlecruiser, SpecialAbilityEnum.Shield);
+            JobToSpecialAbility.Add(CharacterJobEnum.Corvette, SpecialAbilityEnum.Speed);
+            JobToSpecialAbility.Add(CharacterJobEnum.Fighter, SpecialAbilityEnum.Damage);
+        }
+        
         /// <summary>
         /// Default character
         /// 
@@ -26,8 +41,8 @@ namespace Game.Models
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             SpecialAbility = SpecialAbilityEnum.Unknown;
 
-            // Default to unknown, which is no special job
-            Job = CharacterJobEnum.Unknown;
+            // Default to Fighter in our game
+            Job = CharacterJobEnum.Fighter;
         }
 
         // Special Ability of the Character, default if unknown
