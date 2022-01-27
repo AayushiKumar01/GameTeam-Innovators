@@ -62,8 +62,8 @@
                 </StackLayout>
 
                 <!-- Spacer labels -->
-                <Label x:Name="GameModeTitle" Text="[game mode title]" HorizontalOptions="Center" FontSize="Large"/>
-                <Label x:Name="GameModeDescription" Text="[description of game mode]" HorizontalOptions="Center" />
+                <Label x:Name="GameModeTitle" Text="[game mode title]" HorizontalOptions="Center" FontSize="Large" LineBreakMode="WordWrap"/>
+                <Label x:Name="GameModeDescription" Text="[description of game mode]" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
 
             </StackLayout>
         </ScrollView>
