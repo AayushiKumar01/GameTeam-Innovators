@@ -10,6 +10,16 @@
 
             <StackLayout>
 
+                <Label 
+                    Text="choose your game mode"
+                    Style="{StaticResource CenterMessageStyle}" FontSize="Medium"/>
+
+                <!-- Spacer labels -->
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text=""/>
+
+
                 <StackLayout Orientation="Horizontal">
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
