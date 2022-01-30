@@ -14,6 +14,9 @@ namespace Game.Models
         // Dictionary for tracking Special Abilities per job type
         static Dictionary < CharacterJobEnum, SpecialAbilityEnum > JobToSpecialAbility = new Dictionary < CharacterJobEnum, SpecialAbilityEnum > ();
 
+        /// <summary>
+        /// Static constructor that executes the first time this class is used
+        /// </summary>
         static CharacterModel()
         {
             // Initialize job to special ability dictionary the first time we use this class
