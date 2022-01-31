@@ -19,7 +19,9 @@
             <Label 
                     Text="{Binding Data.Name}" 
                     Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"/>
-            
+
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
