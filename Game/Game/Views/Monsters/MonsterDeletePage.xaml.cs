@@ -62,5 +62,27 @@ namespace Game.Views
             // Add your code here...
             return true;
         }
+
+        /// <summary>
+        /// Delete selected monster
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void DeleteMonster(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, "Delete", viewModel.Data);
+            _ = await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Cancel Monster Deletion and close this page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void CancelMonsterDeletion(object sender, EventArgs e)
+        {
+            _ = await Navigation.PopModalAsync();
+        }
+
     }
 }

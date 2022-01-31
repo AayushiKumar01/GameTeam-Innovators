@@ -35,6 +35,28 @@
                 
                 <Label Text="Are you sure you want to delete this monster?" Style="{StaticResource MessageStyle}"/>
 
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                    <Button 
+                    Text="Yes" 
+                    Clicked="DeleteMonster" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                    </Button>
+
+                    <Button 
+                    Text="No" 
+                    Clicked="CancelMonsterDeletion" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                    </Button>
+
+                </StackLayout>
+                
             </StackLayout>
         </StackLayout>
     </ScrollView>
