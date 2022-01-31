@@ -15,9 +15,7 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
-
-            <ListView x:Name="MonstersListView" 
+             <ListView x:Name="MonstersListView" 
                     ItemsSource="{Binding Dataset}"
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     RefreshCommand="{Binding LoadItemsCommand}"
