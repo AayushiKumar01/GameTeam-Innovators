@@ -11,7 +11,7 @@ namespace Game.Helpers
     {
 
             /// <summary>
-            /// Converts a value to the String
+            /// Converts a value to the string
             /// </summary>
             /// <param name="value"></param>
             /// <param name="targetType"></param>
@@ -28,7 +28,7 @@ namespace Game.Helpers
 
                 if (value is string)
                 {
-                    // Convert String Enum and then Enum to Message
+                    // Convert string Enum and then Enum to Message
                     var myEnum = CharacterJobEnumHelper.ConvertMessageToEnum((string)value);
                     var myReturn = myEnum.ToMessage();
 
@@ -39,7 +39,7 @@ namespace Game.Helpers
             }
 
             /// <summary>
-            /// Converts a String to the Value
+            /// Converts a string to the Value
             /// </summary>
             /// <param name="value"></param>
             /// <param name="targetType"></param>
@@ -56,7 +56,7 @@ namespace Game.Helpers
 
                 if (value is string)
                 {
-                    // Convert the Message String to the Enum
+                    // Convert the Message string to the Enum
                     var myReturn = CharacterJobEnumHelper.ConvertMessageToEnum((string)value);
 
                     return myReturn;

@@ -82,7 +82,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            RangeValue.Text = String.Format("{0}", (int)value);
+            RangeValue.Text = string.Format("{0}", (int)value);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            ValueValue.Text = String.Format("{0}", (int)value);
+            ValueValue.Text = string.Format("{0}", (int)value);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            DamageValue.Text = String.Format("{0}", (int)value);
+            DamageValue.Text = string.Format("{0}", (int)value);
         }
     }
 

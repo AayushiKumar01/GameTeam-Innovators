@@ -147,7 +147,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            AttackValue.Text = String.Format("{0}", (int)value);
+            AttackValue.Text = string.Format("{0}", (int)value);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            DefenseValue.Text = String.Format("{0}", (int)value);
+            DefenseValue.Text = string.Format("{0}", (int)value);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Game.Views
         {
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
-            SpeedValue.Text = String.Format("{0}", (int)value);
+            SpeedValue.Text = string.Format("{0}", (int)value);
         }
 
 
