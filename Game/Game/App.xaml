@@ -29,7 +29,7 @@
             <Color x:Key="PrimaryBackgroundColor">#000000</Color>
             <Color x:Key="SecondaryBackgroundColor">#277290</Color>
             <Color x:Key="TriciaryBackgroundColor">#F2D06B</Color>
-            <Color x:Key="LightBackgroundColor">#efefef</Color>
+            <Color x:Key="LightBackgroundColor">#277290</Color>
 
             <Color x:Key="PrimaryTextColor">#FFFFFF</Color>
             <Color x:Key="SecondaryTextColor">#fbf3cb</Color>
