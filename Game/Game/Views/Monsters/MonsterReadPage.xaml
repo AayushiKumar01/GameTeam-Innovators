@@ -32,7 +32,16 @@
                          />
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-                        
+
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label 
+                                Text="Description : " 
+                                Style="{StaticResource LabelStyle}"/>
+                            <Label 
+                                Text="{Binding Data.Description}" 
+                                Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+
 
                     </StackLayout>
                 </StackLayout>
