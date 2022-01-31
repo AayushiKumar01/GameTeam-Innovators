@@ -26,6 +26,11 @@
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
+                        <Label 
+                                Text="{Binding Data.Name}" 
+                                Style="{StaticResource ValueStyle}"
+                         />
+
                         
 
                     </StackLayout>
