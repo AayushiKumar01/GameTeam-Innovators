@@ -36,6 +36,28 @@
 
                         <Label Text="Create Page" Style="{StaticResource HeaderStyle}"/>
                         
+                        <Grid
+                            RowSpacing="1"
+                            ColumnSpacing="2"
+                            VerticalOptions="Center">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0"
+                                Text="Name *" 
+                                Style="{StaticResource LabelStyle}"/>
+
+                            <Entry Grid.Row="0" Grid.Column="1"
+                                Text="{Binding Data.Name, Mode=TwoWay}" 
+                                Style="{StaticResource EntryStyle}"
+                                   x:Name="CharacterName"/>
+
+                        </Grid>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
