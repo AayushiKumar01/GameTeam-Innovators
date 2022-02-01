@@ -56,8 +56,17 @@
                                 Style="{StaticResource EntryStyle}"
                                    x:Name="MonsterName"/>
 
-                        </Grid>
+                            <Label Grid.Row="1" Grid.Column="0"
+                                Text="Description *" 
+                                Style="{StaticResource LabelStyle}"/>
 
+                            <Entry Grid.Row="1" Grid.Column="1"
+                                Text="{Binding Data.Description, Mode=TwoWay}" 
+                                Style="{StaticResource EntryStyle}"
+                                   x:Name="MonsterDescription"/>
+
+
+                        </Grid>
 
                     </StackLayout>
                 </ScrollView>
