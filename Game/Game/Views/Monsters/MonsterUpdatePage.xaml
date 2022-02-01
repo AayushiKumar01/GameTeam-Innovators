@@ -110,7 +110,27 @@
                                 SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
                                 x:Name="SpaceshipPicker"/>
                         </Grid>
+                        
+                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
 
+                            <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
+
+                            <Label 
+                                    Text="{Binding Data.Attack}" 
+                                    x:Name="AttackValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                            <Slider Maximum="10" 
+                                    Value="{Binding Data.Attack}"
+                                    ValueChanged="Attack_OnSliderValueChanged"
+                                    HorizontalOptions="FillAndExpand"/>
+
+
+
+                        </StackLayout>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
