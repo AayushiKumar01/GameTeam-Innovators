@@ -65,6 +65,15 @@
                                 Style="{StaticResource EntryStyle}"
                                    x:Name="MonsterDescription"/>
 
+                            <Image Grid.Row="2" Grid.Column="0"
+                                Source="{Binding Data.ImageURI}"
+                                Style="{StaticResource ImageSmallStyle}"/>
+
+                            <Entry Grid.Row="2" Grid.Column="1"
+                                Text="{Binding Data.ImageURI}" 
+                                Style="{StaticResource EntryStyle}"/>
+    
+
 
                         </Grid>
 
