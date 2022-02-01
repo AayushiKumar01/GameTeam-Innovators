@@ -58,6 +58,12 @@
                                    x:Name="CharacterName"/>
 
                         </Grid>
+
+                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+
+                        </StackLayout>
+                        
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
