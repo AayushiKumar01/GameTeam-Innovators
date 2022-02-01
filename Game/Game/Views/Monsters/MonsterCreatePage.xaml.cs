@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using Game.GameRules;
 using Xamarin.Forms;
@@ -36,8 +37,14 @@ namespace Game.Views
 
             this.ViewModel.Title = "Create Alien Craft";
 
+
             // Load the values for the Difficulty into the Picker
-            // Reuse LevelTableHelper
+            foreach (string diff in DifficultyEnumHelper.GetListAll)
+            {
+                DifficultyPicker.Items.Add(diff);
+            }
+            
+            // Load the values for the Level into the Picker
             for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
             {
                 LevelPicker.Items.Add(i.ToString());
@@ -121,6 +128,17 @@ namespace Game.Views
             return true;
         }
         
+        private void Difficulty_Changed(object sender, EventArgs e)
+        {
+            // Find the Difficulty enum
+            string stringValue = "Unknown";
+            if (DifficultyPicker.SelectedItem != null)
+            {
+                // Get the value if it exists, otherwise leave as 'Unknown'
+                stringValue = DifficultyPicker.SelectedItem.ToString();
+            }
+            ViewModel.Data.Difficulty = DifficultyEnumHelper.ConvertStringToEnum(stringValue);
+        }
         
         private void Level_Changed(object sender, EventArgs e)
         {
@@ -130,7 +148,6 @@ namespace Game.Views
             ManageHealth();
         }
         
-
         /// <summary>
         /// Change the Level Picker
         /// </summary>
@@ -224,5 +241,6 @@ namespace Game.Views
 
             return true;
         }
+        
     }
 }
