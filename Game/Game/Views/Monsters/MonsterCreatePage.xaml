@@ -137,24 +137,24 @@
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
 
-                                <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
 
-                                <Label 
+                            <Label 
                                     Text="{Binding Data.Attack}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
                                     HorizontalOptions="End"
                                     HorizontalTextAlignment="End"/>
-                                
-                                <Slider Maximum="10" 
-                                        Value="{Binding Data.Attack}"
-                                        ValueChanged="Attack_OnSliderValueChanged"
-                                        HorizontalOptions="FillAndExpand"/>
-                                
-                                <Label Text="Defense" Style="{StaticResource LabelStyle}"/>
 
-                                <Label 
+                            <Slider Maximum="10" 
+                                    Value="{Binding Data.Attack}"
+                                    ValueChanged="Attack_OnSliderValueChanged"
+                                    HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="Defense" Style="{StaticResource LabelStyle}"/>
+
+                            <Label 
                                     Text="{Binding Data.Defense}" 
                                     x:Name="DefenseValue"
                                     Style="{StaticResource ValueStyle}"
@@ -162,12 +162,36 @@
                                     HorizontalOptions="End"
                                     HorizontalTextAlignment="End"/>
 
-                                <Slider Maximum="10"
-                                        Value="{Binding Data.Defense}"
-                                        ValueChanged="Defense_OnSliderValueChanged"
-                                        HorizontalOptions="FillAndExpand"/>
-                            </StackLayout>
-                        
+                            <Slider Maximum="10"
+                                    Value="{Binding Data.Defense}"
+                                    ValueChanged="Defense_OnSliderValueChanged"
+                                    HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="Speed" Style="{StaticResource LabelStyle}"/>
+
+                            <Label 
+                                    Text="{Binding Data.Speed}" 
+                                    x:Name="SpeedValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                            <Slider Maximum="10"
+                                    Value="{Binding Data.Speed}"
+                                    ValueChanged="Speed_OnSliderValueChanged"
+                                    HorizontalOptions="FillAndExpand"/>
+
+                        </StackLayout>
+
+                        <FlexLayout 
+                        Padding="5"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceAround"
+                        AlignContent="SpaceAround"
+                        x:Name="ItemBox">
+                        </FlexLayout>
+
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
