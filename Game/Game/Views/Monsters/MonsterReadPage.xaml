@@ -22,9 +22,9 @@
                     AbsoluteLayout.LayoutFlags="All">
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}">
+                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="CenterAndExpand">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Label 
                                 Text="{Binding Data.Name}" 
