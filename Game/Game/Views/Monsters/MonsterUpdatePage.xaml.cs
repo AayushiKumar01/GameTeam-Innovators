@@ -95,33 +95,47 @@ namespace Game.Views
             // Change the Level
             ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
 
+            ManageHealth();
+        }
+
+        /// <summary>
+        /// Change the Level Picker
+        /// </summary>
+        public void ManageHealth()
+        {
+            // Roll for new HP
+            ViewModel.Data.MaxHealth = RandomPlayerHelper.GetHealth(ViewModel.Data.Level);
+
+            // Show the Result
+            MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
         }
 
 
-        ///// <summary>
-        ///// Randomize the Monster, keep the level the same
-        ///// </summary>
-        ///// <returns></returns>
-        //public bool RandomizeMonster()
-        //{
-        //    // Randomize Name
-        //    ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
-        //    ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
+        /// <summary>
+        /// Randomize the Monster, keep the level the same
+        /// </summary>
+        /// <returns></returns>
+        public bool RandomizeMonster()
+        {
+            // Randomize Name
+            ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
+            ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
 
-        //    // Randomize the Attributes
-        //    ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
+            // Randomize the Attributes
+            ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
+            ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
+            ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
 
-        //    ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
+            ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
 
-        //    ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
+            ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
 
-        //    ViewModel.Data.UniqueItem = RandomPlayerHelper.GetMonsterUniqueItem();
+            ViewModel.Data.UniqueItem = RandomPlayerHelper.GetMonsterUniqueItem();
 
-        //    _ = UpdatePageBindingContext();
+            _ = UpdatePageBindingContext();
 
-        //    return true;
-        //}
+            return true;
+        }
+
     }
 }
