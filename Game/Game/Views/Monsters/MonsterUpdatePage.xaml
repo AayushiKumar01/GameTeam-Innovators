@@ -65,13 +65,22 @@
                                 Style="{StaticResource EntryStyle}"
                                    x:Name="MonsterDescription"/>
 
-                            <Image Grid.Row="2" Grid.Column="0"
+                            <Label Grid.Row="2" Grid.Column="0"
+                                Text="Image" 
+                                Style="{StaticResource LabelStyle}"/>
+
+                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+
+                                <Image 
                                 Source="{Binding Data.ImageURI}"
                                 Style="{StaticResource ImageSmallStyle}"/>
 
-                            <Entry Grid.Row="2" Grid.Column="1"
+                                <Entry 
                                 Text="{Binding Data.ImageURI}" 
                                 Style="{StaticResource EntryStyle}"/>
+
+                            </StackLayout>
+
 
                             <Label Grid.Row="3" Grid.Column="0"
                                    Text="Level" 
