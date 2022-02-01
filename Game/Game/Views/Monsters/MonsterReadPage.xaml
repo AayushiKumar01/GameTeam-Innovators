@@ -29,7 +29,7 @@
                         <Label 
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource ValueStyle}"
-                         />
+                                HorizontalOptions="CenterAndExpand"/>
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
