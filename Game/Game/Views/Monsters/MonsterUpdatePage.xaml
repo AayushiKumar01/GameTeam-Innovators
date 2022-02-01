@@ -105,7 +105,7 @@
                                 Text="Spaceship Type" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <Picker Grid.Row="6" Grid.Column="1"
+                            <Picker Grid.Row="5" Grid.Column="1"
                                 ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
                                 SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
                                 x:Name="SpaceshipPicker"/>
