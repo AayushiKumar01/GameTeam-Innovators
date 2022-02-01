@@ -34,7 +34,7 @@
 
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
-                        
+                        <Label x:Name="ErrorMessage" Text="" Style="{StaticResource HeaderStyle}" HorizontalTextAlignment="Center"/>
                         <Grid
                             RowSpacing="1"
                             ColumnSpacing="2"
@@ -54,7 +54,7 @@
                             <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}" 
                                 Style="{StaticResource EntryStyle}"
-                                   x:Name="CharacterName"/>
+                                   x:Name="MonsterName"/>
 
                         </Grid>
 
@@ -87,7 +87,7 @@
                             <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
                                 Style="{StaticResource EntryStyle}"
-                                   x:Name="CharacterDescription"/>
+                                   x:Name="MonsterDescription"/>
 
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Image" 
