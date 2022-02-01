@@ -105,6 +105,16 @@
                                     Style="{StaticResource EntryStyle}"/>
 
                             </StackLayout>
+                            
+                            <Label Grid.Row="3" Grid.Column="0"
+                                   Text="Level" 
+                                   Style="{StaticResource LabelStyle}"/>
+
+                            <Picker Grid.Row="3" Grid.Column="1"
+                                    SelectedItem="{Binding SelectedItemProperty}" 
+                                    SelectedIndexChanged="Level_Changed"
+                                    x:Name="LevelPicker"/>
+                            
                         </Grid>
                     </StackLayout>
                 </ScrollView>
