@@ -68,7 +68,28 @@
                                 Source="d10.png"
                                 Clicked="RollDice_Clicked" />
                         </StackLayout>
-                        
+                        <Grid
+                            RowSpacing="1"
+                            ColumnSpacing="2"
+                            VerticalOptions="Center">
+                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Text="Description *" 
+                                   Style="{StaticResource LabelStyle}"/>
+
+                            <Entry Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Data.Description, Mode=TwoWay}" 
+                                   Style="{StaticResource EntryStyle}"
+                                   x:Name="CharacterDescription"/>
+                            
+                        </Grid>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
