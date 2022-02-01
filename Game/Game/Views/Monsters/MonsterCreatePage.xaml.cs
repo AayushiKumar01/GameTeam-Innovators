@@ -34,8 +34,16 @@ namespace Game.Views
             data.Data = new MonsterModel();
             this.ViewModel = data;
 
-            this.ViewModel.Title = "Create";
+            this.ViewModel.Title = "Create Alien Craft";
 
+            // Load the values for the Difficulty into the Picker
+            // Reuse LevelTableHelper
+            for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
+            {
+                LevelPicker.Items.Add(i.ToString());
+            }
+
+            this.ViewModel.Data.Level = 1;
             _ = UpdatePageBindingContext();
         }
 
