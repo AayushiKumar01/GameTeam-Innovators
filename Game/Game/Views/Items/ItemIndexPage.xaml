@@ -14,14 +14,7 @@
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Filter:"/>
-                <Entry Text="{Binding Data.Filter}" 
-                       Style="{StaticResource EntryStyle}"/>
-                <Button Text="Clear" />
-            </StackLayout>
-                
+              
 
             <ListView x:Name="ItemsListView"
                     ItemsSource="{Binding Dataset}"
