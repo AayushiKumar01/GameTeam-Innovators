@@ -162,6 +162,18 @@ namespace Game.Views
         }
        
         /// <summary>
+        /// Catch the change to the Slider for Defense
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Defense_OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            double value = e.NewValue;
+            value = Math.Round(value, MidpointRounding.AwayFromZero);
+            DefenseValue.Text = string.Format("{0}", (int)value);
+        }
+        
+        /// <summary>
         /// Setup the Dice Animation
         /// </summary>
         /// <param name="sender"></param>
