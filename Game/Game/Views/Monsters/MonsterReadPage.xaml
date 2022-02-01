@@ -42,7 +42,16 @@
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
 
-
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Level : " 
+                                Style="{StaticResource LabelStyle}"/>
+                            <Label 
+                                Text="{Binding Data.Level}" 
+                                Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+                        
+                        
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
