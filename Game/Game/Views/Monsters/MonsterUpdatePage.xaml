@@ -18,6 +18,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:CharacterJobEnumConverter x:Key="CharacterJobEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -83,13 +84,13 @@
 
 
                             <Label Grid.Row="3" Grid.Column="0"
-                                   Text="Level" 
-                                   Style="{StaticResource LabelStyle}"/>
+                                Text="Level" 
+                                Style="{StaticResource LabelStyle}"/>
 
                             <Picker Grid.Row="3" Grid.Column="1"
-                                    SelectedItem="{Binding SelectedItemProperty}" 
-                                    SelectedIndexChanged="Level_Changed"
-                                    x:Name="LevelPicker"/>
+                                SelectedItem="{Binding SelectedItemProperty}" 
+                                SelectedIndexChanged="Level_Changed"
+                                x:Name="LevelPicker"/>
 
                             <Label Grid.Row="4" Grid.Column="0"
                                 Text="Max Health" 
@@ -100,6 +101,14 @@
                                 Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
                                 Style="{StaticResource ValueStyle}"/>
 
+                            <Label Grid.Row="5" Grid.Column="0"
+                                Text="Spaceship Type" 
+                                Style="{StaticResource LabelStyle}"/>
+
+                            <Picker Grid.Row="6" Grid.Column="1"
+                                ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
+                                SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
+                                x:Name="SpaceshipPicker"/>
                         </Grid>
 
                     </StackLayout>
