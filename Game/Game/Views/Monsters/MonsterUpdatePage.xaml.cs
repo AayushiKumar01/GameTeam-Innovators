@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
-
+using Game.GameRules;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using Game.ViewModels;
 using Game.Models;
+using Game.ViewModels;
 
 namespace Game.Views
 {
@@ -35,6 +35,12 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Update " + data.Title;
+
+            for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
+            {
+                LevelPicker.Items.Add(i.ToString());
+            }
+
 
             _ = UpdatePageBindingContext();
         }
@@ -84,6 +90,13 @@ namespace Game.Views
         {
             _ = await Navigation.PopModalAsync();
         }
+        private void Level_Changed(object sender, EventArgs e)
+        {
+            // Change the Level
+            ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
+
+        }
+
 
         ///// <summary>
         ///// Randomize the Monster, keep the level the same
