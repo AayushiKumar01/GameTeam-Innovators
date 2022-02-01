@@ -62,6 +62,11 @@
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
+                            <ImageButton 
+                                x:Name="RollDice"
+                                Style="{StaticResource ImageLargeStyle}"
+                                Source="d10.png"
+                                Clicked="RollDice_Clicked" />
                         </StackLayout>
                         
                     </StackLayout>
