@@ -16,6 +16,8 @@ namespace Game.Models
         // Fighters hit hard and have fight abilities
         Fighter = 10,
 
+        Cleric = 11,
+
         // Corvettes defend well and have buff abilities
         Corvette = 12,
 
@@ -50,6 +52,10 @@ namespace Game.Models
             {
                 case CharacterJobEnum.Fighter:
                     Message = "Fighter";
+                    break;
+
+                case CharacterJobEnum.Cleric:
+                    Message = "Cleric";
                     break;
 
                 case CharacterJobEnum.Corvette:
