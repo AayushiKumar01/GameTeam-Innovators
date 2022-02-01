@@ -31,7 +31,7 @@
                                 Style="{StaticResource ValueStyle}"
                                 HorizontalOptions="CenterAndExpand"/>
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Label 
