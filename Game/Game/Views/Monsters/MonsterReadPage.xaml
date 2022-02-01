@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local_helpers="clr-namespace:Game.Helpers"
              mc:Ignorable="d"
              x:Class="Game.Views.MonsterReadPage"
              Title="{Binding Title}">
@@ -11,6 +11,13 @@
         <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:CharacterJobEnumConverter x:Key="CharacterJobEnumConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <AbsoluteLayout
         HorizontalOptions="FillAndExpand"
@@ -50,7 +57,15 @@
                                 Text="{Binding Data.Level}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
-                        
+
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Spaceship Type : " 
+                                Style="{StaticResource LabelStyle}"/>
+                            <Label 
+                                Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
+                                Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
                         
                     </StackLayout>
                 </StackLayout>
