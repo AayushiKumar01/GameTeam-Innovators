@@ -75,13 +75,7 @@
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
 
-            <Label 
-                Text="Items Dropped:"
-                Style="{StaticResource LabelStyle}"/>
-            <Label 
-                Text="{Binding Data.ItemsDroppedList}"
-                Style="{StaticResource ValueStyle}"/>
-
+           
         </StackLayout>
     </ScrollView>
 </ContentPage>
