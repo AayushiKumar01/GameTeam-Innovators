@@ -13,7 +13,7 @@
     </ContentPage.ToolbarItems>
 
 
-    <ScrollView>
+    <ScrollView HorizontalOptions="CenterAndExpand">
         <StackLayout Style="{StaticResource OuterBoxStack}"
             Spacing="10">
 
