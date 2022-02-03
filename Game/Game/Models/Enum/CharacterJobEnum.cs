@@ -96,7 +96,8 @@ namespace Game.Models
                 var myList = new List<string>();
                 foreach (CharacterJobEnum job in Enum.GetValues(typeof(CharacterJobEnum)))
                 {
-                    if (job != CharacterJobEnum.Unknown)
+                    if (job != CharacterJobEnum.Unknown
+                        && job != CharacterJobEnum.Cleric)
                         myList.Add(job.ToMessage());
                 }
 
