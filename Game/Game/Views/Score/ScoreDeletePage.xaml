@@ -71,7 +71,7 @@
                 HorizontalOptions="Center" 
                 Padding="20">
 
-                <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
+                <Label Text="Are you sure you want to delete this?" Style="{StaticResource MessageStyle}"/>
 
                 <Button 
                     Text="Yes" 
