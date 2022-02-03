@@ -75,14 +75,6 @@
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
 
-            
-            <Label 
-                Text="Monsters Killed:"
-                Style="{StaticResource LabelStyle}"/>
-            <Label 
-                Text="{Binding Data.MonstersKilledList}" 
-                Style="{StaticResource ValueStyle}"/>
-
             <Label 
                 Text="Items Dropped:"
                 Style="{StaticResource LabelStyle}"/>
