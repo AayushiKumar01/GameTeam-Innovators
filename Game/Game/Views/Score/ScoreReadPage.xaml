@@ -77,13 +77,6 @@
 
             
             <Label 
-                Text="Characters at Death:"
-                Style="{StaticResource LabelStyle}"/>
-            <Label 
-                Text="{Binding Data.CharacterAtDeathList}" 
-                Style="{StaticResource ValueStyle}"/>
-
-            <Label 
                 Text="Monsters Killed:"
                 Style="{StaticResource LabelStyle}"/>
             <Label 
