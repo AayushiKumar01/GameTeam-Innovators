@@ -118,6 +118,9 @@ namespace Game.Views
             // Randomize Name
             ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
             ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
+            
+            //Randomize the Job (Spaceship Type)
+            ViewModel.Data.Job = RandomPlayerHelper.GetCharacterJob();
 
             // Randomize the Attributes
             ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
