@@ -139,6 +139,26 @@ namespace Game.GameRules
         }
 
         /// <summary>
+        /// Returns a random character job
+        /// </summary>
+        /// <returns></returns>
+        public static CharacterJobEnum GetCharacterJob()
+        {
+            List<CharacterJobEnum> JobList = new List<CharacterJobEnum>();
+
+            foreach (CharacterJobEnum job in Enum.GetValues(typeof(CharacterJobEnum)))
+            {
+                if (job != CharacterJobEnum.Unknown
+                    && job != CharacterJobEnum.Cleric)
+                    JobList.Add(job);
+            }
+
+            var result = JobList.ElementAt(DiceHelper.RollDice(1, JobList.Count()) - 1);
+
+            return result;
+        }
+
+        /// <summary>
         /// Get Random Ability Number
         /// </summary>
         /// <returns></returns>

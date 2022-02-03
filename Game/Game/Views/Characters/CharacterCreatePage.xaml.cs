@@ -360,6 +360,9 @@ namespace Game.Views
             ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
             ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
 
+            //Randomize the Job (Spaceship Type)
+            ViewModel.Data.Job = RandomPlayerHelper.GetCharacterJob();
+
             // Randomize an Item for Location
             ViewModel.Data.Head = RandomPlayerHelper.GetItem(ItemLocationEnum.Head);
             ViewModel.Data.Necklass = RandomPlayerHelper.GetItem(ItemLocationEnum.Necklass);
