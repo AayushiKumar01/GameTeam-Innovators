@@ -35,6 +35,7 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
 
+                        <Label x:Name="ErrorMessage" Text="" Style="{StaticResource HeaderStyle}" HorizontalTextAlignment="Center"/>
 
                         <Grid
                             RowSpacing="1"
