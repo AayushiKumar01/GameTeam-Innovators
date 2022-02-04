@@ -39,7 +39,7 @@ namespace Game.Views
 
 
             // Load the values for the Difficulty into the Picker
-            foreach (string diff in DifficultyEnumHelper.GetListAll)
+            foreach (string diff in DifficultyEnumHelper.GetListMonster)
             {
                 DifficultyPicker.Items.Add(diff);
             }
