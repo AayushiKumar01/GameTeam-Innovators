@@ -20,7 +20,7 @@
     </ContentPage.Resources>
 
     <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
+        HorizontalOptions="CenterAndExpand"
         VerticalOptions="FillAndExpand"
         >
 
