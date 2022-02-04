@@ -66,7 +66,16 @@
                                 Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
-                        
+
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Difficulty : " 
+                                Style="{StaticResource LabelStyle}"/>
+                            <Label 
+                                Text="{Binding Data.Difficulty}" 
+                                Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
