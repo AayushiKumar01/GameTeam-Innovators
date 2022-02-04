@@ -36,21 +36,8 @@ namespace Game.Views
             this.ViewModel = data;
 
             this.ViewModel.Title = "Create Alien Craft";
-
-
-            // Load the values for the Difficulty into the Picker
-            foreach (string diff in DifficultyEnumHelper.GetListMonster)
-            {
-                DifficultyPicker.Items.Add(diff);
-            }
             
-            // Load the values for the Level into the Picker
-            for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
-            {
-                LevelPicker.Items.Add(i.ToString());
-            }
-
-            this.ViewModel.Data.Level = 1;
+            this.ViewModel.Data.Difficulty = DifficultyEnum.Unknown;
             _ = UpdatePageBindingContext();
         }
 
@@ -60,8 +47,6 @@ namespace Game.Views
         /// <returns></returns>
         public bool UpdatePageBindingContext()
         {
-            // Temp store off the Level
-            var level = this.ViewModel.Data.Level;
 
             // Temp store off the difficulty
             var difficulty = this.ViewModel.Data.Difficulty;
@@ -71,11 +56,7 @@ namespace Game.Views
             BindingContext = this.ViewModel;
 
             ViewModel.Data.Difficulty = difficulty;
-
-            // This resets the Picker to -1 index, need to reset it back
-            ViewModel.Data.Level = level;
-            LevelPicker.SelectedIndex = ViewModel.Data.Level - 1;
-
+            
             return true;
         }
 
@@ -157,25 +138,6 @@ namespace Game.Views
             ViewModel.Data.Difficulty = DifficultyEnumHelper.ConvertStringToEnum(stringValue);
         }
         
-        private void Level_Changed(object sender, EventArgs e)
-        {
-            // Change the Level
-            ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
-
-            ManageHealth();
-        }
-        
-        /// <summary>
-        /// Change the Level Picker
-        /// </summary>
-        public void ManageHealth()
-        {
-            // Roll for new HP
-            ViewModel.Data.MaxHealth = RandomPlayerHelper.GetHealth(ViewModel.Data.Level);
-
-            // Show the Result
-            MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
-        }
         
         /// <summary>
         /// Randomize Monster Values and Items

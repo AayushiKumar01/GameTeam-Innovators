@@ -1,0 +1,68 @@
+﻿using Game.Models;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using Xamarin.Forms;
+
+namespace Game.Helpers
+{
+    public class DifficultyEnumConverter: IValueConverter
+    {
+
+            /// <summary>
+            /// Converts a value to the string
+            /// </summary>
+            /// <param name="value"></param>
+            /// <param name="targetType"></param>
+            /// <param name="parameter"></param>
+            /// <param name="culture"></param>
+            /// <returns></returns>
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                if (value is Enum)
+                {
+                    //return (int)value;
+                    return ((DifficultyEnum)value).ToMessage();
+                }
+
+                if (value is string)
+                {
+                    // Convert string Enum and then Enum to Message
+                    var myEnum = DifficultyEnumHelper.ConvertMessageToEnum((string)value);
+                    var myReturn = myEnum.ToMessage();
+
+                    return myReturn;
+                }
+
+                return 0;
+            }
+
+            /// <summary>
+            /// Converts a string to the Value
+            /// </summary>
+            /// <param name="value"></param>
+            /// <param name="targetType"></param>
+            /// <param name="parameter"></param>
+            /// <param name="culture"></param>
+            /// <returns></returns>
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                if (value is int)
+                {
+                    var myReturn = Enum.ToObject(targetType, value);
+                    return ((DifficultyEnum)myReturn).ToMessage();
+                }
+
+                if (value is string)
+                {
+                    // Convert the Message string to the Enum
+                    var myReturn = DifficultyEnumHelper.ConvertMessageToEnum((string)value);
+
+                    return myReturn;
+                }
+                return 0;
+            }
+        
+    }
+}

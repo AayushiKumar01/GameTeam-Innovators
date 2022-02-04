@@ -162,5 +162,27 @@ namespace Game.Models
         {
             return (DifficultyEnum)Enum.Parse(typeof(DifficultyEnum), value);
         }
+
+        /// <summary>
+        /// Given the Message for an enum
+        /// Look it up and return the enum
+        /// 
+        /// 'Easy' => Easy
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static DifficultyEnum ConvertMessageToEnum(string value)
+        {
+            // Get the Message, Determine Which enum has that message, and return that enum.
+            foreach (DifficultyEnum difficulty in Enum.GetValues(typeof(DifficultyEnum)))
+            {
+                if (difficulty.ToMessage().Equals(value))
+                {
+                    return difficulty;
+                }
+            }
+            return DifficultyEnum.Unknown;
+        }
     }
 }
