@@ -67,7 +67,7 @@
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
-                    Text="Number of Turns:"  
+                    Text="Length:"  
                     Style="{StaticResource LabelStyle}"/>
 
                 <Label 
