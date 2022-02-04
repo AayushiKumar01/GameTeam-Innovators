@@ -94,18 +94,6 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Change the Level Picker
-        /// </summary>
-        public void ManageHealth()
-        {
-            // Roll for new HP
-            ViewModel.Data.MaxHealth = RandomPlayerHelper.GetHealth(ViewModel.Data.Level);
-
-            // Show the Result
-            MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
-        }
-
-        /// <summary>
         /// Catch the change to the Slider for Attack
         /// </summary>
         /// <param name="sender"></param>
@@ -139,32 +127,6 @@ namespace Game.Views
             double value = e.NewValue;
             value = Math.Round(value, MidpointRounding.AwayFromZero);
             SpeedValue.Text = string.Format("{0}", (int)value);
-        }
-
-        /// <summary>
-        /// Randomize the Monster, keep the level the same
-        /// </summary>
-        /// <returns></returns>
-        public bool RandomizeMonster()
-        {
-            // Randomize Name
-            ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
-            ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
-
-            // Randomize the Attributes
-            ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
-            ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
-            ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
-
-            ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
-
-            ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
-
-            ViewModel.Data.UniqueItem = RandomPlayerHelper.GetMonsterUniqueItem();
-
-            _ = UpdatePageBindingContext();
-
-            return true;
         }
 
     }
