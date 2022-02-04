@@ -29,6 +29,7 @@ namespace Game.Models
 
             // Default to unknown, which is no special job
             Job = CharacterJobEnum.Fighter;
+            Level = 1;
         }
 
         /// <summary>

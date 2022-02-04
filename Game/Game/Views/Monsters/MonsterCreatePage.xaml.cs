@@ -60,6 +60,9 @@ namespace Game.Views
         /// <returns></returns>
         public bool UpdatePageBindingContext()
         {
+            // Temp store off the Level
+            var level = this.ViewModel.Data.Level;
+
             // Temp store off the difficulty
             var difficulty = this.ViewModel.Data.Difficulty;
 
@@ -68,6 +71,10 @@ namespace Game.Views
             BindingContext = this.ViewModel;
 
             ViewModel.Data.Difficulty = difficulty;
+
+            // This resets the Picker to -1 index, need to reset it back
+            ViewModel.Data.Level = level;
+            LevelPicker.SelectedIndex = ViewModel.Data.Level - 1;
 
             return true;
         }
