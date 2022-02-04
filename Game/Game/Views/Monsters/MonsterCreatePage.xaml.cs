@@ -36,8 +36,7 @@ namespace Game.Views
             this.ViewModel = data;
 
             this.ViewModel.Title = "Create Alien Craft";
-            
-            this.ViewModel.Data.Difficulty = DifficultyEnum.Unknown;
+
             _ = UpdatePageBindingContext();
         }
 
