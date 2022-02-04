@@ -22,7 +22,7 @@
                 <Label Text=""/>
                 <Label Text=""/>
 
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <ImageButton
