@@ -38,12 +38,6 @@ namespace Game.Views
             this.ViewModel.Title = "Create Alien Craft";
 
 
-            // Load the values for the Difficulty into the Picker
-            foreach (string diff in DifficultyEnumHelper.GetListMonster)
-            {
-                DifficultyPicker.Items.Add(diff);
-            }
-            
             // Load the values for the Level into the Picker
             for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
             {
@@ -51,6 +45,7 @@ namespace Game.Views
             }
 
             this.ViewModel.Data.Level = 1;
+            this.ViewModel.Data.Difficulty = DifficultyEnum.Unknown;
             _ = UpdatePageBindingContext();
         }
 

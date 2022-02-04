@@ -18,6 +18,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:DifficultyEnumConverter x:Key="DifficultyEnumConverter"/>
             <local_helpers:CharacterJobEnumConverter x:Key="CharacterJobEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -109,8 +110,10 @@
                                    Text="Difficulty" 
                                    Style="{StaticResource LabelStyle}"/>
 
+                           
                             <Picker Grid.Row="3" Grid.Column="1"
-                                    SelectedItem="{Binding SelectedItemProperty}" 
+                                    ItemsSource="{x:Static local_enum:DifficultyEnumHelper.GetListAll}" 
+                                    SelectedItem="{Binding Data.Difficulty, Converter={StaticResource DifficultyEnumConverter}, Mode=TwoWay}"
                                     SelectedIndexChanged="Difficulty_Changed"
                                     x:Name="DifficultyPicker"/>
                             
