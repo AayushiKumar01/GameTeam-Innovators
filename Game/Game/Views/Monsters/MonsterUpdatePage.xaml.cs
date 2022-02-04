@@ -36,11 +36,6 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
-            for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
-            {
-                LevelPicker.Items.Add(i.ToString());
-            }
-
 
             _ = UpdatePageBindingContext();
         }
@@ -96,13 +91,6 @@ namespace Game.Views
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
             _ = await Navigation.PopModalAsync();
-        }
-        private void Level_Changed(object sender, EventArgs e)
-        {
-            // Change the Level
-            ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
-
-            ManageHealth();
         }
 
         /// <summary>
