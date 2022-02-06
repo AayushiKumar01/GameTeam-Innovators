@@ -22,7 +22,7 @@
                 Dark
                 -->
 
-            <Color x:Key="PageBackgroundColor">#000000</Color>
+            <Color x:Key="PageBackgroundColor">#04173d</Color>
             <Color x:Key="ViewBackgroundColor">#277290</Color>
             <Color x:Key="NavigationBarColor">#81b9d0</Color>
 
