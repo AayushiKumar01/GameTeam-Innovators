@@ -8,7 +8,7 @@
     <ContentPage.Content>
 
 
-        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
+        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10" HorizontalOptions="Center">
 
 
             <StackLayout Margin="20" Style="{StaticResource OuterBoxStack}">
