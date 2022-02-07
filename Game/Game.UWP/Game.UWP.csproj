@@ -111,6 +111,12 @@
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="ship1.png" />
+    <Content Include="ship2.png" />
+    <Content Include="ship3.png" />
+    <Content Include="ship4.png" />
+    <Content Include="ship5.png" />
+    <Content Include="ship6.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
