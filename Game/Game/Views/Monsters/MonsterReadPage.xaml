@@ -31,8 +31,6 @@
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="CenterAndExpand">
 
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-
                         <Label 
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource ValueStyle}"
@@ -75,9 +73,8 @@
                                 Text="{Binding Data.Difficulty}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
-
-                    </StackLayout>
-                </StackLayout>
+                    
+                 </StackLayout>
             </ScrollView>
         </StackLayout>
 
