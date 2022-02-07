@@ -84,15 +84,6 @@
 
                             </StackLayout>
 
-                            <Label Grid.Row="3" Grid.Column="0"
-                                Text="Max Health" 
-                                Style="{StaticResource LabelStyle}"/>
-
-                            <Label Grid.Row="3" Grid.Column="1"
-                                x:Name="MaxHealthValue"
-                                Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
-                                Style="{StaticResource ValueStyle}"/>
-
                             <Label Grid.Row="4" Grid.Column="0"
                                    Text="Difficulty" 
                                    Style="{StaticResource LabelStyle}"/>
