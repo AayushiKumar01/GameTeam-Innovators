@@ -109,7 +109,7 @@ namespace UnitTests.Models
 
             Assert.AreEqual(DifficultyEnum.Unknown, result.Difficulty);
 
-            Assert.AreEqual(CharacterJobEnum.Unknown, result.Job);
+            Assert.AreEqual(CharacterJobEnum.Fighter, result.Job);
         }
 
         [Test]
