@@ -392,37 +392,37 @@ namespace Game.GameRules
                 new MonsterModel {
                     Name = "Green Troll",
                     Description = "Big and Ugly",
-                    ImageURI = "troll1.png",
+                    ImageURI = "monsterdrafts1.png",
                 },
 
                 new MonsterModel {
                     Name = "Old Troll",
                     Description = "Old and Powerfull",
-                    ImageURI = "troll2.png",
+                    ImageURI = "monsterdrafts2.png",
                 },
 
                 new MonsterModel {
                     Name = "Dainty Troll",
                     Description = "and fast",
-                    ImageURI = "troll3.png",
+                    ImageURI = "monsterdrafts3.png",
                 },
 
                 new MonsterModel {
                     Name = "Troll's Troll",
                     Description = "wozer",
-                    ImageURI = "troll4.png",
+                    ImageURI = "monsterdrafts4.png",
                 },
 
                 new MonsterModel {
                     Name = "Warrior Troll",
                     Description = "with sword",
-                    ImageURI = "troll5.png",
+                    ImageURI = "monsterdrafts5.png",
                 },
 
                 new MonsterModel {
                     Name = "Ax Troll",
                     Description = "with Hat and Ax",
-                    ImageURI = "troll6.png",
+                    ImageURI = "monsterdrafts6.png",
                 },
             };
 
