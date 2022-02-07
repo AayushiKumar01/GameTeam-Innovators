@@ -31,17 +31,18 @@
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="CenterAndExpand">
 
-                        <Label 
-                                Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="CenterAndExpand"/>
+                    <Label 
+                        Text="{Binding Data.Name}" 
+                        Style="{StaticResource ValueStyle}"
+                        HorizontalOptions="CenterAndExpand"/>
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                     <Grid
                     RowSpacing="1"
                     ColumnSpacing="1"
-                    VerticalOptions="Center">
+                    VerticalOptions="Center"
+                    Padding="15">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -79,6 +80,42 @@
                                     Style="{StaticResource ValueStyle}"/>
 
                     </Grid>
+
+                    <Frame OutlineColor="#F2D06B" Padding="1">
+                        <Grid ColumnSpacing="1"
+                              RowSpacing="1"
+                              BackgroundColor="Black">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0"
+                                   Text="Attack : "
+                                   Style="{StaticResource GridLabelStyle}"/>
+                            <Label Grid.Row="0" Grid.Column="1"
+                                   Text="{Binding Data.Attack}"
+                                   Style="{StaticResource GridValueStyle}"/>
+
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Text="Defense : "
+                                   Style="{StaticResource GridLabelStyle}"/>
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Data.Defense}"
+                                   Style="{StaticResource GridValueStyle}"/>
+
+                            <Label Grid.Row="2" Grid.Column="0"
+                                   Text="Speed : "
+                                   Style="{StaticResource GridLabelStyle}"/>
+                            <Label Grid.Row="2" Grid.Column="1"
+                                   Text="{Binding Data.Speed}"
+                                   Style="{StaticResource GridValueStyle}"/>
+
+                        </Grid>
+                    </Frame>
+                           
 
                 </StackLayout>
             </ScrollView>
