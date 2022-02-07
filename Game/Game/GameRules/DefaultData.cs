@@ -304,7 +304,7 @@ namespace Game.GameRules
                     Description = "Archer Wannabe",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "elf1.png",
+                    ImageURI = "ship1.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -319,7 +319,7 @@ namespace Game.GameRules
                     Description = "Hawk eye",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "elf2.png",
+                    ImageURI = "ship2.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -334,7 +334,7 @@ namespace Game.GameRules
                     Description = "Warrior in training",
                     Level = 1,
                     MaxHealth = 8,
-                    ImageURI = "elf4.png",
+                    ImageURI = "ship3.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -349,7 +349,7 @@ namespace Game.GameRules
                     Description = "A strong Warrior",
                     Level = 4,
                     MaxHealth = 38,
-                    ImageURI = "elf3.png"
+                    ImageURI = "ship4.png"
                 },
 
                 new CharacterModel {
@@ -357,7 +357,7 @@ namespace Game.GameRules
                     Description = "Come and get me",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf5.png"
+                    ImageURI = "ship5.png"
                 },
 
                 new CharacterModel {
@@ -365,7 +365,7 @@ namespace Game.GameRules
                     Description = "The Wiz",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf6.png"
+                    ImageURI = "ship6.png"
                 },
 
                 new CharacterModel {
@@ -373,7 +373,7 @@ namespace Game.GameRules
                     Description = "A powerfull Cleric",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf7.png"
+                    ImageURI = "ship1.png"
                 }
             };
 
