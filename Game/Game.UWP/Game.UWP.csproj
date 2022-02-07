@@ -117,6 +117,12 @@
     <Content Include="item4.png" />
     <Content Include="item5.png" />
     <Content Include="item6.png" />
+    <Content Include="monsterdrafts1.png" />
+    <Content Include="monsterdrafts2.png" />
+    <Content Include="monsterdrafts3.png" />
+    <Content Include="monsterdrafts4.png" />
+    <Content Include="monsterdrafts5.png" />
+    <Content Include="monsterdrafts6.png" />
     <Content Include="ship1.png" />
     <Content Include="ship2.png" />
     <Content Include="ship3.png" />
