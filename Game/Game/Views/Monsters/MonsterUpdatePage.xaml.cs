@@ -37,12 +37,6 @@ namespace Game.Views
             this.ViewModel.Title = "Update " + data.Title;
 
 
-            // Load the values for the Difficulty into the Picker
-           /* foreach (string diff in DifficultyEnumHelper.GetListMonster)
-            {
-                DifficultyPicker.Items.Add(diff);
-            }*/
-
             _ = UpdatePageBindingContext();
         }
 
@@ -134,18 +128,6 @@ namespace Game.Views
             value = Math.Round(value, MidpointRounding.AwayFromZero);
             SpeedValue.Text = string.Format("{0}", (int)value);
         }
-
-        /*private void Difficulty_Changed(object sender, EventArgs e)
-        {
-            // Find the Difficulty enum
-            string stringValue = "Unknown";
-            if (DifficultyPicker.SelectedItem != null)
-            {
-                // Get the value if it exists, otherwise leave as 'Unknown'
-                stringValue = DifficultyPicker.SelectedItem.ToString();
-            }
-            ViewModel.Data.Difficulty = DifficultyEnumHelper.ConvertStringToEnum(stringValue);
-        }*/
 
     }
 }
