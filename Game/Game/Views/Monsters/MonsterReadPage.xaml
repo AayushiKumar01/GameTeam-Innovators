@@ -38,43 +38,49 @@
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Description : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.Description}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                    <Grid
+                    RowSpacing="1"
+                    ColumnSpacing="1"
+                    VerticalOptions="Center">
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Level : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.Level}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Spaceship Type : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                            <Label Grid.Row="0" Grid.Column="0"
+                                    Text="Description : " 
+                                    Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="0" Grid.Column="1"
+                                    Text="{Binding Data.Description}" 
+                                    Style="{StaticResource ValueStyle}"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Difficulty : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.Difficulty}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
-                    
-                 </StackLayout>
+                            <Label Grid.Row="1" Grid.Column="0"
+                                    Text="Level : " 
+                                    Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="1" Grid.Column="1"
+                                    Text="{Binding Data.Level}" 
+                                    Style="{StaticResource ValueStyle}"/>
+
+                            <Label Grid.Row="2" Grid.Column="0"
+                                    Text="Spaceship Type : " 
+                                    Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="2" Grid.Column="1"
+                                    Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
+                                    Style="{StaticResource ValueStyle}"/>
+
+                            <Label Grid.Row="3" Grid.Column="0"
+                                    Text="Difficulty : " 
+                                    Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="3" Grid.Column="1"
+                                    Text="{Binding Data.Difficulty}" 
+                                    Style="{StaticResource ValueStyle}"/>
+
+                    </Grid>
+
+                </StackLayout>
             </ScrollView>
         </StackLayout>
 
