@@ -390,38 +390,38 @@ namespace Game.GameRules
             var datalist = new List<MonsterModel>()
             {
                 new MonsterModel {
-                    Name = "Green Troll",
-                    Description = "Big and Ugly",
+                    Name = "Purple Phage Frigate",
+                    Description = "Spreads like a virus",
                     ImageURI = "monsterdrafts1.png",
                 },
 
                 new MonsterModel {
-                    Name = "Old Troll",
-                    Description = "Old and Powerfull",
+                    Name = "Medusozoan Destroyer",
+                    Description = "Watch out for the tentacles",
                     ImageURI = "monsterdrafts2.png",
                 },
 
                 new MonsterModel {
-                    Name = "Dainty Troll",
-                    Description = "and fast",
+                    Name = "Protomolecule Corvette",
+                    Description = "It assimilates any lifeform",
                     ImageURI = "monsterdrafts3.png",
                 },
 
                 new MonsterModel {
-                    Name = "Troll's Troll",
-                    Description = "wozer",
+                    Name = "Armillary Battlecruiser",
+                    Description = "It sees incomprehensible truths",
                     ImageURI = "monsterdrafts4.png",
                 },
 
                 new MonsterModel {
-                    Name = "Warrior Troll",
-                    Description = "with sword",
+                    Name = "Hydrozoan Corvette",
+                    Description = "An organic spaceship",
                     ImageURI = "monsterdrafts5.png",
                 },
 
                 new MonsterModel {
-                    Name = "Ax Troll",
-                    Description = "with Hat and Ax",
+                    Name = "Jackal Fighter",
+                    Description = "Able to shoot in any direction",
                     ImageURI = "monsterdrafts6.png",
                 },
             };
