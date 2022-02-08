@@ -112,7 +112,7 @@
 
 
                             <Picker Grid.Row="3" Grid.Column="1"
-                                    ItemsSource="{x:Static local_enum:DifficultyEnumHelper.GetListAll}" 
+                                    ItemsSource="{x:Static local_enum:DifficultyEnumHelper.GetListMonster}" 
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource DifficultyEnumConverter}, Mode=TwoWay}"
                                     SelectedIndexChanged="Difficulty_Changed"
                                     x:Name="DifficultyPicker"/>
