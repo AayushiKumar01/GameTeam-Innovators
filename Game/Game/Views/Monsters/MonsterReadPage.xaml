@@ -81,7 +81,7 @@
 
                     </Grid>
 
-                    <Frame OutlineColor="#F2D06B" Padding="1">
+                    <Frame OutlineColor="#F2D06B" Padding="10">
                         <Grid ColumnSpacing="1"
                               RowSpacing="1"
                               BackgroundColor="Black">
