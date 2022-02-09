@@ -86,9 +86,9 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.CurrentHealth},
 
                 new ItemModel {
-                    Name = "Arrows",
-                    Description = "Poke your eye out",
-                    ImageURI = "item2.png",
+                    Name = "Blue Plasma Cannon",
+                    Description = "Molten fire",
+                    ImageURI = "item3.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -106,18 +106,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Bow",
-                    Description = "Fast Bow",
-                    ImageURI = "item4.png",
-                    Range = 10,
-                    Damage = 10,
-                    Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Attack},
-
-                new ItemModel {
-                    Name = "Fire Bow",
-                    Description = "Fast Bow",
+                    Name = "Red Laser Turret",
+                    Description = "Standard laser weapon",
                     ImageURI = "item5.png",
                     Range = 10,
                     Damage = 10,
@@ -166,8 +156,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Bunny Hat",
-                    Description = "Pink hat with fluffy ears",
+                    Name = "Captain Kirk",
+                    Description = "Venturing where no man has gone before",
                     ImageURI = "item4.png",
                     Range = 0,
                     Damage = 0,
@@ -246,8 +236,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Cute Shoes",
-                    Description = "really fast",
+                    Name = "Johnson-Tanaka Engine",
+                    Description = "Thrust up to 10G",
                     ImageURI = "item6.png",
                     Range = 0,
                     Damage = 0,
