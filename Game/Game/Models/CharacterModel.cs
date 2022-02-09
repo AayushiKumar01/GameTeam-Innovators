@@ -36,10 +36,10 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Character;
             Guid = Id;
-            Name = "Elf";
-            Description = "Happy Elf";
+            Name = "Hyperion";
+            Description = "Veteran of the Third Solar War";
             Level = 1;
-            ImageURI = "knight.png";
+            ImageURI = "ship2.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             SpecialAbility = SpecialAbilityEnum.Unknown;
