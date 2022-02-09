@@ -50,8 +50,10 @@ namespace Game.Models
         /// </summary>
         public ItemModel()
         {
-            ImageURI = ItemService.DefaultImageURI;
-        }
+            Name = "Red Laser Turret";
+            Description = "Standard laser weapon";
+            ImageURI = "item5.png";
+          }
 
         /// <summary>
         /// Constructor to create an item based on what is passed in
