@@ -300,8 +300,8 @@ namespace Game.GameRules
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
-                    Name = "Mike",
-                    Description = "Archer Wannabe",
+                    Name = "Pillar of Autumn",
+                    Description = "UNSC Flagship",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "ship1.png",
@@ -315,8 +315,8 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Tim",
-                    Description = "Hawk eye",
+                    Name = "Hyperion",
+                    Description = "Veteran of the Third Solar War",
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "ship2.png",
@@ -330,8 +330,8 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Doug",
-                    Description = "Warrior in training",
+                    Name = "The Rocinante",
+                    Description = "A Legitimate Salvage",
                     Level = 1,
                     MaxHealth = 8,
                     ImageURI = "ship3.png",
@@ -345,35 +345,27 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Sue",
-                    Description = "A strong Warrior",
+                    Name = "The Behemoth",
+                    Description = "A salvager converted into a warship",
                     Level = 4,
                     MaxHealth = 38,
                     ImageURI = "ship4.png"
                 },
 
                 new CharacterModel {
-                    Name = "Jea",
-                    Description = "Come and get me",
+                    Name = "Firefly",
+                    Description = "Light and nimble",
                     Level = 5,
                     MaxHealth = 43,
                     ImageURI = "ship5.png"
                 },
 
                 new CharacterModel {
-                    Name = "Darren",
-                    Description = "The Wiz",
+                    Name = "Conqueror",
+                    Description = "All shall fall before me",
                     Level = 5,
                     MaxHealth = 43,
                     ImageURI = "ship6.png"
-                },
-
-                new CharacterModel {
-                    Name = "Dani",
-                    Description = "A powerfull Cleric",
-                    Level = 5,
-                    MaxHealth = 43,
-                    ImageURI = "ship1.png"
                 }
             };
 
