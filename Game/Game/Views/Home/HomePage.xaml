@@ -17,18 +17,18 @@
 
                         <Image
                              Source="andquestlogo.png"
-                             Style="{StaticResource ImageLargeStyle}"/>
+                             Style="{StaticResource ImageExtraLargeStyle}"/>
 
 
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
 
                             <Image
                             Source="item.png"
-                            Style="{StaticResource ImageSmallStyle}" Rotation="-30" Margin="10, -40, 0, 0"/>
+                            Style="{StaticResource ImageMediumStyle}" Rotation="-30" Margin="10, -40, 0, 0"/>
 
                             <Image
                                 Source="item.png"
-                                Style="{StaticResource ImageBattleMediumStyle}" Rotation="30" Margin="20, 0, 0, 0"/>
+                                Style="{StaticResource ImageLargeStyle}" Rotation="30" Margin="20, 0, 0, 0"/>
 
                         </StackLayout>
 
