@@ -85,7 +85,7 @@ namespace Game.GameRules
         public static string GetMonsterName()
         {
 
-            List<string> FirstNameList = new List<string> { "Arg", "Deg", "Ase", "Xes", "Zez", "Klk", "Oi", "Oni", "Tanu" };
+            List<string> FirstNameList = new List<string> { "Purple Phage", "Medusozoan", "Protomolecule", "Armillary", "Hydrozoan", "Jackal", "Hyena", "Cthulhu", "Devourer" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
