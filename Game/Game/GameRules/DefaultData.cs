@@ -96,14 +96,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Boxing",
-                    Description = "watch out",
-                    ImageURI = "item3.png",
+                    Name = "Point Defense Shield",
+                    Description = "Shoots down missiles",
+                    ImageURI = "item2.png",
                     Range = 0,
-                    Damage = 6,
+                    Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Attack},
+                    Location = ItemLocationEnum.OffHand,
+                    Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
                     Name = "Red Laser Turret",
