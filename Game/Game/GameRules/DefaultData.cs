@@ -176,14 +176,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Feel the Power",
-                    Description = "Love this one",
+                    Name = "Captain Nemo",
+                    Description = "1000 Leagues under the nebula",
                     ImageURI = "item1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.Necklass,
-                    Attribute = AttributeEnum.Attack},
+                    Location = ItemLocationEnum.Head,
+                    Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
                     Name = "Horned Hat",
