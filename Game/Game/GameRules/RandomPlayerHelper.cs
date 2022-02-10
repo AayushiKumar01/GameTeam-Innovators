@@ -100,7 +100,7 @@ namespace Game.GameRules
         /// <returns></returns>
         public static string GetMonsterDescription()
         {
-            List<string> StringList = new List<string> { "eats Elf", "the Elf hater", "Elf destoryer", "Elf Hunter", "Elf Killer", "Can't we all get along?" };
+            List<string> StringList = new List<string> { "Spreads like a virus", "Watch out for the tentacles", "It assimilates any lifeform", "It sees incomprehensible truths", "An organic spaceship", "It watches" };
 
             var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
