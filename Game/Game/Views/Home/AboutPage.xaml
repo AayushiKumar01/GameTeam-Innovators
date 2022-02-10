@@ -42,7 +42,7 @@
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                     <Label Text="description to play.. put some description here" Style="{StaticResource HeaderStyle}" FontSize="Micro" LineBreakMode="WordWrap" WidthRequest="200"/>
-                    <Image Source="d20_2.png" Style="{StaticResource ImageMediumStyle}"/>
+                    <Image Source="dice10.png" Style="{StaticResource ImageMediumStyle}"/>
                 </StackLayout>
 
             </StackLayout>
@@ -57,7 +57,7 @@
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
 
-                    <Image Source="d20_2.png" Style="{StaticResource ImageMediumStyle}"/>
+                    <Image Source="dice10.png" Style="{StaticResource ImageMediumStyle}"/>
 
                     <StackLayout  Style="{StaticResource VerticalStack}" VerticalOptions="Center">
 
