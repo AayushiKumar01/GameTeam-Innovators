@@ -128,7 +128,7 @@ namespace UnitTests.Helpers
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual("Doug", result);
+            Assert.AreEqual("Hyperion", result);
         }
 
         [Test]
