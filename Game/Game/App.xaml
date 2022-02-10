@@ -9,7 +9,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
-
+ 
             <!--Colors -->
 
             <!--
@@ -22,8 +22,8 @@
                 Dark
                 -->
 
-            <Color x:Key="PageBackgroundColor">#04173d</Color>
-            <Color x:Key="ViewBackgroundColor">#277290</Color>
+            <Color x:Key="PageBackgroundColor">#277290</Color>
+            <Color x:Key="ViewBackgroundColor">#04173d</Color>
             <Color x:Key="NavigationBarColor">#81b9d0</Color>
 
             <Color x:Key="PrimaryBackgroundColor">#000000</Color>
