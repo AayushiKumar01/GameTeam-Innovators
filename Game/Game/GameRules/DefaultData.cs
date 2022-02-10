@@ -196,9 +196,9 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
-                    Name = "Ring of Power",
-                    Description = "The wearer has all the power",
-                    ImageURI = "item3.png",
+                    Name = "Auxillary Thruster",
+                    Description = "Extra mobility",
+                    ImageURI = "item6.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
