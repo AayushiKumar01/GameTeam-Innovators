@@ -64,8 +64,8 @@ namespace Game.Views
         /// <returns></returns>
         public StackLayout GetItemToDisplay(ItemLocationEnum location)
         {
-            // Defualt Image is the Plus
-            var ImageSource = "icon_cancel.png";
+            // Defualt Image is the planet
+            var ImageSource = "item.png";
             var ClickableButton = true;
 
             var data = ViewModel.Data.GetItemByLocation(location);
