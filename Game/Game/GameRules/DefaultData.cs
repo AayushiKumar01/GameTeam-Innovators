@@ -36,8 +36,8 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Dagger",
-                    Description = "watch out",
+                    Name = "Viking Warhead",
+                    Description = "Devastating explosions",
                     ImageURI = "item3.png",
                     Range = 0,
                     Damage = 6,
