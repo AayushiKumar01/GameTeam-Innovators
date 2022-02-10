@@ -216,16 +216,6 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Warm Shoes",
-                    Description = "Strong Shoes",
-                    ImageURI = "item5.png",
-                    Range = 0,
-                    Damage = 0,
-                    Value = 9,
-                    Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Attack},
-
-                new ItemModel {
                     Name = "Johnson-Tanaka Engine",
                     Description = "Thrust up to 10G",
                     ImageURI = "item6.png",
