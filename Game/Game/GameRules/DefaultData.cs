@@ -16,9 +16,9 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Gold Sword",
-                    Description = "Sword made of Gold, really expensive looking",
-                    ImageURI = "item1.png",
+                    Name = "Ion Cannon",
+                    Description = "Vaporize Your Enemies",
+                    ImageURI = "item3.png",
                     Range = 0,
                     Damage = 10,
                     Value = 9,
