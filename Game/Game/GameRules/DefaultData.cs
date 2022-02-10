@@ -206,13 +206,13 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Speed},
 
                 new ItemModel {
-                    Name = "Strong Ring",
-                    Description = "Watch out",
-                    ImageURI = "item4.png",
+                    Name = "Nuclear Reactor Engine",
+                    Description = "Don't let it get damaged",
+                    ImageURI = "item6.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.Finger,
+                    Location = ItemLocationEnum.Feet,
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
