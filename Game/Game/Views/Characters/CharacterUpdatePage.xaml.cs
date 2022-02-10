@@ -284,8 +284,8 @@ namespace Game.Views
             // Get the Item, if it exist show the info
             // If it does not exist, show a Plus Icon for the location
 
-            // Defualt Image is the Plus
-            var ImageSource = "icon_add.png";
+            // Defualt Image is the item
+            var ImageSource = "item.png";
 
             var data = ViewModel.Data.GetItemByLocation(location);
             if (data == null)
