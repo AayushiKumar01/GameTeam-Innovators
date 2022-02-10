@@ -68,19 +68,13 @@
                     <Button 
                     Text="Yes" 
                     Clicked="Delete_Clicked" 
-                    HorizontalOptions="Center"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="black">
+                    Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
 
                     <Button 
                     Text="No" 
                     Clicked="Cancel_Clicked" 
-                    HorizontalOptions="Center"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="black">
+                    Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
                 </StackLayout>
 
