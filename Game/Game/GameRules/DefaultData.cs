@@ -116,14 +116,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Strong Shield",
-                    Description = "Enough to hide behind",
-                    ImageURI = "item6.png",
+                    Name = "Blast Shield",
+                    Description = "Solid iron",
+                    ImageURI = "item2.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.OffHand,
-                    Attribute = AttributeEnum.Defense},
+                    Attribute = AttributeEnum.MaxHealth},
 
                 new ItemModel {
                     Name = "Fancy Shield",
