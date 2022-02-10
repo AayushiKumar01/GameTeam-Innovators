@@ -46,11 +46,11 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Strong Sword",
-                    Description = "watch out",
-                    ImageURI = "item4.png",
-                    Range = 0,
-                    Damage = 12,
+                    Name = "Blue Plasma Cannon",
+                    Description = "Molten fire",
+                    ImageURI = "item3.png",
+                    Range = 10,
+                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Attack},
