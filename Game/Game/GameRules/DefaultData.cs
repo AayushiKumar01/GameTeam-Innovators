@@ -186,13 +186,13 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
-                    Name = "Horned Hat",
-                    Description = "Where's the Rabbit?",
-                    ImageURI = "item2.png",
+                    Name = "Rocket Flares",
+                    Description = "Distract Missiles",
+                    ImageURI = "item5.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.Head,
+                    Location = ItemLocationEnum.Finger,
                     Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
