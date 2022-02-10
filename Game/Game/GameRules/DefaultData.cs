@@ -136,14 +136,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Health Shield",
-                    Description = "Enough to hide behind",
-                    ImageURI = "item2.png",
+                    Name = "Captain Kirk",
+                    Description = "Venturing where no man has gone before",
+                    ImageURI = "item1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.OffHand,
-                    Attribute = AttributeEnum.MaxHealth},
+                    Location = ItemLocationEnum.Head,
+                    Attribute = AttributeEnum.Speed},
 
                 new ItemModel {
                     Name = "Lucky Shield",
