@@ -131,7 +131,7 @@ namespace Game.GameRules
         /// <returns></returns>
         public static string GetCharacterDescription()
         {
-            List<string> StringList = new List<string> { "the terrible", "the awesome", "the lost", "the old", "the younger", "the quiet", "the loud", "the helpless", "the happy", "the sleepy", "the angry", "the clever" };
+            List<string> StringList = new List<string> { "Her Majesty's Ship", "His Majesty's Ship", "Derelict Spacecraft", "Legitimate Salvage", "All shall fall before me", "Light and nimble", "A salvager converted into a warship", "Veteran of the Third Solar War", "USS Ship", "UNSC Ship", "Old Warship", "Modern Warship" };
 
             var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
