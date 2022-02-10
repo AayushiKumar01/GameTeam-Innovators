@@ -17,7 +17,7 @@
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" WidthRequest="200">
                 
-                    <Label Text="developers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Developers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
                     <Label Text="Aayushi Kumar" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Start" />
                     <Label Text="Maason Kao" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Start" />
                     <Label Text="Adam Kucera" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Start" />
@@ -25,7 +25,7 @@
                     <!-- Spacer label -->
                     <Label Text="" Style="{StaticResource MessageStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
 
-                    <Label Text="designers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"  HorizontalTextAlignment="Center" />
+                    <Label Text="Designers" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
                     <Label Text="Nina Leon" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
                     <Label Text="Michelle Nurzhanov" Style="{StaticResource MessageStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
                 
