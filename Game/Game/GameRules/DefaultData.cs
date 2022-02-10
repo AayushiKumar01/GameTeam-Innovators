@@ -146,24 +146,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Speed},
 
                 new ItemModel {
-                    Name = "Lucky Shield",
-                    Description = "Do you feel lucky punk?",
-                    ImageURI = "item3.png",
-                    Range = 0,
-                    Damage = 0,
-                    Value = 9,
-                    Location = ItemLocationEnum.OffHand,
-                    Attribute = AttributeEnum.Attack},
-
-                new ItemModel {
-                    Name = "Captain Kirk",
-                    Description = "Venturing where no man has gone before",
-                    ImageURI = "item4.png",
+                    Name = "Captain Holden",
+                    Description = "Better lucky than good",
+                    ImageURI = "item1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.Head,
-                    Attribute = AttributeEnum.Speed},
+                    Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
                     Name = "Horned Hat",
