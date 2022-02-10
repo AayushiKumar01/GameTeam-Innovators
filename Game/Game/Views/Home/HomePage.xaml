@@ -16,7 +16,7 @@
                     <StackLayout Style="{StaticResource VerticalStack}" VerticalOptions="Center">
 
                         <Image
-                             Source="item.png"
+                             Source="andquestlogo.png"
                              Style="{StaticResource ImageLargeStyle}"/>
 
 
@@ -34,19 +34,7 @@
 
                     </StackLayout>
                 </StackLayout>
-
-                <StackLayout HorizontalOptions="Center">
-
-                    <Label 
-                        Text="Andromeda Quest"
-                        Style="{StaticResource CenterMessageStyle}"
-                        FontSize="Large"
-                        LineBreakMode="NoWrap"
-                        MaxLines="5"
-                        />
-
-                </StackLayout>
-
+                
                 <Button
                     Text="start"
                     Clicked="GameButton_Clicked"
