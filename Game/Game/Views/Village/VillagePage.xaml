@@ -23,7 +23,7 @@
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
-                        Source="item.png"
+                        Source="ship2.png"
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="CharactersButton_Clicked"/>
 
@@ -36,7 +36,7 @@
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
-                        Source="item.png"
+                        Source="monsterdrafts4.png"
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="MonstersButton_Clicked" />
 
@@ -49,7 +49,7 @@
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
-                        Source="item.png"
+                        Source="item2.png"
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="ItemsButton_Clicked"/>
 

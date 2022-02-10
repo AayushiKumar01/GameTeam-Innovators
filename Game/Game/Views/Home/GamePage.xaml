@@ -31,7 +31,7 @@
                             Clicked="VillageButton_Clicked"/>
 
                         <Label 
-                            Text="spacecraft carrier"
+                            Text="Spacecraft Carrier"
                             Style="{StaticResource CenterMessageStyle}" LineBreakMode="WordWrap"/>
                     </StackLayout>
 
@@ -43,7 +43,7 @@
                             Clicked="DungeonButton_Clicked"/>
 
                         <Label 
-                            Text="planet 1"
+                            Text="Begin Quest"
                             Style="{StaticResource CenterMessageStyle}"/>
                     </StackLayout>
 
@@ -55,7 +55,7 @@
                             Clicked="AutobattleButton_Clicked"/>
 
                         <Label 
-                            Text="planet 2"
+                            Text="Auto Quest"
                             Style="{StaticResource CenterMessageStyle}"/>
                     </StackLayout>
 
