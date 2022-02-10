@@ -111,6 +111,7 @@
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="dice10.png" />
     <Content Include="item1.png" />
     <Content Include="item2.png" />
     <Content Include="item3.png" />
