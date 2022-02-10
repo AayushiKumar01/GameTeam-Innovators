@@ -76,14 +76,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Mace of Health",
-                    Description = "Feeling Good",
-                    ImageURI = "item1.png",
+                    Name = "Ion Shield",
+                    Description = "Enough to hide behind",
+                    ImageURI = "item2.png",
                     Range = 0,
-                    Damage = 6,
+                    Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.CurrentHealth},
+                    Location = ItemLocationEnum.OffHand,
+                    Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
                     Name = "Blue Plasma Cannon",
