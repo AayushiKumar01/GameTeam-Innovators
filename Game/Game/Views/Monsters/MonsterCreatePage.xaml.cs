@@ -124,20 +124,7 @@ namespace Game.Views
 
             return true;
         }
-        
-        private void Difficulty_Changed(object sender, EventArgs e)
-        {
-            // Find the Difficulty enum
-            string stringValue = "Unknown";
-            if (DifficultyPicker.SelectedItem != null)
-            {
-                // Get the value if it exists, otherwise leave as 'Unknown'
-                stringValue = DifficultyPicker.SelectedItem.ToString();
-            }
-            ViewModel.Data.Difficulty = DifficultyEnumHelper.ConvertStringToEnum(stringValue);
-        }
-        
-        
+
         /// <summary>
         /// Randomize Monster Values and Items
         /// </summary>
