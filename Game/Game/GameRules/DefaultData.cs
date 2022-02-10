@@ -156,14 +156,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
-                    Name = "Horned Hat",
-                    Description = "Where's the Rabbit?",
-                    ImageURI = "item5.png",
+                    Name = "Sonar Radar",
+                    Description = "Sound travels through space?",
+                    ImageURI = "item6.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
-                    Location = ItemLocationEnum.Head,
-                    Attribute = AttributeEnum.Defense},
+                    Location = ItemLocationEnum.Necklass,
+                    Attribute = AttributeEnum.Speed},
 
                 new ItemModel {
                     Name = "Fast Necklass",
