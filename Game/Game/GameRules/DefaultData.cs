@@ -26,9 +26,9 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Pirate Sword",
-                    Description = "Aye matie",
-                    ImageURI = "item2.png",
+                    Name = "Mordhau Mk II Missile",
+                    Description = "Hull cracker",
+                    ImageURI = "item5.png",
                     Range = 0,
                     Damage = 8,
                     Value = 9,
