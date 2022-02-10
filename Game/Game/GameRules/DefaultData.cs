@@ -56,11 +56,11 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Wand",
-                    Description = "watch out",
-                    ImageURI = "item5.png",
+                    Name = "PDC",
+                    Description = "Automatic tracking gatling guns",
+                    ImageURI = "item4.png",
                     Range = 0,
-                    Damage = 4,
+                    Damage = 6,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Defense},
