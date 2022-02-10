@@ -66,14 +66,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Defense},
 
                 new ItemModel {
-                    Name = "Mace",
-                    Description = "watch out",
-                    ImageURI = "item6.png",
-                    Range = 0,
-                    Damage = 6,
+                    Name = "Red Laser Turret",
+                    Description = "Standard laser weapon",
+                    ImageURI = "item5.png",
+                    Range = 10,
+                    Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Speed},
+                    Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
                     Name = "Mace of Health",
