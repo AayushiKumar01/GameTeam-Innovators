@@ -116,7 +116,7 @@ namespace Game.GameRules
         public static string GetCharacterName()
         {
 
-            List<string> FirstNameList = new List<string> { "Mike", "Doug", "Jea", "Sue", "Tim", "Daren", "Dani", "Mami", "Mari", "Ryu", "Hucky", "Peanut", "Sumi", "Apple", "Ami", "Honami", "Sonomi", "Pat", "Sakue", "Isamu" };
+            List<string> FirstNameList = new List<string> { "Pillar of Autumn", "Hyperion", "The Rocinante", "The Behemoth", "Firefly", "Conqueror", "Axiom", "Patriot", "Mari", "Cyclopse", "Herminia", "Starfall", "Midway", "Apple", "Ami", "Aries", "Gemini", "Helios", "Elysium", "Prometheus" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
