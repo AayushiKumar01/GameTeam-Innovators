@@ -65,7 +65,7 @@
                             <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource ImageSmallStyle}"
-                                Source="d10.png"
+                                Source="dice10.png"
                                 Clicked="RollDice_Clicked"/>
 
                         <Grid
