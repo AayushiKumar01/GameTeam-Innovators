@@ -166,14 +166,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Speed},
 
                 new ItemModel {
-                    Name = "Fast Necklass",
-                    Description = "And Tasty",
-                    ImageURI = "item6.png",
+                    Name = "Infrared Radar",
+                    Description = "Tracks heat signatures",
+                    ImageURI = "item2.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.Necklass,
-                    Attribute = AttributeEnum.Speed},
+                    Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
                     Name = "Feel the Power",
