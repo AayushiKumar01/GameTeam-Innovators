@@ -126,14 +126,14 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.MaxHealth},
 
                 new ItemModel {
-                    Name = "Fancy Shield",
-                    Description = "Enough to hide behind",
-                    ImageURI = "item1.png",
+                    Name = "Plasma Shield",
+                    Description = "Incinerate incoming projectiles",
+                    ImageURI = "item2.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.OffHand,
-                    Attribute = AttributeEnum.Defense},
+                    Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
                     Name = "Health Shield",
