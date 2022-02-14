@@ -40,8 +40,7 @@
 
                                 <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
                                         Source="{Binding ImageURI}"
-                                        Style="{StaticResource ImageMediumStyle}"
-                                        VerticalOptions="CenterAndExpand"/>
+                                        Style="{StaticResource ImageMediumStyle}"/>
 
                                 <Label Grid.Column="1" Grid.Row="0"
                                        Text="{Binding Name}" 
