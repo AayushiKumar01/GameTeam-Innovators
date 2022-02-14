@@ -29,8 +29,8 @@
 
 
                 <Label x:Name="ErrorMessage"
-                 HorizontalOptions="CenterAndExpand"/>
-
+                       Style="{StaticResource ErrorLabel}"/>
+                
                 <Grid Style="{StaticResource StandardGrid}">
 
                     <Grid.RowDefinitions>
