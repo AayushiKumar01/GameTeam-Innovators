@@ -87,7 +87,7 @@
                                 Text="Image" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalFillAndExpand}">
 
                                 <Image 
                                     Source="{Binding Data.ImageURI, Mode=TwoWay}"
@@ -119,7 +119,7 @@
                                     x:Name="SpaceshipPicker"/>
                         </Grid>
 
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+                        <StackLayout Style="{StaticResource SliderLayout}">
 
                             <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
 
