@@ -115,12 +115,12 @@
                             Text="{Binding Data.Range}" 
                             x:Name="RangeValue"
                             Style="{StaticResource SliderNumberValueLabel}"/>
-                    
-                        <Slider Maximum="10"
-                                Value="{Binding Data.Range}"
-                                ValueChanged="Range_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
-                        
+
+                    <Slider 
+                            Value="{Binding Data.Range}"
+                            ValueChanged="Range_OnSliderValueChanged"
+                            Style="{StaticResource StandardSlider}"/>
+
 
                     <Label 
                         Text="Value"
