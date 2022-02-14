@@ -14,7 +14,7 @@
                         Clicked="AutobattleButton_Clicked"/>
 
                 <Label 
-                        Text="Begin Battle"
+                        Text="Begin Quest"
                         Style="{StaticResource CenterMessageStyle}"/>
             </StackLayout>
 
