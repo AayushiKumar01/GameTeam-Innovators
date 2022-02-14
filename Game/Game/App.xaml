@@ -451,6 +451,15 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
+            
+            <!-- FlexLayout -->
+            <Style TargetType="FlexLayout"
+                   x:Key="StandardFlex">
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="Wrap" Value="Wrap" />
+                <Setter Property="JustifyContent" Value="SpaceAround" />
+                <Setter Property="AlignContent" Value="SpaceAround" />
+            </Style>
 
             <!-- Frame -->
             <Style TargetType="Frame">
