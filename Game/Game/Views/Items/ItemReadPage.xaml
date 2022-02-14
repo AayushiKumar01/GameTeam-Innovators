@@ -24,7 +24,9 @@
 
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="{Binding Data.Name}" Style="{StaticResource HeaderStyle}" HorizontalOptions="Center"/>
+            <Label 
+                Text="{Binding Data.Name}" 
+                Style="{StaticResource CenterMessageStyle}"/>
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
