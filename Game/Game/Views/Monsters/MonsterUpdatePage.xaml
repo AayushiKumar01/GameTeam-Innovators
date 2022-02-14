@@ -53,6 +53,19 @@
                                 Style="{StaticResource EntryStyle}"
                                    x:Name="MonsterName"/>
 
+                        </Grid>
+
+                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+
+                        <Grid Style="{StaticResource StandardGrid}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
                             <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description *" 
                                 Style="{StaticResource LabelStyle}"/>
