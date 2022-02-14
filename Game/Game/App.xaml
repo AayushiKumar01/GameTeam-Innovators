@@ -511,6 +511,12 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="BorderColor" Value="{StaticResource SecondaryBackgroundColor}" />
             </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="ItemPopupFrame">
+                <Setter Property="BorderColor" Value="{StaticResource TriciaryBackgroundColor}"/>
+                <Setter Property="Padding" Value="1"/>
+            </Style>
             
             <!-- Grid -->
             <Style TargetType="Grid">
