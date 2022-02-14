@@ -478,6 +478,13 @@
                 <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                x:Key="OneMarginLayout"
+                 BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+            </Style>
+
 
             <Style TargetType="StackLayout"
                 x:Key="ItemPopupBox"
@@ -496,7 +503,14 @@
                 <Setter Property="JustifyContent" Value="SpaceAround" />
                 <Setter Property="AlignContent" Value="SpaceAround" />
             </Style>
-
+            
+            <!-- AbsoluteLayout -->
+            <Style TargetType="AbsoluteLayout"
+                   x:Key="StandardAbsolute">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+            
             <!-- Frame -->
             <Style TargetType="Frame">
                 <Setter Property="Margin" Value="0" />
