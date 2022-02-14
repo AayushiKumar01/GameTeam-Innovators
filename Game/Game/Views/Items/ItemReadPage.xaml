@@ -32,9 +32,7 @@
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Grid
-                    RowSpacing="1"
-                    ColumnSpacing="2"
-                    VerticalOptions="Center">
+                    Style="{StaticResource StandardGrid}">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
