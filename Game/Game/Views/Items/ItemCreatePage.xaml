@@ -107,29 +107,29 @@
 
                 <StackLayout Style="{StaticResource SliderLayout}">
 
-                        <Label 
-                            Text="Range" 
-                            Style="{StaticResource LabelStyle}"/>
+                    <Label 
+                        Text="Range" 
+                        Style="{StaticResource LabelStyle}"/>
 
-                        <Label 
-                            Text="{Binding Data.Range}" 
-                            x:Name="RangeValue"
-                            Style="{StaticResource SliderNumberValueLabel}"/>
+                    <Label 
+                        Text="{Binding Data.Range}" 
+                        x:Name="RangeValue"
+                        Style="{StaticResource SliderNumberValueLabel}"/>
 
                     <Slider 
                             Value="{Binding Data.Range}"
                             ValueChanged="Range_OnSliderValueChanged"
                             Style="{StaticResource StandardSlider}"/>
-
+                    
 
                     <Label 
                         Text="Value"
                         Style="{StaticResource LabelStyle}"/>
 
-                        <Label 
-                            Text="{Binding Data.Value}" 
-                            x:Name="ValueValue"
-                            Style="{StaticResource SliderNumberValueLabel}"/>
+                    <Label 
+                        Text="{Binding Data.Value}" 
+                        x:Name="ValueValue"
+                        Style="{StaticResource SliderNumberValueLabel}"/>
 
                     <Slider Maximum="10"
                                 Value="{Binding Data.Value}"
