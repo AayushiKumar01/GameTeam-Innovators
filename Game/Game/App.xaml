@@ -233,6 +233,8 @@
                 BasedOn="{StaticResource ImageLargeStyle}">
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+
             </Style>
 
             <Style TargetType="Image"
