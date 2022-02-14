@@ -568,8 +568,8 @@
 
             <Style TargetType="Grid"
                    x:Key="StandardGrid">
-                <Setter Property="ColumnSpacing" Value="2" />
                 <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="ColumnSpacing" Value="2" />
                 <Setter Property="VerticalOptions" Value="Center" />
             </Style>
 
