@@ -31,13 +31,13 @@
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource CenterMessageStyle}"/>
 
-                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
                     <Grid
-                    RowSpacing="1"
-                    ColumnSpacing="1"
-                    VerticalOptions="Center"
-                    Padding="15">
+                        RowSpacing="1"
+                        ColumnSpacing="1"
+                        VerticalOptions="Center"
+                        Padding="15">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
