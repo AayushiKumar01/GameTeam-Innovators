@@ -34,18 +34,18 @@
                 
                 <Label Text="Are you sure you want to delete this monster?" Style="{StaticResource MessageStyle}"/>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout Style="{StaticResource DeleteButtonMargin}">
 
                     <Button 
-                    Text="Yes" 
-                    Clicked="DeleteMonster" 
-                    Style="{StaticResource DeleteConfirmationButtons}">
+                        Text="Yes" 
+                        Clicked="DeleteMonster" 
+                        Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
 
                     <Button 
-                    Text="No" 
-                    Clicked="CancelMonsterDeletion" 
-                    Style="{StaticResource DeleteConfirmationButtons}">
+                        Text="No" 
+                        Clicked="CancelMonsterDeletion" 
+                        Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
 
                 </StackLayout>
