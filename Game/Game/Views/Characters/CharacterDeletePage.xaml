@@ -13,8 +13,7 @@
     </ContentPage.ToolbarItems>
 
     <ScrollView Style="{StaticResource CenterScrollView}">
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10">
+        <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <Label 
                     Text="{Binding Data.Name}" 
