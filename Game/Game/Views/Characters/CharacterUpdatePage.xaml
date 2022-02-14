@@ -119,9 +119,9 @@
                                 Style="{StaticResource LabelStyle}"/>
 
                             <Picker Grid.Row="5" Grid.Column="1"
-                        ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
-                        SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
-                        x:Name="SpaceshipPicker"/>
+                                ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
+                                SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
+                                x:Name="SpaceshipPicker"/>
                         </Grid>
 
                         <StackLayout Style="{StaticResource SliderLayout}">
