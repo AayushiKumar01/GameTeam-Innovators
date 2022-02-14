@@ -52,10 +52,7 @@
 
                 <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
-                <Grid
-                    RowSpacing="1"
-                    ColumnSpacing="2"
-                    VerticalOptions="Center">
+                <Grid Style="{StaticResource StandardGrid}">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
