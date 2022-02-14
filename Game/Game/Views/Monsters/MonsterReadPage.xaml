@@ -60,12 +60,14 @@
                                 Style="{StaticResource ValueStyle}"/>
                     </StackLayout>
 
-                    <Label Grid.Row="3" Grid.Column="0"
-                                    Text="Difficulty : " 
-                                    Style="{StaticResource LabelStyle}"/>
-                            <Label Grid.Row="3" Grid.Column="1"
-                                    Text="{Binding Data.Difficulty}" 
-                                    Style="{StaticResource ValueStyle}"/>
+                    <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
+                        <Label 
+                                Text="Difficulty : " 
+                                Style="{StaticResource LabelStyle}"/>
+                        <Label 
+                                Text="{Binding Data.Difficulty}" 
+                                Style="{StaticResource ValueStyle}"/>
+                    </StackLayout>
 
 
                     <Frame OutlineColor="#F2D06B" Padding="10">
