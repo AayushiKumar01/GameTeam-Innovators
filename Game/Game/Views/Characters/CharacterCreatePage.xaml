@@ -32,7 +32,7 @@
                     <StackLayout Style="{StaticResource OuterBoxStack}">
 
                         <Label x:Name="ErrorMessage"
-                        Style="{StaticResource ErrorLabel}"/>
+                               Style="{StaticResource ErrorLabel}"/>
                         
                         <Grid
                             RowSpacing="1"
