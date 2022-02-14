@@ -48,8 +48,7 @@
 
                                 <Label Grid.Column="1" Grid.Row="1"
                                        Text="{Binding Description}" 
-                                       Style="{StaticResource ListStyle}"
-                                       FontSize="Micro"/>
+                                       Style="{StaticResource ListStyle}"/>
 
                                 <StackLayout Grid.Column="1" Grid.Row="2"
                                     Orientation="Horizontal">
