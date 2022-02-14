@@ -168,9 +168,10 @@
                                 x:Name="SpeedValue"
                                 Style="{StaticResource SliderNumberValueLabel}"/>
 
-                            <Slider Maximum="10"
+                            <Slider
                                 Value="{Binding Data.Speed}"
-                                ValueChanged="Speed_OnSliderValueChanged"/>
+                                ValueChanged="Speed_OnSliderValueChanged"
+                                Style="{StaticResource StandardSlider}"/>
 
                         </StackLayout>
 
