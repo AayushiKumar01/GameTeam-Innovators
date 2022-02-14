@@ -402,6 +402,13 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="SliderLayout"
+                BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+
+            <Style TargetType="StackLayout"
                 x:Key="PlayerBattleOuterBox"
                 BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />

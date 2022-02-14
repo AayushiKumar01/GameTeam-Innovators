@@ -112,7 +112,7 @@
                     </StackLayout>
                 </Grid>
 
-                <StackLayout Style="{StaticResource BattleMapBox}">
+                <StackLayout Style="{StaticResource SliderLayout}">
 
                         <Label 
                             Text="Range" 
