@@ -115,8 +115,8 @@
                                 Style="{StaticResource ValueStyle}"/>
 
                             <Label Grid.Row="5" Grid.Column="0"
-                        Text="Spaceship Type" 
-                        Style="{StaticResource LabelStyle}"/>
+                                Text="Spaceship Type" 
+                                Style="{StaticResource LabelStyle}"/>
 
                             <Picker Grid.Row="5" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
