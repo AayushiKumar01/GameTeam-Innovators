@@ -54,8 +54,8 @@
                                 Text="{Binding Data.Level}" 
                                 Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
-                        
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+
+                        <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
                             <Label 
                                 Text="Spaceship Type : " 
                                 Style="{StaticResource LabelStyle}"/>
