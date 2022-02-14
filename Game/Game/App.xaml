@@ -84,6 +84,12 @@
                 <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
             </Style>
 
+            <Style TargetType="ScrollView"
+                   x:Key="CenterScrollView"
+                   BaseResourceKey="ScrollView">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
             <!-- Label -->
 
             <Style TargetType="Label"
