@@ -196,8 +196,7 @@
             <StackLayout 
                     Style="{StaticResource ItemPopupBox}">
 
-                <Frame 
-                    BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
+                <Frame  Style="{StaticResource ItemPopupFrame}">
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
                         <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
 
