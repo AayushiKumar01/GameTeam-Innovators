@@ -33,8 +33,7 @@
 
                            <Label 
                                 Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="CenterAndExpand"/>
+                                Style="{StaticResource CenterMessageStyle}"/>
                         
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
