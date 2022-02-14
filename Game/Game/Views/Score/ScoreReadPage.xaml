@@ -13,9 +13,8 @@
     </ContentPage.ToolbarItems>
 
 
-    <ScrollView HorizontalOptions="CenterAndExpand">
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-            Spacing="10">
+    <ScrollView Style="{StaticResource CenterScrollView}">
+        <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
