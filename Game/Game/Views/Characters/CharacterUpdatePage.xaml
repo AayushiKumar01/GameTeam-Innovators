@@ -29,10 +29,10 @@
             <StackLayout Style="{StaticResource OneMarginLayout}">
 
                 <ScrollView>
-                    <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
+                    <StackLayout Style="{StaticResource OuterBoxStack}">
 
                         <Label x:Name="ErrorMessage"
-                                HorizontalOptions="CenterAndExpand"/>
+                               Style="{StaticResource ErrorLabel}"/>
                         <Grid
                             RowSpacing="1"
                             ColumnSpacing="2"
