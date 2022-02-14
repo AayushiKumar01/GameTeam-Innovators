@@ -57,13 +57,11 @@
    
             </StackLayout>
 
-            <StackLayout 
-                HorizontalOptions="Center" 
-                Padding="20">
+            <StackLayout>
 
                 <Label Text="Are you sure you want to delete this?" Style="{StaticResource MessageStyle}"/>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                
+                <StackLayout Style="{StaticResource DeleteButtonMargin}">
                     <Button 
                     Text="Yes" 
                     Clicked="Delete_Clicked" 
