@@ -20,7 +20,7 @@
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ScrollView HorizontalOptions="Center">
+    <ScrollView Style="{StaticResource CenterScrollView}">
 
         <StackLayout Style="{StaticResource OuterBoxStack}" 
                      Spacing="10">
