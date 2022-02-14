@@ -188,7 +188,14 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
+
+            <Style TargetType="Label"
+                x:Key="ErrorLabel"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+            </Style>
             <!-- Image -->
             <Style TargetType="Image"
                 x:Key="ImageExtraLargeStyle">

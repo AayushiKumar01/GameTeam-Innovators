@@ -29,7 +29,7 @@
                 Spacing="10">
 
                 <Label x:Name="ErrorMessage"
-                 HorizontalOptions="CenterAndExpand"/>
+                 Style="{StaticResource ErrorLabel}"/>
                 
                 <Grid
                     RowSpacing="1"
