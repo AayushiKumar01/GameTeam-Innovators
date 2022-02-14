@@ -436,6 +436,12 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="HorizontalCenterAndExpand"
+                BasedOn="{StaticResource HorizontalStack}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="ItemPopupStackLayout"
                 BasedOn="{StaticResource VerticalStack}">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
