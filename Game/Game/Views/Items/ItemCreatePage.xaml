@@ -131,10 +131,10 @@
                         x:Name="ValueValue"
                         Style="{StaticResource SliderNumberValueLabel}"/>
 
-                    <Slider Maximum="10"
+                    <Slider 
                         Value="{Binding Data.Value}"
                         ValueChanged="Value_OnSliderValueChanged"
-                        HorizontalOptions="FillAndExpand"/>
+                        Style="{StaticResource StandardSlider}"/>
 
                     
                     <Label 
