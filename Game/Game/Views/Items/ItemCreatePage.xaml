@@ -117,9 +117,9 @@
                         Style="{StaticResource SliderNumberValueLabel}"/>
 
                     <Slider 
-                            Value="{Binding Data.Range}"
-                            ValueChanged="Range_OnSliderValueChanged"
-                            Style="{StaticResource StandardSlider}"/>
+                        Value="{Binding Data.Range}"
+                        ValueChanged="Range_OnSliderValueChanged"
+                        Style="{StaticResource StandardSlider}"/>
                     
 
                     <Label 
@@ -132,23 +132,25 @@
                         Style="{StaticResource SliderNumberValueLabel}"/>
 
                     <Slider Maximum="10"
-                                Value="{Binding Data.Value}"
-                                ValueChanged="Value_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
+                        Value="{Binding Data.Value}"
+                        ValueChanged="Value_OnSliderValueChanged"
+                        HorizontalOptions="FillAndExpand"/>
 
+                    
                     <Label 
                         Text="Damage" 
                         Style="{StaticResource LabelStyle}"/>
                     
-                        <Label 
-                            Text="{Binding Data.Damage}" 
-                            x:Name="DamageValue"
-                            Style="{StaticResource SliderNumberValueLabel}"/>
-
-                    <Slider Maximum="10"
-                                Value="{Binding Data.Damage}"
-                                ValueChanged="Damage_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
+                    <Label 
+                        Text="{Binding Data.Damage}" 
+                        x:Name="DamageValue"
+                        Style="{StaticResource SliderNumberValueLabel}"/>
+                    
+                    <Slider 
+                        Value="{Binding Data.Damage}"
+                        ValueChanged="Damage_OnSliderValueChanged"
+                        Style="{StaticResource StandardSlider}"/>
+                    
                 </StackLayout>
             </StackLayout>
         </ScrollView>
