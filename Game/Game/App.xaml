@@ -187,6 +187,7 @@
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
 
             <Style TargetType="Label"
