@@ -22,9 +22,7 @@
     <AbsoluteLayout
             Style="{StaticResource StandardAbsolute}">
 
-        <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+        <StackLayout Style="{StaticResource OneMarginLayout}">
 
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="CenterAndExpand">
