@@ -126,15 +126,15 @@
                         Text="Value"
                         Style="{StaticResource LabelStyle}"/>
 
-                        <Label 
-                            Text="{Binding Data.Value}" 
-                            x:Name="ValueValue"
-                            Style="{StaticResource SliderNumberValueLabel}"/>
+                    <Label 
+                        Text="{Binding Data.Value}" 
+                        x:Name="ValueValue"
+                        Style="{StaticResource SliderNumberValueLabel}"/>
 
-                    <Slider Maximum="10"
-                                Value="{Binding Data.Value}"
-                                ValueChanged="Value_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
+                    <Slider 
+                            Value="{Binding Data.Value}"
+                            ValueChanged="Value_OnSliderValueChanged"
+                            Style="{StaticResource StandardSlider}"/>
 
                     <Label 
                         Text="Damage" 
