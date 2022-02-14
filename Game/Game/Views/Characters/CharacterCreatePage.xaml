@@ -219,7 +219,7 @@
 
                                                 <Label Grid.Column="1" Grid.Row="2"
                                                         Text="{Binding Description}" 
-                                                        Style="{StaticResource ListStyle}"
+                                                        Style="{StaticResource PopupItemDescriptionStyle}"
                                                         FontSize="Micro"/>
                                             </Grid>
                                         </ViewCell>
