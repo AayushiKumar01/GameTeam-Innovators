@@ -131,10 +131,10 @@
                                 x:Name="DefenseValue"
                                 Style="{StaticResource SliderNumberValueLabel}"/>
 
-                            <Slider Maximum="10"
+                            <Slider
                                 Value="{Binding Data.Defense}"
                                 ValueChanged="Defense_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
+                                Style="{StaticResource StandardSlider}"/>
 
                             <Label Text="Speed" Style="{StaticResource LabelStyle}"/>
 
@@ -143,9 +143,10 @@
                                 x:Name="SpeedValue"
                                 Style="{StaticResource SliderNumberValueLabel}"/>
 
-                            <Slider Maximum="10"
+                            <Slider
                                 Value="{Binding Data.Speed}"
-                                ValueChanged="Speed_OnSliderValueChanged"/>
+                                ValueChanged="Speed_OnSliderValueChanged"
+                                Style="{StaticResource StandardSlider}"/>
 
                         </StackLayout>
                     </StackLayout>
