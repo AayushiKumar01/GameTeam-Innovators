@@ -26,6 +26,8 @@
         <ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}">
 
+                <Label Text="Create Page" Style="{StaticResource HeaderStyle}"/>
+
                 <Grid Style="{StaticResource StandardGrid}">
                     
                     <Grid.RowDefinitions>
