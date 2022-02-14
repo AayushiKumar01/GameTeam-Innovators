@@ -32,19 +32,19 @@
 
             <StackLayout>
                 <Label Text="Are you sure you want to delete this character?" Style="{StaticResource MessageStyle}"/>
-                
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <StackLayout Style="{StaticResource DeleteButtonMargin}">
 
                     <Button 
-                    Text="Yes" 
-                    Clicked="DeleteCharacter" 
-                    Style="{StaticResource DeleteConfirmationButtons}">
+                        Text="Yes" 
+                        Clicked="DeleteCharacter" 
+                        Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
 
                     <Button 
-                    Text="No" 
-                    Clicked="CancelCharacterDeletion" 
-                   Style="{StaticResource DeleteConfirmationButtons}">
+                        Text="No" 
+                        Clicked="CancelCharacterDeletion" 
+                        Style="{StaticResource DeleteConfirmationButtons}">
                     </Button>
 
                 </StackLayout>
