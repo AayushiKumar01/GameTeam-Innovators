@@ -109,8 +109,8 @@
                                 SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
                                 x:Name="SpaceshipPicker"/>
                         </Grid>
-                        
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+
+                        <StackLayout Style="{StaticResource SliderLayout}">
 
                             <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
 
