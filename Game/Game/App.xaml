@@ -531,6 +531,13 @@
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                x:Key="VerticalFillAndExpand"
+                BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
             <!-- FlexLayout -->
             <Style TargetType="FlexLayout"
                    x:Key="StandardFlex">

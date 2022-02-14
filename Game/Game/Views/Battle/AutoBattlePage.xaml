@@ -5,7 +5,7 @@
              >
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+        <StackLayout Style="{StaticResource VerticalFillAndExpand}">
             <StackLayout Style="{StaticResource CardImageTextBox}">
 
                 <ImageButton
