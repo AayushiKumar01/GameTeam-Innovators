@@ -146,10 +146,10 @@
                             x:Name="DamageValue"
                             Style="{StaticResource SliderNumberValueLabel}"/>
 
-                    <Slider Maximum="10"
-                                Value="{Binding Data.Damage}"
-                                ValueChanged="Damage_OnSliderValueChanged"
-                                HorizontalOptions="FillAndExpand"/>
+                    <Slider 
+                            Value="{Binding Data.Damage}"
+                            ValueChanged="Damage_OnSliderValueChanged"
+                            Style="{StaticResource StandardSlider}"/>
 
                 </StackLayout>
             </StackLayout>
