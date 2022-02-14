@@ -50,7 +50,7 @@
                         Style="{StaticResource EntryStyle}"/>
 
                 </Grid>
-                <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+                <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
                 <Grid
                     RowSpacing="1"
