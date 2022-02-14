@@ -532,6 +532,14 @@
                 <Setter Property="Maximum" Value="9" />
                 <Setter Property="Increment" Value="1" />
             </Style>
+            
+            <!-- Slider -->
+            <Style TargetType="Slider"
+                   x:Key="StandardSlider">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource TriciaryBackgroundColor}"/>
+                <Setter Property="Maximum" Value="10"/>
+            </Style>
 
             <!-- Picker -->
             <Style TargetType="Picker">
