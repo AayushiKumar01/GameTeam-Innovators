@@ -429,6 +429,11 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                x:Key="HorizontalFillAndExpand"
+                BasedOn="{StaticResource HorizontalStack}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
 
             <Style TargetType="StackLayout"
                 x:Key="ItemPopupStackLayout"
