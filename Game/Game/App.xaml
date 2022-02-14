@@ -602,6 +602,12 @@
             </Style>
 
             <Style TargetType="Grid"
+                   x:Key="PaddedGrid"
+                   BasedOn="{StaticResource StandardGrid}">
+                <Setter Property="Padding" Value="10" />
+            </Style>
+
+            <Style TargetType="Grid"
                    x:Key="StatGrid">
                 <Setter Property="RowSpacing" Value="1" />
                 <Setter Property="ColumnSpacing" Value="1" />
