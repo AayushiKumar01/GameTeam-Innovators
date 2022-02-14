@@ -194,11 +194,7 @@
                      Style="{StaticResource PopupItemSelector}">
 
             <StackLayout 
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                WidthRequest="300"
-                HeightRequest="300"
-                >
+                    Style="{StaticResource ItemPopupBox}">
 
                 <Frame 
                     BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
