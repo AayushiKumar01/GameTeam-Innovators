@@ -152,15 +152,15 @@
                             
                             <Label Text="Speed" Style="{StaticResource LabelStyle}"/>
                                 
-                                <Label 
-                                    Text="{Binding Data.Speed}" 
-                                    x:Name="SpeedValue"
-                                    Style="{StaticResource SliderNumberValueLabel}"/>
+                            <Label 
+                                Text="{Binding Data.Speed}" 
+                                x:Name="SpeedValue"
+                                Style="{StaticResource SliderNumberValueLabel}"/>
 
-                                <Slider Maximum="10"
-                                    Value="{Binding Data.Speed}"
-                                    ValueChanged="Speed_OnSliderValueChanged"
-                                    HorizontalOptions="FillAndExpand"/>
+                            <Slider
+                                Value="{Binding Data.Speed}"
+                                ValueChanged="Speed_OnSliderValueChanged"
+                                Style="{StaticResource StandardSlider}"/>
 
                          </StackLayout>
 
