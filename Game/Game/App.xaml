@@ -191,6 +191,14 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="PopupItemDescriptionStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="ErrorLabel"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
@@ -609,7 +617,7 @@
             <Style TargetType="ListView"
                    x:Key="PopupLocationItemListView">
                 <Setter Property="HasUnevenRows" Value="true"/>
-                <Setter Property="Margin" Value="5,0,5,0" />
+                <Setter Property="Margin" Value="10,0,10,0" />
                 <Setter Property="RowHeight" Value="80" />
             </Style>
 
