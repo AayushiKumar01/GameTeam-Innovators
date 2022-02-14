@@ -65,10 +65,7 @@
                             Source="dice10.png"
                             Clicked="RollDice_Clicked" />
 
-                        <Grid
-                            RowSpacing="1"
-                            ColumnSpacing="2"
-                            VerticalOptions="Center">
+                        <Grid Style="{StaticResource StandardGrid}">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
