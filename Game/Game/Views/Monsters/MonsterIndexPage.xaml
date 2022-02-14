@@ -52,8 +52,7 @@
 
                                 <Label Grid.Column="1" Grid.Row="2"
                                        Text="{Binding Job}" 
-                                       Style="{StaticResource ListStyle}"
-                                       FontSize="Micro"/>
+                                       Style="{StaticResource ListStyle}"/>
 
                             </Grid>
                         </ViewCell>
