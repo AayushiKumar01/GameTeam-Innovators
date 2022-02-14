@@ -16,7 +16,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <StackLayout>
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
                     <Label 
                        Text="Name : " 
                         Style="{StaticResource LabelStyle}"/>
