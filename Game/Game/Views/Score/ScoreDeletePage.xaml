@@ -35,8 +35,8 @@
                         Style="{StaticResource ValueStyle}"/>
                 </StackLayout>
 
-               
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+
+                <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
                     <Label 
                         Text="Score:" 
                         Style="{StaticResource LabelStyle}"/>
