@@ -121,10 +121,7 @@
                         <Label 
                             Text="{Binding Data.Range}" 
                             x:Name="RangeValue"
-                            Style="{StaticResource ValueStyle}"
-                            Padding="0,0,10,0"
-                            HorizontalOptions="End"
-                            HorizontalTextAlignment="End"/>
+                            Style="{StaticResource SliderNumberValueLabel}"/>
                     
                         <Slider Maximum="10"
                                 Value="{Binding Data.Range}"
