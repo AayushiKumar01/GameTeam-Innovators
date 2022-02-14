@@ -419,6 +419,13 @@
 
 
             <Style TargetType="StackLayout"
+                x:Key="ItemPopupStackLayout"
+                BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Padding" Value="2" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="PlayerBattleOuterBox"
                 BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
