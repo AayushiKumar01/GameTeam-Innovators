@@ -62,7 +62,7 @@
 
                         </Grid>
 
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource BattleMapBox}">
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
                             <ImageButton 
