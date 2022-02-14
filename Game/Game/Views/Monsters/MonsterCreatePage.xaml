@@ -124,14 +124,14 @@
                             <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
 
                             <Label 
-                                    Text="{Binding Data.Attack}" 
-                                    x:Name="AttackValue"
-                                    Style="{StaticResource SliderNumberValueLabel}"/>
+                                Text="{Binding Data.Attack}" 
+                                x:Name="AttackValue"
+                                Style="{StaticResource SliderNumberValueLabel}"/>
 
-                            <Slider Maximum="10" 
-                                    Value="{Binding Data.Attack}"
-                                    ValueChanged="Attack_OnSliderValueChanged"
-                                    HorizontalOptions="FillAndExpand"/>
+                            <Slider 
+                                Value="{Binding Data.Attack}"
+                                ValueChanged="Attack_OnSliderValueChanged"
+                                Style="{StaticResource StandardSlider}"/>
 
                             <Label Text="Defense" Style="{StaticResource LabelStyle}"/>
 
