@@ -66,9 +66,7 @@
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame Style="{StaticResource ItemPopupFrame}">
-                                <Grid ColumnSpacing="1" 
-                                RowSpacing="1"
-                                BackgroundColor="black">
+                                <Grid Style="{StaticResource StatGrid}">
 
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>

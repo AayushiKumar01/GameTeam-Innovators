@@ -585,6 +585,14 @@
             </Style>
 
             <Style TargetType="Grid"
+                   x:Key="StatGrid">
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="ColumnSpacing" Value="1" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundColor}" />
+                <Setter Property="Padding" Value="1" />
+            </Style>
+
+            <Style TargetType="Grid"
                 x:Key="MapGridStyle">
                 <Setter Property="VerticalOptions" Value="Fill" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
