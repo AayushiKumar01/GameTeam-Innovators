@@ -54,15 +54,13 @@
 
                         </Grid>
 
-                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
-                            <ImageButton 
-                                x:Name="RollDice"
-                                Style="{StaticResource ImageMediumStyle}"
-                                Source="dice10.png"
-                                Clicked="RollDice_Clicked"/>
-                        </StackLayout>
+                        <ImageButton 
+                            x:Name="RollDice"
+                            Style="{StaticResource ImageMediumStyle}"
+                            Source="dice10.png"
+                            Clicked="RollDice_Clicked"/>
 
                         <Grid
                             RowSpacing="1"
