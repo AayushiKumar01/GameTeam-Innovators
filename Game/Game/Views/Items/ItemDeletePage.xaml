@@ -12,9 +12,9 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
-    <ScrollView HorizontalOptions="Center">
-        
-<StackLayout Style="{StaticResource OuterBoxStack}"
+    <ScrollView Style="{StaticResource CenterScrollView}">
+
+        <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10">
 
             <Label 
