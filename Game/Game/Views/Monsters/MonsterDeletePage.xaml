@@ -21,7 +21,8 @@
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
+
                 <Label 
                     Text="Description : " 
                     Style="{StaticResource LabelStyle}"/>
