@@ -20,9 +20,7 @@
     </ContentPage.Resources>
 
     <AbsoluteLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+            Style="{StaticResource StandardAbsolute}">
 
         <StackLayout Style="{StaticResource VerticalStack}"
                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
