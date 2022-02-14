@@ -22,10 +22,7 @@
                     RefreshCommand="{Binding LoadItemsCommand}"
                     CachingStrategy="RecycleElement"
                     ItemSelected="OnItemSelected"
-                    HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="80"
-                    >
+                    Style="{StaticResource IndexListView}">
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>
