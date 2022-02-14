@@ -165,11 +165,8 @@
                          </StackLayout>
 
                         <FlexLayout 
-                        Padding="5"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround"
-                        x:Name="ItemBox">
+                            Style="{StaticResource StandardFlex}" 
+                            x:Name="ItemBox">
                         </FlexLayout>
 
                     </StackLayout>
