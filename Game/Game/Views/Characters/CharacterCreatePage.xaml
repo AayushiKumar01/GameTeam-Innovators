@@ -62,10 +62,7 @@
                             Source="dice10.png"
                             Clicked="RollDice_Clicked"/>
 
-                        <Grid
-                            RowSpacing="1"
-                            ColumnSpacing="2"
-                            VerticalOptions="Center">
+                        <Grid Style="{StaticResource StandardGrid}">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
@@ -87,7 +84,7 @@
                                 Text="Image" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalFillAndExpand}">
 
                                 <Image 
                                     Source="{Binding Data.ImageURI, Mode=TwoWay}"
