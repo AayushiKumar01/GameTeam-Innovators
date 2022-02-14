@@ -451,7 +451,25 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
-            
+
+            <Style TargetType="StackLayout"
+                x:Key="PopupItemSelector">
+                <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
+                <Setter Property="IsVisible" Value="false" />
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".5, .5,.5,.5" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+            </Style>
+
+
+            <Style TargetType="StackLayout"
+                x:Key="ItemPopupBox"
+                BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HeightRequest" Value="300" />
+                <Setter Property="MinimumHeightRequest" Value="300" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+            </Style>
+
             <!-- FlexLayout -->
             <Style TargetType="FlexLayout"
                    x:Key="StandardFlex">
