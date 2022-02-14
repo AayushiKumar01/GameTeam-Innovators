@@ -46,7 +46,7 @@
                                        Style="{StaticResource ListStyle}"/>
 
                                 <StackLayout Grid.Column="1" Grid.Row="1"
-                                    Orientation="Horizontal">
+                                    Style="{StaticResource Horizontal}">
                                     
                                     <Label 
                                        Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
