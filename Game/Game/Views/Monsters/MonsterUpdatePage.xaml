@@ -79,7 +79,7 @@
                                 Text="Image" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalFillAndExpand}">
 
                                 <Image 
                                 Source="{Binding Data.ImageURI}"
@@ -91,20 +91,20 @@
 
                             </StackLayout>
 
-                            <Label Grid.Row="4" Grid.Column="0"
+                            <Label Grid.Row="3" Grid.Column="0"
                                    Text="Difficulty" 
                                    Style="{StaticResource LabelStyle}"/>
 
-                            <Picker Grid.Row="4" Grid.Column="1"
+                            <Picker Grid.Row="3" Grid.Column="1"
                                     ItemsSource="{x:Static local_enum:DifficultyEnumHelper.GetListMonster}" 
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource DifficultyEnumConverter}, Mode=TwoWay}"
                                     x:Name="DifficultyPicker"/>
 
-                            <Label Grid.Row="5" Grid.Column="0"
+                            <Label Grid.Row="4" Grid.Column="0"
                                 Text="Spaceship Type" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <Picker Grid.Row="5" Grid.Column="1"
+                            <Picker Grid.Row="4" Grid.Column="1"
                                 ItemsSource="{x:Static local_enum:CharacterJobEnumHelper.GetListMessageCharacterJob}" 
                                 SelectedItem="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}, Mode=TwoWay}" 
                                 x:Name="SpaceshipPicker"/>
