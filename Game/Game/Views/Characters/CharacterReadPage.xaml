@@ -29,7 +29,7 @@
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}">
 
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Style="{StaticResource CenterAndExpand}">
 
                            <Label 
                                 Text="{Binding Data.Name}" 
