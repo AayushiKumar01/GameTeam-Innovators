@@ -42,21 +42,25 @@
                                 Style="{StaticResource ValueStyle}"/>
                     </StackLayout>
 
-                    <Label Grid.Row="1" Grid.Column="0"
-                                    Text="Level : " 
-                                    Style="{StaticResource LabelStyle}"/>
-                            <Label Grid.Row="1" Grid.Column="1"
-                                    Text="{Binding Data.Level}" 
-                                    Style="{StaticResource ValueStyle}"/>
+                    <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
+                        <Label 
+                                Text="Level : " 
+                                Style="{StaticResource LabelStyle}"/>
+                        <Label 
+                                Text="{Binding Data.Level}" 
+                                Style="{StaticResource ValueStyle}"/>
+                    </StackLayout>
 
-                            <Label Grid.Row="2" Grid.Column="0"
-                                    Text="Spaceship Type : " 
-                                    Style="{StaticResource LabelStyle}"/>
-                            <Label Grid.Row="2" Grid.Column="1"
-                                    Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
-                                    Style="{StaticResource ValueStyle}"/>
+                    <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
+                        <Label 
+                                Text="Spaceship Type : " 
+                                Style="{StaticResource LabelStyle}"/>
+                        <Label 
+                                Text="{Binding Data.Job, Converter={StaticResource CharacterJobEnumConverter}}" 
+                                Style="{StaticResource ValueStyle}"/>
+                    </StackLayout>
 
-                            <Label Grid.Row="3" Grid.Column="0"
+                    <Label Grid.Row="3" Grid.Column="0"
                                     Text="Difficulty : " 
                                     Style="{StaticResource LabelStyle}"/>
                             <Label Grid.Row="3" Grid.Column="1"
