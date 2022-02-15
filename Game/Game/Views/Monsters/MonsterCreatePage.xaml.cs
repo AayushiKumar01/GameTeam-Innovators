@@ -66,13 +66,20 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            // Abort save if name or description is empty
-            if (string.IsNullOrEmpty(MonsterName.Text) || string.IsNullOrEmpty(MonsterDescription.Text))
+            // Abort save if name is empty
+            if (string.IsNullOrEmpty(MonsterName.Text))
+            { 
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
+                return;
+            }
+
+            // Abort save if description is empty
+            if (string.IsNullOrEmpty(MonsterDescription.Text))
             {
                 ErrorMessage.Text = "Mandatory fields can not be blank.";
                 return;
             }
-            
+
             // If the image in the data box is empty, use the default one..
             if (string.IsNullOrEmpty(ViewModel.Data.ImageURI))
             {
