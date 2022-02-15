@@ -118,7 +118,7 @@ namespace Game.Views
                 return;
             }
             
-            // Abort save if name is empty
+            // Abort save if description is empty
             if (string.IsNullOrEmpty(CharacterDescription.Text))
             {
                 ErrorMessage.Text = "Mandatory fields can not be blank.";
