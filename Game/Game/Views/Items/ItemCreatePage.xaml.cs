@@ -47,12 +47,34 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            // Abort save if name or description or location or attribute is empty
-            if (string.IsNullOrEmpty(ItemName.Text) || string.IsNullOrEmpty(ItemDescription.Text) || LocationPicker.SelectedItem.Equals("Unknown") || AttributePicker.SelectedItem.Equals("Unknown"))
+            // Abort save if attribute is empty
+            if (AttributePicker.SelectedItem.Equals("Unknown"))
             {
                 ErrorMessage.Text = "Mandatory fields can not be blank.";
                 return;
             }
+
+            // Abort save if name is empty
+            if (string.IsNullOrEmpty(ItemName.Text))
+            {
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
+                return;
+            }
+
+            // Abort save if description is empty
+            if (string.IsNullOrEmpty(ItemDescription.Text))
+            {
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
+                return;
+            }
+
+            // Abort save if location is empty
+            if (LocationPicker.SelectedItem.Equals("Unknown"))
+            {
+                ErrorMessage.Text = "Mandatory fields can not be blank.";
+                return;
+            }
+
             // If the image in the data box is empty, use the default one..
             if (string.IsNullOrEmpty(ViewModel.Data.ImageURI))
             {
