@@ -18,6 +18,9 @@ namespace Game.Views
         // View Model for Item
         public readonly GenericViewModel<ItemModel> ViewModel;
 
+        //Hold a copy of the original item data in case update is canceled
+        public ItemModel ItemCopy; 
+        
         // Empty Constructor for Tests
         public ItemUpdatePage(bool UnitTest) { }
 
@@ -31,6 +34,9 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Update " + data.Title;
+
+            //copying item data to ItemCopy to restore values in case update is canceled
+            ItemCopy = new ItemModel(data.Data);
 
             //Need to make the SelectedItem a string, so it can select the correct item.
             LocationPicker.SelectedItem = data.Data.Location.ToMessage();
@@ -75,6 +81,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
+            //restoring original item data
+            ViewModel.Data.Update(ItemCopy);
             _ = await Navigation.PopModalAsync();
         }
 
