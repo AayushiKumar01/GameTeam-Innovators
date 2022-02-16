@@ -49,7 +49,7 @@ namespace Game.GameRules
                     Name = "Blue Plasma Cannon",
                     Description = "Molten fire",
                     ImageURI = "item3.png",
-                    Range = 100,
+                    Range = 10,
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
