@@ -12,7 +12,7 @@ namespace Game.Helpers
     // The picker requires this because the picker must be a string, but the enum is a value...
 
     // Converts from a string to the enum value.  Head = 5, would return 5 for the string "Head", and for "Head" will return 5
-    class ItemLocationEnumConverter : IValueConverter
+    public class ItemLocationEnumConverter : IValueConverter
     {
         /// <summary>
         /// Converts a value to the string
