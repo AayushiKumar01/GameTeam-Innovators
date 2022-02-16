@@ -94,6 +94,20 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CharacterDeletePage_CancelButtonPressed_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.CancelCharacterDeletion(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void CharacterDeletePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
