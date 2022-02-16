@@ -124,6 +124,26 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        
+
+        [Test]
+        public void ItemCreatePage_Save_Clicked_Empty_ImageURI_Should_Pass()
+        {
+            // Arrange
+            ((Picker)page.FindByName("AttributePicker")).SelectedIndex = 1;
+            ((Picker)page.FindByName("LocationPicker")).SelectedIndex = 1;
+            page.ViewModel.Data.ImageURI = "";
+            page.ViewModel.SetNeedsRefresh(true);
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
         [Test]
         public void ItemCreatePage_Save_Clicked_Null_Image_Should_Pass()
         {
