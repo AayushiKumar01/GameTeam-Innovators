@@ -92,6 +92,20 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void ItemCreatePage_Save_Clicked_Empty_Description_Should_Pass()
+        {
+            // Arrange
+            ((Entry)page.FindByName("ItemDescription")).Text = "";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
         [Test]
         public void ItemCreatePage_Save_Clicked_Null_Image_Should_Pass()
