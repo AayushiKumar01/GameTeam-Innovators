@@ -81,6 +81,21 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CharacterUpdatePage_Save_Clicked_Null_Description_Default_Should_Pass()
+        {
+            // Arrange
+            ((Entry)page.FindByName("CharacterDescription")).Text = "";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void CharacterUpdatePage_Save_Clicked_Null_Image_Should_Pass()
         {
             // Arrange
