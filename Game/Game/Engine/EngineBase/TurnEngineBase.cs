@@ -122,17 +122,17 @@ namespace Game.Engine.EngineBase
             // Assume Move if nothing else happens
             EngineSettings.CurrentAction = ActionEnum.Move;
 
-            // Check to see if ability is avaiable
-            if (ChooseToUseAbility(Attacker))
-            {
-                EngineSettings.CurrentAction = ActionEnum.Ability;
-                return EngineSettings.CurrentAction;
-            }
-
             // See if Desired Target is within Range, and if so attack away
             if (EngineSettings.MapModel.IsTargetInRange(Attacker, AttackChoice(Attacker)))
             {
                 EngineSettings.CurrentAction = ActionEnum.Attack;
+                return EngineSettings.CurrentAction;
+            }
+
+            // Check to see if ability is avaiable
+            if (ChooseToUseAbility(Attacker))
+            {
+                EngineSettings.CurrentAction = ActionEnum.Ability;
             }
 
             return EngineSettings.CurrentAction;
