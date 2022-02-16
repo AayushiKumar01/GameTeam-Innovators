@@ -81,7 +81,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Save_Clicked_Null_Name_Shows_Error_Should_Pass()
+        public void CharacterCreatePage_Save_Clicked_Empty_Name_Shows_Error_Should_Pass()
         {
             // Arrange
             // page.ViewModel.Data.Name = null;
@@ -98,7 +98,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void CharacterCreatePage_Save_Clicked_Null_Description_Shows_Error_Should_Pass()
+        public void CharacterCreatePage_Save_Clicked_Empty_Description_Shows_Error_Should_Pass()
         {
             // Arrange
             ((Entry)page.FindByName("CharacterDescription")).Text = "";
