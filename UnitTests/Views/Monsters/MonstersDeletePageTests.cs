@@ -92,5 +92,19 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void MonsterDeletePage_CancelButtonPressed_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.CancelMonsterDeletion(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
