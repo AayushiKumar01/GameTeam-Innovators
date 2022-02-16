@@ -81,6 +81,23 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void CharacterCreatePage_Save_Clicked_Null_Name_Shows_Error_Should_Pass()
+        {
+            // Arrange
+            // page.ViewModel.Data.Name = null;
+            ((Entry)page.FindByName("CharacterName")).Text = "";
+            // page.ViewModel.SetNeedsRefresh(true);
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void CharacterCreatePage_Save_Clicked_Null_Image_Should_Pass()
         {
             // Arrange
