@@ -84,9 +84,7 @@ namespace UnitTests.Views
         public void CharacterCreatePage_Save_Clicked_Empty_Name_Shows_Error_Should_Pass()
         {
             // Arrange
-            // page.ViewModel.Data.Name = null;
             ((Entry)page.FindByName("CharacterName")).Text = "";
-            // page.ViewModel.SetNeedsRefresh(true);
 
             // Act
             page.Save_Clicked(null, null);
