@@ -25,6 +25,9 @@ namespace Game.Views
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
 
+        // to hold original character data for cancel update
+        public CharacterModel CharacterCopy;
+
         // Empty Constructor for UTs
         public CharacterUpdatePage(bool UnitTest) { }
 
@@ -34,6 +37,9 @@ namespace Game.Views
         public CharacterUpdatePage(GenericViewModel<CharacterModel> data)
         {
             InitializeComponent();
+
+            //copying character data to CharacterCopy to restore values in case update is canceled
+            CharacterCopy = new CharacterModel(data.Data);
 
             BindingContext = this.ViewModel = data;
 
@@ -139,11 +145,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
-            // TODO: Mike, refactor this. Setting and Showing is causing a bug
-            // Don't want to set the value on update constructor, only after save on the page
-            // need to make sure that cancel from a save, actually cancels.
-            // Make a copy of the object and work from that and then have that passed in to update
-
+            //restore original character data
+            ViewModel.Data.Update(CharacterCopy);
             _ = await Navigation.PopModalAsync();
         }
 
