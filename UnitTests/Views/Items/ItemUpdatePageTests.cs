@@ -110,6 +110,21 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void ItemUpdatePage_Save_Clicked_Empty_Name_Should_Pass()
+        {
+            // Arrange
+            ((Entry)page.FindByName("ItemName")).Text = "";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void ItemUpdatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
