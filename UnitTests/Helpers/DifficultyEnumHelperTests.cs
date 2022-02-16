@@ -147,6 +147,35 @@ namespace UnitTests.Helpers
                 Assert.AreEqual(myExpected, myActual, "string: " + item + TestContext.CurrentContext.Test.Name);
             }
         }
+
+
+        [Test]
+        public void DifficultyEnumHelper_ConvertMessageToEnum_Valid_Head_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = DifficultyEnumHelper.ConvertMessageToEnum("Difficult");
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(DifficultyEnum.Difficult, result);
+        }
+
+        [Test]
+        public void DifficultyEnumHelper_ConvertMessageToEnum_InValid_Bogus_Should_Fail()
+        {
+            // Arrange
+
+            // Act
+            var result = DifficultyEnumHelper.ConvertMessageToEnum("bogus");
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(DifficultyEnum.Unknown, result);
+        }
     }
 }
 
