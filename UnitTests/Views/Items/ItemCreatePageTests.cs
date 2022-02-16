@@ -81,6 +81,7 @@ namespace UnitTests.Views
         public void ItemCreatePage_Save_Clicked_Empty_Name_Should_Pass()
         {
             // Arrange
+            ((Picker)page.FindByName("AttributePicker")).SelectedIndex = 1;
             ((Entry)page.FindByName("ItemName")).Text = "";
 
             // Act
@@ -96,6 +97,7 @@ namespace UnitTests.Views
         public void ItemCreatePage_Save_Clicked_Empty_Description_Should_Pass()
         {
             // Arrange
+            ((Picker)page.FindByName("AttributePicker")).SelectedIndex = 1;
             ((Entry)page.FindByName("ItemDescription")).Text = "";
 
             // Act
