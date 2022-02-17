@@ -47,7 +47,6 @@ namespace Game.Views
 
             BattleMessageValue.Text = BattleMessage;
 
-            AutobattleImage.Source = "troll6_d.gif";
         }
     }
 }
