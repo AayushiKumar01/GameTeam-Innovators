@@ -191,7 +191,15 @@ namespace Game.Views
         /// <returns></returns>
         public async Task<bool> GetItemsPost()
         {
-            var number = Convert.ToInt32(ServerItemValue.Text);
+            
+            //var number = Convert.ToInt32(ServerItemValue.Text);
+
+            //checking for valid numbers
+            if (int.TryParse(ServerItemValue.Text, out var number) == false)
+            {
+                return false;
+            }
+
             var level = 6;  // Max Value of 6
             var attribute = AttributeEnum.Unknown;  // Any Attribute
             var location = ItemLocationEnum.Unknown;    // Any Location
