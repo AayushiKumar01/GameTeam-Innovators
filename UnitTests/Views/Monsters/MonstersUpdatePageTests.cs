@@ -109,6 +109,28 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void MonsterUpdatePage_Attack_OnStepperValueChanged_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new MonsterModel();
+            var ViewModel = new GenericViewModel<MonsterModel>(data);
+
+            page = new MonsterUpdatePage(ViewModel);
+            var oldValue = 0.0;
+            var newValue = 1.0;
+
+            var args = new ValueChangedEventArgs(oldValue, newValue);
+
+            // Act
+            page.Attack_OnSliderValueChanged(null, args);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void MonsterUpdatePage_Defense_OnStepperValueChanged_Default_Should_Pass()
         {
             // Arrange
