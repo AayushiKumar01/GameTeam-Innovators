@@ -211,6 +211,9 @@ namespace Game.Views
             // Example  result = await ItemsController.Instance.GetItemsFromGame(1, 10, AttributeEnum.Speed, ItemLocationEnum.Feet, false, true);
             var dataList = await ItemService.GetItemsFromServerPostAsync(number, level, attribute, location, category, random, updateDataBase);
 
+            //to display results
+            _ = DisplayServerResults(dataList);
+
             return true;
         }
     }
