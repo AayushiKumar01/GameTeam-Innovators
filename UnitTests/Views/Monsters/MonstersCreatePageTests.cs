@@ -109,6 +109,28 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void MonsterCreatePage_Speed_OnStepperValueChanged_Default_Should_Pass()
+        {
+            // ArSpeed
+            var data = new MonsterModel();
+            var ViewModel = new GenericViewModel<MonsterModel>(data);
+
+            page = new MonsterCreatePage(ViewModel);
+            var oldSpeed = 0.0;
+            var newSpeed = 1.0;
+
+            var args = new ValueChangedEventArgs(oldSpeed, newSpeed);
+
+            // Act
+            page.Speed_OnSliderValueChanged(null, args);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void MonsterCreatePage_Defense_OnStepperDefenseChanged_Default_Should_Pass()
         {
             // Arrange
