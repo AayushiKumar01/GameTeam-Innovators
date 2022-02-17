@@ -107,5 +107,28 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void MonsterUpdatePage_Speed_OnStepperDamageChanged_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new MonsterModel();
+            var ViewModel = new GenericViewModel<MonsterModel>(data);
+
+            page = new MonsterUpdatePage(ViewModel);
+            var oldDamage = 0.0;
+            var newDamage = 1.0;
+
+            var args = new ValueChangedEventArgs(oldDamage, newDamage);
+
+            // Act
+            page.Speed_OnSliderValueChanged(null, args);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
     }
 }
