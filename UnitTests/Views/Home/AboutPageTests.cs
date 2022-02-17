@@ -359,6 +359,28 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
+
+        [Test]
+        public async Task AboutPage_GetItemsPost_Invalid_ABC_Should_Fail()
+        {
+            // Arrange
+            _ = TestBaseHelper.SetHttpClientToMock();
+            ResponseMessage.SetResponseMessageStringContent(JsonSampleData.StringContent_Example_API_Pass);
+            ResponseMessage.SetResponseMessageStringContent(ResponseMessage.NullStringContent);
+            ResponseMessage.SetHttpStatusCode(ResponseMessage.HttpStatusCodeSuccess);
+
+            page.SetServerItemValue("ABC");
+
+            // Act
+            var result = await page.GetItemsPost();
+
+            // Reset
+            _ = TestBaseHelper.SetHttpClientToReal();
+
+            // Assert
+            Assert.AreEqual(false, result); // Got to here, so it happened...
+        }
+
         #endregion GetItemsPost
 
         #region DisplayServerResults
