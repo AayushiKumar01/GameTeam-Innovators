@@ -27,8 +27,6 @@
                     Style="{StaticResource BattleMessageStyle}"
                     />
 
-                <Image x:Name="AutobattleImage"></Image>
-
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
