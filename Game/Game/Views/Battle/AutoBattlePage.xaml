@@ -8,14 +8,15 @@
         <StackLayout Style="{StaticResource VerticalFillAndExpand}">
             <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                <ImageButton
-                        Source="item.png"
+                <Image
+                        Source="ship7.gif"
                         Style="{StaticResource ImageLargeStyle}"
-                        Clicked="AutobattleButton_Clicked"/>
+                        IsAnimationPlaying="True"
+                        />
 
-                <Label 
+                <Button 
                         Text="Begin Quest"
-                        Style="{StaticResource CenterMessageStyle}"/>
+                        Clicked="AutobattleButton_Clicked"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource CardImageTextBox}">
@@ -26,11 +27,7 @@
                     Style="{StaticResource BattleMessageStyle}"
                     />
 
-                <Image
-                        x:Name="AutobattleImage"
-                        Source="elf1_a.gif"
-                        IsAnimationPlaying="True"
-                        Style="{StaticResource ImageLargeStyle}"></Image>
+                <Image x:Name="AutobattleImage"></Image>
 
             </StackLayout>
         </StackLayout>
