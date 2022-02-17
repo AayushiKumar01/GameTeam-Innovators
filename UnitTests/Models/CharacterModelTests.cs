@@ -87,7 +87,7 @@ namespace UnitTests.Models
             Assert.IsNotNull(result.Id);
             Assert.AreEqual(result.Id, result.Guid);
 
-            Assert.AreEqual("ship2.png", result.ImageURI);
+            Assert.AreEqual("ship7.gif", result.ImageURI);
             Assert.AreEqual(PlayerTypeEnum.Character, result.PlayerType);
 
             Assert.AreEqual(true, result.Alive);
