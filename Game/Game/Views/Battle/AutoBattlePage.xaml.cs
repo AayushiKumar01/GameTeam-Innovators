@@ -43,10 +43,11 @@ namespace Game.Views
 
             _ = await AutoBattle.RunAutoBattle();
 
-            var BattleMessage = string.Format("Done {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
+            var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
             BattleMessageValue.Text = BattleMessage;
-            
+
+            AutobattleImage.Source = "troll6_d.gif";
         }
     }
 }
