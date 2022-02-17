@@ -129,7 +129,13 @@ namespace Game.Views
             // The ServerItemValue Code stands for the batch of items to get
             // as the group to request.  1, 2, 3, 100 (All), or if not specified All
 
-            var value = Convert.ToInt32(ServerItemValue.Text);
+            //var value = Convert.ToInt32(ServerItemValue.Text);
+            
+            if (int.TryParse(ServerItemValue.Text, out var value) == false)
+            {
+                return false;
+            }
+
             var dataList = await ItemService.GetItemsFromServerGetAsync(value);
 
             _ = DisplayServerResults(dataList);
