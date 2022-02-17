@@ -80,6 +80,21 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void MonsterUpdatePage_Save_Clicked_Empty_Description_Should_Pass()
+        {
+            // Arrange
+            ((Entry)page.FindByName("MonsterDescription")).Text = "";
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void MonsterUpdatePage_Save_Clicked_Empty_Name_Should_Pass()
         {
             // Arrange
