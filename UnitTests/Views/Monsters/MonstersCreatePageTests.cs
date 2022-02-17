@@ -109,6 +109,28 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void MonsterCreatePage_Defense_OnStepperDefenseChanged_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new MonsterModel();
+            var ViewModel = new GenericViewModel<MonsterModel>(data);
+
+            page = new MonsterCreatePage(ViewModel);
+            var oldDefense = 0.0;
+            var newDefense = 1.0;
+
+            var args = new ValueChangedEventArgs(oldDefense, newDefense);
+
+            // Act
+            page.Defense_OnSliderValueChanged(null, args);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void MonsterCreatePage_RollDice_Clicked_Default_Should_Pass()
         {
             // Arrange
