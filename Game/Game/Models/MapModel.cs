@@ -17,7 +17,7 @@ namespace Game.Models
         public int MapXAxiesCount = 3;
 
         // The Y axies Size
-        public int MapYAxiesCount = 6;
+        public int MapYAxiesCount = 8;
 
         // The Map Locations
         public MapModelLocation[,] MapGridLocation;
