@@ -276,7 +276,7 @@ namespace Game.Views
 
             // Set the Height for the MapGrid based on the number of rows * the height of the BattleMapFrame
 
-            var height = BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapXAxiesCount * 60;
+            var height = BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.MapXAxiesCount * 120;
 
             BattleMapDisplay.MinimumHeightRequest = height;
             BattleMapDisplay.HeightRequest = height;
