@@ -62,7 +62,7 @@ namespace Game.Models
 
             var x = 0;
             var y = 0;
-            foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Character))
+            foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Monster))
             {
                 MapGridLocation[x, y].Player = data;
 
@@ -77,7 +77,7 @@ namespace Game.Models
 
             x = 0;
             y = MapYAxiesCount - 1;
-            foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Monster))
+            foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Character))
             {
                 MapGridLocation[x, y].Player = data;
 
