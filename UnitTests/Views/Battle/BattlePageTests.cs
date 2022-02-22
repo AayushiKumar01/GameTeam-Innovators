@@ -38,6 +38,8 @@ namespace UnitTests.Views
             //Start the Engine in AutoBattle Mode
             _ = BattleEngineViewModel.Instance.Engine.StartBattle(false);
 
+            // BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Clear();
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Clear();
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
             BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Add(new PlayerInfoModel(new MonsterModel()));
             _ = BattleEngineViewModel.Instance.Engine.Round.MakePlayerList();
