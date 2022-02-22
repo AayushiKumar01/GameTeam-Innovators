@@ -814,7 +814,7 @@ namespace UnitTests.Models
 
             // Assert 
             Assert.AreEqual(0, result.Column);
-            Assert.AreEqual(0, result.Row);
+            Assert.AreEqual(1, result.Row);
         }
 
         [Test]
