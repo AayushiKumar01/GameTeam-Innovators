@@ -1003,7 +1003,7 @@ namespace UnitTests.Views
             // Make UI Map
             page.DrawMapGridInitialState();
 
-            var nameImage = "MapR3C3ImageButton";
+            var nameImage = "MapR3C1ImageButton";
             _ = page.MapLocationObject.TryGetValue(nameImage, out var dataImage);
 
             // Act
