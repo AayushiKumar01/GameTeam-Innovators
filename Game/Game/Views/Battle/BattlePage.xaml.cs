@@ -745,7 +745,7 @@ namespace Game.Views
             // }
 
             htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
-            HtmlBox.Source = HtmlBox.Source = htmlSource;
+            HtmlBox.Source = htmlSource;
         }
 
         /// <summary>
