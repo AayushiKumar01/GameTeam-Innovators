@@ -12,11 +12,11 @@
 
             <StackLayout Style="{StaticResource VerticalStack}"
                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+                    AbsoluteLayout.LayoutFlags="All" HorizontalOptions="CenterAndExpand">
 
                 <ScrollView x:Name="ScrollView">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource VerticalStack}" WidthRequest="300">
 
                         <Label Text="Round Cleared" Style="{StaticResource CenterMessageLargeStyle}"/>
 
