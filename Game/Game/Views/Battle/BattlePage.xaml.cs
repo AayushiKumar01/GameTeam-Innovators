@@ -735,17 +735,17 @@ namespace Game.Views
         public void GameMessage()
         {
             // Output The Message that happened.
-            BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessages.Text);
+            // BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessages.Text);
+            //
+            // Debug.WriteLine(BattleMessages.Text);
+            //
+            // if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
+            // {
+            //     BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
+            // }
 
-            Debug.WriteLine(BattleMessages.Text);
-
-            if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
-            {
-                BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
-            }
-
-            //htmlSource.Html = BattleEngineViewModel.Instance.Engine.BattleMessagesModel.GetHTMLFormattedTurnMessage();
-            //HtmlBox.Source = HtmlBox.Source = htmlSource;
+            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
+            HtmlBox.Source = HtmlBox.Source = htmlSource;
         }
 
         /// <summary>
@@ -753,9 +753,9 @@ namespace Game.Views
         /// </summary>
         public void ClearMessages()
         {
-            BattleMessages.Text = "";
+            // BattleMessages.Text = "";
             htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
-            //HtmlBox.Source = htmlSource;
+            HtmlBox.Source = htmlSource;
         }
 
         #endregion MessageHandelers
