@@ -1,8 +1,7 @@
 ﻿using NUnit.Framework;
 
-using Game.Engine.EngineGame;
 using Game.Models;
-using Game.Engine.EngineModels;
+using Game.Engine.EngineKoenig;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -16,8 +15,6 @@ namespace UnitTests.Engine.EngineGame
         public void Setup()
         {
             Engine = new BattleEngine();
-            Engine.Round = new RoundEngine();
-            Engine.Round.Turn = new TurnEngine();
         }
 
         [TearDown]
@@ -40,24 +37,7 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.IsNotNull(result);
         }
-
         #endregion Constructor
-
-        #region EngineSettings
-        [Test]
-        public void BattleEngine_EngineSettings_Valid_Default_Should_Pass()
-        {
-            // Arrange
-
-            // Act
-            var result = Engine.EngineSettings = EngineSettingsModel.Instance;
-
-            // Reset
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
-        #endregion EngineSettings
 
         #region StartBattle
         [Test]
@@ -108,21 +88,5 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
         #endregion PopulateCharacterList
-
-        #region SetBattleStateEnum
-        [Test]
-        public void BattleEngine_SetBattleStateEnum_Valid_Default_Should_Pass()
-        {
-            // Arrange
-
-            // Act
-            var result = Engine.SetBattleStateEnum(BattleStateEnum.Battling);
-
-            // Reset
-
-            // Assert
-            Assert.AreEqual(true, result);
-        }
-        #endregion SetBattleStateEnum
     }
 }
