@@ -48,9 +48,9 @@ namespace UnitTests.Models
 
             Assert.AreEqual(0, result.DamageAmount);
             Assert.AreEqual(0, result.CurrentHealth);
-
-            Assert.AreEqual(@"<html><body bgcolor=""#E8D0B6""><p>", result.htmlHead);
-            Assert.AreEqual(@"</p></body></html>", result.htmlTail);
+            
+            Assert.AreEqual(@"<html><body bgcolor=""#81b9d0""><p><center>", result.htmlHead);
+            Assert.AreEqual(@"</center></p></body></html>", result.htmlTail);
         }
 
         [Test]
