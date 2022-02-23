@@ -33,6 +33,9 @@ namespace Game.Views
         bool UnitTestSetting;
         public BattlePage(bool UnitTest) { UnitTestSetting = UnitTest; }
 
+        // Temporary flag to forge the game to end with 'Finish Game' Button
+        bool forceGameOver = false;
+        
         /// <summary>
         /// Constructor
         /// </summary>
@@ -618,6 +621,19 @@ namespace Game.Views
             await ShowBattleSettingsPage();
         }
 
+        
+        
+        /// <summary>
+        /// Temporary button handler to force the game to end early
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FinishButton_Clicked(object sender, EventArgs e)
+        {
+            forceGameOver = true;
+            NextAttackExample();
+        }
+        
         /// <summary>
         /// Next Attack Example
         /// 
@@ -640,7 +656,11 @@ namespace Game.Views
 
             // Hold the current state
             var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
-
+            if (forceGameOver)
+            {
+                RoundCondition = RoundEnum.GameOver;
+            }
+            
             // Output the Message of what happened.
             GameMessage();
 
