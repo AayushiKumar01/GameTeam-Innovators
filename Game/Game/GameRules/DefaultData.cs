@@ -158,7 +158,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Sonar Radar",
                     Description = "Sound travels through space?",
-                    ImageURI = "item6.png",
+                    ImageURI = "radar1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
@@ -168,7 +168,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Infrared Radar",
                     Description = "Tracks heat signatures",
-                    ImageURI = "item2.png",
+                    ImageURI = "radar1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
