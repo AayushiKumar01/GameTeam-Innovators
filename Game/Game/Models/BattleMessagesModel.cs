@@ -45,7 +45,7 @@
         public int CurrentHealth = 0;
 
         // Beginning of the Html Block for html formatting
-        public string htmlHead = @"<html><body bgcolor=""#E8D0B6""><p>";
+        public string htmlHead = @"<html><body bgcolor=""#81b9d0""><p><center>";
 
         // Ending of the Html Block for Html formatting
         public string htmlTail = @"</p></body></html>";
