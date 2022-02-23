@@ -48,7 +48,7 @@
         public string htmlHead = @"<html><body bgcolor=""#81b9d0""><p><center>";
 
         // Ending of the Html Block for Html formatting
-        public string htmlTail = @"</p></body></html>";
+        public string htmlTail = @"</center></p></body></html>";
 
 
         public bool ClearMessages()
