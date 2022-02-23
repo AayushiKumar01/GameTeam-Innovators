@@ -55,7 +55,7 @@
                     </StackLayout>
 
                     <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
-                    <StackLayout x:Name="BattleBottomBox" Style="{StaticResource BattleUIBottomBox}">
+                    <StackLayout x:Name="BattleBottomBox" Style="{StaticResource BattleUIBottomBox}" MinimumWidthRequest="250">
 
                         <Frame x:Name="BattlePlayerInfomationBox"
                                     Style="{StaticResource PlayerBattleOuterFrame}"
