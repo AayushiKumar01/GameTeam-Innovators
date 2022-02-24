@@ -106,9 +106,8 @@
                         </StackLayout>
 
                         <StackLayout 
-                                Style="{StaticResource VerticalStack}" 
-                                HeightRequest="100"
-                                HorizontalOptions="CenterAndExpand">
+                                Style="{StaticResource VerticalFillAndExpand}" 
+                                HeightRequest="100">
 
                             <StackLayout x:Name="MessageDisplayBox" 
                                 IsVisible="false"
