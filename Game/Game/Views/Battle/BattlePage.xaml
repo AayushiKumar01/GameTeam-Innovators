@@ -111,9 +111,7 @@
 
                             <StackLayout x:Name="MessageDisplayBox" 
                                 IsVisible="false"
-                                Style="{StaticResource VerticalStack}" 
-                                        VerticalOptions="StartAndExpand"
-                                        HorizontalOptions="CenterAndExpand">
+                                Style="{StaticResource MessageDisplayBox}">
 
                                 <!-- <Label x:Name="BattleMessages"  -->
                                 <!--         HorizontalOptions="FillAndExpand"  -->
