@@ -12,15 +12,15 @@
 
                 <Button Clicked="BeginButton_Clicked" Text="Begin"/>
 
-                
-                <Label Text="Monsters" Style="{StaticResource MessageLargeStyle}" HorizontalTextAlignment="End"  HorizontalOptions="End"/>
+
+                <Label Text="Monsters" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                 <FlexLayout x:Name="MonsterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap" WidthRequest="300"/>
 
-                <Label Text="Characters" Style="{StaticResource MessageLargeStyle}" HorizontalTextAlignment="End" HorizontalOptions="End"/>
+                <Label Text="Characters" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                 <FlexLayout x:Name="PartyListFrame"
                                     JustifyContent="Start"
