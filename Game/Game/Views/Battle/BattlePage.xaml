@@ -57,6 +57,18 @@
                     <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                     <StackLayout x:Name="BattleBottomBox" Style="{StaticResource OuterBoxStack}" VerticalOptions="CenterAndExpand">
 
+                        <WebView
+                            x:Name="HtmlBox"
+                            WidthRequest="400"
+                            MinimumWidthRequest="200"
+                            HeightRequest="60"
+                            MinimumHeightRequest="60"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start"
+                            BackgroundColor="Transparent"
+                            IsVisible="True"
+                        />
+
                         <Frame x:Name="BattlePlayerInfomationBox"
                                     Style="{StaticResource PlayerBattleOuterFrame}"
                                     IsVisible="False">
@@ -117,17 +129,6 @@
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
-                <WebView
-                    x:Name="HtmlBox"
-                    WidthRequest="400"
-                    MinimumWidthRequest="200"
-                    HeightRequest="60"
-                    MinimumHeightRequest="60"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Start"
-                    BackgroundColor="Transparent"
-                    IsVisible="True"
-                />
             </StackLayout>
 
             <!--The Game Over Screen -->
