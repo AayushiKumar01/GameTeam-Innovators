@@ -874,6 +874,7 @@ namespace Game.Views
             AttackButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
             BattlePlayerInfomationBox.IsVisible = false;
+            HtmlBox.IsVisible = false;
         }
 
         /// <summary>
@@ -934,6 +935,7 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = true;
                     BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
+                    HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
                     break;
 
