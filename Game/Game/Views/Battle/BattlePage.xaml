@@ -45,7 +45,7 @@
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
                     <!--The Battle Map Display -->
                     <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start" MinimumWidthRequest="200">
                         <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
