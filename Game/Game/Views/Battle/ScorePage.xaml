@@ -4,8 +4,8 @@
              x:Class="Game.Views.ScorePage">
 
     <ContentPage.Content>
-        <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
-            <StackLayout Style="{StaticResource VerticalStack}">
+        <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" HorizontalOptions="CenterAndExpand" >
+            <StackLayout Style="{StaticResource VerticalStack}" WidthRequest="350">
 
             <Label Text="Score Page" Style="{StaticResource CenterMessageLargeStyle}"/>
 
