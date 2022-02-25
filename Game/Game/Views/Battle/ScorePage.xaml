@@ -45,7 +45,11 @@
                 <Button Clicked="CloseButton_Clicked" Text="Close"/>
                 
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
-                  <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit" WidthRequest="50"></Button>
+                    <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
+
+                    <Label Text="Check your score on this page, or click Exit and return soon" Style="{StaticResource MessageStyle}" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" MaxLines="5" Padding="20"/>
+                    
+                    <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit" WidthRequest="50"></Button>
             </StackLayout>
 
         </StackLayout>
