@@ -926,9 +926,7 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
 
-                    // Show the Game Over Display
-                    GameOverDisplay.IsVisible = true;
-                    break;
+                break;
 
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
