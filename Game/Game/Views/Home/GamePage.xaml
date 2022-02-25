@@ -27,7 +27,7 @@
 
                         <ImageButton
                             Source="item.png"
-                            Style="{StaticResource ImageMediumStyle}"
+                            Style="{StaticResource ImageLargeStyle}"
                             Clicked="VillageButton_Clicked"/>
 
                         <Label 
@@ -39,7 +39,7 @@
 
                         <ImageButton
                             Source="item.png"
-                            Style="{StaticResource ImageMediumStyle}"
+                            Style="{StaticResource ImageLargeStyle}"
                             Clicked="DungeonButton_Clicked"/>
 
                         <Label 
@@ -51,7 +51,7 @@
 
                         <ImageButton
                             Source="item.png"
-                            Style="{StaticResource ImageMediumStyle}"
+                            Style="{StaticResource ImageLargeStyle}"
                             Clicked="AutobattleButton_Clicked"/>
 
                         <Label 
