@@ -101,6 +101,11 @@
                             Text="Begin"
                             IsEnabled="False"/>
 
+                        <Button 
+                            Clicked="BattleButton_Clicked" 
+                            Text="Temp Button Begin"
+                            IsEnabled="True"/>
+
                     </StackLayout>
 
                     <CollectionView
