@@ -43,6 +43,10 @@
                                     Wrap="Wrap"/>
                 
                 <Button Clicked="CloseButton_Clicked" Text="Close"/>
+                
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
+                  <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit" WidthRequest="50"></Button>
+            </StackLayout>
 
         </StackLayout>
         </ScrollView>

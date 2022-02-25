@@ -199,5 +199,17 @@ namespace Game.Views
         {
             _ = await Navigation.PopModalAsync();
         }
+
+      
+        /// <summary>
+        /// exit button to exit the game and move to the game screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void ExitButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new GamePage()));
+        }
+
     }
 }
