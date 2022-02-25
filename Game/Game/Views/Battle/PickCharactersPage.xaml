@@ -14,8 +14,35 @@
 
                 <Label Text="Battle Time" Style="{StaticResource CenterMessageLargeStyle}"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
+                    
+                    <CollectionView
+                            x:Name="CharactersListView"
+                            ItemsSource="{Binding DatabaseCharacterList}"
+                            SelectionMode="Multiple"
+                            HeightRequest="175"
+                            SelectedItem="OnDatabaseCharacterItemSelected">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal"
+                                               ItemSpacing="25"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{Binding ItemPopupFrame}">
+                                    
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}"
+                                               Style="{StaticResource CenterMessageStyle}"/>
+                                        <Image Source="{Binding ImageURI}"
+                                                Style="{StaticResource ImageLargeStyle}"/>
+                                    </StackLayout>
+                                </Frame>
 
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <!--
                     <StackLayout HorizontalOptions="Start">
 
                         <Label Text="Characters" Style="{StaticResource CenterMessageStyle}"/>
@@ -59,7 +86,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
-
+                    -->
                     <StackLayout HorizontalOptions="CenterAndExpand">
 
                         <Label Text="Count" Style="{StaticResource CenterMessageStyle}"/>
@@ -76,7 +103,32 @@
 
                     </StackLayout>
 
-                    <StackLayout HorizontalOptions="End">
+                    <CollectionView
+                            x:Name="PartyListView"
+                            ItemsSource="{Binding PartyCharacterList}"
+                            HeightRequest="175"
+                            SelectedItem="OnPartyCharacterItemSelected">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal"
+                                               ItemSpacing="25"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{Binding ItemPopupFrame}">
+
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}"
+                                               Style="{StaticResource CenterMessageStyle}"/>
+                                        <ImageButton Source="{Binding ImageURI}"
+                                                     Style="{StaticResource ImageLargeStyle}"/>
+                                    </StackLayout>
+                                </Frame>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <!--
+                    <StackLayout>
 
                         <Label Text="Party" Style="{StaticResource CenterMessageStyle}"/>
 
@@ -118,6 +170,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
+                    -->
                 </StackLayout>
 
             </StackLayout>

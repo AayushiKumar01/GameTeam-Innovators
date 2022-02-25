@@ -62,7 +62,7 @@ namespace Game.Views
             }
 
             // Manually deselect Character.
-            CharactersListView.SelectedItem = null;
+            //CharactersListView.SelectedItem = null;
 
             // Don't add more than the party max
             if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
