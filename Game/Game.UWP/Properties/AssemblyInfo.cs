@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Andromeda Quest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A Great Game")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Seattle U")]
 [assembly: AssemblyProduct("Andromeda Quest")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Andromeda Quest")]
 [assembly: AssemblyCulture("")]
 
 // Version information for an assembly consists of the following four values:
