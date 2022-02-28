@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineInterfaces;
+using Plugin.SimpleAudioPlayer;
 
 namespace Game.Views
 {
@@ -17,12 +18,19 @@ namespace Game.Views
         // Hold the Engine, so it can be swapped out for unit testing
         public IAutoBattleInterface AutoBattle = BattleEngineViewModel.Instance.AutoBattleEngine;
 
+        //hold audio file
+        public ISimpleAudioPlayer BattleStartAudio;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public AutoBattlePage()
         {
             InitializeComponent();
+
+            //Initialzing and loading audio file
+            BattleStartAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+            BattleStartAudio.Load("autobattle.mp3");
         }
 
         /// <summary>
@@ -32,6 +40,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
+            //playing background audio when auto battle begins
+            BattleStartAudio.Play();
+            
             // Call into Auto Battle from here to do the Battle...
 
             // To See Level UP happening, a character needs to be close to the next level
