@@ -66,6 +66,7 @@ namespace Game.Views
                 .SeattleIcePercentage;
             AllowSeattleIce.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
                 .AllowSeattleIce;
+            SeattleIceSlider.IsEnabled = AllowSeattleIce.IsToggled;
             #endregion
         }
 
@@ -204,10 +205,12 @@ namespace Game.Views
             if (AllowSeattleIce.IsToggled == true)
             {
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
+                SeattleIceSlider.IsEnabled = true;
                 return;
             }
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = false;
+            SeattleIceSlider.IsEnabled = false;
         }
 
         private void SeattleIcePercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
