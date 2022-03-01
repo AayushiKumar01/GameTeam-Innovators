@@ -2,7 +2,7 @@
 
 using NUnit.Framework;
 
-using Game.Engine.EngineGame;
+using Game.Engine.EngineKoenig;
 using Game.Models;
 using Game.Helpers;
 using Game.ViewModels;
@@ -10,7 +10,7 @@ using Game.ViewModels;
 namespace Scenario
 {
     [TestFixture]
-    public class AutoBattleEngineScenarioTests
+    public class AutoBattleEngineScenarioKoenigTests
     {
         AutoBattleEngine AutoBattle;
 
