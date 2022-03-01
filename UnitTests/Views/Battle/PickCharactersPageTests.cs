@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Collections;
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -144,50 +145,15 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void PickCharactersPage_OnPartyCharacterItemSelected_Default_Should_Pass()
-        {
-            // Arrange
-
-            var selectedCharacter = new CharacterModel();
-
-            var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(selectedCharacter, 0);
-
-            // Act
-            page.OnPartyCharacterItemSelected(null, selectedCharacterChangedEventArgs);
-
-            // Reset
-
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
-
-        [Test]
-        public void PickCharactersPage_OnPartyCharacterItemSelected_InValid_Should_Pass()
-        {
-            // Arrange
-
-            var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(null, 0);
-
-            // Act
-            page.OnPartyCharacterItemSelected(null, selectedCharacterChangedEventArgs);
-
-            // Reset
-
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
-
-        [Test]
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_Default_Should_Pass()
         {
             // Arrange
 
             var selectedCharacter = new CharacterModel();
-
-            var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(selectedCharacter, 0);
-
+            CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
+            
             // Act
-            page.OnDatabaseCharacterItemSelected(null, selectedCharacterChangedEventArgs);
+            CharactersListView.SelectedItem = selectedCharacter;
 
             // Reset
 
@@ -199,11 +165,12 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
             // Arrange
-
-            var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(null, 0);
+            var selectedCharacter = new CharacterModel();
+            CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
 
             // Act
-            page.OnDatabaseCharacterItemSelected(null, selectedCharacterChangedEventArgs);
+            // page.OnDatabaseCharacterItemSelected(null, selectedCharacterChangedEventArgs);
+            CharactersListView.SelectedItem = selectedCharacter;
 
             // Reset
 
