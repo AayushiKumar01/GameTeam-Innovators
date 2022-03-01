@@ -46,7 +46,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual(" hits really hard ", result);
+            Assert.AreEqual(" scores a critical hit on ", result);
         }
 
         [Test]
