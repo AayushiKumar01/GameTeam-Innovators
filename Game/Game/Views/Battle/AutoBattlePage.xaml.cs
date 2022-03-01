@@ -53,8 +53,11 @@ namespace Game.Views
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
             //playing background audio when auto battle begins
-            BattleStartAudio.Play();
-            
+            if (BattleStartAudio != null)
+            {
+                BattleStartAudio.Play();
+            }
+
             // Call into Auto Battle from here to do the Battle...
 
             // To See Level UP happening, a character needs to be close to the next level
@@ -72,8 +75,15 @@ namespace Game.Views
             _ = await AutoBattle.RunAutoBattle();
 
             //playing background audio when auto battle is over
-            BattleStartAudio.Stop();
-            GameOverAudio.Play();
+            if (BattleStartAudio != null)
+            {
+                BattleStartAudio.Stop();
+            }
+
+            if (GameOverAudio != null)
+            {
+                GameOverAudio.Play();
+            }
 
             var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
