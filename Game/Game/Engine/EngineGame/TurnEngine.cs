@@ -79,6 +79,10 @@ namespace Game.Engine.EngineGame
                 case ActionEnum.Move:
                     result = MoveAsTurn(Attacker);
                     break;
+
+                case ActionEnum.Rest:
+                    result = Rest(Attacker);
+                    break;
             }
 
             EngineSettings.BattleScore.TurnCount++;
@@ -575,6 +579,18 @@ namespace Game.Engine.EngineGame
         public override PlayerInfoModel AttackChoice(PlayerInfoModel data)
         {
             return base.AttackChoice(data);
+        }
+
+        /// <summary>
+        /// Rests for the turn
+        /// 
+        /// Does nothing, heals 2 hp
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <returns></returns>
+        public override bool Rest(PlayerInfoModel Attacker)
+        {
+            return base.Rest(Attacker);
         }
     }
 }

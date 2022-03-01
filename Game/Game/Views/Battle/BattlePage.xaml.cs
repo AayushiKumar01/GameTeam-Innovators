@@ -612,6 +612,16 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Attack Action
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void RestButton_Clicked(object sender, EventArgs e)
+        {
+            Rest();
+        }
+
+        /// <summary>
         /// Settings Page
         /// </summary>
         /// <param name="sender"></param>
@@ -722,6 +732,19 @@ namespace Game.Views
                     _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(BattleEngineViewModel.Instance.Engine.Round.Turn.AttackChoice(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker));
                     break;
             }
+        }
+
+        public void Rest()
+        {
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+
+            var currentChar = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+
+            //_ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn
+
+            GameMessage();
+
+
         }
 
         /// <summary>
@@ -873,6 +896,7 @@ namespace Game.Views
             StartBattleButton.IsVisible = false;
             AttackButton.IsVisible = false;
             FinishButton.IsVisible = false;
+            RestButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
             BattlePlayerInfomationBox.IsVisible = false;
             HtmlBox.IsVisible = false;
@@ -937,6 +961,7 @@ namespace Game.Views
                     HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
                     FinishButton.IsVisible = true;
+                    RestButton.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons

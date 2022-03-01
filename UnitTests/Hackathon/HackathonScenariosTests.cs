@@ -183,20 +183,21 @@ namespace Scenario
         }
         #endregion Scenario4
 
-        #region Scenario23
+        #region Scenario33
         [Test]
-        public void HackathonScenario_Scenario_23_Valid_Default_Should_Pass()
+        public void HackathonScenario_Scenario_33_Valid_Default_Should_Pass()
         {
             // Arrange
+            var PlayerInfo = new PlayerInfoModel();
+            PlayerInfo.MaxHealth = 100;
+            PlayerInfo.CurrentHealth = 98;
 
             // Act
-
-
-            // Reset
-
+            var result = Engine.Round.Turn.Rest(PlayerInfo);
+            
             // Assert
-            Assert.AreEqual(true, true);
+            Assert.AreEqual(PlayerInfo.CurrentHealth, PlayerInfo.MaxHealth);
         }
-        #endregion Scenario23
+        #endregion Scenario33
     }
 }

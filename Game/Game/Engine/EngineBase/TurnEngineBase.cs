@@ -82,6 +82,10 @@ namespace Game.Engine.EngineBase
                 case ActionEnum.Move:
                     result = MoveAsTurn(Attacker);
                     break;
+
+                case ActionEnum.Rest:
+                    result = Rest(Attacker);
+                    break;
             }
 
             EngineSettings.BattleScore.TurnCount++;
@@ -743,5 +747,25 @@ namespace Game.Engine.EngineBase
         {
             return true;
         }
+
+        /// <summary>
+        /// Rests for the turn
+        /// 
+        /// Does nothing, heals 2 hp
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <returns></returns>
+        public virtual bool Rest(PlayerInfoModel Attacker)
+        {
+
+            if(Attacker.CurrentHealth > Attacker.MaxHealth - 2)
+            {
+                Attacker.CurrentHealth = Attacker.MaxHealth;
+            }
+
+            Attacker.CurrentHealth += 2;
+
+            return true;
+        }
     }
-}
+} 
