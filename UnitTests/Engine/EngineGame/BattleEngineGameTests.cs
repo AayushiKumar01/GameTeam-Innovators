@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 
 using Game.Models;
-using Game.Engine.EngineKoenig;
+using Game.Engine.EngineGame;
 
 namespace UnitTests.Engine.EngineGame
 {

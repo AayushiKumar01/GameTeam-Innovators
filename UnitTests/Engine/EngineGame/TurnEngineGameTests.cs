@@ -6,7 +6,7 @@ using NUnit.Framework;
 using Game.Models;
 using Game.Helpers;
 using Game.ViewModels;
-using Game.Engine.EngineKoenig;
+using Game.Engine.EngineGame;
 using Game.Engine.EngineModels;
 
 namespace UnitTests.Engine.EngineGame
