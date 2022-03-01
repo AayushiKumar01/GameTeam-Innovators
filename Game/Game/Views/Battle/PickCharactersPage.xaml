@@ -21,6 +21,7 @@
                             ItemsSource="{Binding DatabaseCharacterList}"
                             SelectionMode="Multiple"
                             HeightRequest="175"
+                            SelectionChanged="OnDatabaseCharacterItemSelected"
                             SelectedItem="OnDatabaseCharacterItemSelected">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Horizontal"

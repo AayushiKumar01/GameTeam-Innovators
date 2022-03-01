@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 using Xamarin.Forms;
@@ -53,23 +54,23 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        public void OnDatabaseCharacterItemSelected(object sender, SelectedItemChangedEventArgs args)
+        public void OnDatabaseCharacterItemSelected(object sender, SelectionChangedEventArgs selectionChangedEventArgs)
         {
-            CharacterModel data = args.SelectedItem as CharacterModel;
-            if (data == null)
+            BattleEngineViewModel.Instance.PartyCharacterList.Clear();
+            foreach (var dat in selectionChangedEventArgs.CurrentSelection)
             {
-                return;
+                // Exit if there is no data here
+                if (dat == null)
+                {
+                    return;
+                }
+                // Don't add more than the party max
+                if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
+                {
+                    BattleEngineViewModel.Instance.PartyCharacterList.Add(dat as CharacterModel);
+                }
             }
-
-            // Manually deselect Character.
-            //CharactersListView.SelectedItem = null;
-
-            // Don't add more than the party max
-            if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
-            {
-                BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
-            }
-
+            
             UpdateNextButtonState();
         }
 
