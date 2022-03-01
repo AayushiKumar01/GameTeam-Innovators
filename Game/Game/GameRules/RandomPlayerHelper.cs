@@ -175,7 +175,7 @@ namespace Game.GameRules
         public static int GetRangeValue()
         {
             // 0 to 9, not 1-10
-            return DiceHelper.RollDice(1, 4) - 1;
+            return DiceHelper.RollDice(1, 3);
         }
 
         /// <summary>
@@ -288,6 +288,7 @@ namespace Game.GameRules
                 Attack = GetAbilityValue(),
                 Speed = GetAbilityValue(),
                 Defense = GetAbilityValue(),
+                Range = GetRangeValue(),
 
                 ImageURI = GetMonsterImage(),
 
