@@ -112,8 +112,7 @@
                     <CollectionView
                             x:Name="PartyListView"
                             ItemsSource="{Binding PartyCharacterList}"
-                            HeightRequest="175"
-                            SelectedItem="OnPartyCharacterItemSelected">
+                            HeightRequest="175">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout Orientation="Horizontal"
                                                ItemSpacing="25"/>
