@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineInterfaces;
+using Game.Helpers;
 using Plugin.SimpleAudioPlayer;
 
 namespace Game.Views
@@ -18,10 +19,7 @@ namespace Game.Views
         // Hold the Engine, so it can be swapped out for unit testing
         public IAutoBattleInterface AutoBattle = BattleEngineViewModel.Instance.AutoBattleEngine;
 
-        //hold audio file
-        public ISimpleAudioPlayer BattleStartAudio;
-        public ISimpleAudioPlayer GameOverAudio;
-
+        private AudioHelper audio;
 
         /// <summary>
         /// Constructor
@@ -29,20 +27,7 @@ namespace Game.Views
         public AutoBattlePage()
         {
             InitializeComponent();
-
-            //Initialzing and loading audio file
-            BattleStartAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();   
-            if (BattleStartAudio != null)
-            {
-                BattleStartAudio.Load("autobattle.mp3");
-
-            }
-            if (GameOverAudio != null)
-            {
-                GameOverAudio.Load("gameover.mp3");
-            }
-          
+            audio = new AudioHelper();
         }
 
         /// <summary>
@@ -53,10 +38,7 @@ namespace Game.Views
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
             //playing background audio when auto battle begins
-            if (BattleStartAudio != null)
-            {
-                BattleStartAudio.Play();
-            }
+            audio.playBattleStart();
 
             // Call into Auto Battle from here to do the Battle...
 
@@ -75,15 +57,8 @@ namespace Game.Views
             _ = await AutoBattle.RunAutoBattle();
 
             //playing background audio when auto battle is over
-            if (BattleStartAudio != null)
-            {
-                BattleStartAudio.Stop();
-            }
-
-            if (GameOverAudio != null)
-            {
-                GameOverAudio.Play();
-            }
+            audio.stopStartAudio();
+            audio.playGameOverAudio();
 
             var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
