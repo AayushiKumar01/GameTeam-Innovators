@@ -149,5 +149,13 @@ namespace Scenario
             Assert.AreEqual(1, EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount);
         }
         #endregion Scenario1
+
+        #region Scenario4
+        [Test]
+        public async Task HackathonScenario_Scenario_4_Valid_Default_Should_Pass()
+        {
+            Assert.AreEqual(true, true);
+        }
+        #region Scenario4
     }
 }
