@@ -32,9 +32,17 @@ namespace Game.Views
 
             //Initialzing and loading audio file
             BattleStartAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            BattleStartAudio.Load("autobattle.mp3");
-            GameOverAudio.Load("gameover.mp3");
+            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();   
+            if (BattleStartAudio != null)
+            {
+                BattleStartAudio.Load("autobattle.mp3");
+
+            }
+            if (GameOverAudio != null)
+            {
+                GameOverAudio.Load("gameover.mp3");
+            }
+          
         }
 
         /// <summary>
