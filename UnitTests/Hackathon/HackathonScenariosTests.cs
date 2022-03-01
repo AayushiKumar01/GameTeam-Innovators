@@ -3,6 +3,9 @@
 using Game.Models;
 using System.Threading.Tasks;
 using Game.ViewModels;
+using Game.Helpers;
+using Game.Engine.EngineGame;
+using Game.Engine.EngineModels;
 
 namespace Scenario
 {
@@ -11,6 +14,7 @@ namespace Scenario
     {
         #region TestSetup
         readonly BattleEngineViewModel EngineViewModel = BattleEngineViewModel.Instance;
+        BattleEngine Engine;
 
         [SetUp]
         public void Setup()
@@ -26,6 +30,9 @@ namespace Scenario
 
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = false;
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = false;
+
+            Engine = new BattleEngine();
+            _ = Engine.StartBattle(true);   // Start engine in auto battle mode
         }
 
         [TearDown]
@@ -152,9 +159,27 @@ namespace Scenario
 
         #region Scenario4
         [Test]
-        public async Task HackathonScenario_Scenario_4_Valid_Default_Should_Pass()
+        public void HackathonScenario_Scenario_4_Valid_Default_Should_Pass()
         {
-            Assert.AreEqual(true, true);
+            // Arrange
+            var AttackScore = 1;
+            var DefenseScore = 100;
+
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(20);
+
+            var oldSeting = EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit;
+            EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit = true;
+
+            // Act
+            var result = Engine.Round.Turn.RollToHitTarget(AttackScore, DefenseScore);
+
+            // Reset
+            _ = DiceHelper.DisableForcedRolls();
+            EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit = oldSeting;
+
+            // Assert
+            Assert.AreEqual(HitStatusEnum.CriticalHit, result);
         }
         #endregion Scenario4
     }
