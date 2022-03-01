@@ -30,6 +30,23 @@ namespace UnitTests.Helpers
         }
 
         [Test]
+        public void RandomPlayerHelper_GetRangeValue_2_Should_Return_2()
+        {
+            // Arrange
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(2);
+
+            // Act
+            var result = RandomPlayerHelper.GetRangeValue();
+
+            // Reset
+            _ = DiceHelper.DisableForcedRolls();
+
+            // Assert
+            Assert.AreEqual(2, result);
+        }
+
+        [Test]
         public void RandomPlayerHelper_GetLevel_2_Should_Return_2()
         {
             // Arrange
