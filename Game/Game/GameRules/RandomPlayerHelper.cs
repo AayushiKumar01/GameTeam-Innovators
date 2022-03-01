@@ -174,7 +174,6 @@ namespace Game.GameRules
         /// <returns></returns>
         public static int GetRangeValue()
         {
-            // 0 to 9, not 1-10
             return DiceHelper.RollDice(1, 3);
         }
 
