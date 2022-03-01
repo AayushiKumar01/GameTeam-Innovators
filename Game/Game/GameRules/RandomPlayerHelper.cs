@@ -169,6 +169,16 @@ namespace Game.GameRules
         }
 
         /// <summary>
+        /// Get Random Range Number
+        /// </summary>
+        /// <returns></returns>
+        public static int GetRangeValue()
+        {
+            // 0 to 9, not 1-10
+            return DiceHelper.RollDice(1, 4) - 1;
+        }
+
+        /// <summary>
         /// Get a Random Level
         /// </summary>
         /// <returns></returns>
