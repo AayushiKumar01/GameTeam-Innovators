@@ -16,7 +16,9 @@
         Move = 10,
 
         // Ability
-        Ability = 20
+        Ability = 20,
+
+        Rest = 25,
     }
 
     /// <summary>
@@ -46,6 +48,10 @@
 
                 case ActionEnum.Ability:
                     Message = " Uses Ability ";
+                    break;
+
+                case ActionEnum.Rest:
+                    Message = " Takes a rest ";
                     break;
 
                 case ActionEnum.Unknown:
@@ -78,6 +84,10 @@
 
                 case ActionEnum.Ability:
                     Message = "action_ability.png";
+                    break;
+
+                case ActionEnum.Rest:
+                    Message = "icon_add.png";
                     break;
 
                 case ActionEnum.Unknown:
