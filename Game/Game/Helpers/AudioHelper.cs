@@ -2,8 +2,9 @@
 
 namespace Game.Helpers
 {
-
-    
+    /// <summary>
+    /// Class for helping load and play audio with error checking
+    /// </summary>
     public class AudioHelper
     {
         
@@ -27,6 +28,9 @@ namespace Game.Helpers
             }
         }
 
+        /// <summary>
+        /// Play Battle Start audio only if its already loaded to prevent error
+        /// </summary>
         public void playBattleStart()
         {
             if (BattleStartAudio != null)
@@ -35,6 +39,9 @@ namespace Game.Helpers
             }
         }
 
+        /// <summary>
+        /// Stop Battle audio only if its already loaded to prevent error
+        /// </summary>
         public void stopStartAudio()
         {
             if (BattleStartAudio != null)
@@ -43,6 +50,9 @@ namespace Game.Helpers
             }
         }
 
+        /// <summary>
+        /// Play Game Over audio only if its already loaded to prevent error
+        /// </summary>
         public void playGameOverAudio()
         {
             if (GameOverAudio != null)
