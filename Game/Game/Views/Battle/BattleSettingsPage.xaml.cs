@@ -57,6 +57,7 @@ namespace Game.Views
 
             #region MonsterToggles
             AllowMonsterItemsSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems;
+            AllowMonsterRespawnSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn;
             #endregion
         }
 
