@@ -46,22 +46,28 @@
 
                     <StackLayout HorizontalOptions="CenterAndExpand">
 
-                        <Label Text="Count" Style="{StaticResource CenterMessageStyle}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Ships" Style="{StaticResource CenterMessageStyle}"/>
 
-                        <Label Style="{StaticResource CenterMessageStyle}" 
-                            x:Name="PartyCountLabel"
-                            Text="0"/>
+                            <Label Style="{StaticResource CenterMessageStyle}" 
+                                   x:Name="PartyCountLabel"
+                                   Text="0"/>
+                            <Label Style="{StaticResource CenterMessageStyle}" 
+                                   Text="(of 6)"/>
+                        </StackLayout>
 
-                        <Button 
-                            x:Name="BeginBattleButton"
-                            Clicked="BattleButton_Clicked" 
-                            Text="Begin"
-                            IsEnabled="False"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button 
+                                x:Name="BeginBattleButton"
+                                Clicked="BattleButton_Clicked" 
+                                Text="Begin"
+                                IsEnabled="False"/>
 
-                        <Button 
-                            Clicked="BattleButton_Clicked" 
-                            Text="Temp Button Begin"
-                            IsEnabled="True"/>
+                            <Button 
+                                Clicked="BattleButton_Clicked" 
+                                Text="Temp Button Begin"
+                                IsEnabled="True"/>
+                        </StackLayout>
 
                     </StackLayout>
 
