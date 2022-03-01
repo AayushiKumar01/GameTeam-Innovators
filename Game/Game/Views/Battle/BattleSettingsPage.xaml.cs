@@ -172,5 +172,22 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
         }
 
+        /// <summary>
+        /// Toggle Monster Items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void AllowMonsterRespawn_Toggled(object sender, EventArgs e)
+        {
+            // Flip the settings
+            if (AllowMonsterRespawnSwitch.IsToggled == true)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn = true;
+                return;
+            }
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn = false;
+        }
+
     }
 }
