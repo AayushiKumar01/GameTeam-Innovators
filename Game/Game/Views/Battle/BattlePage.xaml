@@ -99,7 +99,7 @@
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                             <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" IsVisible="False"/>
-                            <Button x:Name="FinishButton" Clicked="FinishButton_Clicked" Text="Finish Game" IsVisible="True"/>
+                            <Button x:Name="FinishButton" Clicked="FinishButton_Clicked" Text="Finish Game" IsVisible="False"/>
                             <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
                             <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" IsVisible="False"/>
 
