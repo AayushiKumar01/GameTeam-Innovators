@@ -25,5 +25,11 @@
 
         // Can monsters respawn?
         public bool AllowMonsterRespawn = false;
+        
+        // Can actions have a chance to miss?
+        public bool AllowSeattleIce = false;
+        
+        // Percentage chance to miss if Ice enabled
+        public double SeattleIcePercentage = 0;
     }
 }

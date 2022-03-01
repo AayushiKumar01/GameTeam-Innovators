@@ -135,6 +135,39 @@
                     VerticalOptions="Center"
                     x:Name="AllowMonsterRespawnSwitch"
                     Toggled="AllowMonsterRespawn_Toggled"/>
+                
+                <Label 
+                    Grid.Row="6" Grid.Column="0"
+                    Text="Allow Seattle Ice" 
+                    Style="{DynamicResource LabelStyle}"/>
+
+                <Switch 
+                    Grid.Row="6" Grid.Column="1"
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    x:Name="AllowSeattleIce"
+                    Toggled="AllowSeattleIce_Toggled"/>
+                
+                <Label 
+                    Grid.Row="7" Grid.Column="0"
+                    Text="Seattle Ice Percentage" 
+                    Style="{DynamicResource LabelStyle}"/>
+
+                <Slider 
+                    Grid.Row="7" Grid.Column="1"
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    Minimum="0"
+                    Maximum="100"
+                    WidthRequest="110"
+                    x:Name="SeattleIceSlider"
+                    ValueChanged="SeattleIcePercentage_Changed"/>
+                
+                <Label 
+                    Grid.Row="7" Grid.Column="2"
+                    Text="0"
+                    x:Name="SeattleIceSliderLabel"
+                    Style="{DynamicResource LabelStyle}"/>
             </Grid>
 
             <Button Clicked="CloseButton_Clicked" Text="Close" HorizontalOptions="CenterAndExpand"/>

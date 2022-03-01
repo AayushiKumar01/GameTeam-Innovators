@@ -1,6 +1,7 @@
-﻿using Game.Models;
+﻿using System;
+using System.Globalization;
+using Game.Models;
 using Game.ViewModels;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -58,6 +59,13 @@ namespace Game.Views
             #region MonsterToggles
             AllowMonsterItemsSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems;
             AllowMonsterRespawnSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn;
+            #endregion
+            
+            #region SeattleIceToggleSlider
+            SeattleIceSlider.Value = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
+                .SeattleIcePercentage;
+            AllowSeattleIce.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
+                .AllowSeattleIce;
             #endregion
         }
 
@@ -190,5 +198,27 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn = false;
         }
 
+        private void AllowSeattleIce_Toggled(object sender, ToggledEventArgs e)
+        {
+            // Flip the settings
+            if (AllowSeattleIce.IsToggled == true)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
+                return;
+            }
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = false;
+        }
+
+        private void SeattleIcePercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
+        {
+            var seattleIcePercentage = valueChangedEventArgs.NewValue;
+            if (seattleIcePercentage != null)
+            {
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage =
+                    seattleIcePercentage;
+                SeattleIceSliderLabel.Text = seattleIcePercentage.ToString(CultureInfo.InvariantCulture) + "%";
+            }
+        }
     }
 }
