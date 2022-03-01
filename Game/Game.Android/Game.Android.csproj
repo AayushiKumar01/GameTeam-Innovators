@@ -349,5 +349,8 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\autobattle.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\gameover.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

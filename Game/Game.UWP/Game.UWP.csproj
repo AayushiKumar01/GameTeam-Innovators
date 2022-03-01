@@ -110,6 +110,7 @@
     <Content Include="action_move.png" />
     <Content Include="andquestlogo.png" />
     <Content Include="Assets\autobattle.mp3" />
+    <Content Include="Assets\gameover.mp3" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />

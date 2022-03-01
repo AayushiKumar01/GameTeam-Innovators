@@ -20,6 +20,8 @@ namespace Game.Views
 
         //hold audio file
         public ISimpleAudioPlayer BattleStartAudio;
+        public ISimpleAudioPlayer GameOverAudio;
+
 
         /// <summary>
         /// Constructor
@@ -30,7 +32,9 @@ namespace Game.Views
 
             //Initialzing and loading audio file
             BattleStartAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
             BattleStartAudio.Load("autobattle.mp3");
+            GameOverAudio.Load("gameover.mp3");
         }
 
         /// <summary>
@@ -58,6 +62,10 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             _ = await AutoBattle.RunAutoBattle();
+
+            //playing background audio when auto battle is over
+            BattleStartAudio.Stop();
+            GameOverAudio.Play();
 
             var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
