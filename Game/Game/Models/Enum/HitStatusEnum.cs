@@ -49,7 +49,7 @@ namespace Game.Models
                     break;
 
                 case HitStatusEnum.CriticalHit:
-                    Message = " hits really hard ";
+                    Message = " scores a critical hit ";
                     break;
 
                 case HitStatusEnum.Miss:
