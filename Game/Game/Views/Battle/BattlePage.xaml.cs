@@ -628,7 +628,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FinishButton_Clicked(object sender, EventArgs e)
+        public void FinishButton_Clicked(object sender, EventArgs e)
         {
             forceGameOver = true;
             NextAttackExample();
