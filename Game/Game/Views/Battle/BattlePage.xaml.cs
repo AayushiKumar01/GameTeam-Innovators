@@ -670,10 +670,14 @@ namespace Game.Views
             {
                 var RoundCondition = RoundEnum.Unknown;
                 Task.Delay(WaitTime).Wait();
-                    
+                
                 // Run in Main thread so that UI update is allowed
                 Device.BeginInvokeOnMainThread(async () =>
                 {
+                    // Check if the game is over and exit early if so
+                    if (forceGameOver)
+                        return;
+                    
                     RoundCondition = NextAttackExample();
                     if (RoundCondition == RoundEnum.NextTurn)
                     {
