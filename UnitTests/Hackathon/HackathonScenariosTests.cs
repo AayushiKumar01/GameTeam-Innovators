@@ -199,5 +199,18 @@ namespace Scenario
             Assert.AreEqual(PlayerInfo.CurrentHealth, PlayerInfo.MaxHealth);
         }
         #endregion Scenario33
+
+        #region Scenario22
+        [Test]
+        public void HackathonScenario_Scenario_22_Valid_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+
+            // Assert
+            Assert.AreEqual(true, true);
+        }
+        #endregion Scenario22
     }
 }
