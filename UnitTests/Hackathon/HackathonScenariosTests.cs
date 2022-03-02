@@ -157,6 +157,138 @@ namespace Scenario
         }
         #endregion Scenario1
 
+        #region Scenario2
+        [Test]
+        public async Task HackathonScenario_Scenario_2_Valid_Default_WithDoug_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      2
+            *      
+            * Description: 
+            *      Make a Character called Doug
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *      TurnEngine.cs - Added condition for Doug to miss in TurnAsAttack
+            * 
+            * Test Algrorithm:
+            *      Create Character named Doug
+            *      call TurnAsAttack
+            *      check is hit status is miss
+            *  
+            *      
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify TurnAsAttack Returned True
+            *      Verify Hit Staus is miss
+            *  
+            */
+
+            //Arrange
+
+            // Set Character Conditions
+
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
+
+            var CharacterPlayerDoug = new PlayerInfoModel(
+                            new CharacterModel
+                            {
+                                Speed = -1,
+                                Level = 1,
+                                CurrentHealth = 1,
+                                ExperienceTotal = 1,
+                                ExperienceRemaining = 1,
+                                Name = "Doug",
+                            });
+
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerDoug);
+
+            // Set Monster Conditions
+
+            var Monster = new MonsterModel();
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+            //Act
+            var result = EngineViewModel.Engine.Round.Turn.TurnAsAttack(CharacterPlayerDoug, MonsterPlayer);
+
+            //Reset
+
+
+            //Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, EngineViewModel.Engine.EngineSettings.BattleMessagesModel.HitStatus == HitStatusEnum.Miss);
+
+        }
+
+        [Test]
+        public async Task HackathonScenario_Scenario_2_Invalid_Default_WithBob_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      2
+            *      
+            * Description: 
+            *      Make a Character called Bob, who does not miss
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *     TurnEngine.cs - Added condition for Doug to miss in TurnAsAttack
+            * 
+            Test Algrorithm:
+            *      Create Character named Bob
+            *      call TurnAsAttack
+            *      check is hit status is miss
+            *  
+            *      
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify TurnAsAttack Returned True
+            *      Verify Hit Staus is miss
+            */
+
+            //Arrange
+
+            // Set Character Conditions
+
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
+
+            var CharacterPlayerBob = new PlayerInfoModel(
+                            new CharacterModel
+                            {
+                                Speed = -1, // Will go last...
+                                Level = 1,
+                                CurrentHealth = 1,
+                                ExperienceTotal = 1,
+                                ExperienceRemaining = 1,
+                                Name = "Bob",
+                            });
+
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerBob);
+
+            // Set Monster Conditions
+
+            var Monster = new MonsterModel();
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+            //Act
+            var result = EngineViewModel.Engine.Round.Turn.TurnAsAttack(CharacterPlayerBob, MonsterPlayer);
+
+            //Reset
+
+
+            //Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, EngineViewModel.Engine.EngineSettings.BattleMessagesModel.HitStatus == HitStatusEnum.Miss);
+
+        }
+        #endregion Scenario2
+
+
         #region Scenario4
         [Test]
         public void HackathonScenario_Scenario_4_Valid_Default_Should_Pass()
