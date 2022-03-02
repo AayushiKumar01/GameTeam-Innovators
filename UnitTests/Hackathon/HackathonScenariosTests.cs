@@ -331,7 +331,80 @@ namespace Scenario
             Assert.AreEqual(PlayerInfo.CurrentHealth, PlayerInfo.MaxHealth);
         }
         #endregion Scenario33
+        
+        #region Scenario37
+        [Test]
+        public void HackathonScenario_Scenario_37_Valid_Default_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      37
+            *      
+            * Description:
+            *       Turn on AllowSeattleIce and set probability to 100%
+            *       Make a Character and Monster, play one turn and it should result in ice slip action 
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *       BattleSettingsModel.cs - Added settings to turn this action on
+            *       TurnEngine.cs - Set action based on settings probability
+            *       ActionEnum.cs - Update enum to have slip action  
+            * 
+            Test Algorithm:
+            *       Turn on AllowSeattleIce and set probability to 100%
+            *       Make a Character and Monster, play one turn
+            *       it should result in ice slip as last action 
+            *  
+            *      
+            * Test Conditions:
+            *      AllowSeattleIce is turned on and SeattleIcePercentage is 100
+            * 
+            * Validation:
+            *      Verify that last action was ice slip
+            */
 
+
+            // Arrange
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
+            Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage = 100;
+            
+            var Character = new CharacterModel
+            {
+                Speed = 20,
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                Name = "Character",
+                ListOrder = 1,
+            };
+
+            // Add each model here to warm up and load it.
+            _ = Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+            
+            // Add to Monster list
+            var Monster = new MonsterModel();
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            
+            // Act
+            var result = Engine.Round.RoundNextTurn();
+
+            // Reset
+            // Disable for the next test
+            Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = false;
+            
+            // Assert
+            Assert.AreEqual(ActionEnum.IceSlip, Engine.EngineSettings.PreviousAction);
+        }
+        #endregion Scenario37
+        
         #region Scenario22
         [Test]
         public void HackathonScenario_Scenario_22_Valid_Default_Should_Pass()
@@ -340,9 +413,12 @@ namespace Scenario
 
             // Act
 
+            // Reset
+            
             // Assert
             Assert.AreEqual(true, true);
         }
         #endregion Scenario22
+
     }
 }
