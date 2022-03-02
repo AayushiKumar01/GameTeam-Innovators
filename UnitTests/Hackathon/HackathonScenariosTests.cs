@@ -320,7 +320,7 @@ namespace Scenario
 
         #region Scenario12
         [Test]
-        public void HackathonScenario_Scenario_12_Valid_Default_Should_Pass()
+        public void HackathonScenario_Scenario_12_Valid_AutoPlayClick_Should_Pass_And_Play_5_Turns()
         {
             /* 
             * Scenario Number:  
