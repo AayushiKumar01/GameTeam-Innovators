@@ -328,8 +328,8 @@ namespace Scenario
             *      
             * Description:
             *       Add Autoplay button to normal battle screen
-            *       Clicking this button with autoplay through all rounds showing UI until all characters have died
-            *       Screens between round are clicked through to continue until the game is over  
+            *       Clicking this button will autoplay through all rounds showing UI until all characters have died
+            *       Screens between rounds are clicked through to continue until the game is over  
             * 
             * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
             *       BattlePage.xaml - Add Autoplay button
