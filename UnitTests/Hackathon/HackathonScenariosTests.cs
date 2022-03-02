@@ -498,7 +498,7 @@ namespace Scenario
         
         #region Scenario37
         [Test]
-        public void HackathonScenario_Scenario_37_Valid_Default_Should_Pass()
+        public void HackathonScenario_Scenario_37_Valid_AllowSeattleIce_Causes_IceSlip_Previous_Action()
         {
             /* 
             * Scenario Number:  
