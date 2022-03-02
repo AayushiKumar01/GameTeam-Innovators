@@ -644,7 +644,7 @@ namespace Game.Engine.EngineGame
             _ = EngineSettings.BattleMessagesModel.AttackerName = Attacker.Name;
             _ = EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
                 
-            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ", slipped on Seattle Ice!";
+            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ": slipped on Seattle Ice!";
 
             return true;
 
