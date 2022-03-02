@@ -319,6 +319,31 @@ namespace Scenario
         [Test]
         public void HackathonScenario_Scenario_33_Valid_Default_Should_Pass()
         {
+            /* 
+            * Scenario Number:  
+            *      33
+            *      
+            * Description: 
+            *      Lets a character choose to rest
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *     TurnEngineBase.cs - ChooseToRest and Rest functions
+            *     ITurnEngineInterface.cs - Rest and ChooseToRest bools
+            *     ActionEnum.cs - Added Rest enum
+            * 
+            Test Algrorithm:
+            *      Create Character
+            *      Set Max Health
+            *      Set Current Health
+            *      Call Rest
+            *      Check HP
+            *      
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify Current HP increased by 2
+            */
             // Arrange
             var PlayerInfo = new PlayerInfoModel();
             PlayerInfo.MaxHealth = 100;
@@ -334,6 +359,34 @@ namespace Scenario
         [Test]
         public void HackathonScenario_Scenario_33_TurnEngine_ChooseToRest_Should_Pass()
         {
+            /* 
+            * Scenario Number:  
+            *      33
+            *      
+            * Description: 
+            *      Lets a character choose to rest
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *     TurnEngineBase.cs - ChooseToRest and Rest functions
+            *     ITurnEngineInterface.cs - Rest and ChooseToRest bools
+            *     ActionEnum.cs - Added Rest enum
+            * 
+            Test Algrorithm:
+            *      Create Character
+            *      Set Max Health
+            *      Set Current Health
+            *      Add Character to PlayerList
+            *      Set ActionEnum to Unknown
+            *      Set AutoBattle to True
+            *      Call ChooseToRest
+            *      Check HP
+            *      
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify Character chose to rest
+            */
             // Arrange
 
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
