@@ -961,7 +961,7 @@ namespace Game.Views
                     HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
                     FinishButton.IsVisible = true;
-                    RestButton.IsVisible = true;
+                    RestButton.IsVisible = false;
                     break;
 
                 // Based on the State disable buttons
