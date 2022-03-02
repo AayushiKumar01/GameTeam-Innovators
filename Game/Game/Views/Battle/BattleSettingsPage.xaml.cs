@@ -218,9 +218,11 @@ namespace Game.Views
             var seattleIcePercentage = valueChangedEventArgs.NewValue;
             if (seattleIcePercentage != null)
             {
+                var value = Math.Round(seattleIcePercentage, MidpointRounding.AwayFromZero);
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage =
-                    seattleIcePercentage;
-                SeattleIceSliderLabel.Text = seattleIcePercentage.ToString(CultureInfo.InvariantCulture) + "%";
+                    Convert.ToInt32(value);
+                    
+                SeattleIceSliderLabel.Text = value.ToString(CultureInfo.InvariantCulture) + "%";
             }
         }
     }
