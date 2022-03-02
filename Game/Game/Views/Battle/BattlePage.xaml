@@ -100,6 +100,7 @@
 
                             <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" IsVisible="False"/>
                             <Button x:Name="FinishButton" Clicked="FinishButton_Clicked" Text="Finish Game" IsVisible="False"/>
+                            <Button x:Name="AutoplayButton" Clicked="AutoplayButton_Clicked" Text="Autoplay" IsVisible="False"/>
                             <Button x:Name="RestButton" Clicked="RestButton_Clicked" Text="Rest (Heal 2 HP)" IsVisible="False"/>
                             <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
                             <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" IsVisible="False"/>

@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Diagnostics;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -645,6 +644,69 @@ namespace Game.Views
         }
         
         /// <summary>
+        /// Button that starts recursive method for autoplaying the game showing UI updates
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void AutoplayButton_Clicked(object sender, EventArgs e)
+        {
+            // Lower the wait time so each turn does not take too long
+            WaitTime = 100;
+            // Recursive method that runs the game in new threads
+            AutoPlayNext();
+        }
+
+        /// <summary>
+        /// Auto play the rest of the game showing UI updates
+        /// </summary>
+        private void AutoPlayNext()
+        {
+            // Unneeded buttons invisible
+            AutoplayButton.IsVisible = false;
+            AttackButton.IsVisible = false;
+            
+            // Start new thread to give UI a chance to refresh
+            Task.Run(async () =>
+            {
+                var RoundCondition = RoundEnum.Unknown;
+                Task.Delay(WaitTime).Wait();
+                    
+                // Run in Main thread so that UI update is allowed
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    RoundCondition = NextAttackExample();
+                    if (RoundCondition == RoundEnum.NextTurn)
+                    {
+                        // Rerun this method to handle next turn
+                        AutoPlayNext();
+                    }
+                    // Just finished a round so need to click through screens
+                    if (RoundCondition == RoundEnum.NewRound)
+                    {
+                        _ = BattleEngineViewModel.Instance.Engine.Round.NewRound();
+
+                        // Exit the items page
+                        _ = await Navigation.PopModalAsync();
+
+                        Task.Delay(WaitTime).Wait();
+
+                        // Click next round
+                        NextRoundButton_Clicked(null, null);
+
+                        Task.Delay(WaitTime).Wait();
+
+                        // Click Begin on next round
+                        _ = await Navigation.PopModalAsync();
+                        
+                        AutoPlayNext();
+                    }
+                    // If we get here without calling AutoPlayNext, finished the game so exit
+                });
+            });
+        }
+        
+        
+        /// <summary>
         /// Next Attack Example
         /// 
         /// This code example follows the rule of
@@ -657,7 +719,7 @@ namespace Game.Views
         /// So the pattern is Click Next, Next, Next until game is over
         /// 
         /// </summary>
-        public void NextAttackExample()
+        public RoundEnum NextAttackExample()
         {
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
@@ -688,7 +750,7 @@ namespace Game.Views
 
                 // Show the Round Over, after that is cleared, it will show the New Round Dialog
                 ShowModalRoundOverPage();
-                return;
+                return RoundCondition;
             }
 
             // Check for Game Over
@@ -705,8 +767,10 @@ namespace Game.Views
                 Debug.WriteLine("Game Over");
 
                 GameOver();
-                return;
+                return RoundCondition;
             }
+
+            return RoundCondition;
         }
 
         /// <summary>
@@ -961,6 +1025,7 @@ namespace Game.Views
                     HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
                     FinishButton.IsVisible = true;
+                    AutoplayButton.IsVisible = true;
                     RestButton.IsVisible = false;
                     break;
 
@@ -994,5 +1059,6 @@ namespace Game.Views
                     break;
             }
         }
+
     }
 }
