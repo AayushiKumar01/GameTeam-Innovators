@@ -394,6 +394,7 @@ namespace Scenario
             // Reset
             // Finish the game early
             page.FinishButton_Clicked(null, null);
+            page.GameOver();
             
             // Assert
             Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount > 5);
