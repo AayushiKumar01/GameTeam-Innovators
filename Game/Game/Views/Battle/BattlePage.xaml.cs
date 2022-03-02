@@ -33,7 +33,7 @@ namespace Game.Views
         public BattlePage(bool UnitTest) { UnitTestSetting = UnitTest; }
 
         // Temporary flag to forge the game to end with 'Finish Game' Button
-        bool forceGameOver = false;
+        public bool forceGameOver = false;
         
         /// <summary>
         /// Constructor

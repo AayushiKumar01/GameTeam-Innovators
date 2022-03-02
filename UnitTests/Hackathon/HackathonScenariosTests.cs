@@ -1,11 +1,14 @@
-﻿using NUnit.Framework;
-
-using Game.Models;
-using System.Threading.Tasks;
-using Game.ViewModels;
-using Game.Helpers;
+﻿using System.Threading.Tasks;
+using Game;
 using Game.Engine.EngineGame;
 using Game.Engine.EngineModels;
+using Game.Helpers;
+using Game.Models;
+using Game.ViewModels;
+using Game.Views;
+using NUnit.Framework;
+using Xamarin.Forms;
+using Xamarin.Forms.Mocks;
 
 namespace Scenario
 {
@@ -315,6 +318,88 @@ namespace Scenario
         }
         #endregion Scenario4
 
+        #region Scenario12
+        [Test]
+        public void HackathonScenario_Scenario_12_Valid_Default_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      12
+            *      
+            * Description:
+            *       Add Autoplay button to normal battle screen
+            *       Clicking this button with autoplay through all rounds showing UI until all characters have died
+            *       Screens between round are clicked through to continue until the game is over  
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *       BattlePage.xaml - Add Autoplay button
+            *       BattlePage.xaml.cs - Add button click handler and logic for auto playing the game
+            * 
+            Test Algorithm:
+            *       Setup BattlePage with 3 Characters and Monsters
+            *       Start autoplay and wait for 1 second for a few turns to pass
+            *       Click the 'Finish Early' button
+            *       Verify that we played at least 5 turns
+            *      
+            * Test Conditions:
+            *      We have enough Characters and Monsters to play at least 5 turns in the round
+            * 
+            * Validation:
+            *      Verify that we played at least 5 turns in 1 second
+            */
+
+
+            // Arrange
+            MockForms.Init();
+            App app = new App();
+            Application.Current = app;
+
+            BattlePage page = new BattlePage();
+            
+            Engine.EngineSettings.MonsterList.Clear();
+            
+            var Character = new CharacterModel
+            {
+                Speed = 20,
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                Name = "Character",
+                ListOrder = 1,
+            };
+
+            // Add each model here to warm up and load it.
+            _ = DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+            
+            // Add to Monster list
+            var Monster = new MonsterModel();
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            
+            // Act
+            page.AutoplayButton_Clicked(null, null);
+            Task.Delay(1000).Wait();
+            
+            // Reset
+            // Finish the game early
+            page.FinishButton_Clicked(null, null);
+            
+            // Assert
+            Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount > 5);
+        }
+        #endregion Scenario12
+        
         #region Scenario33
         [Test]
         public void HackathonScenario_Scenario_33_Valid_Default_Should_Pass()
@@ -458,7 +543,7 @@ namespace Scenario
             };
 
             // Add each model here to warm up and load it.
-            _ = Game.Helpers.DataSetsHelper.WarmUp();
+            _ = DataSetsHelper.WarmUp();
 
             Engine.EngineSettings.CharacterList.Clear();
 
