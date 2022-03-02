@@ -330,6 +330,32 @@ namespace Scenario
             // Assert
             Assert.AreEqual(PlayerInfo.CurrentHealth, PlayerInfo.MaxHealth);
         }
+
+        [Test]
+        public void HackathonScenario_Scenario_33_TurnEngine_ChooseToRest_Should_Pass()
+        {
+            // Arrange
+
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
+
+            CharacterPlayer.CurrentHealth = 1;
+            CharacterPlayer.MaxHealth = 100;
+
+            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
+
+            _ = Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+
+            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+            Engine.EngineSettings.BattleScore.AutoBattle = true;
+
+            // Act
+            var result = Engine.Round.Turn.ChooseToRest(CharacterPlayer);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
         #endregion Scenario33
         
         #region Scenario37
