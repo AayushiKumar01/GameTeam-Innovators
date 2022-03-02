@@ -12,6 +12,7 @@ namespace Game.Engine.EngineInterfaces
         bool ChooseToUseAbility(PlayerInfoModel Attacker);
         bool UseAbility(PlayerInfoModel Attacker);
         bool Attack(PlayerInfoModel Attacker);
+        bool ChooseToRest(PlayerInfoModel Attacker);
         bool Rest(PlayerInfoModel Attacker);
         PlayerInfoModel AttackChoice(PlayerInfoModel data);
         PlayerInfoModel SelectCharacterToAttack();
