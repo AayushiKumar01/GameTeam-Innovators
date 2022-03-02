@@ -159,7 +159,7 @@ namespace Scenario
 
         #region Scenario2
         [Test]
-        public async Task HackathonScenario_Scenario_2_Valid_Default_WithDoug_Should_Pass()
+        public void HackathonScenario_Scenario_2_Valid_Default_WithDoug_Should_Pass()
         {
             /* 
             * Scenario Number:  
@@ -224,7 +224,7 @@ namespace Scenario
         }
 
         [Test]
-        public async Task HackathonScenario_Scenario_2_Invalid_Default_WithBob_Should_Pass()
+        public void HackathonScenario_Scenario_2_Invalid_Default_WithBob_Should_Pass()
         {
             /* 
             * Scenario Number:  
