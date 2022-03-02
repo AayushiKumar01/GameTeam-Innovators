@@ -137,6 +137,12 @@ namespace Game.Engine.EngineBase
             if (ChooseToUseAbility(Attacker))
             {
                 EngineSettings.CurrentAction = ActionEnum.Ability;
+                return EngineSettings.CurrentAction;
+            }
+
+            if (ChooseToRest(Attacker))
+            {
+                EngineSettings.CurrentAction = ActionEnum.Rest;
             }
 
             return EngineSettings.CurrentAction;
@@ -767,5 +773,22 @@ namespace Game.Engine.EngineBase
 
             return true;
         }
+        /// <summary>
+        /// Rest as Turn
+        /// Heal 2 hp
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <returns></returns>
+        public virtual bool ChooseToRest(PlayerInfoModel Attacker)
+        {
+
+            if(Attacker.CurrentHealth < (int)(Attacker.MaxHealth / 4))
+            {
+                return true;
+            }
+            
+            return false;
+        }
+
     }
 } 
