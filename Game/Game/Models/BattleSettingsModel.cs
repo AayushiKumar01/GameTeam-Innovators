@@ -30,6 +30,6 @@
         public bool AllowSeattleIce = false;
         
         // Percentage chance to miss if Ice enabled
-        public double SeattleIcePercentage = 0;
+        public int SeattleIcePercentage = 0;
     }
 }
