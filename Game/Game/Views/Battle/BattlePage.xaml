@@ -110,7 +110,15 @@
                         <StackLayout 
                                 Style="{StaticResource VerticalFillAndExpand}" 
                                 HeightRequest="100">
-
+                            
+                            <StackLayout x:Name="autoplay_stack" IsVisible="False" Orientation="Vertical" Style="{StaticResource VerticalStack}">
+                                <StackLayout Orientation="Horizontal"  Style="{StaticResource HorizontalStack}">
+                                    <Label Text="Autoplay:" VerticalTextAlignment="Center"/>
+                                    <Button Text="Slower" Clicked="DelaySlower_Button" x:Name="SlowerButton"/>
+                                    <Button Text="Faster" Clicked="DelayFaster_Button" x:Name="FasterButton" />
+                                </StackLayout>
+                            </StackLayout>
+                            
                             <StackLayout x:Name="MessageDisplayBox" 
                                 IsVisible="false"
                                 Style="{StaticResource MessageDisplayBox}">
@@ -129,7 +137,6 @@
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
-
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

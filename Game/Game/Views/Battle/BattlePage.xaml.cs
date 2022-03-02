@@ -651,7 +651,9 @@ namespace Game.Views
         public void AutoplayButton_Clicked(object sender, EventArgs e)
         {
             // Lower the wait time so each turn does not take too long
-            WaitTime = 100;
+            WaitTime = 256;
+            // Show speed buttons
+            autoplay_stack.IsVisible = true;
             // Recursive method that runs the game in new threads
             AutoPlayNext();
         }
@@ -692,12 +694,8 @@ namespace Game.Views
                         // Exit the items page
                         _ = await Navigation.PopModalAsync();
 
-                        Task.Delay(WaitTime).Wait();
-
                         // Click next round
                         NextRoundButton_Clicked(null, null);
-
-                        Task.Delay(WaitTime).Wait();
 
                         // Click Begin on next round
                         _ = await Navigation.PopModalAsync();
@@ -1064,5 +1062,34 @@ namespace Game.Views
             }
         }
 
+        private void DelaySlower_Button(object sender, EventArgs e)
+        {
+            WaitTime *= 2;
+            int maxWaitTime = 4096;
+            if (WaitTime > maxWaitTime)
+            {
+                WaitTime = maxWaitTime;
+            }
+            FasterButton.IsEnabled = true;
+            if (WaitTime == maxWaitTime)
+            {
+                SlowerButton.IsEnabled = false;
+            }
+        }
+
+        private void DelayFaster_Button(object sender, EventArgs e)
+        {
+            WaitTime /= 2;
+            int minWaitTime = 1;
+            if (WaitTime <= 0)
+            {
+                WaitTime = minWaitTime;
+            }
+            SlowerButton.IsEnabled = true;
+            if (WaitTime == minWaitTime)
+            {
+                FasterButton.IsEnabled = false;
+            }
+        }
     }
 }
