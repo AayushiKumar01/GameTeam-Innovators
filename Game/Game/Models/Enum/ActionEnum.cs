@@ -19,6 +19,9 @@
         Ability = 20,
 
         Rest = 25,
+        
+        // Slipped on Seattle Ice
+        IceSlip = 30,
     }
 
     /// <summary>

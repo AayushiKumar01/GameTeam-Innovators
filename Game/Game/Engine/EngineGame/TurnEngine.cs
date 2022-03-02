@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Diagnostics;
-
-using Game.Models;
-using Game.Helpers;
-using Game.ViewModels;
-using Game.GameRules;
+using System.Linq;
+using Game.Engine.EngineBase;
 using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
+using Game.GameRules;
+using Game.Helpers;
+using Game.Models;
+using Game.ViewModels;
 
 namespace Game.Engine.EngineGame
 {
@@ -17,7 +17,7 @@ namespace Game.Engine.EngineGame
     /// A turn is when a Character takes an action or a Monster takes an action
     /// 
     /// </summary>
-    public class TurnEngine : EngineBase.TurnEngineBase, ITurnEngineInterface
+    public class TurnEngine : TurnEngineBase, ITurnEngineInterface
     {
         #region Algrorithm
         /* 
@@ -50,7 +50,8 @@ namespace Game.Engine.EngineGame
             // Choose Action.  Such as Move, Attack etc.
 
             // INFO: Teams, if you have other actions they would go here.
-
+            EngineSettings.CurrentAction = CalculateSeattleIceSlip(EngineSettings.CurrentAction);
+            
             var result = false;
 
             // If the action is not set, then try to set it or use Attact
@@ -83,6 +84,10 @@ namespace Game.Engine.EngineGame
                 case ActionEnum.Rest:
                     result = Rest(Attacker);
                     break;
+                
+                case ActionEnum.IceSlip:
+                    result = IceSlip(Attacker);
+                    break;
             }
 
             EngineSettings.BattleScore.TurnCount++;
@@ -96,6 +101,26 @@ namespace Game.Engine.EngineGame
             return result;
         }
 
+        
+        /// <summary>
+        /// Calculate if Action should be an IceSlip based on if its enabled and chances
+        /// </summary>
+        /// <param name="engineSettingsCurrentAction"></param>
+        private ActionEnum CalculateSeattleIceSlip(ActionEnum engineSettingsCurrentAction)
+        {
+            if (EngineSettings.BattleSettingsModel.AllowSeattleIce)
+            {
+                var seattleIceChance = EngineSettings.BattleSettingsModel.SeattleIcePercentage;
+
+                var rollDice = DiceHelper.RollDice(1, 100);
+                if (rollDice <= seattleIceChance)
+                {
+                    return ActionEnum.IceSlip;
+                }
+            }
+            return engineSettingsCurrentAction;
+        }
+        
         /// <summary>
         /// Find a Desired Target
         /// Move close to them
@@ -597,6 +622,32 @@ namespace Game.Engine.EngineGame
         public override bool Rest(PlayerInfoModel Attacker)
         {
             return base.Rest(Attacker);
+        }
+        
+        /// <summary>
+        /// Slip on ice for the turn
+        /// 
+        /// Does nothing
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <returns>Return success</returns>
+        public bool IceSlip(PlayerInfoModel Attacker)
+        {
+            if (Attacker == null)
+            {
+                return false;
+            }
+
+            // Set Messages to empty
+            _ = EngineSettings.BattleMessagesModel.ClearMessages();
+
+            _ = EngineSettings.BattleMessagesModel.AttackerName = Attacker.Name;
+            _ = EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
+                
+            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ", slipped on Seattle Ice!";
+
+            return true;
+
         }
     }
 }
