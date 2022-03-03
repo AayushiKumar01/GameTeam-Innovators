@@ -127,6 +127,13 @@ namespace Game.Models
                     }
                     break;
 
+                case CharacterJobEnum.Frigate:
+                    foreach (var item in AbilityEnumHelper.GetListFrigate)
+                    {
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                    }
+                    break;
+
                 default:
                     foreach (var item in AbilityEnumHelper.GetListOthers)
                     {
