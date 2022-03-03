@@ -1166,13 +1166,17 @@ namespace UnitTests.Engine.EngineBase
         [Test]
         public void RoundEngine_PlayerList_Valid_Default_Should_Pass()
         {
+            // Arrange
+            Engine.EngineSettings.CharacterList.Clear();
+            Engine.EngineSettings.MonsterList.Clear();
+            
             // Act
             var result = Engine.Round.PlayerList();
 
             // Reset
 
             // Assert
-            Assert.AreEqual(2, result.Count);
+            Assert.AreEqual(0, result.Count);
         }
         #endregion PlayerList
     }
