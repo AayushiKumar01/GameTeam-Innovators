@@ -141,6 +141,13 @@ namespace Game.Models
                     }
                     break;
 
+                case CharacterJobEnum.Battlecruiser:
+                    foreach (var item in AbilityEnumHelper.GetListBattlecruiser)
+                    {
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                    }
+                    break;
+
                 default:
                     foreach (var item in AbilityEnumHelper.GetListOthers)
                     {
