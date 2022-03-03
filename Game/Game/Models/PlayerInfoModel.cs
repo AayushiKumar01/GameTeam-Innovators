@@ -114,7 +114,7 @@ namespace Game.Models
             {
                 case CharacterJobEnum.Corvette:
 
-                    foreach (var item in AbilityEnumHelper.GetListCleric)
+                    foreach (var item in AbilityEnumHelper.GetListCorvette)
                     {
                         AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
                     }
