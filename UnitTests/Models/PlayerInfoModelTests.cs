@@ -68,6 +68,21 @@ namespace UnitTests.Models
         }
 
         [Test]
+        public void PlayerInfoModel_Constructor_Character_Frigate_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new CharacterModel { Job = CharacterJobEnum.Frigate };
+
+            // Act
+            var result = new PlayerInfoModel(data);
+
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [Test]
         public void PlayerInfoModel_Constructor_Character_Cleric_Default_Should_Pass()
         {
             // Arrange
