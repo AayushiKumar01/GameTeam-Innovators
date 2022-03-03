@@ -140,6 +140,23 @@ namespace Game.Models
         }
 
         /// <summary>
+        /// Returns a list of strings of the enum for Frigate
+        /// </summary>
+        public static List<string> GetListCorvette
+        {
+            get
+            {
+
+                List<string> AbilityList = new List<string>{
+                AbilityEnum.Nimble.ToString()
+                };
+
+                AbilityList.AddRange(GetListOthers);
+                return AbilityList;
+            }
+        }
+
+        /// <summary>
         /// Returns a list of strings of the enum for Cleric
         /// </summary>
         public static List<string> GetListCleric
