@@ -104,7 +104,7 @@ namespace UnitTests.Models
             var data = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Corvette });
 
             // Act
-            var result = data.IsAbilityAvailable(AbilityEnum.Heal);
+            var result = data.IsAbilityAvailable(AbilityEnum.Nimble);
 
             // Reset
 
@@ -255,7 +255,7 @@ namespace UnitTests.Models
         public void PlayerInfoModel_SelectAbilityToUse_Cleric_Heal_Should_Skip()
         {
             // Arrange
-            var data = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Corvette });
+            var data = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
             data.AbilityTracker[AbilityEnum.Quick] = 0;
             data.AbilityTracker[AbilityEnum.Barrier] = 0;
             data.AbilityTracker[AbilityEnum.Curse] = 0;
