@@ -240,6 +240,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Make the List
+            Engine.Round.newGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Sort the list by Current Health, so it has to be resorted.
@@ -289,6 +290,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
 
             // Make the List
+            Engine.Round.newGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Sort the list by Current Health, so it has to be resorted.
@@ -858,6 +860,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             // Make the List
+            Engine.Round.newGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Set Mike as the Player
@@ -936,6 +939,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             // Make the List
+            Engine.Round.newGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Set Sue as the Player
@@ -1014,6 +1018,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
             // Make the List
+            Engine.Round.newGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Act
