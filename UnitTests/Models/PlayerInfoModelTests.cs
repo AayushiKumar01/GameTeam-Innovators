@@ -98,6 +98,21 @@ namespace UnitTests.Models
         }
 
         [Test]
+        public void PlayerInfoModel_Constructor_Character_Battlecruiser_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new CharacterModel { Job = CharacterJobEnum.Battlecruiser };
+
+            // Act
+            var result = new PlayerInfoModel(data);
+
+            // Reset
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [Test]
         public void PlayerInfoModel_Constructor_Character_Cleric_Default_Should_Pass()
         {
             // Arrange
