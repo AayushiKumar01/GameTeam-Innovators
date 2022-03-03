@@ -131,9 +131,7 @@ namespace Game.Models
             get
             {
                 List<string> AbilityList = new List<string>{
-                AbilityEnum.Nimble.ToString(),
-                AbilityEnum.Toughness.ToString(),
-                AbilityEnum.Focus.ToString()
+                AbilityEnum.Curse.ToString()
                 };
 
                 AbilityList.AddRange(GetListOthers);

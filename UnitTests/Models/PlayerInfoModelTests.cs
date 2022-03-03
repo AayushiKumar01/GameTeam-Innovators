@@ -218,7 +218,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual(AbilityEnum.Nimble, result);
+            Assert.AreEqual(AbilityEnum.Curse, result);
         }
 
         [Test]
