@@ -134,6 +134,13 @@ namespace Game.Models
                     }
                     break;
 
+                case CharacterJobEnum.Destroyer:
+                    foreach (var item in AbilityEnumHelper.GetListDestroyer)
+                    {
+                        AbilityTracker.Add(AbilityEnumHelper.ConvertStringToEnum(item), Level);
+                    }
+                    break;
+
                 default:
                     foreach (var item in AbilityEnumHelper.GetListOthers)
                     {
