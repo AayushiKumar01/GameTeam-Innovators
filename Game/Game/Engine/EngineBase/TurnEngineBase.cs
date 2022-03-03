@@ -767,6 +767,8 @@ namespace Game.Engine.EngineBase
             if(Attacker.CurrentHealth > Attacker.MaxHealth - 2)
             {
                 Attacker.CurrentHealth = Attacker.MaxHealth;
+
+                return true;
             }
 
             Attacker.CurrentHealth += 2;
