@@ -72,6 +72,17 @@ namespace UnitTests.Helpers
             Assert.AreEqual(2, result.Count);
         }
 
+        [Test]
+        public void AbilityEnumHelper_GetListBattlecruiser_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AbilityEnumHelper.GetListBattlecruiser;
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
+        }
 
         [Test]
         public void AbilityEnumHelper_GetListCleric_Should_Pass()
