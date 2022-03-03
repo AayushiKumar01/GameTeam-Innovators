@@ -49,6 +49,18 @@ namespace UnitTests.Helpers
         }
 
         [Test]
+        public void AbilityEnumHelper_GetListFrigate_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AbilityEnumHelper.GetListFrigate;
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
+        }
+
+        [Test]
         public void AbilityEnumHelper_GetListCleric_Should_Pass()
         {
             // Arrange
