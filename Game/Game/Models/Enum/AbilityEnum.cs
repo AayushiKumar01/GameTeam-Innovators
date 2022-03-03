@@ -194,6 +194,23 @@ namespace Game.Models
         }
 
         /// <summary>
+        /// Returns a list of strings of the enum for Frigate
+        /// </summary>
+        public static List<string> GetListBattlecruiser
+        {
+            get
+            {
+
+                List<string> AbilityList = new List<string>{
+                AbilityEnum.Barrier.ToString()
+                };
+
+                AbilityList.AddRange(GetListOthers);
+                return AbilityList;
+            }
+        }
+
+        /// <summary>
         /// Returns a list of strings of the enum of not Cleric or Fighter
         /// </summary>
         public static List<string> GetListOthers
