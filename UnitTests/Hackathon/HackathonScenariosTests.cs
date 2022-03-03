@@ -443,6 +443,46 @@ namespace Scenario
         }
 
         [Test]
+        public void HackathonScenario_Scenario_33_Valid_Health_Larger_Than_Rest_Threshold_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      33
+            *      
+            * Description: 
+            *      Lets a character choose to rest
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *     TurnEngineBase.cs - ChooseToRest and Rest functions
+            *     ITurnEngineInterface.cs - Rest and ChooseToRest bools
+            *     ActionEnum.cs - Added Rest enum
+            * 
+            Test Algrorithm:
+            *      Create Character
+            *      Set Max Health
+            *      Set Current Health
+            *      Call Rest
+            *      Check HP
+            *      
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify Current HP increased by 2
+            */
+            // Arrange
+            var PlayerInfo = new PlayerInfoModel();
+            PlayerInfo.MaxHealth = 100;
+            PlayerInfo.CurrentHealth = 99;
+
+            // Act
+            var result = Engine.Round.Turn.Rest(PlayerInfo);
+
+            // Assert
+            Assert.AreEqual(PlayerInfo.CurrentHealth, PlayerInfo.MaxHealth);
+        }
+
+        [Test]
         public void HackathonScenario_Scenario_33_TurnEngine_ChooseToRest_Should_Pass()
         {
             /* 
