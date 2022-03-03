@@ -133,16 +133,15 @@ namespace Game.Engine.EngineBase
                 return EngineSettings.CurrentAction;
             }
 
+            if (ChooseToRest(Attacker))
+            {
+                EngineSettings.CurrentAction = ActionEnum.Rest;
+            }
+
             // Check to see if ability is avaiable
             if (ChooseToUseAbility(Attacker))
             {
                 EngineSettings.CurrentAction = ActionEnum.Ability;
-                return EngineSettings.CurrentAction;
-            }
-
-            if (ChooseToRest(Attacker))
-            {
-                EngineSettings.CurrentAction = ActionEnum.Rest;
             }
 
             return EngineSettings.CurrentAction;
