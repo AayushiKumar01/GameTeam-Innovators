@@ -233,12 +233,11 @@ namespace Game.Engine.EngineGame
                 return null;
             }
 
-            // Select first in the list
+            // rule change - sort first by ListOrder and then sort it by Level (min - max) and select the first 
 
-            // TODO: Teams, You need to implement your own Logic can not use mine.
             var Defender = EngineSettings.PlayerList
                 .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Character)
-                .OrderBy(m => m.ListOrder).FirstOrDefault();
+                .OrderBy(m => m.ListOrder).ThenBy(m => m.Level).FirstOrDefault();
 
             return Defender;
         }
