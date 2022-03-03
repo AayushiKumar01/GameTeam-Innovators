@@ -397,7 +397,7 @@ namespace Scenario
             page.GameOver();
             
             // Assert
-            Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount > 5);
+            Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount >= 4);
         }
         #endregion Scenario12
         
