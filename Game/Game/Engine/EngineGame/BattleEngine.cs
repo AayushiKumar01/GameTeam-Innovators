@@ -53,7 +53,7 @@ namespace Game.Engine.EngineGame
             };
 
             BattleRunning = true;
-            Round.newGame();
+            Round.NewGame();
             _ = Round.NewRound();
 
             return true;

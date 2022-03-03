@@ -340,7 +340,7 @@ namespace Game.Engine.EngineBase
             return EngineSettings.PlayerList;
         }
 
-        public void newGame()
+        public void NewGame()
         {
             IsInit = true;
         }
