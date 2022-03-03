@@ -273,16 +273,16 @@ namespace Game.Engine.EngineGame
                 }
             }
 
-            // Set ListOrder to greatest item in PlayerList
-            foreach (PlayerInfoModel playerInfoModel in EngineSettings.PlayerList)
+            if (!IsInit)
             {
-                if (ListOrder < playerInfoModel.ListOrder)
+                // Set ListOrder to greatest item in PlayerList
+                foreach (PlayerInfoModel playerInfoModel in EngineSettings.PlayerList)
                 {
-                    ListOrder = playerInfoModel.ListOrder;
+                    ListOrder = Math.Max(ListOrder, playerInfoModel.ListOrder);
                 }
+                ListOrder++;
             }
 
-            ListOrder++;
             foreach (var data in EngineSettings.MonsterList)
             {
                 if (data.Alive)
