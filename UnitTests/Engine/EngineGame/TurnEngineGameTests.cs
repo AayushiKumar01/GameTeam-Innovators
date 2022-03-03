@@ -585,6 +585,23 @@ namespace UnitTests.Engine.EngineGame
         }
 
         [Test]
+        public void TurnEngine_TakeTurn_Rest_Should_Pass()
+        {
+            // Arrange
+
+            Engine.EngineSettings.CurrentAction = ActionEnum.Rest;
+
+            var PlayerInfo = new PlayerInfoModel(new CharacterModel());
+
+            // Act
+            var result = Engine.Round.Turn.TakeTurn(PlayerInfo);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+        [Test]
         public void TurnEngine_TakeTurn_Move_Should_Pass()
         {
             // Arrange
