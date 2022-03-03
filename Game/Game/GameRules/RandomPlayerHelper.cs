@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Game.Helpers;
 using Game.Models;
 using Game.ViewModels;
@@ -275,9 +274,13 @@ namespace Game.GameRules
 
             var rnd = DiceHelper.RollDice(1, MonsterIndexViewModel.Instance.Dataset.Count);
 
+            var calcLevelbuff = MaxLevel / 3;
+            var calcLevel = DiceHelper.RollDice(1, MaxLevel - calcLevelbuff) + calcLevelbuff;
+            calcLevel = Math.Min(calcLevel, 20);
+
             var result = new MonsterModel(MonsterIndexViewModel.Instance.Dataset.ElementAt(rnd - 1))
             {
-                Level = DiceHelper.RollDice(1, MaxLevel),
+                Level = calcLevel,
 
                 // Randomize Name
                 Name = GetMonsterName(),
@@ -298,7 +301,7 @@ namespace Game.GameRules
             result.Attack = result.Difficulty.ToModifier(result.Attack);
             result.Defense = result.Difficulty.ToModifier(result.Defense);
             result.Speed = result.Difficulty.ToModifier(result.Speed);
-            result.Level = result.Difficulty.ToModifier(result.Level);
+            result.Level = Math.Min(result.Difficulty.ToModifier(result.Level), 20);
 
             // Get the new Max Health
             result.MaxHealth = DiceHelper.RollDice(result.Level, 10);
