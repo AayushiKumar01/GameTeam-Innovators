@@ -193,6 +193,7 @@ namespace UnitTests.Engine.EngineEngine
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Make the List
+            Engine.Round.NewGame();
             Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
 
             // Sort the list by Current Health, so it has to be resorted.
