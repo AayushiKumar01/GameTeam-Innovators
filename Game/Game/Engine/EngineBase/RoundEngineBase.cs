@@ -92,24 +92,22 @@ namespace Game.Engine.EngineBase
             * I don't have crudi monsters yet so will add 6 new ones...
             * If you have crudi monsters, then pick from the list
 
-            * Consdier how you will scale the monsters up to be appropriate for the characters to fight
+            * Monster level is within 1/3rd of the average of Character level 
             * 
             */
         /// </summary>
         /// <returns></returns>
         public virtual int AddMonstersToRound()
         {
-            // TODO: Teams, You need to implement your own Logic can not use mine.
-
             var TargetLevel = 1;
 
             if (EngineSettings.CharacterList.Count() > 0)
             {
-                // Get the Min Character Level (linq is soo cool....)
-                TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Min(m => m.Level));
+                // Get the Average Character Level (linq is soo cool....)
+                TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
             }
 
-            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters; i++)
+            for (var i = 0; i < TargetLevel / 2; i++)
             {
                 var data = RandomPlayerHelper.GetRandomMonster(TargetLevel, EngineSettings.BattleSettingsModel.AllowMonsterItems);
 
