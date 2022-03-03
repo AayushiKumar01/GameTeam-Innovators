@@ -1232,6 +1232,61 @@ namespace UnitTests.Engine.EngineBase
 
             Assert.AreEqual(3, NewPlayerList.Count);
         }
+
+        [Test]
+        public void RoundEngine_PlayerList_Add_Monsters_Should_Return_Count_3()
+        {
+            var MonsterPlayerMike = new PlayerInfoModel(
+                                       new MonsterModel
+                                       {
+                                           Speed = 200,
+                                           Level = 1,
+                                           CurrentHealth = 1,
+                                           ExperienceTotal = 1,
+                                           Name = "Mike",
+                                           ListOrder = 1,
+                                       });
+
+            var MonsterPlayerDoug = new PlayerInfoModel(
+                                        new MonsterModel
+                                        {
+                                            Speed = 20,
+                                            Level = 1,
+                                            CurrentHealth = 1,
+                                            ExperienceTotal = 1,
+                                            Name = "Doug",
+                                            ListOrder = 2,
+                                        });
+
+            var MonsterPlayerSue = new PlayerInfoModel(
+                                        new MonsterModel
+                                        {
+                                            Speed = 2,
+                                            Level = 1,
+                                            CurrentHealth = 1,
+                                            ExperienceTotal = 1,
+                                            Name = "Sue",
+                                            ListOrder = 3,
+                                        });
+
+            _ = Game.Helpers.DataSetsHelper.WarmUp();
+
+            Engine.EngineSettings.CharacterList.Clear();
+            Engine.EngineSettings.MonsterList.Clear();
+
+
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayerMike);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayerDoug);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayerSue);
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+
+
+            var NewPlayerList = Engine.Round.PlayerList();
+
+            Assert.AreEqual(3, NewPlayerList.Count);
+        }
         #endregion PlayerList
     }
 }
