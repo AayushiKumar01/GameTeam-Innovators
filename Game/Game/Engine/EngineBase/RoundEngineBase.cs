@@ -107,7 +107,7 @@ namespace Game.Engine.EngineBase
                 TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Average(m => m.Level));
             }
 
-            for (var i = 0; i < TargetLevel / 2; i++)
+            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters; i++)
             {
                 var data = RandomPlayerHelper.GetRandomMonster(TargetLevel, EngineSettings.BattleSettingsModel.AllowMonsterItems);
 
