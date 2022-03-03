@@ -64,7 +64,7 @@ namespace Game.Models
             switch (value)
             {
                 case AbilityEnum.Bandage:
-                    Message = "Apply Bandages";
+                    Message = "Emergency Repair";
                     break;
 
                 case AbilityEnum.Nimble:

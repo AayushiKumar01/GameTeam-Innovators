@@ -32,7 +32,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Apply Bandages", result);
+            Assert.AreEqual("Emergency Repair", result);
         }
 
         [Test]
