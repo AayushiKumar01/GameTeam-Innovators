@@ -20,6 +20,8 @@ namespace Game.Engine.EngineBase
         // Hold the turn
         public ITurnEngineInterface Turn { get; set; } = null;
 
+        protected bool IsInit = true;
+        
         /// <summary>
         /// Clear the List between Rounds
         /// </summary>

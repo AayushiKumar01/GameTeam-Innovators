@@ -67,7 +67,8 @@ namespace Game.Engine.EngineGame
 
             // Update Score for the RoundCount
             EngineSettings.BattleScore.RoundCount++;
-
+            
+            IsInit = false;
             return true;
         }
 
@@ -89,13 +90,13 @@ namespace Game.Engine.EngineGame
         public override int AddMonstersToRound()
         {
             // TODO: Teams, You need to implement your own Logic can not use mine.
-
+            
             var TargetLevel = 1;
 
-            if (EngineSettings.CharacterList.Count() > 0)
+            if (EngineSettings.PlayerList.Count() > 0)
             {
-                // Get the Min Character Level (linq is soo cool....)
-                TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Min(m => m.Level));
+                // Get the Max Character Level (linq is soo cool....)
+                TargetLevel = Convert.ToInt32(EngineSettings.PlayerList.Average(m => m.Level));
             }
 
             for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters; i++)
@@ -249,26 +250,39 @@ namespace Game.Engine.EngineGame
         public override List<PlayerInfoModel> MakePlayerList()
         {
             // Start from a clean list of players
-            EngineSettings.PlayerList.Clear();
-
-            // Remember the Insert order, used for Sorting
             var ListOrder = 0;
-
-            foreach (var data in EngineSettings.CharacterList)
+            if (IsInit)
             {
-                if (data.Alive)
-                {
-                    EngineSettings.PlayerList.Add(
-                        new PlayerInfoModel(data)
-                        {
-                            // Remember the order
-                            ListOrder = ListOrder
-                        });
+                EngineSettings.PlayerList.Clear();
 
-                    ListOrder++;
+                // Remember the Insert order, used for Sorting
+
+                foreach (var data in EngineSettings.CharacterList)
+                {
+                    if (data.Alive)
+                    {
+                        EngineSettings.PlayerList.Add(
+                            new PlayerInfoModel(data)
+                            {
+                                // Remember the order
+                                ListOrder = ListOrder
+                            });
+
+                        ListOrder++;
+                    }
                 }
             }
 
+            // Set ListOrder to greatest item in PlayerList
+            foreach (PlayerInfoModel playerInfoModel in EngineSettings.PlayerList)
+            {
+                if (ListOrder < playerInfoModel.ListOrder)
+                {
+                    ListOrder = playerInfoModel.ListOrder;
+                }
+            }
+
+            ListOrder++;
             foreach (var data in EngineSettings.MonsterList)
             {
                 if (data.Alive)
