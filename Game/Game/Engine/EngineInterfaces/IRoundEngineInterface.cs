@@ -28,5 +28,6 @@ namespace Game.Engine.EngineInterfaces
         ItemModel SwapCharacterItem(PlayerInfoModel character, ItemLocationEnum setLocation, ItemModel PoolItem);
         bool RemoveCharacterBuffs();
         List<PlayerInfoModel> PlayerList();
+        void newGame();
     }
 }

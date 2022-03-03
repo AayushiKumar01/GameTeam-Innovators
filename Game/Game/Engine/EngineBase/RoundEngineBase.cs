@@ -342,6 +342,11 @@ namespace Game.Engine.EngineBase
             return EngineSettings.PlayerList;
         }
 
+        public void newGame()
+        {
+            IsInit = true;
+        }
+
         /// <summary>
         /// Get the Information about the Player
         /// </summary>
