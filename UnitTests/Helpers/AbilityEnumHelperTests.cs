@@ -61,6 +61,19 @@ namespace UnitTests.Helpers
         }
 
         [Test]
+        public void AbilityEnumHelper_GetListDestroyer_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = AbilityEnumHelper.GetListDestroyer;
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
+        }
+
+
+        [Test]
         public void AbilityEnumHelper_GetListCleric_Should_Pass()
         {
             // Arrange
