@@ -55,11 +55,6 @@ namespace Game.Views
             AllowCriticalHitSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
             AllowCriticalMissSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss;
             #endregion HitToggles
-
-            #region MonsterToggles
-            AllowMonsterItemsSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems;
-            AllowMonsterRespawnSwitch.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn;
-            #endregion
             
             #region SeattleIceToggleSlider
             SeattleIceSlider.Value = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
@@ -180,23 +175,6 @@ namespace Game.Views
             }
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
-        }
-
-        /// <summary>
-        /// Toggle Monster Items
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void AllowMonsterRespawn_Toggled(object sender, EventArgs e)
-        {
-            // Flip the settings
-            if (AllowMonsterRespawnSwitch.IsToggled == true)
-            {
-                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn = true;
-                return;
-            }
-
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterRespawn = false;
         }
 
         private void AllowSeattleIce_Toggled(object sender, ToggledEventArgs e)
