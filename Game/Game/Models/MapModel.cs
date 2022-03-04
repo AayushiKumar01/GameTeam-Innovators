@@ -252,6 +252,34 @@ namespace Game.Models
         }
 
         /// <summary>
+        /// Walk the Map and Find the Location that is close to the target and the start
+        /// </summary>
+        /// <param name="Target"></param>
+        /// <returns></returns>
+        public MapModelLocation ReturnClosestEmptyLocationFromStartDist(MapModelLocation Start, MapModelLocation Target, int MaxDist)
+        {
+            MapModelLocation Result = ReturnClosestEmptyLocation(Target);
+
+            var LowestDistance = int.MaxValue;
+
+            foreach (var data in GetEmptyLocations())
+            {
+                var distanceToStart = CalculateDistance(data, Start);
+                if (distanceToStart <= MaxDist)
+                {
+                    var distanceToTarget = CalculateDistance(data, Target);
+                    if (distanceToTarget < LowestDistance)
+                    {
+                        Result = data;
+                        LowestDistance = distanceToTarget;
+                    }
+                }
+            }
+
+            return Result;
+        }
+        
+        /// <summary>
         /// Walk the Map and Find the Location that is close to the target
         /// </summary>
         /// <param name="Target"></param>

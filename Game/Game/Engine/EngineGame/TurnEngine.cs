@@ -134,7 +134,7 @@ namespace Game.Engine.EngineGame
              * TODO: TEAMS Work out your own move logic if you are implementing move
              * 
              * Mike's Logic
-             * The monster or charcter will move to a different square if one is open
+             * The monster or character will move to a different square if one is open
              * Find the Desired Target
              * Jump to the closest space near the target that is open
              * 
@@ -168,7 +168,7 @@ namespace Game.Engine.EngineGame
                 // Find Location Nearest to Defender that is Open.
 
                 // Get the Open Locations
-                var openSquare = EngineSettings.MapModel.ReturnClosestEmptyLocation(locationDefender);
+                var openSquare = EngineSettings.MapModel.ReturnClosestEmptyLocationFromStartDist(locationAttacker, locationDefender, Attacker.Speed);
 
                 Debug.WriteLine(string.Format("{0} moves from {1},{2} to {3},{4}", locationAttacker.Player.Name, locationAttacker.Column, locationAttacker.Row, openSquare.Column, openSquare.Row));
 
