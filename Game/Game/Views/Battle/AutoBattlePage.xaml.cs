@@ -19,8 +19,6 @@ namespace Game.Views
         // Hold the Engine, so it can be swapped out for unit testing
         public IAutoBattleInterface AutoBattle = BattleEngineViewModel.Instance.AutoBattleEngine;
 
-        private AudioHelper audio;
-
         /// <summary>
         /// Constructor
         /// </summary>
