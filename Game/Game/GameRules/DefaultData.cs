@@ -48,7 +48,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Blue Plasma Cannon",
                     Description = "Molten fire",
-                    ImageURI = "item3.png",
+                    ImageURI = "reactor1.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
@@ -188,7 +188,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Rocket Flares",
                     Description = "Distract Missiles",
-                    ImageURI = "item5.png",
+                    ImageURI = "reactor2.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,

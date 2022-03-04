@@ -133,6 +133,7 @@
     <Content Include="monsterdrafts6.png" />
     <Content Include="radar1.png" />
     <Content Include="reactor1.png" />
+    <Content Include="reactor2.png" />
     <Content Include="ship1.png" />
     <Content Include="ship2.png" />
     <Content Include="ship3.png" />
