@@ -1623,5 +1623,21 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(false, result);
         }
         #endregion MoveAsTurn
+
+        #region IceSlip
+        [Test]
+        public void TurnEngine_IceSlip_Valid_Null_Attacks_Character_Should_Fail()
+        {
+            // Arrange
+            var result = Engine.Round.Turn.IceSlip(null);
+
+            // Act
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+        #endregion IceSlip
     }
 }
