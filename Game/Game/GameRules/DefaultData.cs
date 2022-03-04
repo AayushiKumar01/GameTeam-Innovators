@@ -208,7 +208,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Nuclear Reactor Engine",
                     Description = "Don't let it get damaged",
-                    ImageURI = "item6.png",
+                    ImageURI = "engine2.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
@@ -218,7 +218,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Johnson-Tanaka Engine",
                     Description = "Thrust up to 10G",
-                    ImageURI = "item6.png",
+                    ImageURI = "engine1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,
