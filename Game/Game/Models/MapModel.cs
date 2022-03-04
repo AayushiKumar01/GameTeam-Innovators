@@ -252,9 +252,11 @@ namespace Game.Models
         }
 
         /// <summary>
-        /// Walk the Map and Find the Location that is close to the target and the start
+        /// Walk the Map and Find the Location that is close to the target and the start with in MaxDist
         /// </summary>
-        /// <param name="Target"></param>
+        /// <param name="Start">Location to start the move from</param>
+        /// <param name="Target">Location to move towards</param>
+        /// <param name="MaxDist">Max distance you want to limit the move from the start</param>
         /// <returns></returns>
         public MapModelLocation ReturnClosestEmptyLocationFromStartDist(MapModelLocation Start, MapModelLocation Target, int MaxDist)
         {

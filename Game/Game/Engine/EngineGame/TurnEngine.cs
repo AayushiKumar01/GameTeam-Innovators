@@ -131,14 +131,17 @@ namespace Game.Engine.EngineGame
         public override bool MoveAsTurn(PlayerInfoModel Attacker)
         {
             /*
-             * TODO: TEAMS Work out your own move logic if you are implementing move
              * 
              * Mike's Logic
              * The monster or character will move to a different square if one is open
              * Find the Desired Target
              * Jump to the closest space near the target that is open
-             * 
+             *
              * If no open spaces, return false
+             *
+             * Our Logic
+             * Try to find a location that is within speed distance of the attacker
+             * in the direction of the defender, default to next to defender if non found.
              * 
              */
 
