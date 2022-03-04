@@ -1650,5 +1650,37 @@ namespace UnitTests.Engine.EngineBase
         }
 
         #endregion DetermineCriticalMissProblem
+
+        #region IceSlip
+        [Test]
+        public void TurnEngine_IceSlip_Valid_Null_Attacks_Character_Should_Fail()
+        {
+            // Arrange
+            var result = Engine.Round.Turn.IceSlip(null);
+
+            // Act
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void TurnEngine_IceSlip_Valid_Character_Attacks_Monster_Should_Pass()
+        {
+            // Arrange
+            var CharacterPlayer = new PlayerInfoModel();
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
+
+            // Act
+            var result = Engine.Round.Turn.IceSlip(CharacterPlayer);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+        #endregion IceSlip
     }
 }
