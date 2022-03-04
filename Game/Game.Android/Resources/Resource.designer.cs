@@ -14,7 +14,7 @@ namespace Game.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -16877,34 +16877,37 @@ namespace Game.Droid
 			public const int test_custom_background = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int tooltip_frame_dark = 2131165399;
+			public const int thruster1 = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int tooltip_frame_light = 2131165400;
+			public const int tooltip_frame_dark = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int troll = 2131165401;
+			public const int tooltip_frame_light = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int troll1 = 2131165402;
+			public const int troll = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int troll2 = 2131165403;
+			public const int troll1 = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int troll3 = 2131165404;
+			public const int troll2 = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int troll4 = 2131165405;
+			public const int troll3 = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int troll5 = 2131165406;
+			public const int troll4 = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int troll6 = 2131165407;
+			public const int troll5 = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int village = 2131165408;
+			public const int troll6 = 2131165408;
+			
+			// aapt resource value: 0x7F0700E1
+			public const int village = 2131165409;
 			
 			static Drawable()
 			{

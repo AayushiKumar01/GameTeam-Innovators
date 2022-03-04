@@ -1639,5 +1639,27 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(false, result);
         }
         #endregion IceSlip
+
+        #region CalculateSeattleIceSlip
+        [Test]
+        public void TurnEngine_CalculateSeattleIceSlip_Valid_ActionEnum_Should_Pass()
+        {
+            // Arrange
+            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
+
+            Engine.EngineSettings.CurrentAction = ActionEnum.Move;
+            Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
+            Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage = 0;
+
+
+            // Act
+            var result = Engine.Round.Turn.DetermineActionChoice(CharacterPlayer);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(ActionEnum.Move, result);
+        }
+        #endregion CalculateSeattleIceSlip
     }
 }
