@@ -277,7 +277,7 @@ namespace Scenario
             var Monster = new MonsterModel();
             var MonsterPlayer = new PlayerInfoModel(Monster);
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
-
+            EngineViewModel.Engine.EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Hit;
             //Act
             var result = EngineViewModel.Engine.Round.Turn.TurnAsAttack(CharacterPlayerBob, MonsterPlayer);
 
