@@ -791,5 +791,32 @@ namespace Game.Engine.EngineBase
             return false;
         }
 
+
+        /// <summary>
+        /// Slip on ice for the turn
+        /// 
+        /// Does nothing
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <returns>Return success</returns>
+        public bool IceSlip(PlayerInfoModel Attacker)
+        {
+            if (Attacker == null)
+            {
+                return false;
+            }
+
+            // Set Messages to empty
+            _ = EngineSettings.BattleMessagesModel.ClearMessages();
+
+            _ = EngineSettings.BattleMessagesModel.AttackerName = Attacker.Name;
+            _ = EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
+
+            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ": slipped on Seattle Ice!";
+
+            return true;
+
+        }
+
     }
 } 
