@@ -1647,9 +1647,9 @@ namespace UnitTests.Engine.EngineGame
             // Arrange
             var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
 
-            Engine.EngineSettings.CurrentAction = ActionEnum.Move;
             Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
             Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage = 0;
+            Engine.EngineSettings.CurrentAction = ActionEnum.Move;
 
 
             // Act
