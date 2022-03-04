@@ -232,6 +232,26 @@ namespace UnitTests.Models
         }
 
         [Test]
+        public void PlayerInfoModel_SelectAbilityToUse_Cleric_Heal_Available_Should_Continue()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new CharacterModel { Job = CharacterJobEnum.Cleric });
+            data.AbilityTracker[AbilityEnum.Heal] = 1;
+            data.AbilityTracker[AbilityEnum.Bandage] = 0;
+
+            data.CurrentHealth = 1;
+            data.MaxHealth = 100;
+
+            // Act
+            var result = data.SelectAbilityToUse();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(AbilityEnum.Unknown, result);
+        }
+
+        [Test]
         public void PlayerInfoModel_SelectHealingAbility_Fighter_Bandage_Avaiable_Should_Pass()
         {
             // Arrange
