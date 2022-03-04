@@ -198,7 +198,7 @@ namespace Game.GameRules
                 new ItemModel {
                     Name = "Auxillary Thruster",
                     Description = "Extra mobility",
-                    ImageURI = "item6.png",
+                    ImageURI = "thruster1.png",
                     Range = 0,
                     Damage = 0,
                     Value = 9,

@@ -331,4 +331,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\engine2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thruster1.png" />
+  </ItemGroup>
 </Project>
