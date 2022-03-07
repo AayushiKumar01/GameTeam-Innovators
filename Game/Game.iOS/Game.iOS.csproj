@@ -337,4 +337,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\reactor2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\char6.gif" />
+  </ItemGroup>
 </Project>
