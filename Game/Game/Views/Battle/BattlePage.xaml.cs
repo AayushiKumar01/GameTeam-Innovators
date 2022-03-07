@@ -676,7 +676,7 @@ namespace Game.Views
             // Unneeded buttons invisible
             AutoplayButton.IsVisible = false;
             AttackButton.IsVisible = false;
-            
+            AbilityButton.IsVisible = false;
             
             // Start new thread to give UI a chance to refresh
             Task.Run(async () =>
@@ -972,6 +972,7 @@ namespace Game.Views
             NextRoundButton.IsVisible = false;
             StartBattleButton.IsVisible = false;
             AttackButton.IsVisible = false;
+            AbilityButton.IsVisible = false;
             FinishButton.IsVisible = false;
             RestButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
@@ -1037,6 +1038,7 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
                     HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
+                    AbilityButton.IsVisible = true;
                     FinishButton.IsVisible = true;
                     AutoplayButton.IsVisible = true;
                     RestButton.IsVisible = false;
