@@ -337,4 +337,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\reactor2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\star.png" />
+  </ItemGroup>
 </Project>
