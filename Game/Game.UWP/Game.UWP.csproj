@@ -131,6 +131,8 @@
     <Content Include="monsterdrafts4.png" />
     <Content Include="monsterdrafts5.png" />
     <Content Include="monsterdrafts6.png" />
+    <Content Include="monsterdrafts7.png" />
+    <Content Include="monsterdrafts8.png" />
     <Content Include="radar1.png" />
     <Content Include="reactor1.png" />
     <Content Include="reactor2.png" />
@@ -199,6 +201,7 @@
     <Content Include="shield3.png" />
     <Content Include="shield4.png" />
     <Content Include="ship7.gif" />
+    <Content Include="ship8.png" />
     <Content Include="sword1.png" />
     <Content Include="sword10.png" />
     <Content Include="sword11.png" />
