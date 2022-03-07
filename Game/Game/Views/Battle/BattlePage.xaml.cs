@@ -621,6 +621,16 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Ability
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void AbilityButton_Clicked(object sender, EventArgs e)
+        {
+            
+        }
+
+        /// <summary>
         /// Settings Page
         /// </summary>
         /// <param name="sender"></param>
@@ -666,6 +676,7 @@ namespace Game.Views
             // Unneeded buttons invisible
             AutoplayButton.IsVisible = false;
             AttackButton.IsVisible = false;
+            
             
             // Start new thread to give UI a chance to refresh
             Task.Run(async () =>
