@@ -337,16 +337,4 @@
   <ItemGroup>
     <BundleResource Include="Resources\reactor2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ship8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\monsterdrafts8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\monsterdrafts7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\background.png" />
-  </ItemGroup>
 </Project>

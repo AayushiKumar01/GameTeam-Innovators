@@ -274,7 +274,7 @@ namespace Game.GameRules
                     Description = "UNSC Flagship",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "ship1.png",
+                    ImageURI = "char1.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -289,7 +289,7 @@ namespace Game.GameRules
                     Description = "Veteran of the Third Solar War",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "ship2.png",
+                    ImageURI = "char2.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -304,7 +304,7 @@ namespace Game.GameRules
                     Description = "A Legitimate Salvage",
                     Level = 1,
                     MaxHealth = 8,
-                    ImageURI = "ship3.png",
+                    ImageURI = "char3.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -319,7 +319,7 @@ namespace Game.GameRules
                     Description = "A salvager converted into a warship",
                     Level = 4,
                     MaxHealth = 38,
-                    ImageURI = "ship4.png"
+                    ImageURI = "char4.gif"
                 },
 
                 new CharacterModel {
@@ -327,7 +327,7 @@ namespace Game.GameRules
                     Description = "Light and nimble",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "ship5.png"
+                    ImageURI = "char5.gif"
                 },
 
                 new CharacterModel {
@@ -335,7 +335,7 @@ namespace Game.GameRules
                     Description = "All shall fall before me",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "ship6.png"
+                    ImageURI = "char6.gif"
                 }
             };
 
