@@ -66,6 +66,7 @@
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
                 <Setter Property="Padding" Value="10,10,10,10" />
+                <Setter Property="BackgroundImageSource" Value="background.png"/>
             </Style>
 
             <Style TargetType="ContentPage"
