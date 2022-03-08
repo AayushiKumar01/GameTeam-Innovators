@@ -627,7 +627,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AbilityButton_Clicked(object sender, EventArgs e)
         {
-            Ability();
+            //Ability();
         }
 
         /// <summary>
@@ -1051,7 +1051,7 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
                     HtmlBox.IsVisible = true;
                     AttackButton.IsVisible = true;
-                    AbilityButton.IsVisible = true;
+                    AbilityButton.IsVisible = false;
                     FinishButton.IsVisible = true;
                     AutoplayButton.IsVisible = true;
                     RestButton.IsVisible = false;
