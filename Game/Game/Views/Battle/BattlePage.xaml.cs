@@ -490,7 +490,9 @@ namespace Game.Views
              * 
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
-
+            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(data.Player);
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Attack;
+            FinishTurnProcess();
             data.IsSelectedTarget = true;
             return true;
         }
@@ -664,7 +666,7 @@ namespace Game.Views
             // Lower the wait time so each turn does not take too long
             WaitTime = 256;
             // Show speed buttons
-            autoplay_stack.IsVisible = true;
+            AutoplayStack.IsVisible = true;
             // Recursive method that runs the game in new threads
             AutoPlayNext();
         }
@@ -740,13 +742,24 @@ namespace Game.Views
             // Get the turn, set the current player and attacker to match
             SetAttackerAndDefender();
 
+            // Let the player make a choice if there is no defender picked
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender != null || BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Count < 1)
+            {
+                return FinishTurnProcess();
+            }
+
+            return RoundEnum.Unknown;
+        }
+
+        private RoundEnum FinishTurnProcess()
+        {
             // Hold the current state
             var RoundCondition = BattleEngineViewModel.Instance.Engine.Round.RoundNextTurn();
             if (forceGameOver)
             {
                 RoundCondition = RoundEnum.GameOver;
             }
-            
+
             // Output the Message of what happened.
             GameMessage();
 
@@ -764,11 +777,8 @@ namespace Game.Views
 
                 // Show the Round Over, after that is cleared, it will show the New Round Dialog
                 ShowModalRoundOverPage();
-                return RoundCondition;
             }
-
-            // Check for Game Over
-            if (RoundCondition == RoundEnum.GameOver)
+            else if (RoundCondition == RoundEnum.GameOver)
             {
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
 
@@ -781,7 +791,10 @@ namespace Game.Views
                 Debug.WriteLine("Game Over");
 
                 GameOver();
-                return RoundCondition;
+            }
+            else
+            {
+                NextAttackExample();
             }
 
             return RoundCondition;
@@ -798,9 +811,11 @@ namespace Game.Views
             {
                 case PlayerTypeEnum.Character:
                     // User would select who to attack
-
+                    PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+                    BattleMessages.Text = string.Format("{0} \n{1}", "Players turn: " + attacker.Name + ", selection an action.", BattleMessages.Text);
+                    
                     // for now just auto selecting
-                    _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(BattleEngineViewModel.Instance.Engine.Round.Turn.AttackChoice(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker));
+                    _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(null);
                     break;
 
                 case PlayerTypeEnum.Monster:

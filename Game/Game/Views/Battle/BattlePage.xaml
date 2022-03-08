@@ -123,7 +123,7 @@
                                 Style="{StaticResource VerticalFillAndExpand}" 
                                 HeightRequest="100">
                             
-                            <StackLayout x:Name="autoplay_stack" IsVisible="False" Orientation="Vertical" Style="{StaticResource VerticalStack}">
+                            <StackLayout x:Name="AutoplayStack" IsVisible="False" Orientation="Vertical" Style="{StaticResource VerticalStack}">
                                 <StackLayout Orientation="Horizontal"  Style="{StaticResource HorizontalStack}">
                                     <Label Text="Autoplay:" VerticalTextAlignment="Center"/>
                                     <Button Text="Slower" Clicked="DelaySlower_Button" x:Name="SlowerButton"/>
