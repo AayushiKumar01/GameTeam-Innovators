@@ -799,7 +799,7 @@ namespace Game.Engine.EngineBase
         /// </summary>
         /// <param name="Attacker"></param>
         /// <returns>Return success</returns>
-        public bool IceSlip(PlayerInfoModel Attacker)
+        public bool SkipTurn(PlayerInfoModel Attacker)
         {
             if (Attacker == null)
             {
@@ -812,7 +812,20 @@ namespace Game.Engine.EngineBase
             _ = EngineSettings.BattleMessagesModel.AttackerName = Attacker.Name;
             _ = EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
 
-            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ": slipped on Seattle Ice!";
+            string specialtxt = "";
+            switch (Attacker.PlayerType)
+            {
+                case PlayerTypeEnum.Monster:
+                    specialtxt = ": meditating this turn!";
+                    break;
+                    
+                case PlayerTypeEnum.Character:
+                default:
+                    specialtxt = ": repairing this turn!";
+                    break;
+            }
+
+            EngineSettings.BattleMessagesModel.TurnMessageSpecial = specialtxt;
 
             return true;
 

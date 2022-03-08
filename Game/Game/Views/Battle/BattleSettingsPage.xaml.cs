@@ -57,11 +57,11 @@ namespace Game.Views
             #endregion HitToggles
             
             #region SeattleIceToggleSlider
-            SeattleIceSlider.Value = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
-                .SeattleIcePercentage;
-            AllowSeattleIce.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
-                .AllowSeattleIce;
-            SeattleIceSlider.IsEnabled = AllowSeattleIce.IsToggled;
+            SkipSlider.Value = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
+                .SkipPercentage;
+            AllowSkip.IsToggled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel
+                .AllowSkips;
+            SkipSlider.IsEnabled = AllowSkip.IsToggled;
             #endregion
         }
 
@@ -177,30 +177,30 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
         }
 
-        private void AllowSeattleIce_Toggled(object sender, ToggledEventArgs e)
+        private void AllowSkip_Toggled(object sender, ToggledEventArgs e)
         {
             // Flip the settings
-            if (AllowSeattleIce.IsToggled == true)
+            if (AllowSkip.IsToggled == true)
             {
-                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
-                SeattleIceSlider.IsEnabled = true;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = true;
+                SkipSlider.IsEnabled = true;
                 return;
             }
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = false;
-            SeattleIceSlider.IsEnabled = false;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
+            SkipSlider.IsEnabled = false;
         }
 
-        private void SeattleIcePercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
+        private void SkipPercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
         {
             var seattleIcePercentage = valueChangedEventArgs.NewValue;
             if (seattleIcePercentage != null)
             {
                 var value = Math.Round(seattleIcePercentage, MidpointRounding.AwayFromZero);
-                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage =
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SkipPercentage =
                     Convert.ToInt32(value);
                     
-                SeattleIceSliderLabel.Text = value.ToString(CultureInfo.InvariantCulture) + "%";
+                SkipSliderLabel.Text = value.ToString(CultureInfo.InvariantCulture) + "%";
             }
         }
     }

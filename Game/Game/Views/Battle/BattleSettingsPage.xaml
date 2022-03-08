@@ -126,19 +126,19 @@
 
                 <Label 
                     Grid.Row="5" Grid.Column="0"
-                    Text="Allow Seattle Ice" 
+                    Text="Allow Random Skip" 
                     Style="{DynamicResource LabelStyle}"/>
 
                 <Switch 
                     Grid.Row="5" Grid.Column="1"
                     HorizontalOptions="Start" 
                     VerticalOptions="Center"
-                    x:Name="AllowSeattleIce"
-                    Toggled="AllowSeattleIce_Toggled"/>
+                    x:Name="AllowSkip"
+                    Toggled="AllowSkip_Toggled"/>
                 
                 <Label 
                     Grid.Row="6" Grid.Column="0"
-                    Text="Seattle Ice Percentage" 
+                    Text="Random Skip Percentage" 
                     Style="{DynamicResource LabelStyle}"/>
 
                 <Slider 
@@ -148,13 +148,13 @@
                     Minimum="0"
                     Maximum="100"
                     WidthRequest="110"
-                    x:Name="SeattleIceSlider"
-                    ValueChanged="SeattleIcePercentage_Changed"/>
+                    x:Name="SkipSlider"
+                    ValueChanged="SkipPercentage_Changed"/>
                 
                 <Label 
                     Grid.Row="6" Grid.Column="2"
                     Text="0"
-                    x:Name="SeattleIceSliderLabel"
+                    x:Name="SkipSliderLabel"
                     Style="{DynamicResource LabelStyle}"/>
             </Grid>
 

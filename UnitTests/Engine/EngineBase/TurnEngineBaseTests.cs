@@ -1656,7 +1656,7 @@ namespace UnitTests.Engine.EngineBase
         public void TurnEngine_IceSlip_Valid_Null_Attacks_Character_Should_Fail()
         {
             // Arrange
-            var result = Engine.Round.Turn.IceSlip(null);
+            var result = Engine.Round.Turn.SkipTurn(null);
 
             // Act
 
@@ -1674,7 +1674,7 @@ namespace UnitTests.Engine.EngineBase
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
             // Act
-            var result = Engine.Round.Turn.IceSlip(CharacterPlayer);
+            var result = Engine.Round.Turn.SkipTurn(CharacterPlayer);
 
             // Reset
 

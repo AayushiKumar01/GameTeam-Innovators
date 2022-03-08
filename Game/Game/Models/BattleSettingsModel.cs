@@ -27,9 +27,9 @@
         public bool AllowMonsterRespawn = false;
         
         // Can actions have a chance to miss?
-        public bool AllowSeattleIce = false;
+        public bool AllowSkips = false;
         
-        // Percentage chance to miss if Ice enabled
-        public int SeattleIcePercentage = 0;
+        // Percentage chance to miss if skip enabled
+        public int SkipPercentage = 0;
     }
 }

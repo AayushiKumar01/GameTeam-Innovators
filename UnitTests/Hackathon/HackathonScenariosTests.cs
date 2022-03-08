@@ -570,8 +570,8 @@ namespace Scenario
 
             // Arrange
             Engine.EngineSettings.MonsterList.Clear();
-            Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = true;
-            Engine.EngineSettings.BattleSettingsModel.SeattleIcePercentage = 100;
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = true;
+            Engine.EngineSettings.BattleSettingsModel.SkipPercentage = 100;
             
             var Character = new CharacterModel
             {
@@ -603,10 +603,10 @@ namespace Scenario
 
             // Reset
             // Disable for the next test
-            Engine.EngineSettings.BattleSettingsModel.AllowSeattleIce = false;
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
             
             // Assert
-            Assert.AreEqual(ActionEnum.IceSlip, Engine.EngineSettings.PreviousAction);
+            Assert.AreEqual(ActionEnum.SkipTurn, Engine.EngineSettings.PreviousAction);
         }
         #endregion Scenario37
         

@@ -29,6 +29,6 @@ namespace Game.Engine.EngineInterfaces
         HitStatusEnum RollToHitTarget(int AttackScore, int DefenseScore);
         List<ItemModel> GetRandomMonsterItemDrops(int round);
         bool DetermineCriticalMissProblem(PlayerInfoModel attacker);
-        bool IceSlip(PlayerInfoModel Attacker);
+        bool SkipTurn(PlayerInfoModel Attacker);
     }
 }

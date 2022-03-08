@@ -20,8 +20,8 @@
 
         Rest = 25,
         
-        // Slipped on Seattle Ice
-        IceSlip = 30,
+        // Random skipping
+        SkipTurn = 30,
     }
 
     /// <summary>

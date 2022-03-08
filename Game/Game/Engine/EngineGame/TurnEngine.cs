@@ -50,7 +50,7 @@ namespace Game.Engine.EngineGame
             // Choose Action.  Such as Move, Attack etc.
 
             // INFO: Teams, if you have other actions they would go here.
-            EngineSettings.CurrentAction = CalculateSeattleIceSlip(EngineSettings.CurrentAction);
+            EngineSettings.CurrentAction = CalculateSkip(EngineSettings.CurrentAction);
             
             var result = false;
 
@@ -85,8 +85,8 @@ namespace Game.Engine.EngineGame
                     result = Rest(Attacker);
                     break;
                 
-                case ActionEnum.IceSlip:
-                    result = IceSlip(Attacker);
+                case ActionEnum.SkipTurn:
+                    result = SkipTurn(Attacker);
                     break;
             }
 
@@ -106,16 +106,16 @@ namespace Game.Engine.EngineGame
         /// Calculate if Action should be an IceSlip based on if its enabled and chances
         /// </summary>
         /// <param name="engineSettingsCurrentAction"></param>
-        private ActionEnum CalculateSeattleIceSlip(ActionEnum engineSettingsCurrentAction)
+        private ActionEnum CalculateSkip(ActionEnum engineSettingsCurrentAction)
         {
-            if (EngineSettings.BattleSettingsModel.AllowSeattleIce)
+            if (EngineSettings.BattleSettingsModel.AllowSkips)
             {
-                var seattleIceChance = EngineSettings.BattleSettingsModel.SeattleIcePercentage;
+                var seattleIceChance = EngineSettings.BattleSettingsModel.SkipPercentage;
 
                 var rollDice = DiceHelper.RollDice(1, 100);
                 if (rollDice <= seattleIceChance)
                 {
-                    return ActionEnum.IceSlip;
+                    return ActionEnum.SkipTurn;
                 }
             }
             return engineSettingsCurrentAction;
@@ -628,7 +628,7 @@ namespace Game.Engine.EngineGame
         /// </summary>
         /// <param name="Attacker"></param>
         /// <returns>Return success</returns>
-        public bool IceSlip(PlayerInfoModel Attacker)
+        public bool SkipTurn(PlayerInfoModel Attacker)
         {
             if (Attacker == null)
             {
@@ -640,8 +640,21 @@ namespace Game.Engine.EngineGame
 
             _ = EngineSettings.BattleMessagesModel.AttackerName = Attacker.Name;
             _ = EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
-                
-            EngineSettings.BattleMessagesModel.TurnMessageSpecial = ": slipped on Seattle Ice!";
+
+            string specialtxt = "";
+            switch (Attacker.PlayerType)
+            {
+                case PlayerTypeEnum.Monster:
+                    specialtxt = ": meditating this turn!";
+                    break;
+                    
+                case PlayerTypeEnum.Character:
+                default:
+                    specialtxt = ": repairing this turn!";
+                    break;
+            }
+
+            EngineSettings.BattleMessagesModel.TurnMessageSpecial = specialtxt;
 
             return true;
 
