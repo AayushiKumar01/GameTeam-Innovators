@@ -26,7 +26,7 @@
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <ImageButton
-                            Source="item.png"
+                            Source="gm_spacecraft_carrier.png"
                             Style="{StaticResource ImageLargeStyle}"
                             Clicked="VillageButton_Clicked"/>
 
@@ -38,7 +38,7 @@
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <ImageButton
-                            Source="item.png"
+                            Source="gm_begin_quest.png"
                             Style="{StaticResource ImageLargeStyle}"
                             Clicked="DungeonButton_Clicked"/>
 
@@ -50,7 +50,7 @@
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <ImageButton
-                            Source="item.png"
+                            Source="gm_auto_quest.png"
                             Style="{StaticResource ImageLargeStyle}"
                             Clicked="AutobattleButton_Clicked"/>
 
