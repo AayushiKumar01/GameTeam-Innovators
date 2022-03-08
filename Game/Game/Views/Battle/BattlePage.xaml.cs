@@ -627,7 +627,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AbilityButton_Clicked(object sender, EventArgs e)
         {
-            
+            Ability();
         }
 
         /// <summary>
@@ -818,6 +818,19 @@ namespace Game.Views
             var currentChar = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
 
             //_ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn
+
+            GameMessage();
+
+
+        }
+
+        public void Ability()
+        {
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+
+            var currentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+
+            _ = BattleEngineViewModel.Instance.Engine.Round.Turn.UseAbility(currentAttacker);
 
             GameMessage();
 
