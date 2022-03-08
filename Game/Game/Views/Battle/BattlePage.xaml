@@ -57,29 +57,30 @@
                     <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                     <StackLayout x:Name="BattleBottomBox" Style="{StaticResource OuterBoxStack}" VerticalOptions="CenterAndExpand">
 
-                        <!-- <WebView -->
-                        <!--     x:Name="HtmlBox" -->
-                        <!--     WidthRequest="400" -->
-                        <!--     MinimumWidthRequest="200" -->
-                        <!--     HeightRequest="60" -->
-                        <!--     MinimumHeightRequest="60" -->
-                        <!--     HorizontalOptions="FillAndExpand" -->
-                        <!--     VerticalOptions="Start" -->
-                        <!--     BackgroundColor="Transparent" -->
-                        <!--     IsVisible="false" -->
-                        <!-- /> -->
+                        <WebView
+                            x:Name="HtmlBox"
+                            WidthRequest="400"
+                            MinimumWidthRequest="200"
+                            HeightRequest="60"
+                            MinimumHeightRequest="60"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start"
+                            BackgroundColor="Transparent"
+                            IsVisible="false"
+                        />
                         
-                        <Label x:Name="BattleMessages"
-                                HorizontalOptions="FillAndExpand"
-                                WidthRequest="400"
-                                MinimumWidthRequest="200" 
-                                LineBreakMode="WordWrap"
-                                MaxLines="3"
-                                LineHeight="1"
-                                CharacterSpacing="1"
-                                Style="{StaticResource LabelStyle}"
-                                FontSize="Micro"/>
-
+                        <Frame x:Name="BattleMessagesFrame" BackgroundColor="Black" Padding="5">
+                            <Label x:Name="BattleMessages"
+                                    HorizontalOptions="FillAndExpand"
+                                    WidthRequest="400"
+                                    MinimumWidthRequest="200" 
+                                    LineBreakMode="WordWrap"
+                                    MaxLines="3"
+                                    LineHeight="1"
+                                    CharacterSpacing="1"
+                                    Style="{StaticResource LabelStyle}"
+                                    FontSize="Micro"/>
+                        </Frame>
                         <Frame x:Name="BattlePlayerInfomationBox"
                                     Style="{StaticResource PlayerBattleOuterFrame}"
                                     IsVisible="False">

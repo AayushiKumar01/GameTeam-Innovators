@@ -879,8 +879,8 @@ namespace Game.Views
                 BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
             }
 
-            // htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
-            // HtmlBox.Source = htmlSource;
+            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
+            HtmlBox.Source = htmlSource;
         }
 
         /// <summary>
@@ -889,8 +889,8 @@ namespace Game.Views
         public void ClearMessages()
         {
             BattleMessages.Text = "";
-            // htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
-            // HtmlBox.Source = htmlSource;
+            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
+            HtmlBox.Source = htmlSource;
         }
 
         #endregion MessageHandelers
@@ -991,8 +991,8 @@ namespace Game.Views
             RestButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
             BattlePlayerInfomationBox.IsVisible = false;
-            // HtmlBox.IsVisible = false;
-            BattleMessages.IsVisible = false;
+            HtmlBox.IsVisible = false;
+            BattleMessagesFrame.IsVisible = false;
         }
 
         /// <summary>
@@ -1051,8 +1051,8 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = true;
                     BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
-                    // HtmlBox.IsVisible = true;
-                    BattleMessages.IsVisible = true;
+                    HtmlBox.IsVisible = true;
+                    BattleMessagesFrame.IsVisible = true;
                     AttackButton.IsVisible = true;
                     AbilityButton.IsVisible = true;
                     FinishButton.IsVisible = true;
