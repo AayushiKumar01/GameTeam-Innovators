@@ -57,17 +57,28 @@
                     <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                     <StackLayout x:Name="BattleBottomBox" Style="{StaticResource OuterBoxStack}" VerticalOptions="CenterAndExpand">
 
-                        <WebView
-                            x:Name="HtmlBox"
-                            WidthRequest="400"
-                            MinimumWidthRequest="200"
-                            HeightRequest="60"
-                            MinimumHeightRequest="60"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Start"
-                            BackgroundColor="Transparent"
-                            IsVisible="false"
-                        />
+                        <!-- <WebView -->
+                        <!--     x:Name="HtmlBox" -->
+                        <!--     WidthRequest="400" -->
+                        <!--     MinimumWidthRequest="200" -->
+                        <!--     HeightRequest="60" -->
+                        <!--     MinimumHeightRequest="60" -->
+                        <!--     HorizontalOptions="FillAndExpand" -->
+                        <!--     VerticalOptions="Start" -->
+                        <!--     BackgroundColor="Transparent" -->
+                        <!--     IsVisible="false" -->
+                        <!-- /> -->
+                        
+                        <Label x:Name="BattleMessages"
+                                HorizontalOptions="FillAndExpand"
+                                WidthRequest="400"
+                                MinimumWidthRequest="200" 
+                                LineBreakMode="WordWrap"
+                                MaxLines="3"
+                                LineHeight="1"
+                                CharacterSpacing="1"
+                                Style="{StaticResource LabelStyle}"
+                                FontSize="Micro"/>
 
                         <Frame x:Name="BattlePlayerInfomationBox"
                                     Style="{StaticResource PlayerBattleOuterFrame}"
@@ -99,7 +110,7 @@
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                             <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Attack" IsVisible="False"/>
-                            <Button x:Name="AbilityButton" Clicked="AbilityButton_Clicked" Text="Ability" IsVisible="False"/>
+                            <Button x:Name="AbilityButton" Clicked="AbilityButton_Clicked" Text="Ability" IsVisible="True"/>
                             <Button x:Name="FinishButton" Clicked="FinishButton_Clicked" Text="Finish Game" IsVisible="False"/>
                             <Button x:Name="AutoplayButton" Clicked="AutoplayButton_Clicked" Text="Autoplay" IsVisible="False"/>
                             <Button x:Name="RestButton" Clicked="RestButton_Clicked" Text="Rest (Heal 2 HP)" IsVisible="False"/>
@@ -123,16 +134,6 @@
                             <StackLayout x:Name="MessageDisplayBox" 
                                 IsVisible="false"
                                 Style="{StaticResource MessageDisplayBox}">
-
-                                <!-- <Label x:Name="BattleMessages"  -->
-                                <!--         HorizontalOptions="FillAndExpand"  -->
-                                <!--         LineBreakMode="WordWrap"  -->
-                                <!--         MaxLines="3" -->
-                                <!--         LineHeight="1" -->
-                                <!--         CharacterSpacing="1" -->
-                                <!--         Style="{StaticResource LabelStyle}" -->
-                                <!--         FontSize="Micro"/> -->
-
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>

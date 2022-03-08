@@ -627,6 +627,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AbilityButton_Clicked(object sender, EventArgs e)
         {
+            BattleMessages.Text = string.Format("{0} \n{1}", "Needs to be implemented!", BattleMessages.Text);
             //Ability();
         }
 
@@ -869,17 +870,17 @@ namespace Game.Views
         public void GameMessage()
         {
             // Output The Message that happened.
-            // BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessages.Text);
-            //
-            // Debug.WriteLine(BattleMessages.Text);
-            //
-            // if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
-            // {
-            //     BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
-            // }
+            BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.TurnMessage, BattleMessages.Text);
+            
+            Debug.WriteLine(BattleMessages.Text);
+            
+            if (!string.IsNullOrEmpty(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage))
+            {
+                BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
+            }
 
-            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
-            HtmlBox.Source = htmlSource;
+            // htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
+            // HtmlBox.Source = htmlSource;
         }
 
         /// <summary>
@@ -887,9 +888,9 @@ namespace Game.Views
         /// </summary>
         public void ClearMessages()
         {
-            // BattleMessages.Text = "";
-            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
-            HtmlBox.Source = htmlSource;
+            BattleMessages.Text = "";
+            // htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLBlankMessage();
+            // HtmlBox.Source = htmlSource;
         }
 
         #endregion MessageHandelers
@@ -990,7 +991,8 @@ namespace Game.Views
             RestButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
             BattlePlayerInfomationBox.IsVisible = false;
-            HtmlBox.IsVisible = false;
+            // HtmlBox.IsVisible = false;
+            BattleMessages.IsVisible = false;
         }
 
         /// <summary>
@@ -1049,9 +1051,10 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = true;
                     BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
-                    HtmlBox.IsVisible = true;
+                    // HtmlBox.IsVisible = true;
+                    BattleMessages.IsVisible = true;
                     AttackButton.IsVisible = true;
-                    AbilityButton.IsVisible = false;
+                    AbilityButton.IsVisible = true;
                     FinishButton.IsVisible = true;
                     AutoplayButton.IsVisible = true;
                     RestButton.IsVisible = false;
