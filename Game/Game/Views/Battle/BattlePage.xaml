@@ -69,7 +69,7 @@
                             IsVisible="false"
                         />
                         
-                        <Frame x:Name="BattleMessagesFrame" BackgroundColor="Black" Padding="5">
+                        <Frame x:Name="BattleMessagesFrame" BackgroundColor="Black" Padding="10">
                             <Label x:Name="BattleMessages"
                                     HorizontalOptions="FillAndExpand"
                                     WidthRequest="400"
@@ -109,15 +109,15 @@
                         </Frame>
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-
-                            <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Attack" IsVisible="False"/>
-                            <Button x:Name="AbilityButton" Clicked="AbilityButton_Clicked" Text="Ability" IsVisible="True"/>
+                            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                                <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Attack" IsVisible="False"/>
+                                <Button x:Name="AbilityButton" Clicked="AbilityButton_Clicked" Text="Ability" IsVisible="True"/>
+                                <Button x:Name="RestButton" Clicked="RestButton_Clicked" Text="Rest (Heal 2 HP)" IsVisible="False"/>
+                                <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
+                                <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" IsVisible="False"/>
+                            </StackLayout>
                             <Button x:Name="FinishButton" Clicked="FinishButton_Clicked" Text="Finish Game" IsVisible="False"/>
                             <Button x:Name="AutoplayButton" Clicked="AutoplayButton_Clicked" Text="Autoplay" IsVisible="False"/>
-                            <Button x:Name="RestButton" Clicked="RestButton_Clicked" Text="Rest (Heal 2 HP)" IsVisible="False"/>
-                            <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" IsVisible="False"/>
-                            <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" IsVisible="False"/>
-
                         </StackLayout>
 
                         <StackLayout 
