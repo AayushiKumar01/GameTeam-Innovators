@@ -252,6 +252,7 @@ namespace Game.Engine.EngineBase
         /// <returns></returns>
         public virtual bool UseAbility(PlayerInfoModel Attacker)
         {
+            EngineSettings.CurrentActionAbility = Attacker.SelectAbilityToUse();
             EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " Uses Ability " + EngineSettings.CurrentActionAbility.ToMessage();
             return (Attacker.UseAbility(EngineSettings.CurrentActionAbility));
         }
