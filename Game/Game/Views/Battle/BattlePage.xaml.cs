@@ -607,16 +607,6 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void AttackButton_Clicked(object sender, EventArgs e)
-        {
-            NextAttackExample();
-        }
-
-        /// <summary>
-        /// Attack Action
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         public void RestButton_Clicked(object sender, EventArgs e)
         {
             Rest();
@@ -678,7 +668,6 @@ namespace Game.Views
         {
             // Unneeded buttons invisible
             AutoplayButton.IsVisible = false;
-            AttackButton.IsVisible = false;
             AbilityButton.IsVisible = false;
             
             // Start new thread to give UI a chance to refresh
@@ -1003,7 +992,6 @@ namespace Game.Views
         {
             NextRoundButton.IsVisible = false;
             StartBattleButton.IsVisible = false;
-            AttackButton.IsVisible = false;
             AbilityButton.IsVisible = false;
             FinishButton.IsVisible = false;
             RestButton.IsVisible = false;
@@ -1071,7 +1059,6 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
                     HtmlBox.IsVisible = true;
                     BattleMessagesFrame.IsVisible = true;
-                    AttackButton.IsVisible = true;
                     AbilityButton.IsVisible = true;
                     FinishButton.IsVisible = true;
                     AutoplayButton.IsVisible = true;
