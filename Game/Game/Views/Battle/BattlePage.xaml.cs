@@ -979,6 +979,7 @@ namespace Game.Views
             base.OnAppearing();
 
             ShowBattleMode();
+            NextAttackExample();
         }
 
         /// <summary>
