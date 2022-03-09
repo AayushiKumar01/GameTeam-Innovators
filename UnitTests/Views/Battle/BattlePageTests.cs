@@ -55,7 +55,9 @@ namespace UnitTests.Views
         public void BattlePage_OnAppearing_Should_Pass()
         {
             // Get the current valute
+            var PlayerInfo = new PlayerInfoModel(new CharacterModel());
 
+            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(PlayerInfo);
             // Act
             OnAppearing();
 
