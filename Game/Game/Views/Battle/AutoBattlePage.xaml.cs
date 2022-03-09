@@ -6,7 +6,7 @@ using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineInterfaces;
 using Game.Helpers;
-
+using Plugin.SimpleAudioPlayer;
 
 namespace Game.Views
 {
@@ -27,7 +27,7 @@ namespace Game.Views
         public AutoBattlePage()
         {
             InitializeComponent();
-           
+            audio = new AudioHelper();
         }
 
         /// <summary>
@@ -37,6 +37,9 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
+            //playing background audio when auto battle begins
+            audio.playBattleStart();
+
             // Call into Auto Battle from here to do the Battle...
 
             // To See Level UP happening, a character needs to be close to the next level
@@ -51,7 +54,11 @@ namespace Game.Views
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
 
-            _ = await AutoBattle.RunAutoBattle();     
+            _ = await AutoBattle.RunAutoBattle();
+
+            //playing background audio when auto battle is over
+            audio.stopStartAudio();
+            audio.playGameOverAudio();
 
             var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
