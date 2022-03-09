@@ -260,7 +260,7 @@ namespace Game.Models
         /// <returns></returns>
         public MapModelLocation ReturnClosestEmptyLocationFromStartDist(MapModelLocation Start, MapModelLocation Target, int MaxDist)
         {
-            MapModelLocation Result = ReturnClosestEmptyLocation(Target);
+            MapModelLocation Result = null;
 
             var LowestDistance = int.MaxValue;
 
@@ -278,6 +278,10 @@ namespace Game.Models
                 }
             }
 
+            if (Result == null)
+            {
+                return ReturnClosestEmptyLocationFromStartDist(Start, Target, ++MaxDist);
+            }
             return Result;
         }
         
