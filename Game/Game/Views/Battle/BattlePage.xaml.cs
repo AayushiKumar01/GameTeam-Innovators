@@ -803,7 +803,7 @@ namespace Game.Views
                 case PlayerTypeEnum.Character:
                     // User would select who to attack
                     PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
-                    BattleMessages.Text = string.Format("{0} \n{1}", "Players turn: " + attacker.Name + ", select an action.", BattleMessages.Text);
+                    BattleMessages.Text = string.Format("{0} \n{1}", "Players turn: " + attacker.Name + ", select map or action.", BattleMessages.Text);
                     
                     // for now just auto selecting
                     _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(null);
