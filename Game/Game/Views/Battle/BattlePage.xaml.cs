@@ -629,11 +629,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AbilityButton_Clicked(object sender, EventArgs e)
         {
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
             Ability();
             BattleMessages.Text = string.Format("{0} \n{1}", "Needs to be implemented!", BattleMessages.Text);
-            FinishTurnProcess();
-            //Ability();
         }
 
         /// <summary>
@@ -846,13 +843,16 @@ namespace Game.Views
         public void Ability()
         {
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+
             _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
-
             PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
-            _ = BattleEngineViewModel.Instance.Engine.Round.Turn.UseAbility(attacker);
 
-            GameMessage();
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
 
+            _ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn(attacker);
+           // _ = BattleEngineViewModel.Instance.Engine.Round.Turn.UseAbility(attacker);
+
+            FinishTurnProcess();
 
         }
 
