@@ -622,7 +622,7 @@ namespace Game.Views
         public void AbilityButton_Clicked(object sender, EventArgs e)
         {
             Ability();
-            BattleMessages.Text = string.Format("{0} \n{1}", "Needs to be implemented!", BattleMessages.Text);
+            //BattleMessages.Text = string.Format("{0} \n{1}", "Needs to be implemented!", BattleMessages.Text);
         }
 
         /// <summary>
@@ -835,15 +835,21 @@ namespace Game.Views
         {
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
-            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
+            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker);
             PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
 
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentActionAbility = attacker.SelectAbilityToUse();
+
             _ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn(attacker);
-           // _ = BattleEngineViewModel.Instance.Engine.Round.Turn.UseAbility(attacker);
+
+            var abilitytxt = AbilityEnumExtensions.ToMessage(attacker.SelectAbilityToUse());
 
             FinishTurnProcess();
+
+            BattleMessages.Text = string.Format("{0} is using ability {1}\n{2}", attacker.Name, abilitytxt, BattleMessages.Text);
+
 
         }
 
