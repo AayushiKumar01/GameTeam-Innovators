@@ -291,7 +291,6 @@ namespace Scenario
             Assert.AreEqual(false, EngineViewModel.Engine.EngineSettings.BattleMessagesModel.HitStatus == HitStatusEnum.Miss);
 
         }
-        #endregion Scenario2
 
 
         #region Scenario4
