@@ -111,7 +111,9 @@ namespace UnitTests.Views
         public void BattlePage_AbilityButton_Clicked_Default_Should_Pass()
         {
             // Arrange
+            var PlayerInfo = new PlayerInfoModel(new CharacterModel());
 
+            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(PlayerInfo);
             // Act
             page.AbilityButton_Clicked(null, null);
 
