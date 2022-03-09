@@ -85,7 +85,7 @@ namespace UnitTests.Views
             // Arrange
 
             // Act
-            page.AttackButton_Clicked(null, null);
+            //page.AttackButton_Clicked(null, null);
 
             // Reset
 
