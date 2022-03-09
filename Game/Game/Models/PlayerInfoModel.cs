@@ -360,7 +360,7 @@ namespace Game.Models
             }
 
             // Reduce the count
-            AbilityTracker[ability] = remaining - 1;
+            //AbilityTracker[ability] = remaining - 1;
 
             return true;
         }
