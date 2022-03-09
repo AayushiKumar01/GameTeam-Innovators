@@ -145,6 +145,12 @@ namespace Game.Engine.EngineGame
              * 
              */
 
+            MapModelLocation locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
+            if (locationAttacker == null)
+            {
+                return false;
+            }
+            
             if (Attacker.PlayerType == PlayerTypeEnum.Monster)
             {
                 // For Attack, Choose Who
@@ -162,11 +168,7 @@ namespace Game.Engine.EngineGame
                     return false;
                 }
 
-                var locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
-                if (locationAttacker == null)
-                {
-                    return false;
-                }
+                
 
                 // Find Location Nearest to Defender that is Open.
 
@@ -180,7 +182,17 @@ namespace Game.Engine.EngineGame
                 return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
             }
 
-            return true;
+            // If we got here, we are moving the character to an empty square
+            
+            // Get saved square location we saved in empty square click
+            CordinatesModel cordsModel = EngineSettings.MoveMapLocation;
+            // Copy CordinatesModel coords into MapModelLocation so we can use them
+            MapModelLocation loc = new MapModelLocation();
+            loc.Column = cordsModel.Column;
+            loc.Row = cordsModel.Row;
+            
+            var moveTo = EngineSettings.MapModel.ReturnClosestEmptyLocationFromStartDist(locationAttacker, loc, Attacker.Speed);
+            return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, moveTo);
         }
 
         /// <summary>

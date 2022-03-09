@@ -463,15 +463,17 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedEmpty(MapModelLocation data)
         {
-            // TODO: Info
-
-            /*
-             * This gets called when the characters is clicked on
-             * Usefull if you want to select the location to move to etc.
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
-
+            // Set action to move when clicking empty square
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Move;
+            
+            CordinatesModel cordinatesModel = new CordinatesModel();
+            cordinatesModel.Column = data.Column;
+            cordinatesModel.Row = data.Row;
+            // Save to coordinates to try to move towards in EngineSettings
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cordinatesModel;
+            
+            // Finish processing the turn 
+            FinishTurnProcess();
             return true;
         }
 
