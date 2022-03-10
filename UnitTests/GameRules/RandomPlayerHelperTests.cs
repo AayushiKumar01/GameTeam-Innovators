@@ -227,7 +227,7 @@ namespace UnitTests.Helpers
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual("ship2.png", result);
+            Assert.AreEqual("char2.gif", result);
         }
 
         [Test]
