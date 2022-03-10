@@ -500,7 +500,7 @@ namespace Game.Views
             }
             else
             {
-                BattleMessages.Text = string.Format("{0} is out of range from  {1}, moving closer\n{2}", attacker.Name,
+                BattleMessages.Text = string.Format("{0} tried to attack {1} but is out of range, moving closer\n{2}", attacker.Name,
                     data.Player.Name, BattleMessages.Text);
 
                 CordinatesModel cordinatesModel = new CordinatesModel();
