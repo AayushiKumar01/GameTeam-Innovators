@@ -7,5 +7,11 @@
     {
         public int Row;
         public int Column;
+
+        public CordinatesModel(MapModelLocation data)
+        {
+            Column = data.Column;
+            Row = data.Row;
+        }
     }
 }
