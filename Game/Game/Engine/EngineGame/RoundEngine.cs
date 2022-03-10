@@ -257,8 +257,9 @@ namespace Game.Engine.EngineGame
 
                 // Remember the Insert order, used for Sorting
 
-                foreach (var data in EngineSettings.CharacterList)
+                for (int i = EngineSettings.CharacterList.Count-1; i >= 0; i--)
                 {
+                    var data = EngineSettings.CharacterList[i];
                     if (data.Alive)
                     {
                         EngineSettings.PlayerList.Add(
@@ -301,6 +302,14 @@ namespace Game.Engine.EngineGame
             return EngineSettings.PlayerList;
         }
 
+        public static IEnumerable<T> FastReverse<T>(IList<T> items)
+        {
+            for (int i = items.Count-1; i >= 0; i--)
+            {
+                yield return items[i];
+            }
+        }
+        
         /// <summary>
         /// Get the Information about the Player
         /// </summary>
@@ -317,10 +326,10 @@ namespace Game.Engine.EngineGame
                 return null;
             }
 
-            // No current player, so set the first one
+            // No current player, so set the last one
             if (EngineSettings.CurrentAttacker == null)
             {
-                return EngineSettings.PlayerList.FirstOrDefault();
+                return EngineSettings.PlayerList.LastOrDefault();
             }
 
             // Find current player in the list
