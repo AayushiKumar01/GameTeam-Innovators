@@ -706,6 +706,7 @@ namespace Game.Views
                     RoundCondition = RoundEnum.NewRound;
                     if (closestPlayer != null)
                     {
+                        // Simulate click on monster closest to current player 
                         RoundCondition = SetSelectedMonster(engineSettings.MapModel.GetLocationForPlayer(closestPlayer));
                     }
 
