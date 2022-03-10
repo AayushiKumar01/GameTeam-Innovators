@@ -41,7 +41,7 @@
                 <Label Text="how to play" Style="{StaticResource HeaderStyle}" HorizontalOptions="Start"  HorizontalTextAlignment="Center" />
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
-                    <Label Text="description to play.. put some description here" Style="{StaticResource HeaderStyle}" FontSize="Micro" LineBreakMode="WordWrap" WidthRequest="200"/>
+                    <Label Text="you can choose up to 6 ships for the battle, which will play against 6 alien spaceships. During the battle you can choose to move, attack, use ability or rest. You can also try our auto quest feature. Enjoy!!! " Style="{StaticResource HeaderStyle}" FontSize="Micro" LineBreakMode="WordWrap" WidthRequest="200"/>
                     <Image Source="dice10.png" Style="{StaticResource ImageMediumStyle}"/>
                 </StackLayout>
 
