@@ -25,6 +25,9 @@ namespace Game.Models
         Teleportation = 4,
 
         // Increase Speed
-        Speed = 5
+        Speed = 5,
+
+        //Repair
+        Repair = 6,
     }
 }

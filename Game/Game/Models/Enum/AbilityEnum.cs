@@ -44,6 +44,9 @@ namespace Game.Models
 
         // Heal Self
         Heal = 54,
+
+        //Repair Self
+        Repair = 55,
     }
 
     /// <summary>
@@ -91,8 +94,9 @@ namespace Game.Models
                     Message = "Shout Curse";
                     break;
 
+                case AbilityEnum.Repair:
                 case AbilityEnum.Heal:
-                    Message = "Heal Self";
+                    Message = "Repair Self";
                     break;
 
                 case AbilityEnum.None:
@@ -185,7 +189,7 @@ namespace Game.Models
             {
 
                 List<string> AbilityList = new List<string>{
-                AbilityEnum.Heal.ToString()
+                AbilityEnum.Repair.ToString()
                 };
 
                 AbilityList.AddRange(GetListOthers);

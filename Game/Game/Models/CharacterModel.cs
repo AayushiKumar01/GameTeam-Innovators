@@ -20,7 +20,7 @@ namespace Game.Models
         static CharacterModel()
         {
             // Initialize job to special ability dictionary the first time we use this class
-            JobToSpecialAbility.Add(CharacterJobEnum.Frigate, SpecialAbilityEnum.Healing);
+            JobToSpecialAbility.Add(CharacterJobEnum.Frigate, SpecialAbilityEnum.Repair);
             JobToSpecialAbility.Add(CharacterJobEnum.Destroyer, SpecialAbilityEnum.Damage);
             JobToSpecialAbility.Add(CharacterJobEnum.Battlecruiser, SpecialAbilityEnum.Shield);
             JobToSpecialAbility.Add(CharacterJobEnum.Corvette, SpecialAbilityEnum.Speed);

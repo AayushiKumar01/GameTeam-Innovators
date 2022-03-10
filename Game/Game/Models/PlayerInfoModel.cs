@@ -340,6 +340,7 @@ namespace Game.Models
             {
                 case AbilityEnum.Heal:
                 case AbilityEnum.Bandage:
+                case AbilityEnum.Repair:
                     _ = BuffHealth();
                     break;
 
