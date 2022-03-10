@@ -302,14 +302,6 @@ namespace Game.Engine.EngineGame
             return EngineSettings.PlayerList;
         }
 
-        public static IEnumerable<T> FastReverse<T>(IList<T> items)
-        {
-            for (int i = items.Count-1; i >= 0; i--)
-            {
-                yield return items[i];
-            }
-        }
-        
         /// <summary>
         /// Get the Information about the Player
         /// </summary>
