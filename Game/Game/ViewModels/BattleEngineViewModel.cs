@@ -42,7 +42,7 @@ namespace Game.ViewModels
         // The Battle Engine
         public IBattleEngineInterface Engine = new Engine.EngineGame.BattleEngine();
 
-        // Auto Battle Engine (used for scneario testing)
+        // Auto Battle Engine (used for scenario testing)
         public IAutoBattleInterface AutoBattleEngine = new Engine.EngineGame.AutoBattleEngine();
 
         // Hold the Proposed List of Characters for the Battle to Use
