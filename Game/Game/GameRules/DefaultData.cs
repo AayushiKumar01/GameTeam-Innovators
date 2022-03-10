@@ -267,13 +267,15 @@ namespace Game.GameRules
             var RightFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.Finger);
             var LeftFingerString = ItemIndexViewModel.Instance.GetDefaultItemId(ItemLocationEnum.Finger);
 
+
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
                     Name = "Pillar of Autumn",
                     Description = "UNSC Flagship",
-                    Level = 1,
-                    MaxHealth = 5,
+                    Level = 3,
+                    MaxHealth = 18,
+                    Speed = 2,
                     ImageURI = "char1.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
@@ -288,8 +290,9 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "Hyperion",
                     Description = "Veteran of the Third Solar War",
-                    Level = 1,
+                    Level = 3,
                     MaxHealth = 5,
+                    Speed = 1,
                     ImageURI = "char2.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
@@ -304,8 +307,9 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "The Rocinante",
                     Description = "A Legitimate Salvage",
-                    Level = 1,
-                    MaxHealth = 8,
+                    Level = 3,
+                    MaxHealth = 18,
+                    Speed = 3,
                     ImageURI = "char3.gif",
                     Head = HeadString,
                     Necklass = NecklassString,
@@ -321,7 +325,8 @@ namespace Game.GameRules
                     Name = "The Behemoth",
                     Description = "A salvager converted into a warship",
                     Level = 4,
-                    MaxHealth = 38,
+                    MaxHealth = 42,
+                    Speed = 2,
                     ImageURI = "char4.gif",
                     Job = CharacterJobEnum.Corvette,
                 },
@@ -329,8 +334,9 @@ namespace Game.GameRules
                 new CharacterModel {
                     Name = "Firefly",
                     Description = "Light and nimble",
-                    Level = 5,
-                    MaxHealth = 43,
+                    Level = 2,
+                    MaxHealth = 12,
+                    Speed = 4,
                     ImageURI = "char5.gif",
                     Job = CharacterJobEnum.Fighter,
                 },
@@ -339,12 +345,12 @@ namespace Game.GameRules
                     Name = "Conqueror",
                     Description = "All shall fall before me",
                     Level = 5,
-                    MaxHealth = 43,
+                    MaxHealth = 32,
+                    Speed = 3,
                     ImageURI = "char6.gif",
                     Job = CharacterJobEnum.Battlecruiser,
                 }
             };
-
             return datalist;
         }
 
