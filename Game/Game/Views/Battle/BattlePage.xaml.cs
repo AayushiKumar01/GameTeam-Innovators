@@ -502,6 +502,11 @@ namespace Game.Views
             {
                 BattleMessages.Text = string.Format("{0} is out of range from  {1}, moving closer\n{2}", attacker.Name,
                     data.Player.Name, BattleMessages.Text);
+
+                CordinatesModel cordinatesModel = new CordinatesModel();
+                cordinatesModel.Column = data.Column;
+                cordinatesModel.Row = data.Row;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cordinatesModel;
                 instanceEngine.EngineSettings.CurrentAction = ActionEnum.Move;
             }
             
