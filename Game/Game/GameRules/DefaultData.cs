@@ -354,42 +354,42 @@ namespace Game.GameRules
                 new MonsterModel {
                     Name = "Purple Phage",
                     Description = "Spreads like a virus",
-                    ImageURI = "monsterdrafts1.png",
+                    ImageURI = "monster1.gif",
                     Job = CharacterJobEnum.Frigate,
                 },
 
                 new MonsterModel {
                     Name = "Medusozoan",
                     Description = "Watch out for the tentacles",
-                    ImageURI = "monsterdrafts2.png",
+                    ImageURI = "monster2.gif",
                     Job = CharacterJobEnum.Destroyer,
                 },
 
                 new MonsterModel {
                     Name = "Protomolecule",
                     Description = "It assimilates any lifeform",
-                    ImageURI = "monsterdrafts3.png",
+                    ImageURI = "monster3.gif",
                     Job = CharacterJobEnum.Corvette,
                 },
 
                 new MonsterModel {
                     Name = "Armillary",
                     Description = "It sees incomprehensible truths",
-                    ImageURI = "monsterdrafts4.png",
+                    ImageURI = "monster4.gif",
                     Job = CharacterJobEnum.Battlecruiser,
                 },
 
                 new MonsterModel {
                     Name = "Hydrozoan",
                     Description = "An organic spaceship",
-                    ImageURI = "monsterdrafts5.png",
+                    ImageURI = "monster5.gif",
                     Job = CharacterJobEnum.Corvette,
                 },
 
                 new MonsterModel {
                     Name = "Jackal",
                     Description = "Able to shoot in any direction",
-                    ImageURI = "monsterdrafts6.png",
+                    ImageURI = "monster6.gif",
                     Job = CharacterJobEnum.Fighter,
                 },
             };
