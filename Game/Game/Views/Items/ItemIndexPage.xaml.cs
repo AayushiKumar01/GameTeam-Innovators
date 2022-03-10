@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using Game.Models;
+using Game.Services;
 using Game.ViewModels;
 
 namespace Game.Views
@@ -87,6 +88,20 @@ namespace Game.Views
             }
 
             BindingContext = ViewModel;
+        }
+
+        private void DropItem_Clicked(object sender, EventArgs e)
+        {
+            var level =20;  // Max Value of 20
+            var attribute = AttributeEnum.Unknown;  // Any Attribute
+            var location = ItemLocationEnum.Unknown;    // Any Location
+            var random = true;  // Random between 1 and Level
+            var updateDataBase = true;  // Add them to the DB
+            var category = 0;   // What category to filter down to, 0 is all
+
+            // will return shoes value 10 of speed.
+            // Example  result = await ItemsController.Instance.GetItemsFromGame(1, 10, AttributeEnum.Speed, ItemLocationEnum.Feet, false, true);
+            ItemService.GetItemsFromServerPostAsync(100, level, attribute, location, 4, false, updateDataBase);
         }
     }
 }
