@@ -63,7 +63,7 @@
                                     WidthRequest="425"
                                     HeightRequest="200"
                                     MinimumWidthRequest="200"
-                                    MinimumHeightRequest="100" 
+                                    MinimumHeightRequest="200" 
                                     LineBreakMode="WordWrap"
                                     MaxLines="10"
                                     LineHeight="1"
