@@ -1011,7 +1011,7 @@ namespace Game.Views
             base.OnAppearing();
 
             ShowBattleMode();
-            NextAttackExample();
+            SetAttackerAndDefender();
         }
 
         /// <summary>
