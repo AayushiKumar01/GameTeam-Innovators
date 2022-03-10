@@ -379,5 +379,31 @@ namespace Game.Models
         {
             return ((int)Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2)));
         }
+
+        /// <summary>
+        /// Find the closest player in the list to the first player param
+        /// </summary>
+        /// <param name="player">Player to compare all other player locations to</param>
+        /// <param name="playerlist">List of players to try to find the closest to</param>
+        /// <returns>player from the player list that is closes to the first param player</returns>
+        public PlayerInfoModel FindClosestPlayerToPlayers(PlayerInfoModel player, List<PlayerInfoModel> playerlist)
+        {
+            MapModelLocation playerloc = GetLocationForPlayer(player);
+                    
+            var LowestDistance = int.MaxValue;
+            PlayerInfoModel closestPlayer = null;
+            for (int i = 0; i < playerlist.Count; i++)
+            {
+                MapModelLocation monsloc = GetLocationForPlayer(playerlist[i]);
+                var dist = CalculateDistance(playerloc, monsloc);
+                if (LowestDistance > dist)
+                {
+                    LowestDistance = dist;
+                    closestPlayer = playerlist[i];
+                }
+            }
+
+            return closestPlayer;
+        }
     }
 }
