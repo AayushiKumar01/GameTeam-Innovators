@@ -349,6 +349,16 @@ namespace Game.GameRules
                     Speed = 3,
                     ImageURI = "char6.gif",
                     Job = CharacterJobEnum.Battlecruiser,
+                },
+
+                new CharacterModel
+                {
+                    Name = "The Pioneer",
+                    Description = "A classic spaceship from the Early Era",
+                    Level = 1,
+                    MaxHealth = 15,
+                    ImageURI = "ship8.png",
+                    Job = CharacterJobEnum.Corvette,
                 }
             };
             return datalist;
