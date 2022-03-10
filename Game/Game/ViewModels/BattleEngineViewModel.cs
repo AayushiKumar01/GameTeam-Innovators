@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-
+using System.Linq;
 using Game.Models;
 using Game.Engine.EngineInterfaces;
 
@@ -52,7 +52,7 @@ namespace Game.ViewModels
         public CharacterIndexViewModel DatabaseCharacterViewModel = CharacterIndexViewModel.Instance;
 
         // Have the Database Character List point to the Character View Model List
-        public ObservableCollection<CharacterModel> DatabaseCharacterList { get; set; } = CharacterIndexViewModel.Instance.Dataset;
+        public ObservableCollection<CharacterModel> DatabaseCharacterList { get; set; } =  new ObservableCollection<CharacterModel>(CharacterIndexViewModel.Instance.Dataset.OrderByDescending(a => a.Speed));
 
 
         #region Constructor
