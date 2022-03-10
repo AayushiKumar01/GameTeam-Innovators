@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Game.Engine.EngineInterfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -484,16 +485,26 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedMonster(MapModelLocation data)
         {
-            // TODO: Info
-
             /*
              * This gets called when the Monster is clicked on
              * Usefull if you want to select the monster to attack etc.
              * 
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
-            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(data.Player);
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Attack;
+            IBattleEngineInterface instanceEngine = BattleEngineViewModel.Instance.Engine;
+            _ = instanceEngine.Round.SetCurrentDefender(data.Player);
+            PlayerInfoModel attacker = instanceEngine.EngineSettings.CurrentAttacker;
+            if (instanceEngine.EngineSettings.MapModel.IsTargetInRange(attacker,data.Player))
+            {
+                instanceEngine.EngineSettings.CurrentAction = ActionEnum.Attack;    
+            }
+            else
+            {
+                BattleMessages.Text = string.Format("{0} is out of range from  {1}, moving closer\n{2}", attacker.Name,
+                    data.Player.Name, BattleMessages.Text);
+                instanceEngine.EngineSettings.CurrentAction = ActionEnum.Move;
+            }
+            
             FinishTurnProcess();
             data.IsSelectedTarget = true;
             return true;
