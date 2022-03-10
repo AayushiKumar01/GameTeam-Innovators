@@ -827,7 +827,7 @@ namespace Game.Views
                 case PlayerTypeEnum.Character:
                     // User would select who to attack
                     PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
-                    BattleMessages.Text = string.Format("{0} \n{1}", "Players turn: " + attacker.Name + ", select map or action.", BattleMessages.Text);
+                    BattleMessages.Text = string.Format("{0} \n{1}", attacker.Job + " players turn , select map or action.", BattleMessages.Text);
                     
                     // Leaving empty to let user pick a target
                     _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(null);
