@@ -520,8 +520,18 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedCharacter(MapModelLocation data)
         {
+            
             // TODO: Info
-
+            EngineSettingsModel EngineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
+            if (EngineSettings.CurrentAttacker == playerAtLocation)
+            {
+                BattleMessages.Text = string.Format("{0} is playing this turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
+            }
+            else
+            {
+                BattleMessages.Text = string.Format("{0}, it's not their turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
+            }
             /*
              * This gets called when the characters is clicked on
              * Usefull if you want to select the character and then set state or do something
