@@ -210,7 +210,7 @@ namespace UnitTests.Helpers
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual("monsterdrafts2.png", result);
+            Assert.AreEqual("monster2.gif", result);
         }
 
         [Test]
@@ -227,7 +227,7 @@ namespace UnitTests.Helpers
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual("ship2.png", result);
+            Assert.AreEqual("char2.gif", result);
         }
 
         [Test]
