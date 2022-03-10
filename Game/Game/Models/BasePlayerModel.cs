@@ -272,8 +272,11 @@ namespace Game.Models
 
                 switch (Job)
                 {
+                    case CharacterJobEnum.Cleric:
+                        result = +1;
+                        break;
                     case CharacterJobEnum.Corvette:
-                        result = 0;
+                        result = +2;
                         break;
                     case CharacterJobEnum.Fighter:
                         result = +1;
