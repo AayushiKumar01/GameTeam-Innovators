@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Game.Engine.EngineInterfaces;
+using Game.Engine.EngineModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -483,7 +484,7 @@ namespace Game.Views
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public bool SetSelectedMonster(MapModelLocation data)
+        public RoundEnum SetSelectedMonster(MapModelLocation data)
         {
             /*
              * This gets called when the Monster is clicked on
@@ -509,10 +510,9 @@ namespace Game.Views
                 BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cordinatesModel;
                 instanceEngine.EngineSettings.CurrentAction = ActionEnum.Move;
             }
-            
-            FinishTurnProcess();
+
             data.IsSelectedTarget = true;
-            return true;
+            return FinishTurnProcess();
         }
 
         /// <summary>
@@ -700,8 +700,18 @@ namespace Game.Views
                     // Check if the game is over and exit early if so
                     if (forceGameOver)
                         return;
+
+                    PlayerInfoModel closestPlayer = null;
+                    EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+
+                    closestPlayer = engineSettings.MapModel.FindClosestPlayerToPlayers(engineSettings.CurrentAttacker, engineSettings.MonsterList);
                     
-                    RoundCondition = NextAttackExample();
+                    RoundCondition = RoundEnum.NewRound;
+                    if (closestPlayer != null)
+                    {
+                        RoundCondition = SetSelectedMonster(engineSettings.MapModel.GetLocationForPlayer(closestPlayer));
+                    }
+
                     if (RoundCondition == RoundEnum.NextTurn)
                     {
                         // Rerun this method to handle next turn
@@ -1139,7 +1149,7 @@ namespace Game.Views
         private void DelayFaster_Button(object sender, EventArgs e)
         {
             WaitTime /= 2;
-            int minWaitTime = 1;
+            int minWaitTime = 32;
             if (WaitTime <= 0)
             {
                 WaitTime = minWaitTime;
