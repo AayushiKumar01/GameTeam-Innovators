@@ -1095,9 +1095,12 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
                     HtmlBox.IsVisible = true;
                     BattleMessagesFrame.IsVisible = true;
-                    AbilityButton.IsVisible = true;
-                    FinishButton.IsVisible = true;
-                    AutoplayButton.IsVisible = true;
+                    FinishButton.IsVisible = false;
+                    if (!AutoplayEnabled)
+                    {
+                        AutoplayButton.IsVisible = true;
+                        AbilityButton.IsVisible = true;
+                    }
                     RestButton.IsVisible = false;
                     break;
 
