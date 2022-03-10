@@ -703,9 +703,11 @@ namespace Game.Views
 
                     PlayerInfoModel closestPlayer = null;
                     EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
-
+                    
+                    // Find closest monster to current player to attack
                     closestPlayer = engineSettings.MapModel.FindClosestPlayerToPlayers(engineSettings.CurrentAttacker, engineSettings.MonsterList);
                     
+                    // Assume new round if closest player is empty
                     RoundCondition = RoundEnum.NewRound;
                     if (closestPlayer != null)
                     {
