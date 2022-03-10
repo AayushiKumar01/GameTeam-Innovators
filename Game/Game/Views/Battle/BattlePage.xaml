@@ -130,6 +130,7 @@
                                     <Label Text="Autoplay:" VerticalTextAlignment="Center"/>
                                     <Button Text="Slower" Clicked="DelaySlower_Button" x:Name="SlowerButton"/>
                                     <Button Text="Faster" Clicked="DelayFaster_Button" x:Name="FasterButton" />
+                                    <Button Text="Stop" Clicked="AutoplayStop_Button" x:Name="StopButton" />
                                 </StackLayout>
                             </StackLayout>
                             

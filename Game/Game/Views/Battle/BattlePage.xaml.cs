@@ -34,8 +34,11 @@ namespace Game.Views
         bool UnitTestSetting;
         public BattlePage(bool UnitTest) { UnitTestSetting = UnitTest; }
 
-        // Temporary flag to forge the game to end with 'Finish Game' Button
+        // Flag to forge the game to end with 'Finish Game' Button
         public bool forceGameOver = false;
+
+        // Flag for setting autoplay
+        public bool AutoplayEnabled = false;
         
         /// <summary>
         /// Constructor
@@ -666,12 +669,16 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AutoplayButton_Clicked(object sender, EventArgs e)
         {
+            AutoplayEnabled = true;
             // Lower the wait time so each turn does not take too long
             WaitTime = 256;
             // Show speed buttons
             AutoplayStack.IsVisible = true;
             // Recursive method that runs the game in new threads
             AutoPlayNext();
+            // Unneeded buttons invisible
+            AutoplayButton.IsVisible = false;
+            AbilityButton.IsVisible = false;
         }
 
         /// <summary>
@@ -679,10 +686,6 @@ namespace Game.Views
         /// </summary>
         private void AutoPlayNext()
         {
-            // Unneeded buttons invisible
-            AutoplayButton.IsVisible = false;
-            AbilityButton.IsVisible = false;
-            
             // Start new thread to give UI a chance to refresh
             Task.Run(async () =>
             {
@@ -693,7 +696,7 @@ namespace Game.Views
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     // Check if the game is over and exit early if so
-                    if (forceGameOver)
+                    if (forceGameOver || !AutoplayEnabled)
                         return;
 
                     PlayerInfoModel closestPlayer = null;
@@ -1157,6 +1160,14 @@ namespace Game.Views
             {
                 FasterButton.IsEnabled = false;
             }
+        }
+
+        private void AutoplayStop_Button(object sender, EventArgs e)
+        {
+            AutoplayEnabled = false;
+            AutoplayStack.IsVisible = false;
+            AbilityButton.IsVisible = true;
+            AutoplayButton.IsVisible = true;
         }
     }
 }
