@@ -468,11 +468,11 @@ namespace Game.Views
             // Set action to move when clicking empty square
             BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Move;
             
-            CordinatesModel cordinatesModel = new CordinatesModel();
-            cordinatesModel.Column = data.Column;
-            cordinatesModel.Row = data.Row;
+            // Copy map location to CordinatesModel to save in settings
+            CordinatesModel cords = new CordinatesModel(data);
+            
             // Save to coordinates to try to move towards in EngineSettings
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cordinatesModel;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cords;
             
             // Finish processing the turn 
             FinishTurnProcess();
@@ -504,9 +504,7 @@ namespace Game.Views
                 BattleMessages.Text = string.Format("{0} tried to attack {1} but is out of range, moving closer\n{2}", attacker.Name,
                     data.Player.Name, BattleMessages.Text);
 
-                CordinatesModel cordinatesModel = new CordinatesModel();
-                cordinatesModel.Column = data.Column;
-                cordinatesModel.Row = data.Row;
+                CordinatesModel cordinatesModel = new CordinatesModel(data);
                 BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cordinatesModel;
                 instanceEngine.EngineSettings.CurrentAction = ActionEnum.Move;
             }
