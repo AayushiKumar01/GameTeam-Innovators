@@ -55,7 +55,7 @@
 
                         </Grid>
 
-                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" IsAnimationPlaying="True"/>
 
                         <Grid Style="{StaticResource StandardGrid}">
 
