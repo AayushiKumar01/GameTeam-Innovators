@@ -486,12 +486,6 @@ namespace Game.Views
         /// <returns></returns>
         public RoundEnum SetSelectedMonster(MapModelLocation data)
         {
-            /*
-             * This gets called when the Monster is clicked on
-             * Usefull if you want to select the monster to attack etc.
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
             IBattleEngineInterface instanceEngine = BattleEngineViewModel.Instance.Engine;
             _ = instanceEngine.Round.SetCurrentDefender(data.Player);
             PlayerInfoModel attacker = instanceEngine.EngineSettings.CurrentAttacker;
@@ -521,7 +515,6 @@ namespace Game.Views
         public bool SetSelectedCharacter(MapModelLocation data)
         {
             
-            // TODO: Info
             EngineSettingsModel EngineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
             PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
             if (EngineSettings.CurrentAttacker == playerAtLocation)
@@ -532,12 +525,6 @@ namespace Game.Views
             {
                 BattleMessages.Text = string.Format("{0}, it's not their turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
             }
-            /*
-             * This gets called when the characters is clicked on
-             * Usefull if you want to select the character and then set state or do something
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
 
             return true;
         }
