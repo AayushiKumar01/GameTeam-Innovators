@@ -82,7 +82,7 @@
                             BackgroundColor="Transparent"
                             IsVisible="false"
                         />
-                        <Frame x:Name="BattlePlayerInfomationBox"
+                        <Frame x:Name="BattlePlayerInformationBox"
                                     Style="{StaticResource PlayerBattleOuterFrame}"
                                     IsVisible="False">
 

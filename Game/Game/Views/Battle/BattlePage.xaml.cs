@@ -1031,7 +1031,7 @@ namespace Game.Views
             FinishButton.IsVisible = false;
             RestButton.IsVisible = false;
             MessageDisplayBox.IsVisible = false;
-            BattlePlayerInfomationBox.IsVisible = false;
+            BattlePlayerInformationBox.IsVisible = false;
             HtmlBox.IsVisible = false;
             BattleMessagesFrame.IsVisible = false;
         }
@@ -1090,7 +1090,7 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    BattlePlayerInfomationBox.IsVisible = true;
+                    BattlePlayerInformationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
                     HtmlBox.IsVisible = true;
                     BattleMessagesFrame.IsVisible = true;
