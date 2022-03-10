@@ -57,7 +57,7 @@
 
                         <Image 
                             Source="{Binding Data.ImageURI, Mode=TwoWay}" 
-                            Style="{StaticResource ImageLargeStyle}"/>
+                            Style="{StaticResource ImageLargeStyle}" IsAnimationPlaying="True"/>
 
                         <ImageButton 
                             x:Name="RollDice"
