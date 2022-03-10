@@ -927,8 +927,13 @@ namespace Game.Views
                 BattleMessages.Text = string.Format("{0} \n{1}", BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.LevelUpMessage, BattleMessages.Text);
             }
 
-            htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
-            HtmlBox.Source = htmlSource;
+            String source = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel
+                .GetHTMLFormattedTurnMessage();
+            if (!source.Contains("Unknown"))
+            {
+                htmlSource.Html = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.GetHTMLFormattedTurnMessage();
+                HtmlBox.Source = htmlSource;
+            }
         }
 
         /// <summary>
