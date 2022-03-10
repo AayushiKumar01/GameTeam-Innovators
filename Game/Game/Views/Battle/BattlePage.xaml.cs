@@ -849,11 +849,17 @@ namespace Game.Views
         {
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
+            _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker);
             PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
 
-            //_ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Rest;
 
-            GameMessage();
+            _ = BattleEngineViewModel.Instance.Engine.Round.Turn.TakeTurn(attacker);
+
+
+            FinishTurnProcess();
+
+            BattleMessages.Text = string.Format("{0} has emergency repairs", attacker.Name, BattleMessages.Text);
 
 
         }
@@ -1101,7 +1107,7 @@ namespace Game.Views
                         AutoplayButton.IsVisible = true;
                         AbilityButton.IsVisible = true;
                     }
-                    RestButton.IsVisible = false;
+                    RestButton.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons
