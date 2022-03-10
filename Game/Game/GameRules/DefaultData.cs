@@ -282,6 +282,7 @@ namespace Game.GameRules
                     Feet = FeetString,
                     RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
+                    Job = CharacterJobEnum.Fighter,
                 },
 
                 new CharacterModel {
@@ -297,6 +298,7 @@ namespace Game.GameRules
                     Feet = FeetString,
                     RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
+                    Job = CharacterJobEnum.Destroyer,
                 },
 
                 new CharacterModel {
@@ -312,6 +314,7 @@ namespace Game.GameRules
                     Feet = FeetString,
                     RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
+                    Job = CharacterJobEnum.Frigate,
                 },
 
                 new CharacterModel {
@@ -319,7 +322,8 @@ namespace Game.GameRules
                     Description = "A salvager converted into a warship",
                     Level = 4,
                     MaxHealth = 38,
-                    ImageURI = "char4.gif"
+                    ImageURI = "char4.gif",
+                    Job = CharacterJobEnum.Corvette,
                 },
 
                 new CharacterModel {
@@ -327,7 +331,8 @@ namespace Game.GameRules
                     Description = "Light and nimble",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "char5.gif"
+                    ImageURI = "char5.gif",
+                    Job = CharacterJobEnum.Fighter,
                 },
 
                 new CharacterModel {
@@ -335,7 +340,8 @@ namespace Game.GameRules
                     Description = "All shall fall before me",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "char6.gif"
+                    ImageURI = "char6.gif",
+                    Job = CharacterJobEnum.Battlecruiser,
                 }
             };
 
