@@ -60,7 +60,7 @@ namespace Game.Views
             audio.stopStartAudio();
             audio.playGameOverAudio();
 
-            var BattleMessage = string.Format("Traveling to planet 1. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
+            var BattleMessage = string.Format("Returned from Andromeda. Quest completed with {0} Rounds", AutoBattle.Battle.EngineSettings.BattleScore.RoundCount);
 
             BattleMessageValue.Text = BattleMessage;
 
