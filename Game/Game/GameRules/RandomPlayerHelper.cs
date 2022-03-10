@@ -68,7 +68,7 @@ namespace Game.GameRules
         public static string GetCharacterImage()
         {
 
-            List<string> FirstNameList = new List<string> { "ship1.png", "ship2.png", "ship3.png", "ship4.png", "ship5.png", "ship6.png", "ship1.png" };
+            List<string> FirstNameList = new List<string> { "char1.gif", "char2.gif", "char3.gif", "char4.gif", "char5.gif", "char6.gif", "char1.gif" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
