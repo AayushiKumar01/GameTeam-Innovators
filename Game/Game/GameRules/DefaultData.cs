@@ -414,6 +414,20 @@ namespace Game.GameRules
                     ImageURI = "monster6.gif",
                     Job = CharacterJobEnum.Fighter,
                 },
+
+                new MonsterModel {
+                    Name = "Predator",
+                    Description = "Prepare to be abducted",
+                    ImageURI = "monsterdrafts7.png",
+                    Job = CharacterJobEnum.Fighter,
+                },
+
+                new MonsterModel {
+                    Name = "Baria",
+                    Description = "Terrible to behold",
+                    ImageURI = "monsterdrafts8.png",
+                    Job = CharacterJobEnum.Corvette,
+                }
             };
 
             return datalist;
