@@ -138,7 +138,7 @@ namespace Game.Engine.EngineGame
         public override bool PickupItemsForAllCharacters()
         {
             // In Auto Battle this happens and the characters get their items
-            // When called manualy, make sure to do the character pickup before calling EndRound
+            // When called manually, make sure to do the character pickup before calling EndRound
 
             // Have each character pickup items...
             foreach (var character in EngineSettings.CharacterList)
