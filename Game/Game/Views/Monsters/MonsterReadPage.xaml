@@ -31,7 +31,7 @@
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource CenterMessageStyle}"/>
 
-                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" IsAnimationPlaying="True"/>
 
                     <StackLayout Style="{StaticResource HorizontalCenterAndExpand}">
                         <Label 
