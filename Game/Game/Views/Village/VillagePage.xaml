@@ -36,7 +36,7 @@
                 <StackLayout Orientation="Horizontal"
                              Spacing="15">
                     <ImageButton
-                        Source="monster.gif"
+                        Source="monster4.gif"
                         Style="{StaticResource ImageBattleMediumStyle}"
                         Clicked="MonstersButton_Clicked" />
 
