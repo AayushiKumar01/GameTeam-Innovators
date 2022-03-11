@@ -48,7 +48,7 @@
 
             <!-- Battle Map Colors for Backgrounds -->
             <Color x:Key="BattleMapTransparentColor">Transparent</Color>
-            <Color x:Key="BattleMapCharacterColor">Transparent</Color>
+            <Color x:Key="BattleMapCharacterColor">DarkBlue</Color>
             <Color x:Key="BattleMapMonsterColor">DarkSlateGray</Color>
             <Color x:Key="BattleMapDeathColor">lightgreen</Color>
             <Color x:Key="BattleMapHitColor">darkorange</Color>
