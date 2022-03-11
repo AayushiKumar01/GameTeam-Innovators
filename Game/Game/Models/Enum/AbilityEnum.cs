@@ -71,15 +71,15 @@ namespace Game.Models
                     break;
 
                 case AbilityEnum.Nimble:
-                    Message = "React Quickly";
+                    Message = "Quick Thrusters";
                     break;
 
                 case AbilityEnum.Toughness:
-                    Message = "Toughen Up";
+                    Message = "Increase Shields";
                     break;
 
                 case AbilityEnum.Focus:
-                    Message = "Mental Focus";
+                    Message = "Power Weapons Systems";
                     break;
 
                 case AbilityEnum.Quick:
@@ -91,7 +91,7 @@ namespace Game.Models
                     break;
 
                 case AbilityEnum.Curse:
-                    Message = "Shout Curse";
+                    Message = "Charge Lasers";
                     break;
 
                 case AbilityEnum.Repair:
