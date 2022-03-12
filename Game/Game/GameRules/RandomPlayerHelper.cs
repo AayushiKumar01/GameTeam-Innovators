@@ -10,6 +10,9 @@ namespace Game.GameRules
 {
     public static class RandomPlayerHelper
     {
+        //ships image list
+        public static List<string> CharacterImageList = new List<string> { "char1.gif", "char2.gif", "char3.gif", "char4.gif", "char5.gif", "char6.gif"};
+
         /// <summary>
         /// Get Health
         /// </summary>
