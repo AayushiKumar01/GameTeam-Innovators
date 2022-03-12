@@ -418,5 +418,25 @@ namespace Game.Views
 
             return true;
         }
+
+        /// <summary>
+        /// Shift Image to the Left
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void LeftArrow_Clicked(object sender, EventArgs e)
+        {
+           
+        }
+
+        /// <summary>
+        /// Shift Image to the Right
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void RightArrow_Clicked(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
