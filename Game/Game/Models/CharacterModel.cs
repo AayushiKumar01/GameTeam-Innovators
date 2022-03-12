@@ -39,7 +39,7 @@ namespace Game.Models
             Name = "Hyperion";
             Description = "Veteran of the Third Solar War";
             Level = 1;
-            ImageURI = "ship2.gif";
+            ImageURI = "char2.gif";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
             SpecialAbility = SpecialAbilityEnum.Unknown;
