@@ -76,7 +76,7 @@ namespace Game.Views
 
             _ = EnableImageArrowButtons();
 
-            //ManageHealth();
+            ManageHealth();
 
             AddItemsToDisplay();
 
