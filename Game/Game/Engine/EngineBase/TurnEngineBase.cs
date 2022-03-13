@@ -54,7 +54,7 @@ namespace Game.Engine.EngineBase
 
             // INFO: Teams, if you have other actions they would go here.
 
-            var result = false;
+            var result = true;
 
             // If the action is not set, then try to set it or use Attact
             if (EngineSettings.CurrentAction == ActionEnum.Unknown)
@@ -124,7 +124,7 @@ namespace Game.Engine.EngineBase
              */
 
             // Assume Move if nothing else happens
-            EngineSettings.CurrentAction = ActionEnum.Move;
+            EngineSettings.CurrentAction = ActionEnum.SkipTurn;
 
             // See if Desired Target is within Range, and if so attack away
             if (EngineSettings.MapModel.IsTargetInRange(Attacker, AttackChoice(Attacker)))

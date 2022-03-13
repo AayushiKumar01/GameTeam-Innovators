@@ -51,7 +51,7 @@ namespace Game.Engine.EngineKoenig
 
             // INFO: Teams, if you have other actions they would go here.
 
-            var result = false;
+            var result = true;
 
             // If the action is not set, then try to set it or use Attact
             if (EngineSettings.CurrentAction == ActionEnum.Unknown)
