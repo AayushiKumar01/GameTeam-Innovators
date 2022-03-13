@@ -364,7 +364,7 @@ namespace UnitTests.Views
         public void CharacterCreatePage_ChangeImageByIncrement_Valid_Increment_Should_Pass()
         {
             // Arrange
-            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "elf3.png" } };
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char3.gif" } };
 
             var indexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(page.ViewModel.Data.ImageURI);
 
