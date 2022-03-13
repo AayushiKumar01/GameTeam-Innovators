@@ -470,5 +470,26 @@ namespace UnitTests.Views
             Assert.AreEqual(true, RightButton.IsEnabled);
         }
 
+        [Test]
+        public void CharacterCreatePage_EnableImageArrowButtons_Valid_Image7_Should_Disable_Right()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to Right most
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.CharacterImageList.Last();
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, LeftButton.IsEnabled);
+            Assert.AreEqual(false, RightButton.IsEnabled);
+        }
+
     }
 }
