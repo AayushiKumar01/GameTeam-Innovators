@@ -204,5 +204,34 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        [Test]
+        public void MonsterUpdatePage_LeftArrow_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.LeftArrow_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void MonsterUpdatePage_RightArrow_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.RightArrow_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+
     }
 }
