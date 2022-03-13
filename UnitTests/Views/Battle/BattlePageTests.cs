@@ -611,7 +611,8 @@ namespace UnitTests.Views
         public void BattlePage_SetSelectedEmpty_Default_Should_Pass()
         {
             // Arrange
-
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = true;
+            
             // Act
             var result = page.SetSelectedEmpty(new MapModelLocation());
 
