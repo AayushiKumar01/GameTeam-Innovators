@@ -1654,7 +1654,7 @@ namespace UnitTests.Engine.EngineGame
 
             Engine.EngineSettings.BattleSettingsModel.AllowSkips = true;
             Engine.EngineSettings.BattleSettingsModel.SkipPercentage = 0;
-            Engine.EngineSettings.CurrentAction = ActionEnum.Move;
+            Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
 
 
             // Act
@@ -1663,7 +1663,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Move, result);
+            Assert.AreEqual(ActionEnum.Ability, result);
         }
         #endregion CalculateSeattleIceSlip
     }
