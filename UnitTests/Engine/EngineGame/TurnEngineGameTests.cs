@@ -615,7 +615,10 @@ namespace UnitTests.Engine.EngineGame
             Engine.EngineSettings.PlayerList.Add(monster);
 
             _ = Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
-
+            Engine.EngineSettings.MoveMapLocation = new CordinatesModel();
+            Engine.EngineSettings.MoveMapLocation.Column = 0;
+            Engine.EngineSettings.MoveMapLocation.Row = 0;
+            
             // Act
             var result = Engine.Round.Turn.TakeTurn(character);
 
@@ -1510,7 +1513,9 @@ namespace UnitTests.Engine.EngineGame
 
             Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
             Engine.EngineSettings.BattleScore.AutoBattle = true;
-
+            Engine.EngineSettings.MoveMapLocation = new CordinatesModel();
+            Engine.EngineSettings.MoveMapLocation.Column = 0;
+            Engine.EngineSettings.MoveMapLocation.Row = 0;
             // Act
             var result = Engine.Round.Turn.MoveAsTurn(CharacterPlayer);
 
