@@ -55,9 +55,27 @@
 
                         </Grid>
 
-                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" IsAnimationPlaying="True"/>
+                        <StackLayout 
+                                Style="{StaticResource HorizontalStack}"
+                                HorizontalOptions="CenterAndExpand">
+                            <Button 
+                                x:Name="LeftArrowButton"
+                                Text="&lt;"
+                                Clicked="LeftArrow_Clicked"
+                                />
 
-                        <Grid Style="{StaticResource StandardGrid}">
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" IsAnimationPlaying="True"/>
+
+                        <Button 
+                                x:Name="RightArrowButton"
+                                Text="&gt;"
+                                Clicked="RightArrow_Clicked"
+                                />
+
+                    </StackLayout>
+                    
+
+                    <Grid Style="{StaticResource StandardGrid}">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
