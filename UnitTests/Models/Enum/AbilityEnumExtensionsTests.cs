@@ -88,7 +88,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Heal Self", result);
+            Assert.AreEqual("Repair Self", result);
         }
 
         [Test]
