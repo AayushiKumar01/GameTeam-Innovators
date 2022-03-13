@@ -58,7 +58,9 @@ namespace Game.Views
             BindingContext = this.ViewModel;
 
             ViewModel.Data.Difficulty = difficulty;
-            
+
+            _ = EnableImageArrowButtons();
+
             return true;
         }
 
@@ -216,6 +218,32 @@ namespace Game.Views
 
             return true;
         }
+
+        /// <summary>
+        /// Enable True of False the Image Arrows
+        /// Based on the image in the list
+        /// </summary>
+        /// <returns></returns>
+        public bool EnableImageArrowButtons()
+        {
+            LeftArrowButton.IsEnabled = true;
+            RightArrowButton.IsEnabled = true;
+
+            var ImageIndexCurrent = RandomPlayerHelper.MonsterImageList.IndexOf(ViewModel.Data.ImageURI);
+
+            if (ImageIndexCurrent < 1)
+            {
+                LeftArrowButton.IsEnabled = false;
+            }
+
+            if (ImageIndexCurrent >= ImageListCount - 1)
+            {
+                RightArrowButton.IsEnabled = false;
+            }
+
+            return true;
+        }
+
 
         /// <summary>
         /// Shift Image to the Left
