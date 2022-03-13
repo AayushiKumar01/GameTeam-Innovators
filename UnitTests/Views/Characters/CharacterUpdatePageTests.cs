@@ -8,6 +8,7 @@ using Game.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Mocks;
 using System.Linq;
+using Game.GameRules;
 
 namespace UnitTests.Views
 {
@@ -366,6 +367,75 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void CharacterUpdatePage_ChangeImageByIncrement_Valid_Increment_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char3.gif" } };
+
+            var indexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(page.ViewModel.Data.ImageURI);
+
+            // Act
+            var result = page.ChangeImageByIncrement(1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, indexCurrent == result - 1);
+        }
+
+        [Test]
+        public void CharacterUpdatePage_ChangeImageByIncrement_Valid_Decrement_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char3.gif" } };
+
+            var indexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(page.ViewModel.Data.ImageURI);
+
+            // Act
+            var result = page.ChangeImageByIncrement(-1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, indexCurrent == result + 1);
+        }
+
+        [Test]
+        public void CharacterUpdatePage_ChangeImageByIncrement_Invalid_Decrement_Zero_Should_Pass()
+        {
+            // Arrange
+
+            // set to the first in the list, zero
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char1.gif" } };
+
+            // Act
+            var result = page.ChangeImageByIncrement(-1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
+        public void CharacterUpdatePage_ChangeImageByIncrement_Invalid_Increment_Overflow_Should_Pass()
+        {
+            // Arrange
+
+            // set to the last in the list
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "ship8.png" } };
+
+            // Act
+            var result = page.ChangeImageByIncrement(1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(6, result);
+        }
+
 
     }
 }
