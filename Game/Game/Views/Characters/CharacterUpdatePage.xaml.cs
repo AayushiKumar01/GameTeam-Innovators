@@ -76,6 +76,8 @@ namespace Game.Views
             ViewModel.Data.Level = level;
             LevelPicker.SelectedIndex = ViewModel.Data.Level - 1;
 
+            _ = EnableImageArrowButtons();
+
             ManageHealth();
 
             AddItemsToDisplay();
@@ -423,6 +425,30 @@ namespace Game.Views
             return true;
         }
 
+        /// <summary>
+        /// Enable True of False the Image Arrows
+        /// Based on the image in the list
+        /// </summary>
+        /// <returns></returns>
+        public bool EnableImageArrowButtons()
+        {
+            LeftArrowButton.IsEnabled = true;
+            RightArrowButton.IsEnabled = true;
+
+            var ImageIndexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(ViewModel.Data.ImageURI);
+
+            if (ImageIndexCurrent < 1)
+            {
+                LeftArrowButton.IsEnabled = false;
+            }
+
+            if (ImageIndexCurrent >= ImageListCount - 1)
+            {
+                RightArrowButton.IsEnabled = false;
+            }
+
+            return true;
+        }
 
         /// <summary>
         /// Shift Image to the Left
