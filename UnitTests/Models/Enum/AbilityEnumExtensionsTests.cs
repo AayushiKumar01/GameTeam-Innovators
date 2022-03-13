@@ -60,7 +60,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Shout Curse", result);
+            Assert.AreEqual("Charge Lasers", result);
         }
 
         [Test]
