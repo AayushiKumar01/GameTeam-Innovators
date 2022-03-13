@@ -994,7 +994,7 @@ namespace UnitTests.Views
 
             var nameImage = "MapR0C0ImageButton";
             _ = page.MapLocationObject.TryGetValue(nameImage, out var dataImage);
-
+            page.NextAttackExample();
             // Act
 
             // Force the click event to fire
