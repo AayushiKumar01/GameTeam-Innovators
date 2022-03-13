@@ -102,7 +102,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("React Quickly", result);
+            Assert.AreEqual("Quick Thrusters", result);
         }
 
         [Test]
