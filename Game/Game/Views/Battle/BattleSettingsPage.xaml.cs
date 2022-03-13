@@ -177,7 +177,7 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
         }
 
-        private void AllowSkip_Toggled(object sender, ToggledEventArgs e)
+        public void AllowSkip_Toggled(object sender, ToggledEventArgs e)
         {
             // Flip the settings
             if (AllowSkip.IsToggled == true)
@@ -191,7 +191,7 @@ namespace Game.Views
             SkipSlider.IsEnabled = false;
         }
 
-        private void SkipPercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
+        public void SkipPercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
         {
             var seattleIcePercentage = valueChangedEventArgs.NewValue;
             if (seattleIcePercentage != null)
