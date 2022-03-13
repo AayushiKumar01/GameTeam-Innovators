@@ -436,6 +436,68 @@ namespace UnitTests.Views
             Assert.AreEqual(6, result);
         }
 
+        [Test]
+        public void CharacterUpdatePage_EnableImageArrowButtons_Valid_Image1_Should_Disable_Left()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to Left most
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.CharacterImageList.First();
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, LeftButton.IsEnabled);
+            Assert.AreEqual(true, RightButton.IsEnabled);
+        }
+
+        [Test]
+        public void CharacterUpdatePage_EnableImageArrowButtons_Valid_Image2_Should_Enable_Both()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to middle
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.CharacterImageList.ElementAt(2);
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, LeftButton.IsEnabled);
+            Assert.AreEqual(true, RightButton.IsEnabled);
+        }
+
+        [Test]
+        public void CharacterUpdatePage_EnableImageArrowButtons_Valid_Image7_Should_Disable_Right()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to Right most
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.CharacterImageList.Last();
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, LeftButton.IsEnabled);
+            Assert.AreEqual(false, RightButton.IsEnabled);
+        }
 
     }
 }
