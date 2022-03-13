@@ -393,5 +393,23 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(true, indexCurrent == result + 1);
         }
+
+        [Test]
+        public void CharacterCreatePage_ChangeImageByIncrement_Invalid_Decrement_Zero_Should_Pass()
+        {
+            // Arrange
+
+            // set to the first in the list, zero
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char1.gif" } };
+
+            // Act
+            var result = page.ChangeImageByIncrement(-1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
+
     }
 }
