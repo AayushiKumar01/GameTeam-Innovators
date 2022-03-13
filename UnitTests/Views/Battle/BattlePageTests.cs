@@ -597,6 +597,7 @@ namespace UnitTests.Views
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
         {
             // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = true;
             page.NextAttackExample();
             // Act
             var result = page.SetSelectedMonster(new MapModelLocation());
