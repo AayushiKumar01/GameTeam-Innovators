@@ -99,7 +99,7 @@ namespace UnitTests.Views
         public void BattlePage_RestButton_Clicked_Default_Should_Pass()
         {
             // Arrange
-
+            page.NextAttackExample();
             // Act
             page.RestButton_Clicked(null, null);
 
