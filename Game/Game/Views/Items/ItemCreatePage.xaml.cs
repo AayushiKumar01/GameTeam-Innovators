@@ -2,6 +2,7 @@
 using Game.ViewModels;
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 using Xamarin.Forms;
@@ -18,6 +19,8 @@ namespace Game.Views
     {
         // The item to create
         public GenericViewModel<ItemModel> ViewModel = new GenericViewModel<ItemModel>();
+
+        public static List<string> ItemImageList = new List<string> { "item1.png", "item2.png", "item3.png", "item4.png", "item5.png", "radar1.png", "reactor1.png", "reactor2.png", "thruster1.png", "engine2.png" };
 
         // Empty Constructor for UTs
         public ItemCreatePage(bool UnitTest) { }
