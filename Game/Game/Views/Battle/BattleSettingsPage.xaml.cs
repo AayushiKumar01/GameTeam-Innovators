@@ -177,6 +177,11 @@ namespace Game.Views
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowMonsterItems = false;
         }
 
+        /// <summary>
+        /// Turn on Allow Skips, update EngineSettings and enable/disable percentage slider
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void AllowSkip_Toggled(object sender, ToggledEventArgs e)
         {
             // Flip the settings
@@ -191,6 +196,11 @@ namespace Game.Views
             SkipSlider.IsEnabled = false;
         }
 
+        /// <summary>
+        /// Percentage slider updates EngineSettings with new value and print to label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="valueChangedEventArgs"></param>
         public void SkipPercentage_Changed(object sender, ValueChangedEventArgs valueChangedEventArgs)
         {
             var seattleIcePercentage = valueChangedEventArgs.NewValue;
