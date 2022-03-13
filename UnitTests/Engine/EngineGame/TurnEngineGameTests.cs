@@ -1663,7 +1663,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Ability, result);
+            Assert.True(result != ActionEnum.Unknown);
         }
         #endregion CalculateSeattleIceSlip
     }
