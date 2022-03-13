@@ -54,9 +54,24 @@
 
                         </Grid>
 
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}"/>
+                        <StackLayout 
+                                Style="{StaticResource HorizontalStack}"
+                                HorizontalOptions="CenterAndExpand">
+                            <Button 
+                                x:Name="LeftArrowButton"
+                                Text="&lt;"
+                                Clicked="LeftArrow_Clicked"
+                                />
 
-                            <ImageButton 
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}"/>
+                            <Button 
+                                x:Name="RightArrowButton"
+                                Text="&gt;"
+                                Clicked="RightArrow_Clicked"
+                                />
+
+                        </StackLayout>
+                        <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource ImageSmallStyle}"
                                 Source="dice10.png"
