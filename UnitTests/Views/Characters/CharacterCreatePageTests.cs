@@ -411,5 +411,23 @@ namespace UnitTests.Views
             Assert.AreEqual(0, result);
         }
 
+        [Test]
+        public void CharacterCreatePage_ChangeImageByIncrement_Invalid_Increment_Overflow_Should_Pass()
+        {
+            // Arrange
+
+            // set to the last in the list
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "ship8.png" } };
+
+            // Act
+            var result = page.ChangeImageByIncrement(1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(6, result);
+        }
+
+
     }
 }
