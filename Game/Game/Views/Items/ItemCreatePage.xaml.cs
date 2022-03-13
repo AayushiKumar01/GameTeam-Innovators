@@ -20,10 +20,6 @@ namespace Game.Views
         // The item to create
         public GenericViewModel<ItemModel> ViewModel = new GenericViewModel<ItemModel>();
 
-        public static List<string> ItemImageList = new List<string> { "item1.png", "item2.png", "item3.png", "item4.png", "item5.png", "radar1.png", "reactor1.png", "reactor2.png", "thruster1.png", "engine2.png" };
-        // Current count of the Images in the Item Image List
-        public int ImageListCount = ItemImageList.Count;
-
         // Empty Constructor for UTs
         public ItemCreatePage(bool UnitTest) { }
 
@@ -136,25 +132,6 @@ namespace Game.Views
             DamageValue.Text = string.Format("{0}", (int)value);
         }
 
-        /// <summary>
-        /// Shift Image to the Left
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void LeftArrow_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// Shift Image to the Right
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void RightArrow_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

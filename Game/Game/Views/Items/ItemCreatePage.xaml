@@ -49,24 +49,8 @@
                         Style="{StaticResource EntryStyle}"/>
 
                 </Grid>
-                <StackLayout 
-                     Style="{StaticResource HorizontalCenterAndExpand}">
-
-                    <Button 
-                        x:Name="LeftArrowButton"
-                         Text="&lt;"
-                        Clicked="LeftArrow_Clicked"
-                        />
-
+                
                     <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-
-                    <Button 
-                        x:Name="RightArrowButton"
-                         Text="&gt;"
-                        Clicked="RightArrow_Clicked"
-                         />
-
-                </StackLayout>
 
                 <Grid Style="{StaticResource StandardGrid}">
 
