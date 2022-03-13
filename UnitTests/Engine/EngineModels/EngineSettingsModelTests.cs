@@ -27,8 +27,8 @@ namespace UnitTests.Engine.EngineModels
         public void EngineSettingsModel_Set_Get_Default_Should_Pass()
         {
             // Arrange
-
             // Act
+            var model = new MapModelLocation();
             var result = EngineSettingsModel.Instance;
 
             result.BattleScore = new ScoreModel();
@@ -38,8 +38,8 @@ namespace UnitTests.Engine.EngineModels
             result.CharacterList = new List<PlayerInfoModel>();
             result.CurrentAttacker = new PlayerInfoModel();
             result.CurrentDefender = new PlayerInfoModel();
-            result.CurrentMapLocation = new CordinatesModel();
-            result.MoveMapLocation = new CordinatesModel();
+            result.CurrentMapLocation = new CordinatesModel(model);
+            result.MoveMapLocation = new CordinatesModel(model);
             result.PlayerList = new List<PlayerInfoModel>();
             result.MapModel = new MapModel();
             result.BattleSettingsModel = new BattleSettingsModel();

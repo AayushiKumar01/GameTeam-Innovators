@@ -11,9 +11,9 @@ namespace UnitTests.Models
         public void CordinatesModel_Constructor_Default_Should_Pass()
         {
             // Arrange
-
+            var model = new MapModelLocation();
             // Act
-            var result = new CordinatesModel();
+            var result = new CordinatesModel(model);
 
             // Reset
 
@@ -25,9 +25,9 @@ namespace UnitTests.Models
         public void CordinatesModel_Get_Default_Should_Pass()
         {
             // Arrange
-
+            var model = new MapModelLocation();
             // Act
-            var result = new CordinatesModel();
+            var result = new CordinatesModel(model);
 
             // Reset
 
@@ -40,9 +40,9 @@ namespace UnitTests.Models
         public void CordinatesModel_Set_Default_Should_Pass()
         {
             // Arrange
-
+            var model = new MapModelLocation();
             // Act
-            var result = new CordinatesModel();
+            var result = new CordinatesModel(model);
             result.Row = 3;
             result.Column = 2;
 
