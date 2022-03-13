@@ -822,6 +822,7 @@ namespace Game.Views
                 Debug.WriteLine("Game Over");
 
                 GameOver();
+                AutoplayEnabled = false;
             }
             else
             {
