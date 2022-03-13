@@ -8,6 +8,7 @@ using Game.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Mocks;
 using Game.GameRules;
+using System.Linq;
 
 namespace UnitTests.Views
 {
@@ -314,6 +315,69 @@ namespace UnitTests.Views
 
             // Assert
             Assert.AreEqual(7, result);
+        }
+
+        [Test]
+        public void MonsterCreatePage_EnableImageArrowButtons_Valid_Image1_Should_Disable_Left()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to Left most
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.MonsterImageList.First();
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, LeftButton.IsEnabled);
+            Assert.AreEqual(true, RightButton.IsEnabled);
+        }
+
+        [Test]
+        public void MonsterCreatePage_EnableImageArrowButtons_Valid_Image2_Should_Enable_Both()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to middle
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.MonsterImageList.ElementAt(2);
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, LeftButton.IsEnabled);
+            Assert.AreEqual(true, RightButton.IsEnabled);
+        }
+
+        [Test]
+        public void MonsterCreatePage_EnableImageArrowButtons_Valid_Image8_Should_Disable_Right()
+        {
+            // Arrange
+            var LeftButton = (Button)page.FindByName("LeftArrowButton");
+            var RightButton = (Button)page.FindByName("RightArrowButton");
+
+            // Set List to Right most
+            page.ViewModel.Data.ImageURI = RandomPlayerHelper.MonsterImageList.Last();
+
+            // Act
+            var result = page.EnableImageArrowButtons();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, LeftButton.IsEnabled);
+            Assert.AreEqual(false, RightButton.IsEnabled);
         }
 
     }
