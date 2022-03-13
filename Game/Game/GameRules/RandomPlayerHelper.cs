@@ -11,7 +11,7 @@ namespace Game.GameRules
     public static class RandomPlayerHelper
     {
         //ships image list
-        public static List<string> CharacterImageList = new List<string> { "char1.gif", "char2.gif", "char3.gif", "char4.gif", "char5.gif", "char6.gif"};
+        public static List<string> CharacterImageList = new List<string> { "char1.gif", "char2.gif", "char3.gif", "char4.gif", "char5.gif", "char6.gif", "ship8.png" };
         public static List<string> MonsterImageList = new List<string> { "monster1.gif", "monster2.gif", "monster3.gif", "monster4.gif", "monster5.gif", "monster6.gif", "monsterdrafts7.png", "monsterdrafts8.png" };
 
         /// <summary>
