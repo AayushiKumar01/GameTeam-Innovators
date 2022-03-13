@@ -468,14 +468,20 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedEmpty(MapModelLocation data)
         {
+            EngineSettingsModel engineEngineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            if (!engineEngineSettings.EnableMapClick)
+            {
+                return false;
+            }
+
             // Set action to move when clicking empty square
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Move;
+            engineEngineSettings.CurrentAction = ActionEnum.Move;
             
             // Copy map location to CordinatesModel to save in settings
             CordinatesModel cords = new CordinatesModel(data);
             
             // Save to coordinates to try to move towards in EngineSettings
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MoveMapLocation = cords;
+            engineEngineSettings.MoveMapLocation = cords;
             
             // Finish processing the turn 
             FinishTurnProcess();
@@ -490,6 +496,10 @@ namespace Game.Views
         public RoundEnum SetSelectedMonster(MapModelLocation data)
         {
             IBattleEngineInterface instanceEngine = BattleEngineViewModel.Instance.Engine;
+            if (!instanceEngine.EngineSettings.EnableMapClick)
+            {
+                return RoundEnum.Unknown;
+            }
             _ = instanceEngine.Round.SetCurrentDefender(data.Player);
             PlayerInfoModel attacker = instanceEngine.EngineSettings.CurrentAttacker;
             if (instanceEngine.EngineSettings.MapModel.IsTargetInRange(attacker,data.Player))
@@ -517,8 +527,11 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedCharacter(MapModelLocation data)
         {
-            
             EngineSettingsModel EngineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            if (!EngineSettings.EnableMapClick)
+            {
+                return false;
+            }
             PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
             if (EngineSettings.CurrentAttacker == playerAtLocation)
             {
@@ -969,9 +982,12 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void NextRoundButton_Clicked(object sender, EventArgs e)
         {
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            engineSettings.BattleStateEnum = BattleStateEnum.Battling;
             ShowBattleMode();
             await Navigation.PushModalAsync(new NewRoundPage());
+            engineSettings.EnableMapClick = true;
+            AutoplayButton.IsVisible = true;
         }
 
         /// <summary>
@@ -981,10 +997,12 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void StartButton_Clicked(object sender, EventArgs e)
         {
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            engineSettings.BattleStateEnum = BattleStateEnum.Battling;
 
             ShowBattleMode();
             await Navigation.PushModalAsync(new NewRoundPage());
+            engineSettings.EnableMapClick = true;
         }
 
         /// <summary>
@@ -1078,24 +1096,29 @@ namespace Game.Views
         /// </summary>
         public void ShowBattleModeUIElements()
         {
-            switch (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum)
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            switch (engineSettings.BattleStateEnum)
             {
                 case BattleStateEnum.Starting:
                     //GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     StartBattleButton.IsVisible = true;
+                    engineSettings.EnableMapClick = false;
                     break;
 
                 case BattleStateEnum.NewRound:
                     _ = UpdateMapGrid();
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     NextRoundButton.IsVisible = true;
+                    AutoplayButton.IsVisible = false;
+                    engineSettings.EnableMapClick = false;
                     break;
 
                 case BattleStateEnum.GameOver:
                     // Hide the Game Board
                     GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
+                    engineSettings.EnableMapClick = false;
 
                 break;
 

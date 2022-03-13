@@ -100,6 +100,8 @@ namespace Game.Engine.EngineModels
 
         // Hold the Battle State, Unknown is default
         public BattleStateEnum BattleStateEnum { get; set; } = BattleStateEnum.Unknown;
-
+        
+        // Hold variable that tracks if the map should be clickable
+        public bool EnableMapClick { get; set; } = false;
     }
 }
