@@ -25,6 +25,9 @@ namespace Game.Views
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
 
+        // Current count of the Images in the Character Image List
+        public int ImageListCount = RandomPlayerHelper.CharacterImageList.Count;
+
         // to hold original character data for cancel update
         public CharacterModel CharacterCopy;
 
@@ -428,7 +431,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void LeftArrow_Clicked(object sender, EventArgs e)
         {
-            
+            _ = ChangeImageByIncrement(-1);
         }
 
         /// <summary>
@@ -438,7 +441,37 @@ namespace Game.Views
         /// <param name="e"></param>
         public void RightArrow_Clicked(object sender, EventArgs e)
         {
-            
+            _ = ChangeImageByIncrement(1);
+        }
+
+        /// <summary>
+        /// Move the Image left or Right
+        /// </summary>
+        /// <param name="increment"></param>
+        public int ChangeImageByIncrement(int increment)
+        {
+            // Find the Index for the current Image
+            var ImageIndexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(ViewModel.Data.ImageURI);
+
+            // Amount to move
+            var indexNew = ImageIndexCurrent + increment;
+
+            if (indexNew >= ImageListCount)
+            {
+                indexNew = ImageListCount - 1;
+            }
+
+            if (indexNew <= 0)
+            {
+                indexNew = 0;
+            }
+
+            // Increment or Decrement to change the to a different image
+            ViewModel.Data.ImageURI = RandomPlayerHelper.CharacterImageList.ElementAt(indexNew);
+
+            _ = UpdatePageBindingContext();
+
+            return indexNew;
         }
     }
 }
