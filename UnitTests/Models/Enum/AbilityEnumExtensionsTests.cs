@@ -130,7 +130,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Toughen Up", result);
+            Assert.AreEqual("Increase Shields", result);
         }
     }
 }
