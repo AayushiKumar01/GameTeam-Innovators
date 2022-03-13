@@ -376,5 +376,22 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(true, indexCurrent == result - 1);
         }
+
+        [Test]
+        public void CharacterCreatePage_ChangeImageByIncrement_Valid_Decrement_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel = new GenericViewModel<CharacterModel>() { Data = new CharacterModel() { ImageURI = "char3.gif" } };
+
+            var indexCurrent = RandomPlayerHelper.CharacterImageList.IndexOf(page.ViewModel.Data.ImageURI);
+
+            // Act
+            var result = page.ChangeImageByIncrement(-1);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, indexCurrent == result + 1);
+        }
     }
 }
