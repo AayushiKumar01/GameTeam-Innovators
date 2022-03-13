@@ -1681,6 +1681,23 @@ namespace UnitTests.Engine.EngineBase
             // Assert
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void TurnEngine_IceSlip_Valid_Monster_Attacks_Monster_Should_Pass()
+        {
+            // Arrange
+            var MonsterPlayer = new PlayerInfoModel();
+            MonsterPlayer.PlayerType = PlayerTypeEnum.Monster;
+            Engine.EngineSettings.CharacterList.Add(MonsterPlayer);
+
+            // Act
+            var result = Engine.Round.Turn.SkipTurn(MonsterPlayer);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
         #endregion IceSlip
     }
 }
