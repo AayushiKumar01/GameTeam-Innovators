@@ -54,8 +54,8 @@
 
                         </Grid>
                         <StackLayout 
-                                Style="{StaticResource HorizontalStack}"
-                                HorizontalOptions="CenterAndExpand">
+                                Style="{StaticResource HorizontalCenterAndExpand}">
+                            
                             <Button 
                                 x:Name="LeftArrowButton"
                                 Text="&lt;"
