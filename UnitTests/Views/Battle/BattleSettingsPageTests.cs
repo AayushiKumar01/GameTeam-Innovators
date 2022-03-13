@@ -333,7 +333,6 @@ namespace UnitTests.Views
         public void BattleSettingsPage_AllowSkip_Toggled_Default_Should_Pass()
         {
             // Arrange
-
             var control = (Switch)page.FindByName("AllowSkip");
             var current = control.IsToggled;
 
@@ -343,7 +342,8 @@ namespace UnitTests.Views
             page.AllowSkip_Toggled(null, args);
 
             // Reset
-
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
+            
             // Assert
             Assert.IsTrue(!current); // Got to here, so it happened...
         }
@@ -352,22 +352,21 @@ namespace UnitTests.Views
         public void BattleSettingsPage_AllowSkip_Toggled_True_Default_Should_Pass()
         {
             // Arrange
-
-            var control = (Switch)page.FindByName("AllowSkip");
-            var current = control.IsToggled;
-
-            ToggledEventArgs args = new ToggledEventArgs(current);
-            page.AllowSkip_Toggled(null, args);
-
-            control.IsToggled = true;
-
+            page.AllowSkip_Toggled(null, new ToggledEventArgs(true));
+            if (!((Switch) page.FindByName("AllowSkip")).IsToggled)
+            {
+                page.AllowSkip_Toggled(null, new ToggledEventArgs(true));
+            }
+            
             // Act
-            page.AllowSkip_Toggled(null, args);
+            var args = new ValueChangedEventArgs(0.0, 50.0);
+            page.SkipPercentage_Changed(null, args);
 
             // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
 
             // Assert
-            Assert.IsTrue(!current); // Got to here, so it happened...
+            Assert.AreEqual(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SkipPercentage,50);
         }
     }
 }
