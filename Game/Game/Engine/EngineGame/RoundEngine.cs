@@ -257,9 +257,8 @@ namespace Game.Engine.EngineGame
 
                 // Remember the Insert order, used for Sorting
 
-                for (int i = EngineSettings.CharacterList.Count-1; i >= 0; i--)
+                foreach (var data in EngineSettings.CharacterList)
                 {
-                    var data = EngineSettings.CharacterList[i];
                     if (data.Alive)
                     {
                         EngineSettings.PlayerList.Add(

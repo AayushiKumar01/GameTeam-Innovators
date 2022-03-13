@@ -387,10 +387,10 @@ namespace Scenario
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
-            
             // Act
+            page.NextAttackExample();
             page.AutoplayButton_Clicked(null, null);
-            Task.Delay(1000).Wait();
+            Task.Delay(1500).Wait();
             
             // Reset
             // Finish the game early
@@ -398,7 +398,7 @@ namespace Scenario
             page.GameOver();
             
             // Assert
-            Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount >= 4);
+            Assert.True(EngineViewModel.Engine.EngineSettings.BattleScore.TurnCount >= 2);
         }
         #endregion Scenario12
         

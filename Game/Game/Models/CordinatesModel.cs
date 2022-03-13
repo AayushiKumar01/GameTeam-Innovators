@@ -8,6 +8,10 @@
         public int Row;
         public int Column;
 
+        public CordinatesModel()
+        {
+        }
+        
         public CordinatesModel(MapModelLocation data)
         {
             Column = data.Column;

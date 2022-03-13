@@ -60,7 +60,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Shout Curse", result);
+            Assert.AreEqual("Charge Lasers", result);
         }
 
         [Test]
@@ -74,7 +74,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Mental Focus", result);
+            Assert.AreEqual("Power Weapons Systems", result);
         }
 
         [Test]
@@ -88,7 +88,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Heal Self", result);
+            Assert.AreEqual("Repair Self", result);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("React Quickly", result);
+            Assert.AreEqual("Quick Thrusters", result);
         }
 
         [Test]
@@ -130,7 +130,7 @@ namespace UnitTests.Models
             // Reset
 
             // Assert
-            Assert.AreEqual("Toughen Up", result);
+            Assert.AreEqual("Increase Shields", result);
         }
     }
 }

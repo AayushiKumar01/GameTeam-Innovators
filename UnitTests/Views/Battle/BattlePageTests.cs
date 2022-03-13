@@ -99,7 +99,7 @@ namespace UnitTests.Views
         public void BattlePage_RestButton_Clicked_Default_Should_Pass()
         {
             // Arrange
-
+            page.NextAttackExample();
             // Act
             page.RestButton_Clicked(null, null);
 
@@ -596,14 +596,14 @@ namespace UnitTests.Views
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
         {
             // Arrange
-
+            page.NextAttackExample();
             // Act
             var result = page.SetSelectedMonster(new MapModelLocation());
 
             // Reset
 
             // Assert
-            Assert.AreEqual(true, result); // Got to here, so it happened...
+            Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
         }
 
         [Test]
@@ -994,7 +994,7 @@ namespace UnitTests.Views
 
             var nameImage = "MapR0C0ImageButton";
             _ = page.MapLocationObject.TryGetValue(nameImage, out var dataImage);
-
+            page.NextAttackExample();
             // Act
 
             // Force the click event to fire
