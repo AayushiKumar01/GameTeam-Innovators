@@ -1669,6 +1669,7 @@ namespace UnitTests.Engine.EngineBase
         [Test]
         public void TurnEngine_IceSlip_Valid_Character_Attacks_Monster_Should_Pass()
         {
+
             // Arrange
             var CharacterPlayer = new PlayerInfoModel();
             Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
@@ -1677,15 +1678,19 @@ namespace UnitTests.Engine.EngineBase
             var result = Engine.Round.Turn.SkipTurn(CharacterPlayer);
 
             // Reset
-
+            
             // Assert
             Assert.AreEqual(true, result);
         }
 
         [Test]
-        public void TurnEngine_IceSlip_Valid_Monster_Attacks_Monster_Should_Pass()
+        public void TurnEngine_IceSlip_Valid_Monster_Attacks_Character_Should_Pass()
         {
             // Arrange
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = true;
+            Engine.EngineSettings.BattleSettingsModel.SkipPercentage = 100;
+
             var MonsterPlayer = new PlayerInfoModel();
             MonsterPlayer.PlayerType = PlayerTypeEnum.Monster;
             Engine.EngineSettings.CharacterList.Add(MonsterPlayer);
@@ -1694,6 +1699,7 @@ namespace UnitTests.Engine.EngineBase
             var result = Engine.Round.Turn.SkipTurn(MonsterPlayer);
 
             // Reset
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
 
             // Assert
             Assert.AreEqual(true, result);
