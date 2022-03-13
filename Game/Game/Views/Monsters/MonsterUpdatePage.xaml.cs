@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Game.Models;
 using Game.ViewModels;
+using System.Linq;
 
 namespace Game.Views
 {
@@ -21,6 +22,9 @@ namespace Game.Views
 
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
+
+        // Current count of the Images in the Monster Image List
+        public int ImageListCount = RandomPlayerHelper.MonsterImageList.Count;
 
         //hold monster original data for cancel update
         public MonsterModel MonsterCopy;
@@ -152,7 +156,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void LeftArrow_Clicked(object sender, EventArgs e)
         {
-
+            _ = ChangeImageByIncrement(-1);
         }
 
         /// <summary>
@@ -162,7 +166,37 @@ namespace Game.Views
         /// <param name="e"></param>
         public void RightArrow_Clicked(object sender, EventArgs e)
         {
+            _ = ChangeImageByIncrement(1);
+        }
 
+        /// <summary>
+        /// Move the Image left or Right
+        /// </summary>
+        /// <param name="increment"></param>
+        public int ChangeImageByIncrement(int increment)
+        {
+            // Find the Index for the current Image
+            var ImageIndexCurrent = RandomPlayerHelper.MonsterImageList.IndexOf(ViewModel.Data.ImageURI);
+
+            // Amount to move
+            var indexNew = ImageIndexCurrent + increment;
+
+            if (indexNew >= ImageListCount)
+            {
+                indexNew = ImageListCount - 1;
+            }
+
+            if (indexNew <= 0)
+            {
+                indexNew = 0;
+            }
+
+            // Increment or Decrement to change the to a different image
+            ViewModel.Data.ImageURI = RandomPlayerHelper.MonsterImageList.ElementAt(indexNew);
+
+            _ = UpdatePageBindingContext();
+
+            return indexNew;
         }
 
     }
