@@ -596,14 +596,14 @@ namespace UnitTests.Views
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
         {
             // Arrange
-
+            page.NextAttackExample();
             // Act
             var result = page.SetSelectedMonster(new MapModelLocation());
 
             // Reset
 
             // Assert
-            Assert.AreEqual(true, result); // Got to here, so it happened...
+            Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
         }
 
         [Test]
