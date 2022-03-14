@@ -59,11 +59,6 @@ namespace Game.Views
             BattleEngineViewModel.Instance.PartyCharacterList.Clear();
             foreach (var dat in selectionChangedEventArgs.CurrentSelection)
             {
-                // Exit if there is no data here
-                if (dat == null)
-                {
-                    return;
-                }
                 // Don't add more than the party max
                 if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
                 {
@@ -116,7 +111,7 @@ namespace Game.Views
         /// </summary>
         public void CreateEngineCharacterList()
         {
-            // Clear the currett list
+            // Clear the current list
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Clear();
 
             // Load the Characters into the Engine
