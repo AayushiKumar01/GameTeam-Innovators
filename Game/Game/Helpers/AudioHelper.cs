@@ -12,16 +12,31 @@ namespace Game.Helpers
         public ISimpleAudioPlayer BattleStartAudio;
         public ISimpleAudioPlayer GameOverAudio;
 
+        public AudioHelper(ISimpleAudioPlayer testPlayer)
+        {
+            // Useful for testing to force null or not for coverage
+            BattleStartAudio = testPlayer;
+            GameOverAudio = testPlayer;
+            
+            loadPlayers();
+        }
+        
         public AudioHelper()
         {
-            //Initialzing and loading audio file
+            // Initializing and loading audio file
             BattleStartAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();   
+            GameOverAudio = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+            
+            loadPlayers();
+        }
+
+        private void loadPlayers()
+        {
             if (BattleStartAudio != null)
             {
                 BattleStartAudio.Load("autobattle.mp3");
-
             }
+
             if (GameOverAudio != null)
             {
                 GameOverAudio.Load("gameover.mp3");
