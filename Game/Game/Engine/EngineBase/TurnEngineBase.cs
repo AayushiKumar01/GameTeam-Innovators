@@ -124,7 +124,7 @@ namespace Game.Engine.EngineBase
              */
 
             // Assume Move if nothing else happens
-            EngineSettings.CurrentAction = ActionEnum.SkipTurn;
+            EngineSettings.CurrentAction = ActionEnum.Move;
 
             // See if Desired Target is within Range, and if so attack away
             if (EngineSettings.MapModel.IsTargetInRange(Attacker, AttackChoice(Attacker)))
