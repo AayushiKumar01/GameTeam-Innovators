@@ -1,4 +1,5 @@
-﻿using Game.Helpers;
+﻿using System.IO;
+using Game.Helpers;
 using NUnit.Framework;
 
 namespace UnitTests.Helpers
@@ -67,7 +68,29 @@ namespace UnitTests.Helpers
             
             // Assert
             Assert.True(true); // If got here we passed
+        }
+        
+        [Test]
+        public void AudioHelper_Mock_Methods_Should_Pass()
+        {
+            // Arrange
+            AudioHelperISimpleAudioPlayerMock mock = new AudioHelperISimpleAudioPlayerMock();
+            mock.Dispose();
+            mock.Load("");
+            mock.Load(new MemoryStream());
+            mock.Pause();
+            mock.Seek(0.0);
+            mock.Stop();
             
+
+            // Act
+            mock.Play();
+
+            // Reset
+            mock = null;
+            
+            // Assert
+            Assert.True(true); // If got here we passed
         }
 
     }
