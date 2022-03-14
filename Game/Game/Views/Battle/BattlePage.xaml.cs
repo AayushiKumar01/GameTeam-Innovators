@@ -1200,7 +1200,7 @@ namespace Game.Views
             }
         }
 
-        private void AutoplayStop_Button(object sender, EventArgs e)
+        public void AutoplayStop_Button(object sender, EventArgs e)
         {
             AutoplayEnabled = false;
             AutoplayStack.IsVisible = false;

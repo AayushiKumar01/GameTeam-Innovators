@@ -95,6 +95,21 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+        
+        [Test]
+        public void BattlePage_Autoplay_Button_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.AutoplayButton_Clicked(null, null);
+
+            // Reset
+            page.AutoplayStop_Button(null, null);
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
         [Test]
         public void BattlePage_RestButton_Clicked_Default_Should_Pass()
