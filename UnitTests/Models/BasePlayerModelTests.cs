@@ -191,6 +191,22 @@ namespace UnitTests.Models
             // Assert
             Assert.AreEqual(1, result);
         }
+        
+        [Test]
+        public void BasePlayerModel_GetSpeed_Cleric_Should_Pass()
+        {
+            // Arrange
+            var data = new BasePlayerModel<CharacterModel>();
+            data.Job = CharacterJobEnum.Cleric;
+            
+            // Act
+            var result = data.GetSpeed();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(2, result);
+        }
 
         [Test]
         public void BasePlayerModel_GetHealthCurrent_Default_Should_Pass()
