@@ -23,8 +23,6 @@ namespace Scenario
             //This is your App.xaml and App.xaml.cs, which can have resources, etc.
             app = new App();
             Application.Current = app;
-
-            page = new BattlePage();
         }
 
         [TearDown]
@@ -36,6 +34,7 @@ namespace Scenario
         public void BattlePage_Constructor_Default_Should_Pass()
         {
             // Arrange
+            page = new BattlePage();
 
             // Act
             var result = page;
