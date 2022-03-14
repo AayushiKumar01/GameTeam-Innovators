@@ -6,6 +6,7 @@ using Xamarin.Forms.Mocks;
 using Xamarin.Forms;
 
 using Game;
+using Game.Engine.EngineModels;
 using Game.Views;
 using Game.Models;
 using Game.ViewModels;
@@ -510,12 +511,13 @@ namespace UnitTests.Views
         public void BattlePage_SetAttackerAndDefender_Character_vs_Unknown_Should_Pass()
         {
             // Arrange
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Clear();
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Clear();
-            BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList.Clear();
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            engineSettings.CharacterList.Clear();
+            engineSettings.MonsterList.Clear();
+            engineSettings.PlayerList.Clear();
 
             // Make Character
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
+            engineSettings.MaxNumberPartyCharacters = 1;
 
             var CharacterPlayer = new PlayerInfoModel(
                             new CharacterModel
@@ -529,11 +531,11 @@ namespace UnitTests.Views
                                 ListOrder = 1,
                             });
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
+            engineSettings.CharacterList.Add(CharacterPlayer);
 
             // Make Monster
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyMonsters = 1;
+            engineSettings.MaxNumberPartyMonsters = 1;
 
             var MonsterPlayer = new PlayerInfoModel(
                             new MonsterModel
@@ -548,10 +550,10 @@ namespace UnitTests.Views
                                 PlayerType = PlayerTypeEnum.Unknown
                             });
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            engineSettings.MonsterList.Add(MonsterPlayer);
 
-            BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
-            BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList.Add(MonsterPlayer);
+            engineSettings.PlayerList.Add(CharacterPlayer);
+            engineSettings.PlayerList.Add(MonsterPlayer);
 
             _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(CharacterPlayer);
 
@@ -589,6 +591,31 @@ namespace UnitTests.Views
 
             // Reset
 
+            // Assert
+            Assert.AreEqual(true, result); // Got to here, so it happened...
+        }
+        
+        [Test]
+        public void BattlePage_SetSelectedCharacter_Is_Attacker_Should_Pass()
+        {
+            // Arrange
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = true;
+            PlayerInfoModel character = new PlayerInfoModel(new CharacterModel());
+            
+            page.SetAttackerAndDefender();
+            engineSettings.MapModel.MapGridLocation[1, 1].Player = character;
+            MapModelLocation mapModelLocation = new MapModelLocation();
+            mapModelLocation.Column = 1;
+            mapModelLocation.Row = 1;
+            engineSettings.CurrentAttacker = character;
+            
+            // Act
+            var result = page.SetSelectedCharacter(mapModelLocation);
+
+            // Reset
+            
+            
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
