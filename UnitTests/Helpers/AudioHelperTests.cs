@@ -9,12 +9,6 @@ namespace UnitTests.Helpers
 
         AudioHelper audio;
 
-        [SetUp]
-        public void Setup()
-        {
-            audio = new AudioHelper(null);
-        }
-
         [TearDown]
         public void TearDown()
         {
@@ -55,6 +49,25 @@ namespace UnitTests.Helpers
             
             // Assert
             Assert.True(true); // If got here we passed
+        }
+        
+        [Test]
+        public void AudioHelper_With_Default_Constructor_Should_Pass()
+        {
+            // Arrange
+            audio = new AudioHelper();
+            
+            // Act
+            audio.playBattleStart();
+            audio.stopStartAudio();
+            audio.playGameOverAudio();
+
+            // Reset
+            audio = null;
+            
+            // Assert
+            Assert.True(true); // If got here we passed
+            
         }
 
     }
