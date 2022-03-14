@@ -337,9 +337,12 @@ namespace UnitTests.Views
             var current = control.IsToggled;
 
             ToggledEventArgs args = new ToggledEventArgs(current);
+            ToggledEventArgs notargs = new ToggledEventArgs(!current);
 
             // Act
             page.AllowSkip_Toggled(null, args);
+            control.IsToggled = true;
+            page.AllowSkip_Toggled(null, notargs);
 
             // Reset
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
@@ -356,6 +359,28 @@ namespace UnitTests.Views
             if (!((Switch) page.FindByName("AllowSkip")).IsToggled)
             {
                 page.AllowSkip_Toggled(null, new ToggledEventArgs(true));
+            }
+            
+            // Act
+            var args = new ValueChangedEventArgs(0.0, 50.0);
+            page.SkipPercentage_Changed(null, args);
+
+            // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
+
+            // Assert
+            Assert.AreEqual(BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.SkipPercentage,50);
+        }
+        
+        [Test]
+        public void BattleSettingsPage_AllowSkip_Toggled_False_Default_Should_Pass()
+        {
+            // Arrange
+            page.AllowSkip_Toggled(null, new ToggledEventArgs(true));
+            page.AllowSkip_Toggled(null, new ToggledEventArgs(false));
+            if (!((Switch) page.FindByName("AllowSkip")).IsToggled)
+            {
+                page.AllowSkip_Toggled(null, new ToggledEventArgs(false));
             }
             
             // Act
