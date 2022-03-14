@@ -24,7 +24,7 @@ namespace Game.Views
         public HtmlWebViewSource htmlSource = new HtmlWebViewSource();
 
         // Wait time before proceeding
-        public int WaitTime = 1024;
+        public int WaitTime = 1500;
 
         // Maximum wait time setting before button disabled
         public int MAX_WAIT_TIME = 4096;
