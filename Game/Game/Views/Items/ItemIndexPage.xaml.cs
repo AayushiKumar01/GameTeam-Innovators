@@ -90,6 +90,11 @@ namespace Game.Views
             BindingContext = ViewModel;
         }
 
+        /// <summary>
+        /// Get items from server
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void DropItem_Clicked(object sender, EventArgs e)
         {
             var level =20;  // Max Value of 20
@@ -99,8 +104,6 @@ namespace Game.Views
             var updateDataBase = true;  // Add them to the DB
             var category = 0;   // What category to filter down to, 0 is all
 
-            // will return shoes value 10 of speed.
-            // Example  result = await ItemsController.Instance.GetItemsFromGame(1, 10, AttributeEnum.Speed, ItemLocationEnum.Feet, false, true);
             ItemService.GetItemsFromServerPostAsync(100, level, attribute, location, 4, false, updateDataBase);
         }
     }
