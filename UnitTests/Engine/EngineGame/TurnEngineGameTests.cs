@@ -555,12 +555,20 @@ namespace UnitTests.Engine.EngineGame
         {
             // Arrange
             var PlayerInfo = new PlayerInfoModel(new CharacterModel());
-
+            PlayerInfo.PlayerType = PlayerTypeEnum.Character;
+            var Defender = new PlayerInfoModel(new CharacterModel());
+            Defender.PlayerType = PlayerTypeEnum.Monster;
+            
+            Engine.EngineSettings.MapModel.MapGridLocation[1, 1].Player = PlayerInfo;
+            Engine.EngineSettings.MapModel.MapGridLocation[1, 2].Player = Defender;
+            
             // Act
             var result = Engine.Round.Turn.TakeTurn(PlayerInfo);
 
             // Reset
-
+            Engine.EngineSettings.MapModel.ClearSelection();
+            Engine.EngineSettings.MapModel.ClearMapGrid();
+            
             // Assert
             Assert.AreEqual(true, result);
         }
