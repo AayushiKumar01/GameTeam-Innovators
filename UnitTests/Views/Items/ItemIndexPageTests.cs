@@ -74,7 +74,8 @@ namespace UnitTests.Views
             page.DropItem_Clicked(null, null);
 
             // Reset
-
+            page = new ItemIndexPage();
+            
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
