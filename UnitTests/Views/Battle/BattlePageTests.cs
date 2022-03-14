@@ -594,7 +594,7 @@ namespace UnitTests.Views
         }
         
         [Test]
-        public void BattlePage_SetSelectedCharacter_DisabledMapClick_Should_Return_False()
+        public void BattlePage_SetSelectedCharacter_Disabled_Map_Click_Should_Return_False()
         {
             // Arrange
             BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = false;
@@ -624,7 +624,7 @@ namespace UnitTests.Views
         }
         
         [Test]
-        public void BattlePage_SetSelectedMonster_Disabled_Map_Click_Return_Unknown()
+        public void BattlePage_SetSelectedMonster_Disabled_Map_Click_Should_Return_Unknown()
         {
             // Arrange
             BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = false;
@@ -653,6 +653,21 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        [Test]
+        public void BattlePage_SetSelectedEmpty_Disabled_Map_Click_Should_Return_False()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = false;
+            
+            // Act
+            var result = page.SetSelectedEmpty(new MapModelLocation());
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result); // Got to here, so it happened...
+        }
+        
         [Test]
         public void BattlePage_UpdateMapGrid_InValid_Bogus_Image_Should_Fail()
         {
