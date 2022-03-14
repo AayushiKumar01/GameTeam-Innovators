@@ -24,8 +24,14 @@ namespace Game.Views
         public HtmlWebViewSource htmlSource = new HtmlWebViewSource();
 
         // Wait time before proceeding
-        public int WaitTime = 1500;
+        public int WaitTime = 1024;
 
+        // Maximum wait time setting before button disabled
+        public int MAX_WAIT_TIME = 4096;
+        
+        // Minimum wait time setting before button disabled
+        public int MIN_WAIT_TIME = 32;
+        
         // Hold the Map Objects, for easy access to update them
         public Dictionary<string, object> MapLocationObject = new Dictionary<string, object>();
 
@@ -1170,33 +1176,25 @@ namespace Game.Views
             }
         }
 
-        private void DelaySlower_Button(object sender, EventArgs e)
+        public void DelaySlower_Button(object sender, EventArgs e)
         {
             WaitTime *= 2;
-            int maxWaitTime = 4096;
-            if (WaitTime > maxWaitTime)
-            {
-                WaitTime = maxWaitTime;
-            }
             FasterButton.IsEnabled = true;
-            if (WaitTime == maxWaitTime)
+            if (WaitTime >= MAX_WAIT_TIME)
             {
                 SlowerButton.IsEnabled = false;
+                WaitTime = MAX_WAIT_TIME;
             }
         }
 
-        private void DelayFaster_Button(object sender, EventArgs e)
+        public void DelayFaster_Button(object sender, EventArgs e)
         {
             WaitTime /= 2;
-            int minWaitTime = 32;
-            if (WaitTime <= 0)
-            {
-                WaitTime = minWaitTime;
-            }
             SlowerButton.IsEnabled = true;
-            if (WaitTime == minWaitTime)
+            if (WaitTime <= MIN_WAIT_TIME)
             {
                 FasterButton.IsEnabled = false;
+                WaitTime = MIN_WAIT_TIME;
             }
         }
 

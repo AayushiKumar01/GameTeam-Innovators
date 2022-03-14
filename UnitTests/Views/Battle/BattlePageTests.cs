@@ -110,6 +110,30 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+        
+        [Test]
+        public void BattlePage_Autoplay_Change_Delay_Buttons_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            int originalTime = page.WaitTime;
+            while (page.WaitTime < page.MAX_WAIT_TIME)
+            {
+                page.DelaySlower_Button(null, null);
+            }
+            while (page.WaitTime > page.MIN_WAIT_TIME)
+            {
+                page.DelayFaster_Button(null, null);
+            }
+
+            // Reset
+            page.WaitTime = originalTime;
+            
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+        
 
         [Test]
         public void BattlePage_RestButton_Clicked_Default_Should_Pass()
