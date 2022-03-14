@@ -606,6 +606,7 @@ namespace UnitTests.Views
             page.SetAttackerAndDefender();
             engineSettings.MapModel.MapGridLocation[1, 1].Player = character;
             MapModelLocation mapModelLocation = new MapModelLocation();
+            mapModelLocation.Player = character;
             mapModelLocation.Column = 1;
             mapModelLocation.Row = 1;
             engineSettings.CurrentAttacker = character;
@@ -620,6 +621,34 @@ namespace UnitTests.Views
             
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
+        }
+        
+        [Test]
+        public void BattlePage_DetermineMapImageButton_Is_Attacker_Should_Pass()
+        {
+            // Arrange
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = true;
+            PlayerInfoModel character = new PlayerInfoModel(new CharacterModel());
+            character.PlayerType = PlayerTypeEnum.Character;
+            
+            MapModelLocation mapModelLocation = new MapModelLocation();
+            mapModelLocation.Player = character;
+            mapModelLocation.Column = 1;
+            mapModelLocation.Row = 1;
+            engineSettings.CurrentAttacker = character;
+            
+            // Act
+            ImageButton imageButton = page.DetermineMapImageButton(mapModelLocation);
+            imageButton.PropagateUpClicked();
+            
+            // Reset
+            engineSettings.MapModel.ClearMapGrid();
+            engineSettings.MapModel.ClearSelection();
+            engineSettings.CurrentAttacker = null;
+            
+            // Assert
+            Assert.NotNull(imageButton); // Got to here, so it happened...
         }
         
         [Test]
