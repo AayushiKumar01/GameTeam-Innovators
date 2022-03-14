@@ -592,6 +592,21 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
+        
+        [Test]
+        public void BattlePage_SetSelectedCharacter_DisabledMapClick_Should_Return_False()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = false;
+            
+            // Act
+            var result = page.SetSelectedCharacter(new MapModelLocation());
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result); 
+        }
 
         [Test]
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
