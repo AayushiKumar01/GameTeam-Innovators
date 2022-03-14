@@ -614,7 +614,9 @@ namespace UnitTests.Views
             var result = page.SetSelectedCharacter(mapModelLocation);
 
             // Reset
-            
+            engineSettings.MapModel.ClearMapGrid();
+            engineSettings.MapModel.ClearSelection();
+            engineSettings.CurrentAttacker = null;
             
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
