@@ -93,6 +93,33 @@ namespace UnitTests.Helpers
             Assert.True(true); // If got here we passed
         }
 
+        
+        [Test]
+        public void AudioHelper_Mock_Get_Set_Should_Pass()
+        {
+            // Arrange
+            AudioHelperISimpleAudioPlayerMock mock = new AudioHelperISimpleAudioPlayerMock();
+            double bal = mock.Balance;
+            double dur = mock.Duration;
+            double vol = mock.Volume;
+            bool canseek = mock.CanSeek;
+            double pos = mock.CurrentPosition;
+            bool playing = mock.IsPlaying;
+            bool loop = mock.Loop;
+            
+            // Act
+
+            mock.Balance = bal;
+            mock.Volume = vol;
+            mock.Loop = loop;
+            
+            // Reset
+            mock = null;
+            
+            // Assert
+            Assert.True(true); // If got here we passed
+        }
+        
     }
 
 }
