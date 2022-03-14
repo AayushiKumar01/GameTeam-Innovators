@@ -31,7 +31,6 @@ namespace UnitTests.Views
             app = new App();
             Application.Current = app;
 
-            page = new PickCharactersPage();
         }
 
         [TearDown]
@@ -44,6 +43,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_Constructor_Default_Should_Pass()
         {
             // Arrange
+            page = new PickCharactersPage();
 
             // Act
             var result = page;
@@ -72,6 +72,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_BattleButton_Clicked_Default_Should_Pass()
         {
             // Arrange
+            page = new PickCharactersPage();
 
             // Act
             page.BattleButton_Clicked(null, null);
@@ -86,6 +87,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_CreateEngineCharacterList_Default_Should_Pass()
         {
             // Arrange
+            page = new PickCharactersPage();
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList = new List<PlayerInfoModel>();
             BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(new CharacterModel()));
 
@@ -134,6 +136,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_UpdateButtonState_Default_Should_Pass()
         {
             // Arrange
+            page = new PickCharactersPage();
 
             // Act
             page.UpdateNextButtonState();
@@ -148,7 +151,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_Default_Should_Pass()
         {
             // Arrange
-
+            page = new PickCharactersPage();
             var selectedCharacter = new CharacterModel();
             CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
             
@@ -165,6 +168,7 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
             // Arrange
+            page = new PickCharactersPage();
             var selectedCharacter = new CharacterModel();
             CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
 
