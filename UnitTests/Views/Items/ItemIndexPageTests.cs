@@ -64,6 +64,20 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+        
+        [Test]
+        public void ItemIndexPage_DropItem_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.DropItem_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
 
         [Test]
         public void ItemIndexPage_OnBackButtonPressed_Valid_Should_Pass()

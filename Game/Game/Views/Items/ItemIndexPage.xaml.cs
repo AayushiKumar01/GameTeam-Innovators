@@ -90,7 +90,7 @@ namespace Game.Views
             BindingContext = ViewModel;
         }
 
-        private void DropItem_Clicked(object sender, EventArgs e)
+        public void DropItem_Clicked(object sender, EventArgs e)
         {
             var level =20;  // Max Value of 20
             var attribute = AttributeEnum.Unknown;  // Any Attribute
