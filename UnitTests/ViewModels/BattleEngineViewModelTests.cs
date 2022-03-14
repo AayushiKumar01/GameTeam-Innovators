@@ -73,7 +73,7 @@ namespace UnitTests.ViewModels
             var result = ViewModel;
 
             var countBefore = result.DatabaseCharacterList.Count;
-
+            
             // Act
             result.DatabaseCharacterList.Add(new CharacterModel());
             result.PartyCharacterList.Add(new CharacterModel());
@@ -84,6 +84,25 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreEqual(countBefore + 1, result.DatabaseCharacterList.Count);
             Assert.AreEqual(1, result.PartyCharacterList.Count);
+        }
+        
+        [Test]
+        public void BattleEngineViewModel_Get_Set_DatabaseCharacterList_Should_Pass()
+        {
+            // Arrange
+            var result = ViewModel;
+            CharacterModel characterModel = new CharacterModel();
+            result.DatabaseCharacterList.Add(characterModel);
+
+            // Act
+            ObservableCollection<CharacterModel> charModel = result.DatabaseCharacterList;
+            result.DatabaseCharacterList = charModel;
+
+            // Reset
+            result.DatabaseCharacterList.Remove(characterModel);
+            
+            // Assert
+            Assert.True(true);
         }
 
         [Test]
