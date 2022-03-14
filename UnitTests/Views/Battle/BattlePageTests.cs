@@ -622,6 +622,21 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
         }
+        
+        [Test]
+        public void BattlePage_SetSelectedMonster_Disabled_Map_Click_Return_Unknown()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = false;
+            page.NextAttackExample();
+            // Act
+            var result = page.SetSelectedMonster(new MapModelLocation());
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(RoundEnum.Unknown, result); // Got to here, so it happened...
+        }
 
         [Test]
         public void BattlePage_SetSelectedEmpty_Default_Should_Pass()
