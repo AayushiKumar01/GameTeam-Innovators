@@ -541,21 +541,10 @@ namespace Game.Views
             PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
             if (EngineSettings.CurrentAttacker == playerAtLocation)
             {
-                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(data));
-                var imageObject = (ImageButton)MapObject;
-                MapObject = GetMapGridObject(GetDictionaryStackName(data));
-                var stackObject = (StackLayout)MapObject;
-                stackObject.BackgroundColor = (Color)Application.Current.Resources["TriciaryBackgroundColor"];
-
                 BattleMessages.Text = string.Format("{0} is playing this turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
             }
             else
             {
-                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(data));
-                var imageObject = (ImageButton)MapObject;
-                MapObject = GetMapGridObject(GetDictionaryStackName(data));
-                var stackObject = (StackLayout)MapObject;
-                stackObject.BackgroundColor = (Color)Application.Current.Resources["BattleMapCharacterColor"];
                 BattleMessages.Text = string.Format("{0}, it's not their turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
             }
 
