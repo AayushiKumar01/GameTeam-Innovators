@@ -810,7 +810,8 @@ namespace Game.Views
             if (RoundCondition == RoundEnum.NewRound)
             {
                 BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.NewRound;
-
+                _ = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.ClearMessages();
+                
                 // Pause
                 _ = Task.Delay(WaitTime);
 
