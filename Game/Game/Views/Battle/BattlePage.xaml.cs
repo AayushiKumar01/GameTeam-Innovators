@@ -73,7 +73,10 @@ namespace Game.Views
 
             // Add Players to Display
             DrawGameAttackerDefenderBoard();
-
+            
+            //Clear messages
+            _ = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleMessagesModel.ClearMessages();
+            
             // Set the Battle Mode
             ShowBattleMode();
         }
