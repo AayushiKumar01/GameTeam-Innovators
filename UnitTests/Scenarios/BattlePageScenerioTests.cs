@@ -148,6 +148,6 @@ namespace Scenario
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
         
-        
+        //See HackathonScenariosTests.cs for other manual Battle Scenarios
     }
 }
