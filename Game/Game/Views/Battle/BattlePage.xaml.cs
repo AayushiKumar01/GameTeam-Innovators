@@ -839,21 +839,20 @@ namespace Game.Views
             return RoundCondition;
         }
 
+        /// <summary>
+        /// Highlight the current players background to show whose turn it is
+        /// </summary>
         public void ColorBackground()
         {
             EngineSettingsModel enginesettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
-
-            List<PlayerInfoModel> engineSettingsCharacterList = enginesettings.CharacterList;
-            foreach (PlayerInfoModel player in engineSettingsCharacterList)
+            foreach (PlayerInfoModel player in enginesettings.CharacterList)
             {
-                if(player.Alive == false)
+                if(!player.Alive)
                 {
                     continue;
                 }
                 MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
-                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(locationForPlayer));
-                var imageObject = (ImageButton)MapObject;
-                MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
+                var MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
                 var stackObject = (StackLayout)MapObject;
 
                 stackObject.BackgroundColor = DetermineMapBackgroundColor(locationForPlayer);
@@ -862,7 +861,6 @@ namespace Game.Views
                 {
                     stackObject.BackgroundColor = (Color)Application.Current.Resources["BattleMapActiveColor"];
                 }
-
             }
         }
 
