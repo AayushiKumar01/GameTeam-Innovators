@@ -541,10 +541,21 @@ namespace Game.Views
             PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
             if (EngineSettings.CurrentAttacker == playerAtLocation)
             {
+                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(data));
+                var imageObject = (ImageButton)MapObject;
+                MapObject = GetMapGridObject(GetDictionaryStackName(data));
+                var stackObject = (StackLayout)MapObject;
+                stackObject.BackgroundColor = (Color)Application.Current.Resources["TriciaryBackgroundColor"];
+
                 BattleMessages.Text = string.Format("{0} is playing this turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
             }
             else
             {
+                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(data));
+                var imageObject = (ImageButton)MapObject;
+                MapObject = GetMapGridObject(GetDictionaryStackName(data));
+                var stackObject = (StackLayout)MapObject;
+                stackObject.BackgroundColor = (Color)Application.Current.Resources["BattleMapCharacterColor"];
                 BattleMessages.Text = string.Format("{0}, it's not their turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
             }
 
@@ -785,6 +796,8 @@ namespace Game.Views
                 return FinishTurnProcess();
             }
 
+            ColorBackground();
+
             return RoundEnum.Unknown;
         }
 
@@ -836,6 +849,29 @@ namespace Game.Views
             }
 
             return RoundCondition;
+        }
+
+        public void ColorBackground()
+        {
+            EngineSettingsModel enginesettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+
+            List<PlayerInfoModel> engineSettingsCharacterList = enginesettings.CharacterList;
+            foreach (PlayerInfoModel player in engineSettingsCharacterList)
+            {
+                MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
+                var MapObject = GetMapGridObject(GetDictionaryImageButtonName(locationForPlayer));
+                var imageObject = (ImageButton)MapObject;
+                MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
+                var stackObject = (StackLayout)MapObject;
+
+                stackObject.BackgroundColor = DetermineMapBackgroundColor(locationForPlayer);
+
+                if (enginesettings.CurrentAttacker.Guid == player.Guid)
+                {
+                    stackObject.BackgroundColor = (Color)Application.Current.Resources["BattleMapActiveColor"];
+                }
+
+            }
         }
 
         /// <summary>
