@@ -847,19 +847,22 @@ namespace Game.Views
             EngineSettingsModel enginesettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
             foreach (PlayerInfoModel player in enginesettings.CharacterList)
             {
-                if(!player.Alive)
+                if (!player.Alive)
                 {
                     continue;
                 }
+
                 MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
-                var MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
-                var stackObject = (StackLayout)MapObject;
-
-                stackObject.BackgroundColor = DetermineMapBackgroundColor(locationForPlayer);
-
-                if (enginesettings.CurrentAttacker.Guid == player.Guid)
+                if (locationForPlayer != null)
                 {
-                    stackObject.BackgroundColor = (Color)Application.Current.Resources["BattleMapActiveColor"];
+                    var MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
+                
+                    var stackObject = (StackLayout) MapObject;
+                    stackObject.BackgroundColor = DetermineMapBackgroundColor(locationForPlayer);
+                    if (enginesettings.CurrentAttacker.Guid == player.Guid)
+                    {
+                        stackObject.BackgroundColor = (Color) Application.Current.Resources["BattleMapActiveColor"];
+                    }
                 }
             }
         }
