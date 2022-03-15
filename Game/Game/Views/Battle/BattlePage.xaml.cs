@@ -1023,7 +1023,10 @@ namespace Game.Views
             ShowBattleMode();
             await Navigation.PushModalAsync(new NewRoundPage());
             engineSettings.EnableMapClick = true;
-            AutoplayButton.IsVisible = true;
+            if (Device.RuntimePlatform != Device.Android)
+            {
+                AutoplayButton.IsVisible = true;
+            }
         }
 
         /// <summary>
@@ -1168,7 +1171,10 @@ namespace Game.Views
                     FinishButton.IsVisible = false;
                     if (!AutoplayEnabled)
                     {
-                        AutoplayButton.IsVisible = true;
+                        if (Device.RuntimePlatform != Device.Android)
+                        {
+                            AutoplayButton.IsVisible = true;
+                        }
                         AbilityButton.IsVisible = true;
                     }
                     RestButton.IsVisible = true;
@@ -1232,7 +1238,10 @@ namespace Game.Views
             AutoplayEnabled = false;
             AutoplayStack.IsVisible = false;
             AbilityButton.IsVisible = true;
-            AutoplayButton.IsVisible = true;
+            if (Device.RuntimePlatform != Device.Android)
+            {
+                AutoplayButton.IsVisible = true;
+            }
         }
     }
 }
