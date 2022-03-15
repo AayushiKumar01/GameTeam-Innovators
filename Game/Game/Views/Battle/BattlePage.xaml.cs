@@ -785,7 +785,6 @@ namespace Game.Views
                 return FinishTurnProcess();
             }
 
-            ColorBackground();
 
             return RoundEnum.Unknown;
         }
@@ -847,6 +846,10 @@ namespace Game.Views
             List<PlayerInfoModel> engineSettingsCharacterList = enginesettings.CharacterList;
             foreach (PlayerInfoModel player in engineSettingsCharacterList)
             {
+                if(player.Alive == false)
+                {
+                    continue;
+                }
                 MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
                 var MapObject = GetMapGridObject(GetDictionaryImageButtonName(locationForPlayer));
                 var imageObject = (ImageButton)MapObject;
@@ -875,6 +878,7 @@ namespace Game.Views
                 case PlayerTypeEnum.Character:
                     // User would select who to attack
                     PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
+                    ColorBackground();
                     BattleMessages.Text = string.Format("{0} \n{1}", attacker.Job + " players turn , select map or action.", BattleMessages.Text);
                     
                     // Leaving empty to let user pick a target
