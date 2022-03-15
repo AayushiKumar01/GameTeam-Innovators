@@ -175,11 +175,7 @@ namespace Game.Engine.EngineGame
                 // Get the Open Locations
                 var openSquare = EngineSettings.MapModel.ReturnClosestEmptyLocationFromStartDist(locationAttacker, locationDefender, Attacker.Speed);
 
-                Debug.WriteLine(string.Format("{0} moves from {1},{2} to {3},{4}", locationAttacker.Player.Name, locationAttacker.Column, locationAttacker.Row, openSquare.Column, openSquare.Row));
-
-                EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " moves closer to " + EngineSettings.CurrentDefender.Name;
-
-                return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
+                return MovePlayerOnMap(Attacker, locationAttacker, openSquare);
             }
 
             // If we got here, we are moving the character to an empty square
@@ -192,7 +188,25 @@ namespace Game.Engine.EngineGame
             loc.Row = cordsModel.Row;
             
             var moveTo = EngineSettings.MapModel.ReturnClosestEmptyLocationFromStartDist(locationAttacker, loc, Attacker.Speed);
-            return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, moveTo);
+            return MovePlayerOnMap(Attacker, locationAttacker, moveTo);
+        }
+
+        private bool MovePlayerOnMap(PlayerInfoModel Attacker, MapModelLocation locationAttacker, MapModelLocation openSquare)
+        {
+            Debug.WriteLine(string.Format("{0} moves from {1},{2} to {3},{4}", locationAttacker.Player.Name,
+                locationAttacker.Column, locationAttacker.Row, openSquare.Column, openSquare.Row));
+
+            if(EngineSettings.CurrentDefender != null){
+                EngineSettings.BattleMessagesModel.TurnMessage =
+                    Attacker.Name + " moves closer to " + EngineSettings.CurrentDefender.Name;
+            }
+            else
+            {
+                EngineSettings.BattleMessagesModel.TurnMessage =
+                    Attacker.Name + " moves this turn";
+            }
+
+            return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
         }
 
         /// <summary>
