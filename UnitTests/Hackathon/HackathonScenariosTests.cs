@@ -44,49 +44,6 @@ namespace Scenario
         }
         #endregion TestSetup
 
-        #region Scenario0
-        [Test]
-        public void HakathonScenario_Scenario_0_Valid_Default_Should_Pass()
-        {
-            /* 
-            * Scenario Number:  
-            *      #
-            *      
-            * Description: 
-            *      <Describe the scenario>
-            * 
-            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
-            *      <List Files Changed>
-            *      <List Classes Changed>
-            *      <List Methods Changed>
-            * 
-            * Test Algrorithm:
-            *      <Step by step how to validate this change>
-            * 
-            * Test Conditions:
-            *      <List the different test conditions to make>
-            * 
-            * Validation:
-            *      <List how to validate this change>
-            *  
-            */
-
-            // Arrange
-
-            // Act
-
-            // Assert
-
-
-            // Act
-            var result = EngineViewModel;
-
-            // Reset
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
-        #endregion Scenario0
 
         #region Scenario1
         [Test]
