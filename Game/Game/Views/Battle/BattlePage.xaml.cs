@@ -847,11 +847,6 @@ namespace Game.Views
             EngineSettingsModel enginesettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
             foreach (PlayerInfoModel player in enginesettings.CharacterList)
             {
-                if (!player.Alive)
-                {
-                    continue;
-                }
-
                 MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
                 if (locationForPlayer != null)
                 {
