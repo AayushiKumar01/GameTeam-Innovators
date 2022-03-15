@@ -752,7 +752,56 @@ namespace UnitTests.Views
             // Assert
             Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
         }
-        
+
+        [Test]
+        public void BattlePage_SetSelectedMonster_Monster_Out_Of_Range_Should_Move()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.EnableMapClick = true;
+            EngineSettingsModel engineSettings = BattleEngineViewModel.Instance.Engine.EngineSettings;
+            PlayerInfoModel character = new PlayerInfoModel(new CharacterModel());
+            character.PlayerType = PlayerTypeEnum.Character;
+            PlayerInfoModel monster = new PlayerInfoModel(new MonsterModel());
+            monster.PlayerType = PlayerTypeEnum.Monster;
+            monster.Range = 0;
+
+            MapModelLocation characterLocation = new MapModelLocation();
+            characterLocation.Player = character;
+            characterLocation.Column = 1;
+            characterLocation.Row = 1;
+
+            MapModelLocation monsterLocation = new MapModelLocation();
+            monsterLocation.Player = monster;
+            monsterLocation.Column = 2;
+            monsterLocation.Row = 5;
+
+            //Switch them since NextAttack with switch them again
+            engineSettings.CurrentAttacker = monster;
+            engineSettings.CurrentDefender = character;
+
+            engineSettings.CharacterList.Clear();
+            engineSettings.MonsterList.Clear();
+            engineSettings.PlayerList.Clear();
+            engineSettings.CharacterList.Add(character);
+            engineSettings.MonsterList.Add(monster);
+            engineSettings.PlayerList.Add(character);
+            engineSettings.PlayerList.Add(monster);
+            engineSettings.MapModel.MapGridLocation[1, 1] = characterLocation;
+            engineSettings.MapModel.MapGridLocation[2, 3] = monsterLocation;
+            page.NextAttackExample();
+
+            // Act
+            var result = page.SetSelectedMonster(monsterLocation);
+
+            // Reset
+            engineSettings.CharacterList.Clear();
+            engineSettings.MonsterList.Clear();
+            engineSettings.PlayerList.Clear();
+
+            // Assert
+            Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
+        }
+
         [Test]
         public void BattlePage_SetSelectedMonster_Disabled_Map_Click_Should_Return_Unknown()
         {
