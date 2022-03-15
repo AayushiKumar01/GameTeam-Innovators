@@ -547,20 +547,6 @@ namespace Scenario
         }
         #endregion Scenario37
         
-        #region Scenario22
-        [Test]
-        public void HackathonScenario_Scenario_22_Valid_Default_Should_Pass()
-        {
-            // Arrange
-
-            // Act
-
-            // Reset
-            
-            // Assert
-            Assert.AreEqual(true, true);
-        }
-        #endregion Scenario22
 
     }
 }
