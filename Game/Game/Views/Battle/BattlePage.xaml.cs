@@ -879,7 +879,7 @@ namespace Game.Views
                     // User would select who to attack
                     PlayerInfoModel attacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker;
                     ColorBackground();
-                    BattleMessages.Text = string.Format("{0} \n{1}", attacker.Job + " players turn , select map or action.", BattleMessages.Text);
+                    BattleMessages.Text = string.Format("{0} \n{1}", attacker.Name +" the " + attacker.Job + "s turn , select map or action.", BattleMessages.Text);
                     
                     // Leaving empty to let user pick a target
                     _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentDefender(null);
