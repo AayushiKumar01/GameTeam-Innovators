@@ -544,11 +544,11 @@ namespace Game.Views
             PlayerInfoModel playerAtLocation = EngineSettings.MapModel.GetPlayerAtLocation(data.Column, data.Row);
             if (EngineSettings.CurrentAttacker == playerAtLocation)
             {
-                BattleMessages.Text = string.Format("{0} is playing this turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
+                BattleMessages.Text = string.Format("{0} this {1} is playing this turn. \n{2}", playerAtLocation.Name, playerAtLocation.Job, BattleMessages.Text);
             }
             else
             {
-                BattleMessages.Text = string.Format("{0}, it's not their turn. \n{1}", playerAtLocation.Name, BattleMessages.Text);
+                BattleMessages.Text = string.Format("{0} the {1}, it's not their turn. \n{2}", playerAtLocation.Name, playerAtLocation.Job, BattleMessages.Text);
             }
 
             return true;
