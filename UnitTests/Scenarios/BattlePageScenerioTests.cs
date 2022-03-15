@@ -12,6 +12,11 @@ using Game.ViewModels;
 
 namespace Scenario
 {
+
+    /// <summary>
+    /// PLEASE REFER TO HackathonScenarioTests for other Scenario tests
+    /// </summary>
+    
     [TestFixture]
     public class BattlePageScenarioTests
     {
@@ -99,7 +104,8 @@ namespace Scenario
             Assert.AreEqual(RoundEnum.NextTurn, result); // Got to here, so it happened...
         }
         
-                [Test]
+        
+        [Test]
         public void BattlePage_SetSelectedCharacter_Scenerio_Should_Pass()
         {
             // Arrange
