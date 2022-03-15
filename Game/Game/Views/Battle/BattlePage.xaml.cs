@@ -852,6 +852,10 @@ namespace Game.Views
                     continue;
                 }
                 MapModelLocation locationForPlayer = enginesettings.MapModel.GetLocationForPlayer(player);
+                if(locationForPlayer == null)
+                {
+                    continue;
+                }
                 var MapObject = GetMapGridObject(GetDictionaryStackName(locationForPlayer));
                 var stackObject = (StackLayout)MapObject;
 
