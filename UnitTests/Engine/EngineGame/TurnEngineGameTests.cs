@@ -1651,6 +1651,28 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(false, result);
         }
+
+        [Test]
+        public void TurnEngine_IceSlip_Valid_Monster_Attacks_Character_Should_Skip()
+        {
+            // Arrange
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = true;
+            Engine.EngineSettings.BattleSettingsModel.SkipPercentage = 100;
+
+            var MonsterPlayer = new PlayerInfoModel();
+            MonsterPlayer.PlayerType = PlayerTypeEnum.Monster;
+            Engine.EngineSettings.CharacterList.Add(MonsterPlayer);
+
+            // Act
+            var result = Engine.Round.Turn.SkipTurn(MonsterPlayer);
+
+            // Reset
+            Engine.EngineSettings.BattleSettingsModel.AllowSkips = false;
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
         #endregion IceSlip
 
         #region CalculateSeattleIceSlip
